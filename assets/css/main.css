@@ -310,4 +310,8 @@ a:after {
 			transition: all .1s ease-in-out;
 }
 
+.icon-user, .icon-github, .icon-twitter, .icon-linkedin {
+	font-size: 30px;
+}
+
 

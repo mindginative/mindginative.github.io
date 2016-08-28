@@ -1,6 +1,6 @@
 +++
-date = "2016-08-28T15:26:39+12:00"
-draft = true
+date = "2016-08-29T02:51:23+12:00"
+draft = false
 title = "moving to hugo"
 
 +++

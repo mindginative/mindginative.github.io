@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>TypeScript and its magic number TS2403 &middot; am lazy, too many typos in here - will try to updat litir!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="am lazy, too many typos in here - will try to updat litir!">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.16" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>TypeScript and its magic number TS2403</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2016-01-09 10:59:13 &#43;1200 &#43;1200">2016-01-09</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	    
+
+	    
+	       
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>At work, we’ve been using Webpack for our frontend stack (TypeScript, AngularJS v1.x, NodeJS, GulpJS + other JS libraries without much drama.
+Over the last couple of months our Angular2-based project is starting to get a life, from a simple PoC to a usable web app.
+Though we were working against the early alpha releases of Angular2 but we thought it’s gonna be fine — we just want a minimum viable product.
+Subsequent bumps to Angular2 release builds up to the first beta the error message below started to popped out and now our simple Webpack <code>require</code> interface needs some little attention.</p>
+
+<pre><code>…node_modules/angular2/typings/node/node.d.ts
+error TS2403: Subsequent variable declarations must have the same type.
+Variable ‘require’ must be of type ‘NodeRequire’, but here has type ‘WebpackRequire’.
+</code></pre>
+
+<p>ah easy fix!, I thought it was just a 2 minutes fix with TypeScript’s “intersection types” introduced in 1.6 release:</p>
+
+<pre><code>declare var require: NodeRequire | WebpackRequire
+</code></pre>
+
+<p>well that didn’t work!</p>
+
+<pre><code>…node_modules/angular2/typings/node/node.d.ts
+error TS2403: Subsequent variable declarations must have the same type.
+Variable ‘require’ must be of type ‘NodeRequire’, but here has type ‘NodeRequire | WebpackRequire’.
+</code></pre>
+
+<p>Fiddling around the internets brought me to a Github issue <a href="https://github.com/Microsoft/TypeScript/issues/3215">https://github.com/Microsoft/TypeScript/issues/3215</a>.
+One of the commenter pointed out to make use of TypeScript open-ended interface functionality which sort of acts like overriding an existing type definition.
+It’s supposedly pretty straight forward to just modify the offending type definition file by changing it to <code>declare var require: any</code> however it’s a file shipped via npm package,
+the quick fix might work today but we don’t know after your next <code>npm install</code> your fix will still be there.</p>
+
+<h4 id="anyway-here-s-the-updated-interface">Anyway here’s the updated interface:</h4>
+
+<pre><code>interface WebpackRequire {
+    &lt;T&gt;(path: string): T;
+    (paths: string[], callback: (...modules: any[]) =&gt; void): void;
+    ensure: (paths: string[], callback: (require: &lt;T&gt;(path: string) =&gt; T) =&gt; void) =&gt; void;
+}
+interface NodeRequire extends WebpackRequire {}
+declare var require: NodeRequire;
+</code></pre>
+
+<p>I tried to make the updated interface definition to be little bit verbose just to remind that this is an overridden (as I call it) interface specifically for Webpack.</p>
+
+<h4 id="references">References</h4>
+
+<ul>
+<li><a href="https://github.com/Microsoft/TypeScript/issues/3215#issuecomment-103467086">https://github.com/Microsoft/TypeScript/issues/3215#issuecomment-103467086</a></li>
+<li><a href="https://basarat.gitbooks.io/typescript/content/docs/types/ambient/interfaces.htm">https://basarat.gitbooks.io/typescript/content/docs/types/ambient/interfaces.htm</a></li>
+<li><a href="http://ronniehegelund.blogspot.co.nz/2013/01/extension-methods-in-typescript.html">http://ronniehegelund.blogspot.co.nz/2013/01/extension-methods-in-typescript.html</a></li>
+<li><a href="https://github.com/angular/angular/issues/5807#issuecomment-164678165">https://github.com/angular/angular/issues/5807#issuecomment-164678165</a></li>
+<li><a href="https://github.com/angular/angular/issues/6266">https://github.com/angular/angular/issues/6266</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/typescript--its-magic-number-ts2403\/';
+    var disqus_title = 'TypeScript and its magic number TS2403';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/typescript--its-magic-number-ts2403\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script src="http://www.mindginative.com/js/skel.min.js"></script>
+<script src="http://www.mindginative.com/js/util.js"></script>
+
+<script src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

@@ -23,5 +23,225 @@ I might sync a few bits from time to time.&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>Browsersync -- The Ghost and the Pretender</title>
+      <link>http://www.mindginative.com/post/browsersync--the-ghost-and-the-pretender/</link>
+      <pubDate>Wed, 04 May 2016 11:10:22 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/browsersync--the-ghost-and-the-pretender/</guid>
+      <description>
+
+&lt;p&gt;Looking at few stats: &lt;a href=&#34;https://github.com/BrowserSync/browser-sync/stargazers&#34;&gt;6.9k&lt;/a&gt; Github stars and &lt;a href=&#34;https://www.npmjs.com/package/browser-sync&#34;&gt;700k&lt;/a&gt; npm downloads in the last month
+(at the time of this writing) it’s no wonder that you can always find plugins,
+tools or utilities that will link up Browsersync with your favourite frontend
+or server side framework to ease up your browser testing. It is packed with good
+features as mentioned in Addy Osmani’s 2013 blog but its ghostMode and Proxy options
+are spot on in my opinion.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ghostMode — Clicks, Scrolls &amp;amp; Form inputs on any device will be mirrored to all others.&lt;/li&gt;
+&lt;li&gt;Proxy — Acts as an intermediary or a mini server between the browser and your backend/api/webapp (sounds about right eh, I guess)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Let’s try the “fast food” way so we can use the two options without writing a single line of code and become productive , right now— c’mon! are you sure ? you asked.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;the-ghost-and-the-pretender&#34;&gt;The Ghost and the Pretender&lt;/h3&gt;
+
+&lt;p&gt;Here’s the basic steps to utilise ghostMode and Proxy options with your web app:&lt;/p&gt;
+
+&lt;p&gt;1.) Install browsersync&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; npm install -g browser-sync
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.) Start browsersync as proxy against your webapp, we’ll use &lt;a href=&#34;http://stackoverflow.com/&#34;&gt;http://stackoverflow.com/&lt;/a&gt; as an example&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; browser-sync start --proxy http://stackoverflow.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will see the following message in terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[BS] Proxying: http://stackoverflow.com
+[BS] Access URLs:
+ — — — — — — — — — — — — — — — — — — — -
+ Local: http://localhost:3000
+ External: http://192.168.178.24:3000
+ — — — — — — — — — — — — — — — — — — — -
+ UI: http://localhost:3001
+ UI External: http://192.168.178.24:3001
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.) Navigate to the proxy URL&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;4.) There’s no #4&lt;/p&gt;
+
+&lt;p&gt;5.) Done&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/browsersync.png&#34; width=&#34;800&#34; alt=&#34;Browsersync Dashboard&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;Here’s how the proxyfied stackoverflow looks like. On the left is iPhone6 simulator, Firefox in the middle and then Opera.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/browsersync-example.gif&#34; width=&#34;800&#34; alt=&#34;Browsersync Dashboard&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;enjoy&#34;&gt;Enjoy!&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Xhyve &#43; Alpine Linux</title>
+      <link>http://www.mindginative.com/post/xhyve-alpine-linux/</link>
+      <pubDate>Mon, 18 Jan 2016 11:07:49 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/xhyve-alpine-linux/</guid>
+      <description>
+
+&lt;p&gt;During the 2015 Xmas holiday break I’ve been meaning to play around with Docker or in particular CoreOS on my Mac machine. I know it’s pretty easy to whip with a few CLI commands — Vagrant + VirtualBox, done! — but I wanted something different and wanted to avoid too many abstraction eg. running a virtual environment on top of a virtual environment. A few google searches got me into xhyve, can’t remember the exact keywords I used — sorry.&lt;/p&gt;
+
+&lt;p&gt;xhyve is relatively a new project, roughly 7 months old as of this writing, out of curiosity I jumped right away and see if I could install Alpine Linux. On the side note, the reason I’m looking at running Alpine Linux because it was mentioned at Vagga’s documentation, period, I will do a post about Vagga.&lt;/p&gt;
+
+&lt;p&gt;I haven’t used Alpine Linux before but luckily I found this Tweet and the link to the blog — thanks to Aria Stewart ;). I then grabbed the latest Alpine release &lt;code&gt;alpine-3.3.0-x86_64.iso&lt;/code&gt; but I ran into a hell lot of booting issues, my first night wasn’t a success. The following day, I realised that scavenging through forums, stackoverflow, &amp;amp; etc isn’t gonna help me out even just getting the basic Alpine boot up and decided to just use the version &lt;code&gt;alpine-3.2.3-x86_64.iso&lt;/code&gt; used by Aria. It definitely works but ran into a couple minor issues so I decided to chuck it into a Bash script and make changes as I go.&lt;/p&gt;
+
+&lt;p&gt;Here’s my Github gist&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
+
+KERNEL=&amp;quot;vmlinuz-grsec&amp;quot;
+INITRD=&amp;quot;initramfs-grsec&amp;quot;
+CMDLINE=&amp;quot;alpine_dev=cdrom:iso9660 modules=loop,squashfs,sd-mod,usb-storage,sr-mod,earlyprintk=serial console=ttyS0&amp;quot;
+
+MEM=&amp;quot;-m 1G&amp;quot;
+IMG_CD=&amp;quot;-s 3,ahci-cd,alpine-3.2.3-x86_64.iso&amp;quot;
+PCI_DEV=&amp;quot;-s 0:0,hostbridge -s 31,lpc&amp;quot;
+LPC_DEV=&amp;quot;-l com1,stdio&amp;quot;
+ACPI=&amp;quot;-A&amp;quot;
+#SMP=&amp;quot;-c 2&amp;quot;
+
+# sudo if you want networking enabled
+NET=&amp;quot;-s 2:0,virtio-net&amp;quot;
+
+xhyve $ACPI $MEM $SMP $PCI_DEV $LPC_DEV $NET $IMG_CD $IMG_HDD -f kexec,$KERNEL,$INITRD,&amp;quot;$CMDLINE&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After a successful boot up&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/xhyve-alpine.png&#34; width=&#34;600&#34; alt=&#34;Alpine Linux inside xhyve v0.2.0&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One last thing, definitely worth looking into is running CoreOS inside xhyve!&lt;/p&gt;
+
+&lt;p&gt;Some references I’ve found while working on the install process&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://coreos.com/blog/coreos-and-xhyve-tech-preview.html&#34;&gt;https://coreos.com/blog/coreos-and-xhyve-tech-preview.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ailispaw/boot2docker-xhyve&#34;&gt;https://github.com/ailispaw/boot2docker-xhyve&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/the-journey-of-code/creating-virtual-dev-environment-with-xhyve-fe501005fc6c#.jdmy6icbv&#34;&gt;https://medium.com/the-journey-of-code/creating-virtual-dev-environment-with-xhyve-fe501005fc6c#.jdmy6icbv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;update-8-may-2016&#34;&gt;Update: 8/May/2016&lt;/h3&gt;
+
+&lt;p&gt;Just after 2 months writing about xhyve + alpine,
+Docker announced they would go native for their Docker engine on top of xhyve — 
+and just 2 days ago I got accepted for testing Docker for Mac.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TypeScript and its magic number TS2403</title>
+      <link>http://www.mindginative.com/post/typescript--its-magic-number-ts2403/</link>
+      <pubDate>Sat, 09 Jan 2016 10:59:13 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/typescript--its-magic-number-ts2403/</guid>
+      <description>
+
+&lt;p&gt;At work, we’ve been using Webpack for our frontend stack (TypeScript, AngularJS v1.x, NodeJS, GulpJS + other JS libraries without much drama.
+Over the last couple of months our Angular2-based project is starting to get a life, from a simple PoC to a usable web app.
+Though we were working against the early alpha releases of Angular2 but we thought it’s gonna be fine — we just want a minimum viable product.
+Subsequent bumps to Angular2 release builds up to the first beta the error message below started to popped out and now our simple Webpack &lt;code&gt;require&lt;/code&gt; interface needs some little attention.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;…node_modules/angular2/typings/node/node.d.ts
+error TS2403: Subsequent variable declarations must have the same type.
+Variable ‘require’ must be of type ‘NodeRequire’, but here has type ‘WebpackRequire’.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ah easy fix!, I thought it was just a 2 minutes fix with TypeScript’s “intersection types” introduced in 1.6 release:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;declare var require: NodeRequire | WebpackRequire
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;well that didn’t work!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;…node_modules/angular2/typings/node/node.d.ts
+error TS2403: Subsequent variable declarations must have the same type.
+Variable ‘require’ must be of type ‘NodeRequire’, but here has type ‘NodeRequire | WebpackRequire’.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fiddling around the internets brought me to a Github issue &lt;a href=&#34;https://github.com/Microsoft/TypeScript/issues/3215&#34;&gt;https://github.com/Microsoft/TypeScript/issues/3215&lt;/a&gt;.
+One of the commenter pointed out to make use of TypeScript open-ended interface functionality which sort of acts like overriding an existing type definition.
+It’s supposedly pretty straight forward to just modify the offending type definition file by changing it to &lt;code&gt;declare var require: any&lt;/code&gt; however it’s a file shipped via npm package,
+the quick fix might work today but we don’t know after your next &lt;code&gt;npm install&lt;/code&gt; your fix will still be there.&lt;/p&gt;
+
+&lt;h4 id=&#34;anyway-here-s-the-updated-interface&#34;&gt;Anyway here’s the updated interface:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;interface WebpackRequire {
+    &amp;lt;T&amp;gt;(path: string): T;
+    (paths: string[], callback: (...modules: any[]) =&amp;gt; void): void;
+    ensure: (paths: string[], callback: (require: &amp;lt;T&amp;gt;(path: string) =&amp;gt; T) =&amp;gt; void) =&amp;gt; void;
+}
+interface NodeRequire extends WebpackRequire {}
+declare var require: NodeRequire;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I tried to make the updated interface definition to be little bit verbose just to remind that this is an overridden (as I call it) interface specifically for Webpack.&lt;/p&gt;
+
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Microsoft/TypeScript/issues/3215#issuecomment-103467086&#34;&gt;https://github.com/Microsoft/TypeScript/issues/3215#issuecomment-103467086&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://basarat.gitbooks.io/typescript/content/docs/types/ambient/interfaces.htm&#34;&gt;https://basarat.gitbooks.io/typescript/content/docs/types/ambient/interfaces.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ronniehegelund.blogspot.co.nz/2013/01/extension-methods-in-typescript.html&#34;&gt;http://ronniehegelund.blogspot.co.nz/2013/01/extension-methods-in-typescript.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/angular/angular/issues/5807#issuecomment-164678165&#34;&gt;https://github.com/angular/angular/issues/5807#issuecomment-164678165&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/angular/angular/issues/6266&#34;&gt;https://github.com/angular/angular/issues/6266&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2016 resolution</title>
+      <link>http://www.mindginative.com/post/2016-resolution/</link>
+      <pubDate>Fri, 01 Jan 2016 10:41:04 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/2016-resolution/</guid>
+      <description>
+
+&lt;h3 id=&#34;untitled-updated-2016-resolution-s&#34;&gt;Untitled… updated 2016 resolution(s)&lt;/h3&gt;
+
+&lt;p&gt;it&amp;rsquo;s not a long list but I&amp;rsquo;ll give it a shot&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Start a writing a blog (first yay!)&lt;/li&gt;
+&lt;li&gt;Track my goals (web apps, any suggestion ?)&lt;/li&gt;
+&lt;li&gt;Be healthy&lt;/li&gt;
+&lt;li&gt;Watch Jono &amp;amp; Ben (c’mon ? what ?)&lt;/li&gt;
+&lt;li&gt;Edutech my kids with Khan Academy (had 1 today for my 3 yr old)&lt;/li&gt;
+&lt;li&gt;Deep dive into Rustlang&lt;/li&gt;
+&lt;li&gt;Be patient&lt;/li&gt;
+&lt;li&gt;Read 1 book per month&lt;/li&gt;
+&lt;li&gt;Experiment and turn small ideas into life&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

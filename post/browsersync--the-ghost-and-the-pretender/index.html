@@ -7,7 +7,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 	<head>
-		<title>moving to hugo &middot; am lazy, too many typos in here - will try to updat litir!</title>
+		<title>Browsersync -- The Ghost and the Pretender &middot; am lazy, too many typos in here - will try to updat litir!</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Richard Sentino">
@@ -49,31 +49,99 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<!-- Main -->
 		<div id="main">
 			
-	<h1>moving to hugo</h1>
+	<h1>Browsersync -- The Ghost and the Pretender</h1>
 	<span>
 	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
-	    <time datetime="2016-08-29 02:51:23 &#43;1200 NZST">2016-08-29</time>&nbsp;&nbsp;
+	    <time datetime="2016-05-04 11:10:22 &#43;1200 NZST">2016-05-04</time>&nbsp;&nbsp;
 
 	    
+	        
+	        
+	    
 
+	    
+	       
+	       
 	    
 	</span>
 
 	<p>
-	    <p>I was initially planning to use plain Github Pages for my blogging but I&rsquo;ve read some good reviews with Hugo.
-I&rsquo;ll give it a try and see how it goes.</p>
+	    
 
-<p>I have written a few blog posts over at Medium but I don&rsquo;t want to spam my Twitter followers with random information that don&rsquo;t matter to them.
-I might sync a few bits from time to time.</p>
+<p>Looking at few stats: <a href="https://github.com/BrowserSync/browser-sync/stargazers">6.9k</a> Github stars and <a href="https://www.npmjs.com/package/browser-sync">700k</a> npm downloads in the last month
+(at the time of this writing) it’s no wonder that you can always find plugins,
+tools or utilities that will link up Browsersync with your favourite frontend
+or server side framework to ease up your browser testing. It is packed with good
+features as mentioned in Addy Osmani’s 2013 blog but its ghostMode and Proxy options
+are spot on in my opinion.</p>
+
+<ul>
+<li>ghostMode — Clicks, Scrolls &amp; Form inputs on any device will be mirrored to all others.</li>
+<li>Proxy — Acts as an intermediary or a mini server between the browser and your backend/api/webapp (sounds about right eh, I guess)</li>
+</ul>
+
+<blockquote>
+<p>Let’s try the “fast food” way so we can use the two options without writing a single line of code and become productive , right now— c’mon! are you sure ? you asked.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="the-ghost-and-the-pretender">The Ghost and the Pretender</h3>
+
+<p>Here’s the basic steps to utilise ghostMode and Proxy options with your web app:</p>
+
+<p>1.) Install browsersync</p>
+
+<pre><code class="language-bash">$&gt; npm install -g browser-sync
+</code></pre>
+
+<p>2.) Start browsersync as proxy against your webapp, we’ll use <a href="http://stackoverflow.com/">http://stackoverflow.com/</a> as an example</p>
+
+<pre><code class="language-bash">$&gt; browser-sync start --proxy http://stackoverflow.com
+</code></pre>
+
+<p>You will see the following message in terminal:</p>
+
+<pre><code class="language-bash">[BS] Proxying: http://stackoverflow.com
+[BS] Access URLs:
+ — — — — — — — — — — — — — — — — — — — -
+ Local: http://localhost:3000
+ External: http://192.168.178.24:3000
+ — — — — — — — — — — — — — — — — — — — -
+ UI: http://localhost:3001
+ UI External: http://192.168.178.24:3001
+</code></pre>
+
+<p>3.) Navigate to the proxy URL</p>
+
+<blockquote>
+<p><a href="http://localhost:3000">http://localhost:3000</a></p>
+</blockquote>
+
+<p>4.) There’s no #4</p>
+
+<p>5.) Done</p>
+
+<p><img src="/images/browsersync.png" width="800" alt="Browsersync Dashboard" /></p>
+
+<hr />
+
+<h3 id="example">Example</h3>
+
+<p>Here’s how the proxyfied stackoverflow looks like. On the left is iPhone6 simulator, Firefox in the middle and then Opera.</p>
+
+<p><img src="/images/browsersync-example.gif" width="800" alt="Browsersync Dashboard" /></p>
+
+<h3 id="enjoy">Enjoy!</h3>
 
 	</p>
 
 	<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'mindginative';
-    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/moving-to-hugo\/';
-    var disqus_title = 'moving to hugo';
-    var disqus_url = 'http:\/\/www.mindginative.com\/post\/moving-to-hugo\/';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/browsersync--the-ghost-and-the-pretender\/';
+    var disqus_title = 'Browsersync -- The Ghost and the Pretender';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/browsersync--the-ghost-and-the-pretender\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

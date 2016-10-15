@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Xhyve &#43; Alpine Linux &middot; am lazy, too many typos in here - will try to updat litir!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="am lazy, too many typos in here - will try to updat litir!">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.16" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>Xhyve &#43; Alpine Linux</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2016-01-18 11:07:49 &#43;1200 &#43;1200">2016-01-18</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	    
+
+	    
+	       
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>During the 2015 Xmas holiday break I’ve been meaning to play around with Docker or in particular CoreOS on my Mac machine. I know it’s pretty easy to whip with a few CLI commands — Vagrant + VirtualBox, done! — but I wanted something different and wanted to avoid too many abstraction eg. running a virtual environment on top of a virtual environment. A few google searches got me into xhyve, can’t remember the exact keywords I used — sorry.</p>
+
+<p>xhyve is relatively a new project, roughly 7 months old as of this writing, out of curiosity I jumped right away and see if I could install Alpine Linux. On the side note, the reason I’m looking at running Alpine Linux because it was mentioned at Vagga’s documentation, period, I will do a post about Vagga.</p>
+
+<p>I haven’t used Alpine Linux before but luckily I found this Tweet and the link to the blog — thanks to Aria Stewart ;). I then grabbed the latest Alpine release <code>alpine-3.3.0-x86_64.iso</code> but I ran into a hell lot of booting issues, my first night wasn’t a success. The following day, I realised that scavenging through forums, stackoverflow, &amp; etc isn’t gonna help me out even just getting the basic Alpine boot up and decided to just use the version <code>alpine-3.2.3-x86_64.iso</code> used by Aria. It definitely works but ran into a couple minor issues so I decided to chuck it into a Bash script and make changes as I go.</p>
+
+<p>Here’s my Github gist</p>
+
+<pre><code class="language-bash">#!/bin/sh
+
+KERNEL=&quot;vmlinuz-grsec&quot;
+INITRD=&quot;initramfs-grsec&quot;
+CMDLINE=&quot;alpine_dev=cdrom:iso9660 modules=loop,squashfs,sd-mod,usb-storage,sr-mod,earlyprintk=serial console=ttyS0&quot;
+
+MEM=&quot;-m 1G&quot;
+IMG_CD=&quot;-s 3,ahci-cd,alpine-3.2.3-x86_64.iso&quot;
+PCI_DEV=&quot;-s 0:0,hostbridge -s 31,lpc&quot;
+LPC_DEV=&quot;-l com1,stdio&quot;
+ACPI=&quot;-A&quot;
+#SMP=&quot;-c 2&quot;
+
+# sudo if you want networking enabled
+NET=&quot;-s 2:0,virtio-net&quot;
+
+xhyve $ACPI $MEM $SMP $PCI_DEV $LPC_DEV $NET $IMG_CD $IMG_HDD -f kexec,$KERNEL,$INITRD,&quot;$CMDLINE&quot;
+
+</code></pre>
+
+<p>After a successful boot up</p>
+
+<p><img src="/images/xhyve-alpine.png" width="600" alt="Alpine Linux inside xhyve v0.2.0" /></p>
+
+<p>One last thing, definitely worth looking into is running CoreOS inside xhyve!</p>
+
+<p>Some references I’ve found while working on the install process</p>
+
+<ul>
+<li><a href="https://coreos.com/blog/coreos-and-xhyve-tech-preview.html">https://coreos.com/blog/coreos-and-xhyve-tech-preview.html</a></li>
+<li><a href="https://github.com/ailispaw/boot2docker-xhyve">https://github.com/ailispaw/boot2docker-xhyve</a></li>
+<li><a href="https://medium.com/the-journey-of-code/creating-virtual-dev-environment-with-xhyve-fe501005fc6c#.jdmy6icbv">https://medium.com/the-journey-of-code/creating-virtual-dev-environment-with-xhyve-fe501005fc6c#.jdmy6icbv</a></li>
+</ul>
+
+<h3 id="update-8-may-2016">Update: 8/May/2016</h3>
+
+<p>Just after 2 months writing about xhyve + alpine,
+Docker announced they would go native for their Docker engine on top of xhyve — 
+and just 2 days ago I got accepted for testing Docker for Mac.</p>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/xhyve-alpine-linux\/';
+    var disqus_title = 'Xhyve \x2b Alpine Linux';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/xhyve-alpine-linux\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script src="http://www.mindginative.com/js/skel.min.js"></script>
+<script src="http://www.mindginative.com/js/util.js"></script>
+
+<script src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

@@ -1,7 +1,12 @@
 +++
-categories = []
+categories = [
+    "blog"
+]
 date = "2016-05-04T11:10:22+12:00"
-tags = []
+tags = [
+    "testing",
+    "browsersync"
+]
 title = "Browsersync -- The Ghost and the Pretender"
 
 +++

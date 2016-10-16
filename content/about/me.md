@@ -1,6 +1,6 @@
 +++
 categories = []
-date = "1970-01-01T00:02:48+12:00"
+date = "2002-01-01T00:02:48+12:00"
 tags = []
 title = "About"
 
@@ -10,7 +10,6 @@ Hi there, My name is **Richard** I'm a web developer from New Zealand. A few lit
 
 * I write code for the web
 * I am cool, not friendly because I am **VERY** friendly!
-* I currently work at Booktrack
 * I put code on Github
 * I like to automate things with CI
 
@@ -49,5 +48,3 @@ I love to go seminars and conferences whenever I can. Below are the list of conf
 * 2002 - Systems Technology Institute IT Convention
 * 2000 - Systems Technology Institute IT Convention
 * 1999 - Systems Technology Institute IT Convention (the Internet & HTML)
-
-

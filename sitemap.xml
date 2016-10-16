@@ -17,6 +17,16 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/post/owasp-new-zealand-day-2016/</loc>
+    <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/post/docker-3rd-bday-training/</loc>
+    <lastmod>2016-03-23T16:46:45+13:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/xhyve-alpine-linux/</loc>
     <lastmod>2016-01-18T11:07:49+12:00</lastmod>
   </url>
@@ -33,7 +43,7 @@
   
   <url>
     <loc>http://www.mindginative.com/about/me/</loc>
-    <lastmod>1970-01-01T00:02:48+12:00</lastmod>
+    <lastmod>2002-01-01T00:02:48+12:00</lastmod>
   </url>
   
 </urlset>

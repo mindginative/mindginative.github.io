@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abouts on am lazy, too many typos in here - will try to updat litir!</title>
-    <link>http://www.mindginative.com/about/</link>
-    <description>Recent content in Abouts on am lazy, too many typos in here - will try to updat litir!</description>
+    <title>About-rsses on am lazy, too many typos in here - will try to updat litir!</title>
+    <link>http://www.mindginative.com/about/index.xml</link>
+    <description>Recent content in About-rsses on am lazy, too many typos in here - will try to updat litir!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 1970 00:02:48 +1200</lastBuildDate>
+    <lastBuildDate>Tue, 01 Jan 2002 00:02:48 +1200</lastBuildDate>
     <atom:link href="http://www.mindginative.com/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
       <link>http://www.mindginative.com/about/me/</link>
-      <pubDate>Thu, 01 Jan 1970 00:02:48 +1200</pubDate>
+      <pubDate>Tue, 01 Jan 2002 00:02:48 +1200</pubDate>
       
       <guid>http://www.mindginative.com/about/me/</guid>
       <description>
@@ -22,7 +22,6 @@
 &lt;ul&gt;
 &lt;li&gt;I write code for the web&lt;/li&gt;
 &lt;li&gt;I am cool, not friendly because I am &lt;strong&gt;VERY&lt;/strong&gt; friendly!&lt;/li&gt;
-&lt;li&gt;I currently work at Booktrack&lt;/li&gt;
 &lt;li&gt;I put code on Github&lt;/li&gt;
 &lt;li&gt;I like to automate things with CI&lt;/li&gt;
 &lt;/ul&gt;

@@ -1,5 +1,7 @@
 +++
-categories = []
+categories = [
+    "blog"
+]
 date = "2016-01-01T10:41:04+12:00"
 tags = []
 title = "2016 resolution"

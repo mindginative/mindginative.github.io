@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Go1.7 installation via GVM on Ubuntu Bash on Windows 10 &middot; am lazy, too many typos in here - will try to updat litir!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="am lazy, too many typos in here - will try to updat litir!">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.18-DEV" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>Go1.7 installation via GVM on Ubuntu Bash on Windows 10</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2016-11-26 22:27:10 &#43;1300 DST">2016-11-26</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	            <i class="fa fa-folder"></i>&nbsp;&nbsp;
+	            
+	            <a class="article-category-link" href="http://www.mindginative.com/categories/tools">tools</a>
+	            
+	            
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/bash">bash</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/windows10">windows10</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>Since moving to <a href="https://www.gohugo.io/">Hugo</a> few months ago my installation
+history with <a href="https://golang.org/">Go</a> was quick and dirty, I just want to get something
+up running to get started with Hugo. 48 hours ago I was playing with Go,
+I thought of building a simple cli utility where CI server can hook in and start building something
+- of course it has be built on top of Go, enough to get my around its dev-ecosystem.</p>
+
+<p>Bash on Windows 10 shipped with Ubuntu 14.04.5 but unfortunately the repo contains Go1.6.
+I could use the Personal Package Archive (ppa) repo however coming from Node Version Manager (nvm),
+I find it a lot easier to switchover from one version to another -
+I have NodeJS projects which requires specific version to run eg: 0.x, 4.x and 6.x and so a version manager is a big help.</p>
+
+<hr />
+
+<h4 id="installation">Installation</h4>
+
+<p>it&rsquo;s pretty straight forward, see gvm steps at <a href="https://github.com/moovweb/gvm#installing">https://github.com/moovweb/gvm#installing</a></p>
+
+<h4 id="notes">Notes</h4>
+
+<p>These are just a few details that I&rsquo;ve encountered during gvm installation, it might be of your help.</p>
+
+<h4 id="failed-to-install-go1-7">Failed to install Go1.7</h4>
+
+<pre><code class="language-bash">$&gt; gvm install go1.7
+
+Downloading Go source...
+Installing go1.7...
+ * Compiling...
+ERROR: Failed to compile. Check the logs at /home/urix/.gvm/logs/go-go1.7-compile.log
+ERROR: Failed to use installed version
+</code></pre>
+
+<p>Make sure to set to issue this command before you install v1.7</p>
+
+<pre><code class="language-bash">gvm install go1.4 -B
+gvm use go1.4
+export GOROOT_BOOTSTRAP=$GOROOT
+gvm install go1.7
+</code></pre>
+
+<p>Set the default Go1.7 version to get the same version when you close and open the Bash shell</p>
+
+<pre><code class="language-bash">gvm use go1.7 --default
+</code></pre>
+
+<h4 id="goroot-and-gopath">GOROOT and GOPATH</h4>
+
+<p>These environment variables will be set automatically by gvm for you when you switch versions,
+which is handy when testing packages with different versions of Go.</p>
+
+<p>My environment for Go1.7</p>
+
+<pre><code class="language-bash">$&gt; go version
+go version go1.7 linux/amd64
+
+$&gt; go env
+
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;&quot;
+GOEXE=&quot;&quot;
+GOHOSTARCH=&quot;amd64&quot;
+GOHOSTOS=&quot;linux&quot;
+GOOS=&quot;linux&quot;
+GOPATH=&quot;/home/urix/.gvm/pkgsets/go1.7/global&quot;
+GORACE=&quot;&quot;
+GOROOT=&quot;/home/urix/.gvm/gos/go1.7&quot;
+GOTOOLDIR=&quot;/home/urix/.gvm/gos/go1.7/pkg/tool/linux_amd64&quot;
+CC=&quot;gcc&quot;
+GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build356629057=/tmp/go-build -gno-record-gcc-switches&quot;
+CXX=&quot;g++&quot;
+CGO_ENABLED=&quot;1&quot;
+
+</code></pre>
+
+<p>and Go1.4</p>
+
+<pre><code class="language-bash">$&gt; gvm use go1.4
+Now using version go1.4
+
+$&gt; go version
+go version go1.4 linux/amd64
+
+$&gt; go env
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;&quot;
+GOCHAR=&quot;6&quot;
+GOEXE=&quot;&quot;
+GOHOSTARCH=&quot;amd64&quot;
+GOHOSTOS=&quot;linux&quot;
+GOOS=&quot;linux&quot;
+GOPATH=&quot;/home/urix/.gvm/pkgsets/go1.4/global&quot;
+GORACE=&quot;&quot;
+GOROOT=&quot;/home/urix/.gvm/gos/go1.4&quot;
+GOTOOLDIR=&quot;/home/urix/.gvm/gos/go1.4/pkg/tool/linux_amd64&quot;
+CC=&quot;gcc&quot;
+GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fmessage-length=0&quot;
+CXX=&quot;g++&quot;
+CGO_ENABLED=&quot;1&quot;
+</code></pre>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/go1-7-bash-on-win10\/';
+    var disqus_title = 'Go1.7 installation via GVM on Ubuntu Bash on Windows 10';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/go1-7-bash-on-win10\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script src="http://www.mindginative.com/js/skel.min.js"></script>
+<script src="http://www.mindginative.com/js/util.js"></script>
+
+<script src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

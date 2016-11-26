@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.mindginative.com/</loc>
-    <lastmod>2016-08-29T02:51:23+12:00</lastmod>
+    <loc>http://www.mindginative.com/post/go1-7-bash-on-win10/</loc>
+    <lastmod>2016-11-26T22:27:10+13:00</lastmod>
   </url>
   
   <url>
@@ -44,6 +44,88 @@
   <url>
     <loc>http://www.mindginative.com/about/me/</loc>
     <lastmod>2002-01-01T00:02:48+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/about/</loc>
+    <lastmod>2002-01-01T00:02:48+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/bash/</loc>
+    <lastmod>2016-11-26T22:27:10+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/categories/conference/</loc>
+    <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/docker/</loc>
+    <lastmod>2016-03-23T16:46:45+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/categories/meetup/</loc>
+    <lastmod>2016-03-23T16:46:45+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/owasp/</loc>
+    <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/post/</loc>
+    <lastmod>2016-11-26T22:27:10+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/security/</loc>
+    <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/categories/tools/</loc>
+    <lastmod>2016-11-26T22:27:10+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/training/</loc>
+    <lastmod>2016-03-23T16:46:45+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/windows10/</loc>
+    <lastmod>2016-11-26T22:27:10+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/</loc>
+    <lastmod>2016-11-26T22:27:10+13:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

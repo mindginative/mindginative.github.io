@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on am lazy, too many typos in here - will try to updat litir!</title>
+    <link>http://www.mindginative.com/tags/ubuntu/index.xml</link>
+    <description>Recent content in Ubuntu on am lazy, too many typos in here - will try to updat litir!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://www.mindginative.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Install FFmpeg from source on Ubuntu Bash on Win10</title>
+      <link>http://www.mindginative.com/post/install-ffmpeg-from-source-ubuntu-win10/</link>
+      <pubDate>Mon, 28 Nov 2016 01:17:35 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/install-ffmpeg-from-source-ubuntu-win10/</guid>
+      <description>&lt;p&gt;I was working on transcoding videos into different formats, resolutions so it could be played on various desktops, tablets and mobile devices.
+My main working machine is Dell XPS13 on Windows 10 with Ubuntu Bash enabled, some of my needed libraries is missing and needs recompilation of FFmpeg the one
+that came from Ubuntu 14.04 repo.&lt;/p&gt;
+
+&lt;p&gt;I think I&amp;rsquo;ve literraly spent hours or probably days buildin/re-building libraries just to get the videos transcoded into my desired format.&lt;/p&gt;
+
+&lt;p&gt;I got tired of copy/pasting the script from the &lt;a href=&#34;https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu&#34;&gt;wiki&lt;/a&gt;. I also needed a script where I could drop into my build server.
+There are couple of examples online, I&amp;rsquo;ve tried some of those, and some are a bit outdated now.&lt;/p&gt;
+
+&lt;p&gt;I ripped off the FFmpeg compilation and dropped into a simple bash script. All I needed to do now is just:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo installer.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo uninstaler.sh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;grab the script here: &lt;a href=&#34;https://github.com/rixrix/ffmpeg_ubuntu_installer.sh&#34;&gt;https://github.com/rixrix/ffmpeg_ubuntu_installer.sh&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

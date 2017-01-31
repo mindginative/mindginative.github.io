@@ -127,6 +127,11 @@ paginate = 10
 	weight = 0
 
 [[menu.main]]
+	name = "Projects"
+	url  = "projects/list"
+	weight = 9
+
+[[menu.main]]
 	name = "About"
 	url  = "about/me"
 	weight = 10

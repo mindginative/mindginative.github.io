@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/projects/list/</loc>
+    <lastmod>2017-01-31T21:54:59+13:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/install-ffmpeg-from-source-ubuntu-win10/</loc>
     <lastmod>2016-11-28T01:17:35+13:00</lastmod>
   </url>
@@ -99,6 +104,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/projects/</loc>
+    <lastmod>2017-01-31T21:54:59+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/security/</loc>
     <lastmod>2016-04-15T16:18:14+13:00</lastmod>
     <priority>0</priority>
@@ -135,7 +146,7 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2016-11-28T01:17:35+13:00</lastmod>
+    <lastmod>2017-01-31T21:54:59+13:00</lastmod>
     <priority>0</priority>
   </url>
   

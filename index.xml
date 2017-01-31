@@ -6,8 +6,54 @@
     <description>Recent content on am lazy, too many typos in here - will try to updat litir!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Nov 2016 01:17:35 +1300</lastBuildDate>
+    <lastBuildDate>Tue, 31 Jan 2017 21:54:59 +1300</lastBuildDate>
     <atom:link href="http://www.mindginative.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Projects</title>
+      <link>http://www.mindginative.com/projects/list/</link>
+      <pubDate>Tue, 31 Jan 2017 21:54:59 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/projects/list/</guid>
+      <description>&lt;p&gt;This list represents some of the projects that are either hobby/personal, opensource and or
+opensource contributions.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/angular/angular/search?q=rixrix&amp;amp;type=Issues&amp;amp;utf8=%E2%9C%93&#34;&gt;Angular2 Contribution&lt;/a&gt; - for almost 3 years at Booktrack on front-end team solely using AngularJS, I managed to contribute to Angular2 since its alpha releases at the same time while working on Angular2-based product. Proud to be recognised as &lt;a href=&#34;https://angularjs.blogspot.co.nz/2016/09/angular2-final.html&#34;&gt;contributor&lt;/a&gt; on the v2.0.0 production release even though my contribution was just a tad tiny.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/TSJS-lib-generator&#34;&gt;TypeScript Contribution&lt;/a&gt; - I love the &lt;a href=&#34;https://www.typescriptlang.org/&#34;&gt;TypeScript&lt;/a&gt; language and I&amp;rsquo;d like the project to continue henced I made a tiny &lt;a href=&#34;https://github.com/Microsoft/TypeScript/blob/master/AUTHORS.md&#34;&gt;contribution&lt;/a&gt; &lt;a href=&#34;https://github.com/Microsoft/TSJS-lib-generator/pull/30&#34;&gt;PR30&lt;/a&gt; aside from submitting issues or testing the latest releases.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/mosaic-photo&#34;&gt;Photo Mosaic in JS&lt;/a&gt; - A little test project I did when I applied for a JS development role at &lt;a href=&#34;https://www.canva.com/&#34;&gt;Canva&lt;/a&gt; , unfortunately my output wasn&amp;rsquo;t good enough to get accepted. I turned their feedback into &lt;a href=&#34;https://github.com/rixrix/mosaic-photo/issues&#34;&gt;issues&lt;/a&gt; to revisit this project at some stage.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/vscode-terraform-snippets&#34;&gt;Terraform Snippets&lt;/a&gt; for &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VSCode&lt;/a&gt; -This library contains at least 550 &lt;a href=&#34;https://www.terraform.io/&#34;&gt;Terraform&lt;/a&gt; code snippets, which would roughly saves you at least 5,000 lines of code snippets.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/stencil&#34;&gt;Stencil Angular2&lt;/a&gt; - This is my minimal version of Angular2 starter kit. It was primarily inspired by @angularclass but thought I could reduce the infrastructure complexity.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/stencil-ng1&#34;&gt;Stencil Angular1&lt;/a&gt; - A bare minimum Angular1 starter kit with only Webpack and NPM script as the build infrastructure.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/stencil-lambda&#34;&gt;Stencil Lambda&lt;/a&gt; - Starter template for all your serverless development on AWS lambda w/ Apex, TypeScript &amp;amp; Webpack. I&amp;rsquo;ve used it for my personal serverless project/.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/npm-git-lock&#34;&gt;NPM Git Lock&lt;/a&gt; - Added various patches for in-house use at Booktrack deployment infrastructure. A CLI tool to lock all node_modules dependencies to a separate git repository.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/node-podcast&#34;&gt;Node Podcast&lt;/a&gt; - Added patch for in-house use at MediaWorks NZ.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/stencil-project/stencil-d3&#34;&gt;D3 on Stencil&lt;/a&gt; - D3.js component for Angular2 via Stencil starter kit.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/gulp-stylint&#34;&gt;Stylus Linter for GulpJS&lt;/a&gt; - Experiment with building &lt;a href=&#34;http://gulpjs.com/&#34;&gt;GulpJS&lt;/a&gt; plugin for linting &lt;a href=&#34;http://stylus-lang.com/&#34;&gt;Stylus&lt;/a&gt; style sheets.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/stencil-project/express-dustjs-kit&#34;&gt;Express + Dust.js Starter Kit&lt;/a&gt; - A bare minimum starter kit for ExpressJS and DustJS&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SodiumFRP/sodium-typescript&#34;&gt;Sodium JS/TypeScript&lt;/a&gt; - Typescript/Javascript implementation of Sodium FRP (Functional Reactive Programming) library.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/typescript-collections&#34;&gt;TypeScript Collections&lt;/a&gt; - minor patch for use with Sodium TypeScript library.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/ffmpeg_ubuntu_installer.sh&#34;&gt;FFMpeg Ubuntu Installer&lt;/a&gt; - A collection of Bash scripts for installation of FFMpeg plugins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/singletasking&#34;&gt;SingleTasking&lt;/a&gt; -Easy web todo app&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/webpinger-nodejs&#34;&gt;Webpinger NodeJS&lt;/a&gt; - AngularJS + NodeJS domain latency checker&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/webpinger-zf1&#34;&gt;Webpinger ZendFramework&lt;/a&gt; - AngularJS + ZendFramework v1 domain latency checker&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/madeinnz-mobile&#34;&gt;Made in NZ Mobile&lt;/a&gt; - Hybrid Cordova-based mobile application&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/madeinnz&#34;&gt;Made in NZ Frontend&lt;/a&gt; - Frontend for Made in NZ project&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/arrow-randomizer&#34;&gt;Arrow Randomizer&lt;/a&gt; - It&amp;rsquo;s the equivalent to TSA&amp;rsquo;s $1.4M app randomizer &lt;a href=&#34;https://news.slashdot.org/story/16/04/04/2227200/tsa-paid-14-million-for-randomizer-app-that-chooses-left-or-right&#34;&gt;https://news.slashdot.org/story/16/04/04/2227200/tsa-paid-14-million-for-randomizer-app-that-chooses-left-or-right&lt;/a&gt;. I built the app before going off for work, probably in 30mins.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/rust-nodejs-ffi&#34;&gt;Rust + NodeJS FFI&lt;/a&gt; - Experiment with calling Rust library in NodeJS via Foreign Function Interface (FFI)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/silverstripe-clickbank&#34;&gt;SilverStrip CMS + Clickbank Module&lt;/a&gt; - &lt;a href=&#34;https://www.clickbank.com/&#34;&gt;ClickBank&lt;/a&gt; module for &lt;a href=&#34;https://www.silverstripe.org/&#34;&gt;Silverstripe CMS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/silverstripe-lucene&#34;&gt;Silverstripe Lucene&lt;/a&gt; - Added patch for my personal project&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/rpi-access-point&#34;&gt;Raspberry Pi acccess point&lt;/a&gt; - A set of configuration / hacks / scripts that I&amp;rsquo;ve compiled from across different sources. I was playing with RPi as an WiFi access point for throttling connected device in various connection such as 3G, Dial-up and or DSL.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://m0n0.ch/wall/index.php&#34;&gt;M0n0Dev for M0n0wall&lt;/a&gt; - Submitted patches to upstream. A PHP script and additional files which automate nearly all of the steps required to build a working &lt;a href=&#34;http://m0n0.ch/wall/index.php&#34;&gt;m0n0wall&lt;/a&gt; firewall image from SVN.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/zafu&#34;&gt;Zafu&lt;/a&gt; - Cisco-Like CLI on a Nix system for the CouchDB database administration.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/agnos&#34;&gt;Agnos Test Runner&lt;/a&gt; - My attempt to build a language-agnostic test runner and managed to get PHP running.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/jobberrails&#34;&gt;JobberRails&lt;/a&gt; - A forked version which I managed to add few features for my Job Site. This was when Rails was so hot, circa 2008-ish.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/tklpatch-silverstripe&#34;&gt;TurnKey Linux patch for SilverStripe&lt;/a&gt; - A TurnKey Linux patch for Silverstripe CMS&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/cordova-plugin-battery-status&#34;&gt;FirefoxOS Battery Status Plugin&lt;/a&gt; - Submitted a pull request &lt;a href=&#34;https://github.com/apache/cordova-plugin-battery-status/pull/11&#34;&gt;#11&lt;/a&gt; to &lt;a href=&#34;https://cordova.apache.org/&#34;&gt;Apache Cordova&lt;/a&gt; project to add support for FirefoxOS battery status&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/ui-playground&#34;&gt;UI Playground&lt;/a&gt; - A UI/UX playground with HarpJS and browser sync.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Install FFmpeg from source on Ubuntu Bash on Win10</title>

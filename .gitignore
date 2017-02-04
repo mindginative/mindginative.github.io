@@ -1,3 +1,6 @@
 public
 .vscode
 *.log
+target
+Cargo.lock
+build

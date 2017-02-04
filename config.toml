@@ -1,10 +1,15 @@
 baseurl = "http://www.mindginative.com/"
 languageCode = "en-us"
-title = "am lazy, too many typos in here - will try to updat litir!"
+title = "Richard Sentino via mindginative"
 theme = "strata"
 disqusShortname = "mindginative"
+
+# build directory
+publishDir = "build"
+
 # Enable Google Analytics by inserting your tracking code
 googleAnalytics = "UA-55684248-1"
+
 # Define how many posts should appear on a site
 paginate = 10
 
@@ -12,7 +17,7 @@ paginate = 10
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
 	name = "Richard Sentino"
-	description = "am lazy, too many typos in here - will try to updat litir!"
+	description = "Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard's page for more information."
 
 	# Format dates with Go's time formatting
 	date_format = "2006-01-02"

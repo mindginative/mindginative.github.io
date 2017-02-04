@@ -69,6 +69,18 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/categories/blog/</loc>
+    <lastmod>2016-05-04T11:10:22+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/browsersync/</loc>
+    <lastmod>2016-05-04T11:10:22+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/categories/</loc>
     <priority>0</priority>
   </url>
@@ -110,6 +122,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/</loc>
+    <lastmod>2017-01-31T21:54:59+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/security/</loc>
     <lastmod>2016-04-15T16:18:14+13:00</lastmod>
     <priority>0</priority>
@@ -117,6 +135,12 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/testing/</loc>
+    <lastmod>2016-05-04T11:10:22+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -141,12 +165,6 @@
   <url>
     <loc>http://www.mindginative.com/tags/windows10/</loc>
     <lastmod>2016-11-28T01:17:35+13:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-01-31T21:54:59+13:00</lastmod>
     <priority>0</priority>
   </url>
   

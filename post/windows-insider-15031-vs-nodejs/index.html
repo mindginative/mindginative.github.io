@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Windows Insider Build 15031 Broke my NVM NodeJS environment &middot; Richard Sentino via mindginative</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard&#39;s page for more information.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.18-DEV" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>Windows Insider Build 15031 Broke my NVM NodeJS environment</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-02-11 13:14:55 &#43;1300 DST">2017-02-11</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	            <i class="fa fa-folder"></i>&nbsp;&nbsp;
+	            
+	            <a class="article-category-link" href="http://www.mindginative.com/categories/ubuntu">ubuntu</a>
+	            &middot;
+	            
+	            <a class="article-category-link" href="http://www.mindginative.com/categories/bash">bash</a>
+	            &middot;
+	            
+	            <a class="article-category-link" href="http://www.mindginative.com/categories/windows10">Windows10</a>
+	            &middot;
+	            
+	            <a class="article-category-link" href="http://www.mindginative.com/categories/nodejs">nodejs</a>
+	            
+	            
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/nodejs">nodejs</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>Yesterday 10th of Feb 2017, I managed to update my PC with the latest <a href="https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97">Windows 10 Insider Preview Build 15031</a>.
+The list contains a massive set of features as well as fixes, so I didn&rsquo;t mind the upgrade. It took at least 20mins to get it done. Once done, my NodeJS environment started complaining, btw I am using <a href="https://github.com/creationix/nvm">Node Version Manager</a>.</p>
+
+<p>Here&rsquo;s what I got when switching NodeJS versions:</p>
+
+<pre><code>nvm use v4.3.2
+net.js:129
+    this._handle.open(options.fd);
+                 ^
+
+Error: Unknown system error -25: Unknown system error -25, uv_pipe_open
+    at Error (native)
+    at new Socket (net.js:129:18)
+    at createWritableStdioStream (node.js:601:18)
+    at process.stdout (node.js:627:16)
+    at module.exports (/home/urix/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npmlog/node_modules/set-blocking/index.js:2:11)
+    at Object.&lt;anonymous&gt; (/home/urix/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npmlog/log.js:11:1)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+nvm is not compatible with the npm config &quot;prefix&quot; option: currently set to &quot;&quot;
+Run `nvm use --delete-prefix v4.3.2` to unset it.
+</code></pre>
+
+<p>luckily, folks at <a href="https://github.com/Microsoft/BashOnWindows/issues/1683#issuecomment-279101631">Bash on Windows were friendly and responsive</a>.
+The timeline for the fix is weeks due to that it&rsquo;s a driver issue but unforunately I can&rsquo;t wait as I need to do some NodeJS work related stuff on various releases.
+I develop and maintain some antiquated NodeJS releases going back as far as v0.12.x hence NVM is my main tool.</p>
+
+<p>I&rsquo;ve switched to the previous inside build prior to 15301 - it took probably less than 5mins to do. I&rsquo;m now on <a href="https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97">Windows Insider Preview Build 15025.100</a></p>
+
+<p>Enjoy!</p>
+
+<h3 id="referrences">Referrences</h3>
+
+<ul>
+<li><a href="https://github.com/Microsoft/BashOnWindows/issues/1683">https://github.com/Microsoft/BashOnWindows/issues/1683</a></li>
+<li><a href="https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97">https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97</a></li>
+<li><a href="https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97">https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/windows-insider-15031-vs-nodejs\/';
+    var disqus_title = 'Windows Insider Build 15031 Broke my NVM NodeJS environment';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/windows-insider-15031-vs-nodejs\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows10 on Richard Sentino via mindginative</title>
+    <link>http://www.mindginative.com/categories/windows10/index.xml</link>
+    <description>Recent content in Windows10 on Richard Sentino via mindginative</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://www.mindginative.com/categories/windows10/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Windows Insider Build 15031 Broke my NVM NodeJS environment</title>
+      <link>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</link>
+      <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</guid>
+      <description>
+
+&lt;p&gt;Yesterday 10th of Feb 2017, I managed to update my PC with the latest &lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97&#34;&gt;Windows 10 Insider Preview Build 15031&lt;/a&gt;.
+The list contains a massive set of features as well as fixes, so I didn&amp;rsquo;t mind the upgrade. It took at least 20mins to get it done. Once done, my NodeJS environment started complaining, btw I am using &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;Node Version Manager&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s what I got when switching NodeJS versions:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nvm use v4.3.2
+net.js:129
+    this._handle.open(options.fd);
+                 ^
+
+Error: Unknown system error -25: Unknown system error -25, uv_pipe_open
+    at Error (native)
+    at new Socket (net.js:129:18)
+    at createWritableStdioStream (node.js:601:18)
+    at process.stdout (node.js:627:16)
+    at module.exports (/home/urix/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npmlog/node_modules/set-blocking/index.js:2:11)
+    at Object.&amp;lt;anonymous&amp;gt; (/home/urix/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npmlog/log.js:11:1)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+nvm is not compatible with the npm config &amp;quot;prefix&amp;quot; option: currently set to &amp;quot;&amp;quot;
+Run `nvm use --delete-prefix v4.3.2` to unset it.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;luckily, folks at &lt;a href=&#34;https://github.com/Microsoft/BashOnWindows/issues/1683#issuecomment-279101631&#34;&gt;Bash on Windows were friendly and responsive&lt;/a&gt;.
+The timeline for the fix is weeks due to that it&amp;rsquo;s a driver issue but unforunately I can&amp;rsquo;t wait as I need to do some NodeJS work related stuff on various releases.
+I develop and maintain some antiquated NodeJS releases going back as far as v0.12.x hence NVM is my main tool.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve switched to the previous inside build prior to 15301 - it took probably less than 5mins to do. I&amp;rsquo;m now on &lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97&#34;&gt;Windows Insider Preview Build 15025.100&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+&lt;h3 id=&#34;referrences&#34;&gt;Referrences&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Microsoft/BashOnWindows/issues/1683&#34;&gt;https://github.com/Microsoft/BashOnWindows/issues/1683&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97&#34;&gt;https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97&#34;&gt;https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

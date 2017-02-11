@@ -45,6 +45,12 @@ I develop and maintain some antiquated NodeJS releases going back as far as v0.1
 
 I've switched to the previous inside build prior to 15301 - it took probably less than 5mins to do. I'm now on [Windows Insider Preview Build 15025.100](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97)
 
+### Update
+
+Make sure to set `Pause Updates` to `on` to avoid re-installing the latest build 15031 when you restart your PC.
+
+<img src="/images/windows-insider-build-15031.png" width="800" alt="Advanced Options" />
+
 Enjoy!
 
 ### Referrences

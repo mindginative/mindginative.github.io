@@ -20,7 +20,7 @@ I think I've literraly spent hours or probably days buildin/re-building librarie
 I got tired of copy/pasting the script from the [wiki](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu). I also needed a script where I could drop into my build server.
 There are couple of examples online, I've tried some of those, and some are a bit outdated now.
 
-I ripped off the FFmpeg compilation and dropped into a simple bash script. All I needed to do now is just:
+I ripped off the FFmpeg compilation steps and dropped into a simple bash script. All I needed to do now is just:
 
 * `sudo installer.sh`
 * `sudo uninstaler.sh`

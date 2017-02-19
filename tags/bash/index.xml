@@ -23,7 +23,7 @@ that came from Ubuntu 14.04 repo.&lt;/p&gt;
 &lt;p&gt;I got tired of copy/pasting the script from the &lt;a href=&#34;https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu&#34;&gt;wiki&lt;/a&gt;. I also needed a script where I could drop into my build server.
 There are couple of examples online, I&amp;rsquo;ve tried some of those, and some are a bit outdated now.&lt;/p&gt;
 
-&lt;p&gt;I ripped off the FFmpeg compilation and dropped into a simple bash script. All I needed to do now is just:&lt;/p&gt;
+&lt;p&gt;I ripped off the FFmpeg compilation steps and dropped into a simple bash script. All I needed to do now is just:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;sudo installer.sh&lt;/code&gt;&lt;/li&gt;

@@ -9,6 +9,145 @@
     <atom:link href="http://www.mindginative.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>NodeJS Development Inside Docker on Windows 10</title>
+      <link>http://www.mindginative.com/post/nodejs-development-inside-docker-with-windows10/</link>
+      <pubDate>Wed, 15 Feb 2017 16:39:23 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/nodejs-development-inside-docker-with-windows10/</guid>
+      <description>
+
+&lt;h2 id=&#34;wait-what&#34;&gt;Wait, what ?&lt;/h2&gt;
+
+&lt;p&gt;Moving to Windows10 (6 months ago as of this writing) as my main OS is a bit hard, just a little bit.
+I use commandline &lt;strong&gt;ALL THE TIME&lt;/strong&gt; and I can&amp;rsquo;t live without the developer&amp;rsquo;s Swiss army knife on my side - tiny tools that make our life easier: &lt;em&gt;grep&lt;/em&gt;, &lt;em&gt;sed&lt;/em&gt;, &lt;em&gt;ps&lt;/em&gt;, &lt;em&gt;tree&lt;/em&gt;, &lt;em&gt;ssh&lt;/em&gt;, &lt;em&gt;find&lt;/em&gt; &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;&lt;em&gt;&lt;a href=&#34;https://msdn.microsoft.com/en-us/commandline/wsl/about&#34;&gt;Bash On Windows&lt;/a&gt;&lt;/em&gt;&amp;rdquo; was a good strategy from Microsoft - I didn&amp;rsquo;t bother about switching to Windows and I didn&amp;rsquo;t think twice, I was more worried about which machine to buy.&lt;/p&gt;
+
+&lt;p&gt;I miss some of the good stuff from MacOS: &lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;, &lt;a href=&#34;https://caskroom.github.io/&#34;&gt;Homebrew Cask&lt;/a&gt;, to name a few.
+I&amp;rsquo;ll just get a Mac mini for OSX development.&lt;/p&gt;
+
+&lt;h2 id=&#34;frustration-solution&#34;&gt;Frustration &amp;amp; Solution&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m a member of the &lt;a href=&#34;https://blogs.windows.com/blog/tag/windows-insider-program/&#34;&gt;Windows Insider Program&lt;/a&gt; and their build releases includes fixes to some annoying issues, often with accompanying features.
+However, the build release &lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/&#34;&gt;15031&lt;/a&gt; affected my productivity.
+Bash On Windows would hang up and opening up a separate Bash window gives the same result - you can&amp;rsquo;t even close the window nor the running process - this would have been an easy &lt;code&gt;kill -9 &amp;lt;PID&amp;gt;&lt;/code&gt; command in Mac/Linux, the famous ALT + CTRL + DELETE combination is nowhere effective.
+NodeJS via NVM wouldn&amp;rsquo;t work at all, see issue &lt;a href=&#34;https://github.com/Microsoft/BashOnWindows/issues/1683&#34;&gt;#1683&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Reboot! yep sometimes 6 reboots in a day&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A rollback to the previous build release was the easiest solution. I hit the button and it works, as &lt;a href=&#34;https://github.com/Microsoft/BashOnWindows/issues/1683#issuecomment-279109940&#34;&gt;Ben Hillis&lt;/a&gt; said of Bash On Windows team:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The rollback feature really is great and doesn&amp;rsquo;t get enough credit. It&amp;rsquo;s saved me a couple times as well.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The hang up went out however there are still minor issues like slowness, etc. It&amp;rsquo;s bearable but I&amp;rsquo;ve already thought of finding an alternative,
+one where I could easily jump from different machine and OS eg. MacOS, Linux.&lt;/p&gt;
+
+&lt;h2 id=&#34;docker-docker&#34;&gt;Docker, Docker&lt;/h2&gt;
+
+&lt;p&gt;Enter Docker, I haven&amp;rsquo;t fully utilised this tool since its beta phase. 5 or 6 montsh ago there were issues with mounting folders from host machine inside a container, it was a show stopper for me at that time.
+I was following some steps from John Lees-Miller&amp;rsquo;s &amp;ldquo;&lt;a href=&#34;http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html&#34;&gt;Building a Node App in Docker&lt;/a&gt;&amp;rdquo; and everthing works except for mounting a shared folder.&lt;/p&gt;
+
+&lt;p&gt;February 2017, I revisited steps and it works!&lt;/p&gt;
+
+&lt;h3 id=&#34;docker-with-node-version-manager&#34;&gt;Docker with Node Version Manager&lt;/h3&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the slightly modified Docker configuration.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OS: Ubuntu 16.04&lt;/li&gt;
+&lt;li&gt;NodeJS: v6.9.2 via NVM&lt;/li&gt;
+&lt;li&gt;NVM: v0.33.0&lt;/li&gt;
+&lt;li&gt;Docker: 1.13.1 (10072)&lt;/li&gt;
+&lt;li&gt;Docker Channel: Stable 94675c5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dockerfile&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM ubuntu:16.04
+
+# Constants
+ENV NVM_VERSION v0.33.0
+ENV NODE_VERSION v6.9.2
+ENV HOME=/home/app
+
+# Replace shell with bash so we can source files
+RUN rm /bin/sh &amp;amp;&amp;amp; ln -s /bin/bash /bin/sh
+
+# add special user called `app`
+RUN useradd --user-group --create-home --shell /bin/false app
+
+# Install pre-reqs
+RUN apt-get update &amp;amp;&amp;amp; apt-get install -y \
+    build-essential \
+    checkinstall    \
+    libssl-dev      \
+    curl
+
+USER app
+
+# Install NVM
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
+
+# Install NODE
+RUN source ~/.nvm/nvm.sh; \
+    nvm install $NODE_VERSION; \
+    nvm use --delete-prefix $NODE_VERSION;
+
+USER root
+COPY package.json start.sh $HOME/web/
+RUN chown -R app:app $HOME/*
+
+USER app
+WORKDIR $HOME/web
+RUN source ~/.nvm/nvm.sh; \
+    nvm use --delete-prefix $NODE_VERSION; \
+    npm install;
+
+USER root
+COPY . $HOME/web
+RUN chown -R app:app $HOME/*
+
+USER app
+RUN source ~/.nvm/nvm.sh; \
+    nvm use --delete-prefix $NODE_VERSION;
+
+CMD [&amp;quot;./start.sh&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;docker-compose.yml&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;web:
+  build: .
+  ports:
+    - &#39;8080:8080&#39;
+  environment:
+    NODE_ENV: dev
+  volumes:
+    - .:/home/app/web
+    - /home/app/web/node_modules
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;start.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+# load NVM environment
+source ~/.nvm/nvm.sh
+nvm use --delete-prefix v6.9.2
+
+# start server
+npm start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Enjoy&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Docker 3rd Bday &#43; Training</title>
       <link>http://www.mindginative.com/post/docker-3rd-bday-training/</link>
       <pubDate>Wed, 23 Mar 2016 16:46:45 +1300</pubDate>

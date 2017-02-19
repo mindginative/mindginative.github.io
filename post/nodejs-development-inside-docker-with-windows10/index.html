@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NodeJS Development Inside Docker on Windows 10 &middot; Richard Sentino via mindginative</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard&#39;s page for more information.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.18.1" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>NodeJS Development Inside Docker on Windows 10</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-02-15 16:39:23 &#43;1300 NZDT">2017-02-15</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/windows10">windows10</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/docker">docker</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/linux">linux</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/nodejs">nodejs</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<h2 id="wait-what">Wait, what ?</h2>
+
+<p>Moving to Windows10 (6 months ago as of this writing) as my main OS is a bit hard, just a little bit.
+I use commandline <strong>ALL THE TIME</strong> and I can&rsquo;t live without the developer&rsquo;s Swiss army knife on my side - tiny tools that make our life easier: <em>grep</em>, <em>sed</em>, <em>ps</em>, <em>tree</em>, <em>ssh</em>, <em>find</em> &hellip;</p>
+
+<p>&ldquo;<em><a href="https://msdn.microsoft.com/en-us/commandline/wsl/about">Bash On Windows</a></em>&rdquo; was a good strategy from Microsoft - I didn&rsquo;t bother about switching to Windows and I didn&rsquo;t think twice, I was more worried about which machine to buy.</p>
+
+<p>I miss some of the good stuff from MacOS: <a href="https://brew.sh/">Homebrew</a>, <a href="https://caskroom.github.io/">Homebrew Cask</a>, to name a few.
+I&rsquo;ll just get a Mac mini for OSX development.</p>
+
+<h2 id="frustration-solution">Frustration &amp; Solution</h2>
+
+<p>I&rsquo;m a member of the <a href="https://blogs.windows.com/blog/tag/windows-insider-program/">Windows Insider Program</a> and their build releases includes fixes to some annoying issues, often with accompanying features.
+However, the build release <a href="https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/">15031</a> affected my productivity.
+Bash On Windows would hang up and opening up a separate Bash window gives the same result - you can&rsquo;t even close the window nor the running process - this would have been an easy <code>kill -9 &lt;PID&gt;</code> command in Mac/Linux, the famous ALT + CTRL + DELETE combination is nowhere effective.
+NodeJS via NVM wouldn&rsquo;t work at all, see issue <a href="https://github.com/Microsoft/BashOnWindows/issues/1683">#1683</a>.</p>
+
+<blockquote>
+<p>Reboot! yep sometimes 6 reboots in a day</p>
+</blockquote>
+
+<p>A rollback to the previous build release was the easiest solution. I hit the button and it works, as <a href="https://github.com/Microsoft/BashOnWindows/issues/1683#issuecomment-279109940">Ben Hillis</a> said of Bash On Windows team:</p>
+
+<blockquote>
+<p>The rollback feature really is great and doesn&rsquo;t get enough credit. It&rsquo;s saved me a couple times as well.</p>
+</blockquote>
+
+<p>The hang up went out however there are still minor issues like slowness, etc. It&rsquo;s bearable but I&rsquo;ve already thought of finding an alternative,
+one where I could easily jump from different machine and OS eg. MacOS, Linux.</p>
+
+<h2 id="docker-docker">Docker, Docker</h2>
+
+<p>Enter Docker, I haven&rsquo;t fully utilised this tool since its beta phase. 5 or 6 montsh ago there were issues with mounting folders from host machine inside a container, it was a show stopper for me at that time.
+I was following some steps from John Lees-Miller&rsquo;s &ldquo;<a href="http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html">Building a Node App in Docker</a>&rdquo; and everthing works except for mounting a shared folder.</p>
+
+<p>February 2017, I revisited steps and it works!</p>
+
+<h3 id="docker-with-node-version-manager">Docker with Node Version Manager</h3>
+
+<p>Here&rsquo;s the slightly modified Docker configuration.</p>
+
+<ul>
+<li>OS: Ubuntu 16.04</li>
+<li>NodeJS: v6.9.2 via NVM</li>
+<li>NVM: v0.33.0</li>
+<li>Docker: 1.13.1 (10072)</li>
+<li>Docker Channel: Stable 94675c5</li>
+</ul>
+
+<p>Dockerfile</p>
+
+<pre><code>FROM ubuntu:16.04
+
+# Constants
+ENV NVM_VERSION v0.33.0
+ENV NODE_VERSION v6.9.2
+ENV HOME=/home/app
+
+# Replace shell with bash so we can source files
+RUN rm /bin/sh &amp;&amp; ln -s /bin/bash /bin/sh
+
+# add special user called `app`
+RUN useradd --user-group --create-home --shell /bin/false app
+
+# Install pre-reqs
+RUN apt-get update &amp;&amp; apt-get install -y \
+    build-essential \
+    checkinstall    \
+    libssl-dev      \
+    curl
+
+USER app
+
+# Install NVM
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
+
+# Install NODE
+RUN source ~/.nvm/nvm.sh; \
+    nvm install $NODE_VERSION; \
+    nvm use --delete-prefix $NODE_VERSION;
+
+USER root
+COPY package.json start.sh $HOME/web/
+RUN chown -R app:app $HOME/*
+
+USER app
+WORKDIR $HOME/web
+RUN source ~/.nvm/nvm.sh; \
+    nvm use --delete-prefix $NODE_VERSION; \
+    npm install;
+
+USER root
+COPY . $HOME/web
+RUN chown -R app:app $HOME/*
+
+USER app
+RUN source ~/.nvm/nvm.sh; \
+    nvm use --delete-prefix $NODE_VERSION;
+
+CMD [&quot;./start.sh&quot;]
+</code></pre>
+
+<p>docker-compose.yml</p>
+
+<pre><code>web:
+  build: .
+  ports:
+    - '8080:8080'
+  environment:
+    NODE_ENV: dev
+  volumes:
+    - .:/home/app/web
+    - /home/app/web/node_modules
+</code></pre>
+
+<p>start.sh</p>
+
+<pre><code>#!/bin/bash
+
+# load NVM environment
+source ~/.nvm/nvm.sh
+nvm use --delete-prefix v6.9.2
+
+# start server
+npm start
+</code></pre>
+
+<p>Enjoy</p>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/nodejs-development-inside-docker-with-windows10\/';
+    var disqus_title = 'NodeJS Development Inside Docker on Windows 10';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/nodejs-development-inside-docker-with-windows10\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

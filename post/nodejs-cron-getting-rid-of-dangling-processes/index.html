@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NodeJS &#43; Cron: A series of attempts in getting rid of dangling processes &middot; Richard Sentino via mindginative</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard&#39;s page for more information.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.18.1" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>NodeJS &#43; Cron: A series of attempts in getting rid of dangling processes</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-02-20 20:47:01 &#43;1300 NZDT">2017-02-20</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	    
+
+	    
+	       
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>Short-lived scripts that sucked your resources for 1mins or at most 5mins - is probably fine.
+However, if it is recurring jobs in Cron and involves several tasks and at least an hour of processing - that&rsquo;d be a different story.</p>
+
+<p>I was working on a simple NodeJS-based cron script with only 3 requirements:</p>
+
+<ul>
+<li>extract</li>
+<li>transform</li>
+<li>load</li>
+</ul>
+
+<p>Each one of these however would involve crunching through a million rows of data.</p>
+
+<p>If you take a closer look at the result of <code>ps aux</code> command, you&rsquo;ll notice that there are couple of dangling processes waiting for some event to complete - of which technically the parent process doesn&rsquo;t exists anymore! - the dates would tell you that some of those process had been there for about 9 days.</p>
+
+<p>the script runs on top of AWS EC2 instance so literally we&rsquo;re talking about:</p>
+
+<blockquote>
+<p>CPU ticks, RAM usage, disk spins, etc == <strong>$$$</strong></p>
+</blockquote>
+
+<p>If left unattended this would turn into a zombie manufacturing plant. Anyhow, see the command output below.</p>
+
+<p><code>$&gt; ps aux</code>:</p>
+
+<pre><code>USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      6934  0.0  0.0  59636   448 ?        S    Feb10   0:00 CRON
+ubuntu    7005  0.0  0.0   4440   104 ?        Ss   Feb10   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &gt; /dev/null 2&gt;&amp;1
+ubuntu    7008  0.0  0.0  11112   180 ?        S    Feb10   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu    7094  0.0  0.0   4444   108 ?        S    Feb10   0:00 sh -c npm run export-task &amp;&amp; npm run transform-task &amp;&amp; npm run load-task
+ubuntu    7095  0.0  0.1 574624  5924 ?        Sl   Feb10   0:00 npm run export-task
+ubuntu   15536  0.0  0.0   4440   104 ?        Ss   Feb18   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &gt; /dev/null 2&gt;&amp;1
+ubuntu   15557  0.0  0.0  11112   176 ?        S    Feb18   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   19398  0.0  0.0   4440   100 ?        Ss   Feb11   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &gt; /dev/null 2&gt;&amp;1
+ubuntu   19399  0.0  0.0  11112   192 ?        S    Feb11   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   19410  0.0  0.0   4444   108 ?        S    Feb11   0:00 sh -c npm run export-task &amp;&amp; npm run transform-task &amp;&amp; npm run load-task
+ubuntu   19421  0.0  0.0   4444   108 ?        S    Feb11   0:00 sh -c node ./js/cron-script.js export-task
+ubuntu   19422  0.0  1.1 839088 44164 ?        Sl   Feb11   0:01 node ./js/cron-script.js export-task
+ubuntu   25683  0.0  0.0   4440   100 ?        Ss   Feb14   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &gt; /dev/null 2&gt;&amp;1
+ubuntu   25684  0.0  0.0  11112   188 ?        S    Feb14   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   25712  0.0  0.0   4444   104 ?        S    Feb14   0:00 sh -c npm run export-task &amp;&amp; npm run transform-task &amp;&amp; npm run load-task
+ubuntu   25723  0.0  0.0   4444   104 ?        S    Feb14   0:00 sh -c node ./js/cron-script.js export-task
+ubuntu   25724  0.0  2.6 964268 102912 ?       Sl   Feb14   0:02 node ./js/cron-script.js export-task
+ubuntu   26093  0.0  0.0   4440   100 ?        Ss   Feb14   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &gt; /dev/null 2&gt;&amp;1
+ubuntu   26094  0.0  0.0  11112   188 ?        S    Feb14   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   26107  0.0  0.0   4444   108 ?        S    Feb14   0:00 sh -c npm run export-task &amp;&amp; npm run transform-task &amp;&amp; npm run load-task
+ubuntu   26118  0.0  0.0   4444   108 ?        S    Feb14   0:00 sh -c node ./js/cron-script.js export-task
+ubuntu   26119  0.0  1.5 929424 60320 ?        Sl   Feb14   0:01 node ./js/cron-script.js export-task
+ubuntu   26511  0.0  0.0   4440   104 ?        Ss   Feb09   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &gt; /dev/null 2&gt;&amp;1
+ubuntu   26512  0.0  0.0  11112   188 ?        S    Feb09   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   26523  0.0  0.0   4444   108 ?        S    Feb09   0:00 sh -c npm run export-task &amp;&amp; npm run transform-task &amp;&amp; npm run load-task
+ubuntu   26534  0.0  0.0   4444   104 ?        S    Feb09   0:00 sh -c node ./js/cron-script.js export-task
+ubuntu   26535  0.0  0.7 601220 28212 ?        Sl   Feb09   0:01 node ./js/cron-script.js export-task
+</code></pre>
+
+<p>On the day when the script was loaded onto crontab and didn&rsquo;t get was I was hoping for, my gut tells me that I f***ed up Cron: bad syntax or wasn&rsquo;t throwing the logs properly, why? you asked! - having passed the &ldquo;<a href="https://blog.codinghorror.com/the-works-on-my-machine-certification-program/">Works on My Machine</a>&rdquo; certification program I could run the script manually at sucess rate of 100%.</p>
+
+<blockquote>
+<p>¯\_(ツ)_/¯</p>
+
+<p>E-V-E-R-Y-T-H-I-N-G WORKS!</p>
+</blockquote>
+
+<h3 id="unsuccessful-attempts">Unsuccessful Attempts</h3>
+
+<h4 id="1st-attempt">1st attempt:</h4>
+
+<pre><code>* * * * * * cd /to/script/folder &amp;&amp; npm run export-task &amp;&amp; npm run transform-task &amp;&amp; npm run load-task 2&gt;&amp;1
+</code></pre>
+
+<h4 id="2nd-attempt">2nd attempt:</h4>
+
+<pre><code>* * * * * * cd /to/script/folder &amp;&amp; npm run-task-in-sequence 2&gt;&amp;1
+</code></pre>
+
+<h4 id="3rd-attempt">3rd attempt:</h4>
+
+<pre><code>* * * * * * cd /to/script/folder &amp;&amp; ./script-wrapper.sh 2&gt;&amp;1
+</code></pre>
+
+<p>script-wrapper.sh</p>
+
+<pre><code>#!/bin/bash
+
+npm run export-task
+npm run transform-task
+npm run load-task
+
+exit 0
+</code></pre>
+
+<h3 id="successful-attempts">Successful Attempts</h3>
+
+<h4 id="4th-attempt">4th attempt:</h4>
+
+<pre><code>* * * * * * cd /to/script/folder &amp;&amp; ./script-wrapper.sh 2&gt;&amp;1
+</code></pre>
+
+<p>script-wrapper.sh</p>
+
+<pre><code>#!/bin/bash
+
+node ./cron-script.js export-task
+node ./cron-script.js transform-task
+node ./cron-script.js load-task
+
+exit 0
+</code></pre>
+
+<p>Not relying on running <a href="https://docs.npmjs.com/cli/run-script">arbitrary commands</a> in npm did fixed the issue.</p>
+
+<h3 id="notes">Notes</h3>
+
+<ul>
+<li>The issue did went away on the 4th attempt but it still needs a lot of explaining because the main issue occurs only inside AWS/EC2 machine. I couldn&rsquo;t replicate the issue on a Docker machine</li>
+<li>I forgot to get the snapshot of the real zombie process, see [1]</li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li>[1] <a href="https://www.howtogeek.com/119815/htg-explains-what-is-a-zombie-process-on-linux/">https://www.howtogeek.com/119815/htg-explains-what-is-a-zombie-process-on-linux/</a></li>
+<li>[2] <a href="https://docs.npmjs.com/cli/run-script">https://docs.npmjs.com/cli/run-script</a></li>
+<li>[3] <a href="https://blog.codinghorror.com/the-works-on-my-machine-certification-program/">https://blog.codinghorror.com/the-works-on-my-machine-certification-program/</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/nodejs-cron-getting-rid-of-dangling-processes\/';
+    var disqus_title = 'NodeJS \x2b Cron: A series of attempts in getting rid of dangling processes';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/nodejs-cron-getting-rid-of-dangling-processes\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

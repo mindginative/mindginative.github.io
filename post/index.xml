@@ -6,8 +6,144 @@
     <description>Recent content in Posts on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Feb 2017 16:39:23 +1300</lastBuildDate>
+    <lastBuildDate>Mon, 20 Feb 2017 20:47:01 +1300</lastBuildDate>
     <atom:link href="http://www.mindginative.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>NodeJS &#43; Cron: A series of attempts in getting rid of dangling processes</title>
+      <link>http://www.mindginative.com/post/nodejs-cron-getting-rid-of-dangling-processes/</link>
+      <pubDate>Mon, 20 Feb 2017 20:47:01 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/nodejs-cron-getting-rid-of-dangling-processes/</guid>
+      <description>
+
+&lt;p&gt;Short-lived scripts that sucked your resources for 1mins or at most 5mins - is probably fine.
+However, if it is recurring jobs in Cron and involves several tasks and at least an hour of processing - that&amp;rsquo;d be a different story.&lt;/p&gt;
+
+&lt;p&gt;I was working on a simple NodeJS-based cron script with only 3 requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;extract&lt;/li&gt;
+&lt;li&gt;transform&lt;/li&gt;
+&lt;li&gt;load&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each one of these however would involve crunching through a million rows of data.&lt;/p&gt;
+
+&lt;p&gt;If you take a closer look at the result of &lt;code&gt;ps aux&lt;/code&gt; command, you&amp;rsquo;ll notice that there are couple of dangling processes waiting for some event to complete - of which technically the parent process doesn&amp;rsquo;t exists anymore! - the dates would tell you that some of those process had been there for about 9 days.&lt;/p&gt;
+
+&lt;p&gt;the script runs on top of AWS EC2 instance so literally we&amp;rsquo;re talking about:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;CPU ticks, RAM usage, disk spins, etc == &lt;strong&gt;$$$&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If left unattended this would turn into a zombie manufacturing plant. Anyhow, see the command output below.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$&amp;gt; ps aux&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      6934  0.0  0.0  59636   448 ?        S    Feb10   0:00 CRON
+ubuntu    7005  0.0  0.0   4440   104 ?        Ss   Feb10   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+ubuntu    7008  0.0  0.0  11112   180 ?        S    Feb10   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu    7094  0.0  0.0   4444   108 ?        S    Feb10   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
+ubuntu    7095  0.0  0.1 574624  5924 ?        Sl   Feb10   0:00 npm run export-task
+ubuntu   15536  0.0  0.0   4440   104 ?        Ss   Feb18   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+ubuntu   15557  0.0  0.0  11112   176 ?        S    Feb18   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   19398  0.0  0.0   4440   100 ?        Ss   Feb11   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+ubuntu   19399  0.0  0.0  11112   192 ?        S    Feb11   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   19410  0.0  0.0   4444   108 ?        S    Feb11   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
+ubuntu   19421  0.0  0.0   4444   108 ?        S    Feb11   0:00 sh -c node ./js/cron-script.js export-task
+ubuntu   19422  0.0  1.1 839088 44164 ?        Sl   Feb11   0:01 node ./js/cron-script.js export-task
+ubuntu   25683  0.0  0.0   4440   100 ?        Ss   Feb14   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+ubuntu   25684  0.0  0.0  11112   188 ?        S    Feb14   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   25712  0.0  0.0   4444   104 ?        S    Feb14   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
+ubuntu   25723  0.0  0.0   4444   104 ?        S    Feb14   0:00 sh -c node ./js/cron-script.js export-task
+ubuntu   25724  0.0  2.6 964268 102912 ?       Sl   Feb14   0:02 node ./js/cron-script.js export-task
+ubuntu   26093  0.0  0.0   4440   100 ?        Ss   Feb14   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+ubuntu   26094  0.0  0.0  11112   188 ?        S    Feb14   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   26107  0.0  0.0   4444   108 ?        S    Feb14   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
+ubuntu   26118  0.0  0.0   4444   108 ?        S    Feb14   0:00 sh -c node ./js/cron-script.js export-task
+ubuntu   26119  0.0  1.5 929424 60320 ?        Sl   Feb14   0:01 node ./js/cron-script.js export-task
+ubuntu   26511  0.0  0.0   4440   104 ?        Ss   Feb09   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+ubuntu   26512  0.0  0.0  11112   188 ?        S    Feb09   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
+ubuntu   26523  0.0  0.0   4444   108 ?        S    Feb09   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
+ubuntu   26534  0.0  0.0   4444   104 ?        S    Feb09   0:00 sh -c node ./js/cron-script.js export-task
+ubuntu   26535  0.0  0.7 601220 28212 ?        Sl   Feb09   0:01 node ./js/cron-script.js export-task
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On the day when the script was loaded onto crontab and didn&amp;rsquo;t get was I was hoping for, my gut tells me that I f***ed up Cron: bad syntax or wasn&amp;rsquo;t throwing the logs properly, why? you asked! - having passed the &amp;ldquo;&lt;a href=&#34;https://blog.codinghorror.com/the-works-on-my-machine-certification-program/&#34;&gt;Works on My Machine&lt;/a&gt;&amp;rdquo; certification program I could run the script manually at sucess rate of 100%.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;¯\_(ツ)_/¯&lt;/p&gt;
+
+&lt;p&gt;E-V-E-R-Y-T-H-I-N-G WORKS!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;unsuccessful-attempts&#34;&gt;Unsuccessful Attempts&lt;/h3&gt;
+
+&lt;h4 id=&#34;1st-attempt&#34;&gt;1st attempt:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;* * * * * * cd /to/script/folder &amp;amp;&amp;amp; npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2nd-attempt&#34;&gt;2nd attempt:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;* * * * * * cd /to/script/folder &amp;amp;&amp;amp; npm run-task-in-sequence 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3rd-attempt&#34;&gt;3rd attempt:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;* * * * * * cd /to/script/folder &amp;amp;&amp;amp; ./script-wrapper.sh 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;script-wrapper.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+npm run export-task
+npm run transform-task
+npm run load-task
+
+exit 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;successful-attempts&#34;&gt;Successful Attempts&lt;/h3&gt;
+
+&lt;h4 id=&#34;4th-attempt&#34;&gt;4th attempt:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;* * * * * * cd /to/script/folder &amp;amp;&amp;amp; ./script-wrapper.sh 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;script-wrapper.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+node ./cron-script.js export-task
+node ./cron-script.js transform-task
+node ./cron-script.js load-task
+
+exit 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Not relying on running &lt;a href=&#34;https://docs.npmjs.com/cli/run-script&#34;&gt;arbitrary commands&lt;/a&gt; in npm did fixed the issue.&lt;/p&gt;
+
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The issue did went away on the 4th attempt but it still needs a lot of explaining because the main issue occurs only inside AWS/EC2 machine. I couldn&amp;rsquo;t replicate the issue on a Docker machine&lt;/li&gt;
+&lt;li&gt;I forgot to get the snapshot of the real zombie process, see [1]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[1] &lt;a href=&#34;https://www.howtogeek.com/119815/htg-explains-what-is-a-zombie-process-on-linux/&#34;&gt;https://www.howtogeek.com/119815/htg-explains-what-is-a-zombie-process-on-linux/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[2] &lt;a href=&#34;https://docs.npmjs.com/cli/run-script&#34;&gt;https://docs.npmjs.com/cli/run-script&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[3] &lt;a href=&#34;https://blog.codinghorror.com/the-works-on-my-machine-certification-program/&#34;&gt;https://blog.codinghorror.com/the-works-on-my-machine-certification-program/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>NodeJS Development Inside Docker on Windows 10</title>

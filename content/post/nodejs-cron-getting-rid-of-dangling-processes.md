@@ -2,7 +2,7 @@
 date = "2017-02-20T20:47:01+13:00"
 title = "NodeJS + Cron: A series of attempts in getting rid of dangling processes"
 categories = []
-tags = []
+tags = ["nodejs", "cron"]
 draft = false
 +++
 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberrypi on Richard Sentino via mindginative</title>
+    <link>http://www.mindginative.com/tags/raspberrypi/index.xml</link>
+    <description>Recent content in Raspberrypi on Richard Sentino via mindginative</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://www.mindginative.com/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>No Fuss, NodeJS LTS installation on Raspbian Lite Jessie</title>
+      <link>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</link>
+      <pubDate>Sat, 18 Mar 2017 21:56:03 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</guid>
+      <description>
+
+&lt;h2 id=&#34;copy-paste-trust-me&#34;&gt;Copy &amp;amp; Paste, trust me!&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$&amp;gt; sudo apt-get update
+$&amp;gt; sudo apt-get upgrade
+$&amp;gt; sudo apt-get -y install git
+$&amp;gt; curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+$&amp;gt; source ~/.bashrc
+$&amp;gt; nvm install --lts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;as of this writing my NodeJS LTS version: &lt;code&gt;v6.10.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;what-s-the-fuss&#34;&gt;What&amp;rsquo;s  The Fuss?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;Node Version Manager (nvm)&lt;/a&gt; gets installed, we&amp;rsquo;ll then use it to install whatever is the current &lt;a href=&#34;https://github.com/nodejs/LTS&#34;&gt;NodeJS LTS&lt;/a&gt; - primarily behind the scenes, it will spear you from crap of load of these commands:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tax -xvf **armv1**.xz, cd, sudo cp -R /blah/blah/path, rm /some/dir,...&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;got-proof&#34;&gt;Got Proof ?&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/rpi-nodejs-raspbian-lite-jessie.jpg&#34; width=&#34;600&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;got-issues-or-better-tips&#34;&gt;Got Issues, or better tips ?&lt;/h2&gt;
+
+&lt;p&gt;yell out, I&amp;rsquo;d highly appreciate and always happy hear! Thanks&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

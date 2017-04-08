@@ -6,8 +6,31 @@
     <description>Recent content on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Mar 2017 21:56:03 +1300</lastBuildDate>
+    <lastBuildDate>Sat, 08 Apr 2017 13:03:54 +1200</lastBuildDate>
     <atom:link href="http://www.mindginative.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Internet Archive&#39;s WaybackMachine 2003</title>
+      <link>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</link>
+      <pubDate>Sat, 08 Apr 2017 13:03:54 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</guid>
+      <description>&lt;p&gt;Weekend Saturday morning, my JavaScript Weekly subscription &lt;a href=&#34;http://javascriptweekly.com/issues/329&#34; target=&#34;_blank&#34;&gt;#329&lt;/a&gt; had a catchy email subject title &lt;strong&gt;&lt;em&gt;Opinionated Comparison of React, Angular2, and Aurelia&lt;/em&gt;&lt;/strong&gt;, read full article &lt;a href=&#34;https://github.com/stickfigure/blog/wiki/Opinionated-Comparison-of-React%2C-Angular2%2C-and-Aurelia?utm_source=javascriptweekly&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I have been doing some form of frontend development since the early 90s.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;from the blog&amp;rsquo;s first sentence I quickly recalled the first website I designed 14yrs ago, worked started in late 2002 but it was launched in 2003. I remember dabbling with Macromedia&amp;rsquo;s Fireworks and Dreamweaver.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/2003.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the link to that &lt;strong&gt;Wayback Machine&lt;/strong&gt;: &lt;a href=&#34;https://web.archive.org/web/20030124013620/http://outsourcing-services.net/&#34;&gt;https://web.archive.org/web/20030124013620/http://outsourcing-services.net/&lt;/a&gt;
+Fortunately, the author&amp;rsquo;s meta name still sticks my name on it, hurray!&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;If I may recall correctly, I tested this on the following browsers: Internet Explorer, Firefox 0.x - preview release, Netscape Navigator &amp;ndash; to all Chrome bashers/fanatics!, that epic browser wasn&amp;rsquo;t born at that time.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>No Fuss, NodeJS LTS installation on Raspbian Lite Jessie</title>
@@ -879,65 +902,6 @@ declare var require: NodeRequire;
 &lt;li&gt;Be patient&lt;/li&gt;
 &lt;li&gt;Read 1 book per month&lt;/li&gt;
 &lt;li&gt;Experiment and turn small ideas into life&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://www.mindginative.com/about/me/</link>
-      <pubDate>Tue, 01 Jan 2002 00:02:48 +1200</pubDate>
-      
-      <guid>http://www.mindginative.com/about/me/</guid>
-      <description>
-
-&lt;p&gt;Hi there, My name is &lt;strong&gt;Richard&lt;/strong&gt; I&amp;rsquo;m a web developer from New Zealand. A few little bits about me:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I write code for the web&lt;/li&gt;
-&lt;li&gt;I am cool, not friendly because I am &lt;strong&gt;VERY&lt;/strong&gt; friendly!&lt;/li&gt;
-&lt;li&gt;I put code on Github&lt;/li&gt;
-&lt;li&gt;I like to automate things with CI&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;community&#34;&gt;Community&lt;/h3&gt;
-
-&lt;p&gt;I &lt;del&gt;help&lt;/del&gt; co-organise from &lt;em&gt;2013-2016&lt;/em&gt; a local tech meetup called &lt;a href=&#34;https://www.meetup.com/Auckland-Continuous-Delivery/&#34;&gt;Auckland Continuous Delivery Meetup&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;speaking&#34;&gt;Speaking&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://booktrack.github.io/continuous-delivery-talk/&#34;&gt;Continuous deployment of a Single Page Application on Azure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://rixrix.github.io/ci-talk-codeship/#/&#34;&gt;CI and Deployment w/ Codeship&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;conferences&#34;&gt;Conferences&lt;/h3&gt;
-
-&lt;p&gt;I love to go seminars and conferences whenever I can. Below are the list of conferences/seminars that I have attended - as far as I can remember:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2016 - OWASP New Zealand Day&lt;/li&gt;
-&lt;li&gt;2016 - AWS Summit (NZ)&lt;/li&gt;
-&lt;li&gt;2015 - Microsoft Build Conference (Auckland NZ)&lt;/li&gt;
-&lt;li&gt;2013 - OpenSource Developers Conference (NZ)&lt;/li&gt;
-&lt;li&gt;2013 - Amazon Web Services Summit (NZ)&lt;/li&gt;
-&lt;li&gt;2013 - Jaspersoft V5 Tech. Training&lt;/li&gt;
-&lt;li&gt;2012 - Agile and Scrum Training&lt;/li&gt;
-&lt;li&gt;2012 - Auckland Mozilla Meetup&lt;/li&gt;
-&lt;li&gt;2010 - Cebu Linux Users Group meetup(Co-Organizer)&lt;/li&gt;
-&lt;li&gt;2009 - Cebu Drupal Users Group meetup (Organizer)&lt;/li&gt;
-&lt;li&gt;2009 - DrupalCamp Manila&lt;/li&gt;
-&lt;li&gt;2009 - DevCon (Developers Connect)&lt;/li&gt;
-&lt;li&gt;2008 - Beer Talk: DefCon Philippines soft launching&lt;/li&gt;
-&lt;li&gt;2007 - Leadership/Management/Supervisory Trng.&lt;/li&gt;
-&lt;li&gt;2007 - Course on Systems Analysis &amp;amp; Design&lt;/li&gt;
-&lt;li&gt;2005 - IT Project Management Course&lt;/li&gt;
-&lt;li&gt;2005 - Open Source Conference&lt;/li&gt;
-&lt;li&gt;2005 - Workshop ICT for Person w/ Disabilities&lt;/li&gt;
-&lt;li&gt;2002 - Leadership &amp;amp; Convention Seminar&lt;/li&gt;
-&lt;li&gt;2002 - Systems Technology Institute IT Convention&lt;/li&gt;
-&lt;li&gt;2000 - Systems Technology Institute IT Convention&lt;/li&gt;
-&lt;li&gt;1999 - Systems Technology Institute IT Convention (the Internet &amp;amp; HTML)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

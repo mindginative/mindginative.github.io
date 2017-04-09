@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/setting-up-bitbucket-pipelines-and-aws-s3/</loc>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</loc>
     <lastmod>2017-04-08T13:03:54+12:00</lastmod>
   </url>
@@ -88,6 +93,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/amazon/</loc>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/archive/</loc>
     <lastmod>2017-04-08T13:03:54+12:00</lastmod>
     <priority>0</priority>
@@ -106,6 +117,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/bitbucket/</loc>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/categories/blog/</loc>
     <lastmod>2016-05-04T11:10:22+12:00</lastmod>
     <priority>0</priority>
@@ -119,6 +136,12 @@
   
   <url>
     <loc>http://www.mindginative.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/categories/ci/</loc>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -143,6 +166,12 @@
   <url>
     <loc>http://www.mindginative.com/tags/docker/</loc>
     <lastmod>2017-02-15T16:39:23+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/categories/frontend/</loc>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -184,7 +213,7 @@
   
   <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-04-08T13:03:54+12:00</lastmod>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -208,7 +237,13 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-04-08T13:03:54+12:00</lastmod>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/s3/</loc>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   

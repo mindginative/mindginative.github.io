@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</loc>
+    <lastmod>2017-04-10T21:03:29+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/setting-up-bitbucket-pipelines-and-aws-s3/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
   </url>
@@ -213,13 +218,19 @@
   
   <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
+    <lastmod>2017-04-10T21:03:29+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.mindginative.com/projects/</loc>
     <lastmod>2017-01-31T21:54:59+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/categories/raspberry/</loc>
+    <lastmod>2017-04-10T21:03:29+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -231,13 +242,13 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/raspbian/</loc>
-    <lastmod>2017-03-18T21:56:03+13:00</lastmod>
+    <lastmod>2017-04-10T21:03:29+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
+    <lastmod>2017-04-10T21:03:29+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -250,6 +261,12 @@
   <url>
     <loc>http://www.mindginative.com/tags/security/</loc>
     <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/ssh/</loc>
+    <lastmod>2017-04-10T21:03:29+12:00</lastmod>
     <priority>0</priority>
   </url>
   

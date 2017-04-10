@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>How to fix Raspberry Pi SSH connection reset &middot; Richard Sentino via mindginative</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard&#39;s page for more information.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.18.1" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>How to fix Raspberry Pi SSH connection reset</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-04-10 21:03:29 &#43;1200 NZST">2017-04-10</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	            <i class="fa fa-folder"></i>&nbsp;&nbsp;
+	            
+	            <a class="article-category-link" href="http://www.mindginative.com/categories/raspberry">raspberry</a>
+	            
+	            
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/ssh">ssh</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/raspbian">raspbian</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:</p>
+
+<blockquote>
+<p>ssh: connect to host 192.168.178.79 port 22: Connection refused</p>
+</blockquote>
+
+<h2 id="tell-tale-sign">Tell-tale Sign</h2>
+
+<p>after few attempts the ssh status showed up an interesting set of logs:</p>
+
+<p>$&gt; sudo service ssh status</p>
+
+<pre><code>● ssh.service - OpenBSD Secure Shell server
+   Loaded: loaded (/lib/systemd/system/ssh.service; enabled)
+   Active: active (running) since Mon 2017-04-10 08:51:38 UTC; 6min ago
+ Main PID: 1332 (sshd)
+   CGroup: /system.slice/ssh.service
+           └─1332 /usr/sbin/sshd -D
+
+Apr 10 08:51:38 raspberrypi sshd[1332]: key_load_public: invalid format
+Apr 10 08:51:38 raspberrypi sshd[1332]: Could not load host key: /etc/ssh/ss...y
+Apr 10 08:51:38 raspberrypi sshd[1332]: key_load_public: invalid format
+Apr 10 08:51:38 raspberrypi sshd[1332]: Could not load host key: /etc/ssh/ss...y
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
+Hint: Some lines were ellipsized, use -l to show in full.
+</code></pre>
+
+<h2 id="fix">Fix</h2>
+
+<p>googling brought me to this article [1], there are 2 suggested CLI commands but the command below fixed my issue:</p>
+
+<p><code>$&gt; sudo rm /etc/ssh/ssh_host_* &amp;&amp; sudo dpkg-reconfigure openssh-server</code></p>
+
+<p>It will generate a new set of ssh certs, like so:</p>
+
+<pre><code>Creating SSH2 RSA key; this may take some time ...
+2048 73:a5:a5:1b:88:c6:19:40:0e:4c:51:18:ad:94:81:7f /etc/ssh/ssh_host_rsa_key.pub (RSA)
+Creating SSH2 DSA key; this may take some time ...
+1024 5a:37:ab:bf:11:c3:f5:ea:5f:e4:b3:ea:16:6a:11:f6 /etc/ssh/ssh_host_dsa_key.pub (DSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 d6:74:28:5e:ca:cd:ac:a8:69:32:03:f3:56:b5:48:7d /etc/ssh/ssh_host_ecdsa_key.pub (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+</code></pre>
+
+<h2 id="my-raspberry-pi">My Raspberry Pi</h2>
+
+<ul>
+<li>OS: Raspbian GNU/Linux 8.0 (jessie)</li>
+<li>Image burner <a href="+https://etcher.io/">Etcher</a> tool</li>
+<li><a href="https://www.raspberrypi.org/products/model-b-plus/">Raspberry Pi 1 Model B+ v1.2</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>[1] <a href="https://drjohnstechtalk.com/blog/2015/04/cant-ssh-to-raspberry-pi/">https://drjohnstechtalk.com/blog/2015/04/cant-ssh-to-raspberry-pi/</a></li>
+<li>[2] <a href="https://etcher.io/">https://etcher.io/</a></li>
+<li>[3] <a href="https://www.raspberrypi.org/products/model-b-plus/">https://www.raspberrypi.org/products/model-b-plus/</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/raspberrypi-ssh-connection-reset\/';
+    var disqus_title = 'How to fix Raspberry Pi SSH connection reset';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/raspberrypi-ssh-connection-reset\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

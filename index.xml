@@ -6,8 +6,83 @@
     <description>Recent content on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Apr 2017 21:27:59 +1200</lastBuildDate>
+    <lastBuildDate>Mon, 10 Apr 2017 21:03:29 +1200</lastBuildDate>
     <atom:link href="http://www.mindginative.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to fix Raspberry Pi SSH connection reset</title>
+      <link>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</link>
+      <pubDate>Mon, 10 Apr 2017 21:03:29 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</guid>
+      <description>
+
+&lt;p&gt;I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ssh: connect to host 192.168.178.79 port 22: Connection refused&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;tell-tale-sign&#34;&gt;Tell-tale Sign&lt;/h2&gt;
+
+&lt;p&gt;after few attempts the ssh status showed up an interesting set of logs:&lt;/p&gt;
+
+&lt;p&gt;$&amp;gt; sudo service ssh status&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;● ssh.service - OpenBSD Secure Shell server
+   Loaded: loaded (/lib/systemd/system/ssh.service; enabled)
+   Active: active (running) since Mon 2017-04-10 08:51:38 UTC; 6min ago
+ Main PID: 1332 (sshd)
+   CGroup: /system.slice/ssh.service
+           └─1332 /usr/sbin/sshd -D
+
+Apr 10 08:51:38 raspberrypi sshd[1332]: key_load_public: invalid format
+Apr 10 08:51:38 raspberrypi sshd[1332]: Could not load host key: /etc/ssh/ss...y
+Apr 10 08:51:38 raspberrypi sshd[1332]: key_load_public: invalid format
+Apr 10 08:51:38 raspberrypi sshd[1332]: Could not load host key: /etc/ssh/ss...y
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
+Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
+Hint: Some lines were ellipsized, use -l to show in full.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fix&#34;&gt;Fix&lt;/h2&gt;
+
+&lt;p&gt;googling brought me to this article [1], there are 2 suggested CLI commands but the command below fixed my issue:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$&amp;gt; sudo rm /etc/ssh/ssh_host_* &amp;amp;&amp;amp; sudo dpkg-reconfigure openssh-server&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It will generate a new set of ssh certs, like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Creating SSH2 RSA key; this may take some time ...
+2048 73:a5:a5:1b:88:c6:19:40:0e:4c:51:18:ad:94:81:7f /etc/ssh/ssh_host_rsa_key.pub (RSA)
+Creating SSH2 DSA key; this may take some time ...
+1024 5a:37:ab:bf:11:c3:f5:ea:5f:e4:b3:ea:16:6a:11:f6 /etc/ssh/ssh_host_dsa_key.pub (DSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 d6:74:28:5e:ca:cd:ac:a8:69:32:03:f3:56:b5:48:7d /etc/ssh/ssh_host_ecdsa_key.pub (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;my-raspberry-pi&#34;&gt;My Raspberry Pi&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OS: Raspbian GNU/Linux 8.0 (jessie)&lt;/li&gt;
+&lt;li&gt;Image burner &lt;a href=&#34;+https://etcher.io/&#34;&gt;Etcher&lt;/a&gt; tool&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/products/model-b-plus/&#34;&gt;Raspberry Pi 1 Model B+ v1.2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[1] &lt;a href=&#34;https://drjohnstechtalk.com/blog/2015/04/cant-ssh-to-raspberry-pi/&#34;&gt;https://drjohnstechtalk.com/blog/2015/04/cant-ssh-to-raspberry-pi/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[2] &lt;a href=&#34;https://etcher.io/&#34;&gt;https://etcher.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[3] &lt;a href=&#34;https://www.raspberrypi.org/products/model-b-plus/&#34;&gt;https://www.raspberrypi.org/products/model-b-plus/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Setting up Bitbucket&#39;s Pipelines for frontend deployment on AWS S3</title>
@@ -934,66 +1009,6 @@ xhyve $ACPI $MEM $SMP $PCI_DEV $LPC_DEV $NET $IMG_CD $IMG_HDD -f kexec,$KERNEL,$
 &lt;p&gt;Just after 2 months writing about xhyve + alpine,
 Docker announced they would go native for their Docker engine on top of xhyve — 
 and just 2 days ago I got accepted for testing Docker for Mac.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>TypeScript and its magic number TS2403</title>
-      <link>http://www.mindginative.com/post/typescript--its-magic-number-ts2403/</link>
-      <pubDate>Sat, 09 Jan 2016 10:59:13 +1200</pubDate>
-      
-      <guid>http://www.mindginative.com/post/typescript--its-magic-number-ts2403/</guid>
-      <description>
-
-&lt;p&gt;At work, we’ve been using Webpack for our frontend stack (TypeScript, AngularJS v1.x, NodeJS, GulpJS + other JS libraries without much drama.
-Over the last couple of months our Angular2-based project is starting to get a life, from a simple PoC to a usable web app.
-Though we were working against the early alpha releases of Angular2 but we thought it’s gonna be fine — we just want a minimum viable product.
-Subsequent bumps to Angular2 release builds up to the first beta the error message below started to popped out and now our simple Webpack &lt;code&gt;require&lt;/code&gt; interface needs some little attention.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;…node_modules/angular2/typings/node/node.d.ts
-error TS2403: Subsequent variable declarations must have the same type.
-Variable ‘require’ must be of type ‘NodeRequire’, but here has type ‘WebpackRequire’.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ah easy fix!, I thought it was just a 2 minutes fix with TypeScript’s “intersection types” introduced in 1.6 release:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;declare var require: NodeRequire | WebpackRequire
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;well that didn’t work!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;…node_modules/angular2/typings/node/node.d.ts
-error TS2403: Subsequent variable declarations must have the same type.
-Variable ‘require’ must be of type ‘NodeRequire’, but here has type ‘NodeRequire | WebpackRequire’.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Fiddling around the internets brought me to a Github issue &lt;a href=&#34;https://github.com/Microsoft/TypeScript/issues/3215&#34;&gt;https://github.com/Microsoft/TypeScript/issues/3215&lt;/a&gt;.
-One of the commenter pointed out to make use of TypeScript open-ended interface functionality which sort of acts like overriding an existing type definition.
-It’s supposedly pretty straight forward to just modify the offending type definition file by changing it to &lt;code&gt;declare var require: any&lt;/code&gt; however it’s a file shipped via npm package,
-the quick fix might work today but we don’t know after your next &lt;code&gt;npm install&lt;/code&gt; your fix will still be there.&lt;/p&gt;
-
-&lt;h4 id=&#34;anyway-here-s-the-updated-interface&#34;&gt;Anyway here’s the updated interface:&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;interface WebpackRequire {
-    &amp;lt;T&amp;gt;(path: string): T;
-    (paths: string[], callback: (...modules: any[]) =&amp;gt; void): void;
-    ensure: (paths: string[], callback: (require: &amp;lt;T&amp;gt;(path: string) =&amp;gt; T) =&amp;gt; void) =&amp;gt; void;
-}
-interface NodeRequire extends WebpackRequire {}
-declare var require: NodeRequire;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I tried to make the updated interface definition to be little bit verbose just to remind that this is an overridden (as I call it) interface specifically for Webpack.&lt;/p&gt;
-
-&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Microsoft/TypeScript/issues/3215#issuecomment-103467086&#34;&gt;https://github.com/Microsoft/TypeScript/issues/3215#issuecomment-103467086&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://basarat.gitbooks.io/typescript/content/docs/types/ambient/interfaces.htm&#34;&gt;https://basarat.gitbooks.io/typescript/content/docs/types/ambient/interfaces.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ronniehegelund.blogspot.co.nz/2013/01/extension-methods-in-typescript.html&#34;&gt;http://ronniehegelund.blogspot.co.nz/2013/01/extension-methods-in-typescript.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/angular/angular/issues/5807#issuecomment-164678165&#34;&gt;https://github.com/angular/angular/issues/5807#issuecomment-164678165&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/angular/angular/issues/6266&#34;&gt;https://github.com/angular/angular/issues/6266&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

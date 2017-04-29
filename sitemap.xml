@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/tags/bash/</loc>
-    <lastmod>2016-11-28T01:17:35+13:00</lastmod>
+    <loc>http://www.mindginative.com/categories/bash/</loc>
+    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/categories/bash/</loc>
-    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
+    <loc>http://www.mindginative.com/tags/bash/</loc>
+    <lastmod>2016-11-28T01:17:35+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -222,14 +222,14 @@
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/tags/nodejs/</loc>
-    <lastmod>2017-03-18T21:56:03+13:00</lastmod>
+    <loc>http://www.mindginative.com/categories/nodejs/</loc>
+    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/categories/nodejs/</loc>
-    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
+    <loc>http://www.mindginative.com/tags/nodejs/</loc>
+    <lastmod>2017-03-18T21:56:03+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -329,13 +329,19 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/categories/ubuntu/</loc>
+    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/ubuntu/</loc>
     <lastmod>2016-11-28T01:17:35+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/categories/ubuntu/</loc>
+    <loc>http://www.mindginative.com/categories/windows10/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
@@ -343,12 +349,6 @@
   <url>
     <loc>http://www.mindginative.com/tags/windows10/</loc>
     <lastmod>2017-02-15T16:39:23+13:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.mindginative.com/categories/windows10/</loc>
-    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Domain Registrar migration from GoDaddy to AWS Route53: Short Story &middot; Richard Sentino via mindginative</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard&#39;s page for more information.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.18.1" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>Domain Registrar migration from GoDaddy to AWS Route53: Short Story</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-04-28 21:11:01 &#43;1200 NZST">2017-04-28</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/dns">dns</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/domain">domain</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/aws">aws</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/route53">route53</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/migration">migration</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>After a fantastic <em><strong>9+</strong></em> years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened  nor bad customer experience.</p>
+
+<p>A million reasons:</p>
+
+<blockquote>
+<p>They&rsquo;re just my domain provider, I only remember them when it&rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.</p>
+</blockquote>
+
+<h2 id="target-audience">Target Audience</h2>
+
+<p>It aims at people who are already using AWS Route53 as their DNS provider, for new commers - I guess you&rsquo;ll have to touch base with DNS first, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html">Migrating DNS Service for an existing Domain to Amazon Route53</a></p>
+
+<h2 id="the-process">The Process</h2>
+
+<p>I&rsquo;ve only spent at most 1 hour from start until I got the final confirmation email from Amazon that they&rsquo;re now the domain registrar of mindginative.</p>
+
+<p>Between the migration process - expect a bunch of emails, notifications, instructions, confirmations from GoDaddy and Amazon.</p>
+
+<p>A word of warning though, before you turn all these knobs you MUST read the <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements">transfer requirements for Top-Level domains</a>.</p>
+
+<h4 id="unlock-your-domain">Unlock your domain</h4>
+
+<p>It&rsquo;s a standard protocol (I guess) for every Domain Registrars to lock your domain - kind of first step security measure for unauthorized domain takeover. So first, unlock it:</p>
+
+<p><img src="/images/godaddy-to-aws/godaddy-unlock.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<h4 id="start-domain-transfer">Start Domain Transfer</h4>
+
+<p>Once unlocked, head over to your AWS dashboard:</p>
+
+<ul>
+<li>1. Route53 dashboard</li>
+<li>2. Registered domains</li>
+<li>3. Transfer Domain</li>
+</ul>
+
+<p>AWS Route53 will always check for unlocked domain status before the actual domain transfer thus a big warning sign should you haven&rsquo;t done it yet.</p>
+
+<p><img src="/images/godaddy-to-aws/aws-domain-transfer.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>Follow through the Transfer Domain wizard, fill out the fields - if needed. Confirm the domain transfer, request authorization code.</p>
+
+<p>AWS Route53 initiates a transfer domain request authorization code from GoDaddy.</p>
+
+<p><img src="/images/godaddy-to-aws/aws-registrar-confirmation.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>Before the <a href="http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/">EPP code</a>, a transer notice email:</p>
+
+<p><img src="/images/godaddy-to-aws/godaddy-domain-transfer-notice.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>and then &ldquo;Accept&rdquo; the domain transfer:</p>
+
+<p><img src="/images/godaddy-to-aws/godaddy-domain-transfer-accept-or-decline.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>errr! and then GoDaddy would then provide you the authorization code:</p>
+
+<p><img src="/images/godaddy-to-aws/godaddy-authorization-code.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<h4 id="all-done">All done</h4>
+
+<p>You will get a fair amount of emails, a few minutes delay, before getting the final confirmation emails from GoDaddy and Amazon Route53 that your domain has been transfered.</p>
+
+<p>Here&rsquo;s from Amazon:</p>
+
+<p><img src="/images/godaddy-to-aws/aws-final-confirmation.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>and GoDaddy:</p>
+
+<p><img src="/images/godaddy-to-aws/godaddy-final-confirmation.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The process went well. no hiccups, other than a few slight delays of notifications and or confirmation emails.</p>
+
+<p>I only paid for the domain re-registration this time with AWS being the Domain Registrar. A good time to change Domain Registrar is when your domain is about to expire, say: 1 month from now - mine had only 3 days left with GoDaddy.</p>
+
+<p>The steps and screenshots were lacking some of the steps but you get the gist, yes?</p>
+
+<p>Who knows, 9 years from I&rsquo;ll move to another Domain Registrar, Google maybe ? we don&rsquo;t know but I&rsquo;d hope it&rsquo;ll be easy as QR Code scanning.</p>
+
+<p>Got questions, suggestions, found typos ? let me know.</p>
+
+<p>Enjoy!</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://godaddy.com">http://godaddy.com</a></li>
+<li><a href="https://aws.amazon.com/route53/">https://aws.amazon.com/route53/</a></li>
+<li><a href="https://aws.amazon.com/getting-started/tutorials/get-a-domain/">https://aws.amazon.com/getting-started/tutorials/get-a-domain/</a></li>
+<li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements">https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements</a></li>
+<li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html">https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html</a></li>
+<li><a href="http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/">http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/domain-registrar-migration-from-godaddy-to-aws-route53-short-story\/';
+    var disqus_title = 'Domain Registrar migration from GoDaddy to AWS Route53: Short Story';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/domain-registrar-migration-from-godaddy-to-aws-route53-short-story\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

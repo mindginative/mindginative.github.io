@@ -6,8 +6,113 @@
     <description>Recent content in Posts on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Apr 2017 21:03:29 +1200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Apr 2017 21:11:01 +1200</lastBuildDate>
     <atom:link href="http://www.mindginative.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Domain Registrar migration from GoDaddy to AWS Route53: Short Story</title>
+      <link>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</link>
+      <pubDate>Fri, 28 Apr 2017 21:11:01 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</guid>
+      <description>
+
+&lt;p&gt;After a fantastic &lt;em&gt;&lt;strong&gt;9+&lt;/strong&gt;&lt;/em&gt; years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened  nor bad customer experience.&lt;/p&gt;
+
+&lt;p&gt;A million reasons:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;They&amp;rsquo;re just my domain provider, I only remember them when it&amp;rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;target-audience&#34;&gt;Target Audience&lt;/h2&gt;
+
+&lt;p&gt;It aims at people who are already using AWS Route53 as their DNS provider, for new commers - I guess you&amp;rsquo;ll have to touch base with DNS first, see &lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&#34;&gt;Migrating DNS Service for an existing Domain to Amazon Route53&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-process&#34;&gt;The Process&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve only spent at most 1 hour from start until I got the final confirmation email from Amazon that they&amp;rsquo;re now the domain registrar of mindginative.&lt;/p&gt;
+
+&lt;p&gt;Between the migration process - expect a bunch of emails, notifications, instructions, confirmations from GoDaddy and Amazon.&lt;/p&gt;
+
+&lt;p&gt;A word of warning though, before you turn all these knobs you MUST read the &lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&#34;&gt;transfer requirements for Top-Level domains&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;unlock-your-domain&#34;&gt;Unlock your domain&lt;/h4&gt;
+
+&lt;p&gt;It&amp;rsquo;s a standard protocol (I guess) for every Domain Registrars to lock your domain - kind of first step security measure for unauthorized domain takeover. So first, unlock it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-unlock.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;start-domain-transfer&#34;&gt;Start Domain Transfer&lt;/h4&gt;
+
+&lt;p&gt;Once unlocked, head over to your AWS dashboard:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1. Route53 dashboard&lt;/li&gt;
+&lt;li&gt;2. Registered domains&lt;/li&gt;
+&lt;li&gt;3. Transfer Domain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;AWS Route53 will always check for unlocked domain status before the actual domain transfer thus a big warning sign should you haven&amp;rsquo;t done it yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-domain-transfer.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Follow through the Transfer Domain wizard, fill out the fields - if needed. Confirm the domain transfer, request authorization code.&lt;/p&gt;
+
+&lt;p&gt;AWS Route53 initiates a transfer domain request authorization code from GoDaddy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-registrar-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Before the &lt;a href=&#34;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&#34;&gt;EPP code&lt;/a&gt;, a transer notice email:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-domain-transfer-notice.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;and then &amp;ldquo;Accept&amp;rdquo; the domain transfer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-domain-transfer-accept-or-decline.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;errr! and then GoDaddy would then provide you the authorization code:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-authorization-code.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;all-done&#34;&gt;All done&lt;/h4&gt;
+
+&lt;p&gt;You will get a fair amount of emails, a few minutes delay, before getting the final confirmation emails from GoDaddy and Amazon Route53 that your domain has been transfered.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s from Amazon:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-final-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;and GoDaddy:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-final-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The process went well. no hiccups, other than a few slight delays of notifications and or confirmation emails.&lt;/p&gt;
+
+&lt;p&gt;I only paid for the domain re-registration this time with AWS being the Domain Registrar. A good time to change Domain Registrar is when your domain is about to expire, say: 1 month from now - mine had only 3 days left with GoDaddy.&lt;/p&gt;
+
+&lt;p&gt;The steps and screenshots were lacking some of the steps but you get the gist, yes?&lt;/p&gt;
+
+&lt;p&gt;Who knows, 9 years from I&amp;rsquo;ll move to another Domain Registrar, Google maybe ? we don&amp;rsquo;t know but I&amp;rsquo;d hope it&amp;rsquo;ll be easy as QR Code scanning.&lt;/p&gt;
+
+&lt;p&gt;Got questions, suggestions, found typos ? let me know.&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://godaddy.com&#34;&gt;http://godaddy.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/route53/&#34;&gt;https://aws.amazon.com/route53/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/getting-started/tutorials/get-a-domain/&#34;&gt;https://aws.amazon.com/getting-started/tutorials/get-a-domain/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&#34;&gt;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&#34;&gt;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&#34;&gt;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>How to fix Raspberry Pi SSH connection reset</title>
@@ -963,66 +1068,6 @@ xhyve $ACPI $MEM $SMP $PCI_DEV $LPC_DEV $NET $IMG_CD $IMG_HDD -f kexec,$KERNEL,$
 &lt;p&gt;Just after 2 months writing about xhyve + alpine,
 Docker announced they would go native for their Docker engine on top of xhyve — 
 and just 2 days ago I got accepted for testing Docker for Mac.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>TypeScript and its magic number TS2403</title>
-      <link>http://www.mindginative.com/post/typescript--its-magic-number-ts2403/</link>
-      <pubDate>Sat, 09 Jan 2016 10:59:13 +1200</pubDate>
-      
-      <guid>http://www.mindginative.com/post/typescript--its-magic-number-ts2403/</guid>
-      <description>
-
-&lt;p&gt;At work, we’ve been using Webpack for our frontend stack (TypeScript, AngularJS v1.x, NodeJS, GulpJS + other JS libraries without much drama.
-Over the last couple of months our Angular2-based project is starting to get a life, from a simple PoC to a usable web app.
-Though we were working against the early alpha releases of Angular2 but we thought it’s gonna be fine — we just want a minimum viable product.
-Subsequent bumps to Angular2 release builds up to the first beta the error message below started to popped out and now our simple Webpack &lt;code&gt;require&lt;/code&gt; interface needs some little attention.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;…node_modules/angular2/typings/node/node.d.ts
-error TS2403: Subsequent variable declarations must have the same type.
-Variable ‘require’ must be of type ‘NodeRequire’, but here has type ‘WebpackRequire’.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ah easy fix!, I thought it was just a 2 minutes fix with TypeScript’s “intersection types” introduced in 1.6 release:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;declare var require: NodeRequire | WebpackRequire
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;well that didn’t work!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;…node_modules/angular2/typings/node/node.d.ts
-error TS2403: Subsequent variable declarations must have the same type.
-Variable ‘require’ must be of type ‘NodeRequire’, but here has type ‘NodeRequire | WebpackRequire’.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Fiddling around the internets brought me to a Github issue &lt;a href=&#34;https://github.com/Microsoft/TypeScript/issues/3215&#34;&gt;https://github.com/Microsoft/TypeScript/issues/3215&lt;/a&gt;.
-One of the commenter pointed out to make use of TypeScript open-ended interface functionality which sort of acts like overriding an existing type definition.
-It’s supposedly pretty straight forward to just modify the offending type definition file by changing it to &lt;code&gt;declare var require: any&lt;/code&gt; however it’s a file shipped via npm package,
-the quick fix might work today but we don’t know after your next &lt;code&gt;npm install&lt;/code&gt; your fix will still be there.&lt;/p&gt;
-
-&lt;h4 id=&#34;anyway-here-s-the-updated-interface&#34;&gt;Anyway here’s the updated interface:&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;interface WebpackRequire {
-    &amp;lt;T&amp;gt;(path: string): T;
-    (paths: string[], callback: (...modules: any[]) =&amp;gt; void): void;
-    ensure: (paths: string[], callback: (require: &amp;lt;T&amp;gt;(path: string) =&amp;gt; T) =&amp;gt; void) =&amp;gt; void;
-}
-interface NodeRequire extends WebpackRequire {}
-declare var require: NodeRequire;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I tried to make the updated interface definition to be little bit verbose just to remind that this is an overridden (as I call it) interface specifically for Webpack.&lt;/p&gt;
-
-&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Microsoft/TypeScript/issues/3215#issuecomment-103467086&#34;&gt;https://github.com/Microsoft/TypeScript/issues/3215#issuecomment-103467086&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://basarat.gitbooks.io/typescript/content/docs/types/ambient/interfaces.htm&#34;&gt;https://basarat.gitbooks.io/typescript/content/docs/types/ambient/interfaces.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ronniehegelund.blogspot.co.nz/2013/01/extension-methods-in-typescript.html&#34;&gt;http://ronniehegelund.blogspot.co.nz/2013/01/extension-methods-in-typescript.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/angular/angular/issues/5807#issuecomment-164678165&#34;&gt;https://github.com/angular/angular/issues/5807#issuecomment-164678165&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/angular/angular/issues/6266&#34;&gt;https://github.com/angular/angular/issues/6266&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</loc>
+    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</loc>
     <lastmod>2017-04-10T21:03:29+12:00</lastmod>
   </url>
@@ -110,6 +115,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/aws/</loc>
+    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/bash/</loc>
     <lastmod>2016-11-28T01:17:35+13:00</lastmod>
     <priority>0</priority>
@@ -169,8 +180,20 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/dns/</loc>
+    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/docker/</loc>
     <lastmod>2017-02-15T16:39:23+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/domain/</loc>
+    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -189,6 +212,12 @@
   <url>
     <loc>http://www.mindginative.com/categories/meetup/</loc>
     <lastmod>2016-03-23T16:46:45+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/migration/</loc>
+    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -218,7 +247,7 @@
   
   <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-04-10T21:03:29+12:00</lastmod>
+    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -248,7 +277,13 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-04-10T21:03:29+12:00</lastmod>
+    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/route53/</loc>
+    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   

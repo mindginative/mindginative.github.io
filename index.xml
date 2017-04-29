@@ -6,8 +6,113 @@
     <description>Recent content on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Apr 2017 21:03:29 +1200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Apr 2017 21:11:01 +1200</lastBuildDate>
     <atom:link href="http://www.mindginative.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Domain Registrar migration from GoDaddy to AWS Route53: Short Story</title>
+      <link>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</link>
+      <pubDate>Fri, 28 Apr 2017 21:11:01 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</guid>
+      <description>
+
+&lt;p&gt;After a fantastic &lt;em&gt;&lt;strong&gt;9+&lt;/strong&gt;&lt;/em&gt; years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened  nor bad customer experience.&lt;/p&gt;
+
+&lt;p&gt;A million reasons:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;They&amp;rsquo;re just my domain provider, I only remember them when it&amp;rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;target-audience&#34;&gt;Target Audience&lt;/h2&gt;
+
+&lt;p&gt;It aims at people who are already using AWS Route53 as their DNS provider, for new commers - I guess you&amp;rsquo;ll have to touch base with DNS first, see &lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&#34;&gt;Migrating DNS Service for an existing Domain to Amazon Route53&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-process&#34;&gt;The Process&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve only spent at most 1 hour from start until I got the final confirmation email from Amazon that they&amp;rsquo;re now the domain registrar of mindginative.&lt;/p&gt;
+
+&lt;p&gt;Between the migration process - expect a bunch of emails, notifications, instructions, confirmations from GoDaddy and Amazon.&lt;/p&gt;
+
+&lt;p&gt;A word of warning though, before you turn all these knobs you MUST read the &lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&#34;&gt;transfer requirements for Top-Level domains&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;unlock-your-domain&#34;&gt;Unlock your domain&lt;/h4&gt;
+
+&lt;p&gt;It&amp;rsquo;s a standard protocol (I guess) for every Domain Registrars to lock your domain - kind of first step security measure for unauthorized domain takeover. So first, unlock it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-unlock.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;start-domain-transfer&#34;&gt;Start Domain Transfer&lt;/h4&gt;
+
+&lt;p&gt;Once unlocked, head over to your AWS dashboard:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1. Route53 dashboard&lt;/li&gt;
+&lt;li&gt;2. Registered domains&lt;/li&gt;
+&lt;li&gt;3. Transfer Domain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;AWS Route53 will always check for unlocked domain status before the actual domain transfer thus a big warning sign should you haven&amp;rsquo;t done it yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-domain-transfer.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Follow through the Transfer Domain wizard, fill out the fields - if needed. Confirm the domain transfer, request authorization code.&lt;/p&gt;
+
+&lt;p&gt;AWS Route53 initiates a transfer domain request authorization code from GoDaddy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-registrar-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Before the &lt;a href=&#34;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&#34;&gt;EPP code&lt;/a&gt;, a transer notice email:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-domain-transfer-notice.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;and then &amp;ldquo;Accept&amp;rdquo; the domain transfer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-domain-transfer-accept-or-decline.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;errr! and then GoDaddy would then provide you the authorization code:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-authorization-code.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;all-done&#34;&gt;All done&lt;/h4&gt;
+
+&lt;p&gt;You will get a fair amount of emails, a few minutes delay, before getting the final confirmation emails from GoDaddy and Amazon Route53 that your domain has been transfered.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s from Amazon:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-final-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;and GoDaddy:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-final-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The process went well. no hiccups, other than a few slight delays of notifications and or confirmation emails.&lt;/p&gt;
+
+&lt;p&gt;I only paid for the domain re-registration this time with AWS being the Domain Registrar. A good time to change Domain Registrar is when your domain is about to expire, say: 1 month from now - mine had only 3 days left with GoDaddy.&lt;/p&gt;
+
+&lt;p&gt;The steps and screenshots were lacking some of the steps but you get the gist, yes?&lt;/p&gt;
+
+&lt;p&gt;Who knows, 9 years from I&amp;rsquo;ll move to another Domain Registrar, Google maybe ? we don&amp;rsquo;t know but I&amp;rsquo;d hope it&amp;rsquo;ll be easy as QR Code scanning.&lt;/p&gt;
+
+&lt;p&gt;Got questions, suggestions, found typos ? let me know.&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://godaddy.com&#34;&gt;http://godaddy.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/route53/&#34;&gt;https://aws.amazon.com/route53/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/getting-started/tutorials/get-a-domain/&#34;&gt;https://aws.amazon.com/getting-started/tutorials/get-a-domain/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&#34;&gt;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&#34;&gt;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&#34;&gt;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>How to fix Raspberry Pi SSH connection reset</title>
@@ -951,64 +1056,6 @@ source: &lt;a href=&#34;https://twitter.com/dockerakl/status/711820276942528512&
 &lt;h3 id=&#34;finally&#34;&gt;Finally!&lt;/h3&gt;
 
 &lt;p&gt;Kudos to the &lt;a href=&#34;http://www.meetup.com/Docker-Auckland/members/?op=leaders&#34;&gt;organisers&lt;/a&gt; \cc &lt;a href=&#34;https://twitter.com/dockerakl&#34;&gt;@dockerakl&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Xhyve &#43; Alpine Linux</title>
-      <link>http://www.mindginative.com/post/xhyve-alpine-linux/</link>
-      <pubDate>Mon, 18 Jan 2016 11:07:49 +1200</pubDate>
-      
-      <guid>http://www.mindginative.com/post/xhyve-alpine-linux/</guid>
-      <description>
-
-&lt;p&gt;During the 2015 Xmas holiday break I’ve been meaning to play around with Docker or in particular CoreOS on my Mac machine. I know it’s pretty easy to whip with a few CLI commands — Vagrant + VirtualBox, done! — but I wanted something different and wanted to avoid too many abstraction eg. running a virtual environment on top of a virtual environment. A few google searches got me into xhyve, can’t remember the exact keywords I used — sorry.&lt;/p&gt;
-
-&lt;p&gt;xhyve is relatively a new project, roughly 7 months old as of this writing, out of curiosity I jumped right away and see if I could install Alpine Linux. On the side note, the reason I’m looking at running Alpine Linux because it was mentioned at Vagga’s documentation, period, I will do a post about Vagga.&lt;/p&gt;
-
-&lt;p&gt;I haven’t used Alpine Linux before but luckily I found this Tweet and the link to the blog — thanks to Aria Stewart ;). I then grabbed the latest Alpine release &lt;code&gt;alpine-3.3.0-x86_64.iso&lt;/code&gt; but I ran into a hell lot of booting issues, my first night wasn’t a success. The following day, I realised that scavenging through forums, stackoverflow, &amp;amp; etc isn’t gonna help me out even just getting the basic Alpine boot up and decided to just use the version &lt;code&gt;alpine-3.2.3-x86_64.iso&lt;/code&gt; used by Aria. It definitely works but ran into a couple minor issues so I decided to chuck it into a Bash script and make changes as I go.&lt;/p&gt;
-
-&lt;p&gt;Here’s my Github gist&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
-
-KERNEL=&amp;quot;vmlinuz-grsec&amp;quot;
-INITRD=&amp;quot;initramfs-grsec&amp;quot;
-CMDLINE=&amp;quot;alpine_dev=cdrom:iso9660 modules=loop,squashfs,sd-mod,usb-storage,sr-mod,earlyprintk=serial console=ttyS0&amp;quot;
-
-MEM=&amp;quot;-m 1G&amp;quot;
-IMG_CD=&amp;quot;-s 3,ahci-cd,alpine-3.2.3-x86_64.iso&amp;quot;
-PCI_DEV=&amp;quot;-s 0:0,hostbridge -s 31,lpc&amp;quot;
-LPC_DEV=&amp;quot;-l com1,stdio&amp;quot;
-ACPI=&amp;quot;-A&amp;quot;
-#SMP=&amp;quot;-c 2&amp;quot;
-
-# sudo if you want networking enabled
-NET=&amp;quot;-s 2:0,virtio-net&amp;quot;
-
-xhyve $ACPI $MEM $SMP $PCI_DEV $LPC_DEV $NET $IMG_CD $IMG_HDD -f kexec,$KERNEL,$INITRD,&amp;quot;$CMDLINE&amp;quot;
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After a successful boot up&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/xhyve-alpine.png&#34; width=&#34;600&#34; alt=&#34;Alpine Linux inside xhyve v0.2.0&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;One last thing, definitely worth looking into is running CoreOS inside xhyve!&lt;/p&gt;
-
-&lt;p&gt;Some references I’ve found while working on the install process&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://coreos.com/blog/coreos-and-xhyve-tech-preview.html&#34;&gt;https://coreos.com/blog/coreos-and-xhyve-tech-preview.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ailispaw/boot2docker-xhyve&#34;&gt;https://github.com/ailispaw/boot2docker-xhyve&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/the-journey-of-code/creating-virtual-dev-environment-with-xhyve-fe501005fc6c#.jdmy6icbv&#34;&gt;https://medium.com/the-journey-of-code/creating-virtual-dev-environment-with-xhyve-fe501005fc6c#.jdmy6icbv&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;update-8-may-2016&#34;&gt;Update: 8/May/2016&lt;/h3&gt;
-
-&lt;p&gt;Just after 2 months writing about xhyve + alpine,
-Docker announced they would go native for their Docker engine on top of xhyve — 
-and just 2 days ago I got accepted for testing Docker for Mac.&lt;/p&gt;
 </description>
     </item>
     

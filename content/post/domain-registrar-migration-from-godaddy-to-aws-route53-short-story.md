@@ -82,7 +82,7 @@ I only paid for the domain re-registration this time with AWS being the Domain R
 
 The steps and screenshots were lacking some of the steps but you get the gist, yes?
 
-Who knows, 9 years from I'll move to another Domain Registrar, Google maybe ? we don't know but I'd hope it'll be easy as QR Code scanning.
+Who knows, 9 years from now I'll move to another Domain Registrar, Google? I don't know but I'd hope by then it'll be easy as QR Code scanning.
 
 Got questions, suggestions, found typos ? let me know.
 

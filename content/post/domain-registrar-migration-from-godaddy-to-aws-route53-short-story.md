@@ -14,7 +14,7 @@ A million reasons:
 
 ## Target Audience
 
-It aims at people who are already using AWS Route53 as their DNS provider, for new commers - I guess you'll have to touch base with DNS first, see [Migrating DNS Service for an existing Domain to Amazon Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html)
+It aims at people who are already using AWS Route53 as their DNS provider, for newcomers - I guess you'll have to touch base with DNS first, see [Migrating DNS Service for an existing Domain to Amazon Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html)
 
 ## The Process
 

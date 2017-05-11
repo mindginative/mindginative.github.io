@@ -9,6 +9,438 @@
     <atom:link href="http://www.mindginative.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>ASRock H110M-STX Deskmini 110w With Headless Ubuntu Server</title>
+      <link>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</link>
+      <pubDate>Thu, 11 May 2017 22:42:44 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</guid>
+      <description>
+
+&lt;p&gt;About 8 months ago when I saw the Intel NUC at local computer store, I thought maybe I could get one for my expirements/projects. One that I could just leave running (headless) on one corner and either do of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Remote SSH from a local coffee shop: download stuff, etc&lt;/li&gt;
+&lt;li&gt;Remote development while travelling overseas where internet speed isn&amp;rsquo;t great&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I did a bit of research about Intel NUC, just wanted to make sure that it will be worthy for the price that I&amp;rsquo;d be paying for. However as I dig more info about it - blogs, reviews and forums - the following tipped off the scale for NUC:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Price&lt;/li&gt;
+&lt;li&gt;Hardware Upgrades&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
+
+&lt;p&gt;The Toshiba and Western Digital SATA disks are old stuff I pulled out from an old laptop.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Spec&lt;/th&gt;
+&lt;th&gt;Additional Info&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ASRock Deskmini&lt;/td&gt;
+&lt;td&gt;Barebone PC&lt;/td&gt;
+&lt;td&gt;H110M-STX, 110W (Wireless version)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp&#34;&gt;ASRock Website info&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Intel G4560 Pentium&lt;/td&gt;
+&lt;td&gt;CPU&lt;/td&gt;
+&lt;td&gt;3.50GHz, 2 Cores&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://cpu.userbenchmark.com/Compare/Intel-Pentium-G4560-vs-Intel-Core-i3-6100/3892vs3511&#34;&gt;Intel-Pentium-G4560-vs-Intel-Core-i3-6100&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Samsung 960 EVO&lt;/td&gt;
+&lt;td&gt;SSD&lt;/td&gt;
+&lt;td&gt;250GB, M.2, PCIe&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.tomshardware.com/reviews/samsung-960-evo-nvme-ssd-review,4802.html&#34;&gt;Tom&amp;rsquo;s Hardware review on 960 EVO NVMe SSD&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Crucial SODIMM&lt;/td&gt;
+&lt;td&gt;RAM&lt;/td&gt;
+&lt;td&gt;2x8GB, DDR4-2133&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.crucial.com/usa/en/ct8g4sfd8213&#34;&gt;crucial info&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;TOSHIBA MQ01ABF050&lt;/td&gt;
+&lt;td&gt;SATA&lt;/td&gt;
+&lt;td&gt;500GB 5400 RPM 8MB Cache SATA 6.0Gb/s 2.5&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.newegg.com/Product/Product.aspx?Item=1Z4-000B-00003&#34;&gt;newegg.com TOSHIBA MQ01ABF050&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Western Digital WD2500BEVT&lt;/td&gt;
+&lt;td&gt;SATA&lt;/td&gt;
+&lt;td&gt;250GB 5400 RPM 8MB Cache SATA 3.0Gb/s 2.5&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.newegg.com/Product/Product.aspx?Item=N82E16822136387&#34;&gt;newegg.com Western Digital WD2500BEVT&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;gallery&#34;&gt;Gallery&lt;/h2&gt;
+
+&lt;p&gt;Here are a couple of shots of my Deskmini and its components.&lt;/p&gt;
+
+&lt;section id=&#34;two&#34;&gt;
+	&lt;div class=&#34;row&#34;&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu-box.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu-box.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Pentium LGA1151&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Pentium G4560&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/evo-cover.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/evo-cover.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;960 EVO M.2 Box&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/evo-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/evo-disk.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;960 EVO 250GB SSD&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/ram.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/ram.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Crucial 2x8GB DDR4 RAM&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/deskmini-assembled.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/deskmini-assembled.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Side View: Assembled Deskmini&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu-and-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu-and-disk.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Top View: Assembled Deskmini&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/deskmini.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/deskmini.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Deskmini Contents&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/sata-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/sata-disk.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Bottom View: Toshiba SATA Disk&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/package.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/package.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Deskmini, RAM, SSD, CPU&lt;/h3&gt;
+		&lt;/article&gt;
+		
+	&lt;/div&gt;
+&lt;/section&gt;
+
+
+&lt;h2 id=&#34;issues&#34;&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;It wouldn&amp;rsquo;t be an exciting stuff if there are no issues, don&amp;rsquo;t you think ?&lt;/p&gt;
+
+&lt;h4 id=&#34;bios-kaby-lake&#34;&gt;BIOS &amp;amp; Kaby Lake&lt;/h4&gt;
+
+&lt;p&gt;Once you get the build done and pushed the start button - &lt;em&gt;IT WON&amp;rsquo;T BOOT THE F**K BOOT UP!&lt;/em&gt; why?! - Kaby Lake processor needs UEFI/BIOS version 7.0 or greater. To fix this issue you either need to do the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ask the retailers/tech guys to flash the BIOS for you - before handling over your money, this is what I did.&lt;/li&gt;
+&lt;li&gt;Get a spare Skylake processor, boot it up on Windows and flash the BIOS with your barehand.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;future-plan&#34;&gt;Future Plan&lt;/h2&gt;
+
+&lt;p&gt;Obviously we want the best, fastest and the latest - so my wishlist for this box are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://noctua.at/en/nh-l9i&#34;&gt;Noctua NH-L9i&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ark.intel.com/products/88195/Intel-Core-i7-6700K-Processor-8M-Cache-up-to-4_20-GHz&#34;&gt;Intel Skylake Core i7 6700K 4.0Ghz 8MB LGA 1151&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.corsair.com/en-gb/vengeance-series-32gb-2x16gb-ddr4-sodimm-3000mhz-cl16-memory-kit-cmsx32gx4m2a3000c16&#34;&gt;Vengeance® Series 32GB (2 x 16GB) DDR4 SODIMM &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Overall I&amp;rsquo;m happy with this box, gets the job done. It&amp;rsquo;s been just few weeks since I built this and its current uptime is 11 days.
+The OS is Ubuntu Server 16.04.2 LTS + Docker version 17.03.1-ce with 3 running Docker containers for my fullstack development.
+Head over at the references below should you need more details.&lt;/p&gt;
+
+&lt;p&gt;I will have another blog for the OS and development experience so stay tuned.&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8j-u7B5nzAk&#34;&gt;https://www.youtube.com/watch?v=8j-u7B5nzAk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp#Gallery&#34;&gt;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp#Gallery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows&#34;&gt;https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www-ssl.intel.com/content/www/us/en/products/boards-kits/nuc.html&#34;&gt;https://www-ssl.intel.com/content/www/us/en/products/boards-kits/nuc.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://forum.asrock.com/forum_posts.asp?TID=4552&amp;amp;title=deskmini-110-kaby-lake-bios&#34;&gt;http://forum.asrock.com/forum_posts.asp?TID=4552&amp;amp;title=deskmini-110-kaby-lake-bios&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hardforum.com/threads/help-intel-skull-canyon-nuc-or-asrock-mini-stx-deskmini-110-with-i7-6700.1908805/&#34;&gt;https://hardforum.com/threads/help-intel-skull-canyon-nuc-or-asrock-mini-stx-deskmini-110-with-i7-6700.1908805/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ASRock H110M-STX Deskmini 110w With Headless Ubuntu Server</title>
+      <link>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</link>
+      <pubDate>Thu, 11 May 2017 22:42:44 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</guid>
+      <description>
+
+&lt;p&gt;About 8 months ago when I saw the Intel NUC at local computer store, I thought maybe I could get one for my expirements/projects. One that I could just leave running (headless) on one corner and either do of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Remote SSH from a local coffee shop: download stuff, etc&lt;/li&gt;
+&lt;li&gt;Remote development while travelling overseas where internet speed isn&amp;rsquo;t great&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I did a bit of research about Intel NUC, just wanted to make sure that it will be worthy for the price that I&amp;rsquo;d be paying for. However as I dig more info about it - blogs, reviews and forums - the following tipped off the scale for NUC:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Price&lt;/li&gt;
+&lt;li&gt;Hardware Upgrades&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
+
+&lt;p&gt;The Toshiba and Western Digital SATA disks are old stuff I pulled out from an old laptop.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Spec&lt;/th&gt;
+&lt;th&gt;Additional Info&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ASRock Deskmini&lt;/td&gt;
+&lt;td&gt;Barebone PC&lt;/td&gt;
+&lt;td&gt;H110M-STX, 110W (Wireless version)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp&#34;&gt;ASRock Website info&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Intel G4560 Pentium&lt;/td&gt;
+&lt;td&gt;CPU&lt;/td&gt;
+&lt;td&gt;3.50GHz, 2 Cores&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://cpu.userbenchmark.com/Compare/Intel-Pentium-G4560-vs-Intel-Core-i3-6100/3892vs3511&#34;&gt;Intel-Pentium-G4560-vs-Intel-Core-i3-6100&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Samsung 960 EVO&lt;/td&gt;
+&lt;td&gt;SSD&lt;/td&gt;
+&lt;td&gt;250GB, M.2, PCIe&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.tomshardware.com/reviews/samsung-960-evo-nvme-ssd-review,4802.html&#34;&gt;Tom&amp;rsquo;s Hardware review on 960 EVO NVMe SSD&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Crucial SODIMM&lt;/td&gt;
+&lt;td&gt;RAM&lt;/td&gt;
+&lt;td&gt;2x8GB, DDR4-2133&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.crucial.com/usa/en/ct8g4sfd8213&#34;&gt;crucial info&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;TOSHIBA MQ01ABF050&lt;/td&gt;
+&lt;td&gt;SATA&lt;/td&gt;
+&lt;td&gt;500GB 5400 RPM 8MB Cache SATA 6.0Gb/s 2.5&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.newegg.com/Product/Product.aspx?Item=1Z4-000B-00003&#34;&gt;newegg.com TOSHIBA MQ01ABF050&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Western Digital WD2500BEVT&lt;/td&gt;
+&lt;td&gt;SATA&lt;/td&gt;
+&lt;td&gt;250GB 5400 RPM 8MB Cache SATA 3.0Gb/s 2.5&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.newegg.com/Product/Product.aspx?Item=N82E16822136387&#34;&gt;newegg.com Western Digital WD2500BEVT&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;gallery&#34;&gt;Gallery&lt;/h2&gt;
+
+&lt;p&gt;Here are a couple of shots of my Deskmini and its components.&lt;/p&gt;
+
+&lt;section id=&#34;two&#34;&gt;
+	&lt;div class=&#34;row&#34;&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu-box.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu-box.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Pentium LGA1151&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Pentium G4560&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/evo-cover.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/evo-cover.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;960 EVO M.2 Box&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/evo-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/evo-disk.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;960 EVO 250GB SSD&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/ram.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/ram.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Crucial 2x8GB DDR4 RAM&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/deskmini-assembled.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/deskmini-assembled.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Side View: Assembled Deskmini&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu-and-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu-and-disk.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Top View: Assembled Deskmini&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/deskmini.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/deskmini.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Deskmini Contents&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/sata-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/sata-disk.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Bottom View: Toshiba SATA Disk&lt;/h3&gt;
+		&lt;/article&gt;
+		
+    
+		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
+      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/package.jpg&#34; class=&#34;image fit thumb&#34;&gt;
+        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/package.jpg&#34; alt=&#34;&#34; /&gt;
+      &lt;/a&gt;
+			&lt;h3&gt;Deskmini, RAM, SSD, CPU&lt;/h3&gt;
+		&lt;/article&gt;
+		
+	&lt;/div&gt;
+&lt;/section&gt;
+
+
+&lt;h2 id=&#34;issues&#34;&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;It wouldn&amp;rsquo;t be an exciting stuff if there are no issues, don&amp;rsquo;t you think ?&lt;/p&gt;
+
+&lt;h4 id=&#34;bios-kaby-lake&#34;&gt;BIOS &amp;amp; Kaby Lake&lt;/h4&gt;
+
+&lt;p&gt;Once you get the build done and pushed the start button - &lt;em&gt;IT WON&amp;rsquo;T BOOT THE F**K BOOT UP!&lt;/em&gt; why?! - Kaby Lake processor needs UEFI/BIOS version 7.0 or greater. To fix this issue you either need to do the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ask the retailers/tech guys to flash the BIOS for you - before handling over your money, this is what I did.&lt;/li&gt;
+&lt;li&gt;Get a spare Skylake processor, boot it up on Windows and flash the BIOS with your barehand.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;future-plan&#34;&gt;Future Plan&lt;/h2&gt;
+
+&lt;p&gt;Obviously we want the best, fastest and the latest - so my wishlist for this box are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://noctua.at/en/nh-l9i&#34;&gt;Noctua NH-L9i&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ark.intel.com/products/88195/Intel-Core-i7-6700K-Processor-8M-Cache-up-to-4_20-GHz&#34;&gt;Intel Skylake Core i7 6700K 4.0Ghz 8MB LGA 1151&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.corsair.com/en-gb/vengeance-series-32gb-2x16gb-ddr4-sodimm-3000mhz-cl16-memory-kit-cmsx32gx4m2a3000c16&#34;&gt;Vengeance® Series 32GB (2 x 16GB) DDR4 SODIMM &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Overall I&amp;rsquo;m happy with this box, gets the job done. It&amp;rsquo;s been just few weeks since I built this and its current uptime is 11 days.
+The OS is Ubuntu Server 16.04.2 LTS + Docker version 17.03.1-ce with 3 running Docker containers for my fullstack development.
+Head over at the references below should you need more details.&lt;/p&gt;
+
+&lt;p&gt;I will have another blog for the OS and development experience so stay tuned.&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8j-u7B5nzAk&#34;&gt;https://www.youtube.com/watch?v=8j-u7B5nzAk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp#Gallery&#34;&gt;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp#Gallery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows&#34;&gt;https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www-ssl.intel.com/content/www/us/en/products/boards-kits/nuc.html&#34;&gt;https://www-ssl.intel.com/content/www/us/en/products/boards-kits/nuc.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://forum.asrock.com/forum_posts.asp?TID=4552&amp;amp;title=deskmini-110-kaby-lake-bios&#34;&gt;http://forum.asrock.com/forum_posts.asp?TID=4552&amp;amp;title=deskmini-110-kaby-lake-bios&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hardforum.com/threads/help-intel-skull-canyon-nuc-or-asrock-mini-stx-deskmini-110-with-i7-6700.1908805/&#34;&gt;https://hardforum.com/threads/help-intel-skull-canyon-nuc-or-asrock-mini-stx-deskmini-110-with-i7-6700.1908805/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>NodeJS Development Inside Docker on Windows 10</title>
       <link>http://www.mindginative.com/post/nodejs-development-inside-docker-with-windows10/</link>
       <pubDate>Wed, 15 Feb 2017 16:39:23 +1300</pubDate>

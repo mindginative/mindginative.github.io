@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ASRock H110M-STX Deskmini 110w With Headless Ubuntu Server &middot; Richard Sentino via mindginative</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard&#39;s page for more information.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.18.1" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>ASRock H110M-STX Deskmini 110w With Headless Ubuntu Server</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-05-11 22:42:44 &#43;1200 NZST">2017-05-11</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	            <i class="fa fa-folder"></i>&nbsp;&nbsp;
+	            
+	            <a class="article-category-link" href="http://www.mindginative.com/categories/development">development</a>
+	            
+	            
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/linux">linux</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/server">server</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/pc">pc</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/linux">linux</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/ubuntu">ubuntu</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/docker">docker</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>About 8 months ago when I saw the Intel NUC at local computer store, I thought maybe I could get one for my expirements/projects. One that I could just leave running (headless) on one corner and either do of the following:</p>
+
+<ul>
+<li>Remote SSH from a local coffee shop: download stuff, etc</li>
+<li>Remote development while travelling overseas where internet speed isn&rsquo;t great</li>
+</ul>
+
+<p>I did a bit of research about Intel NUC, just wanted to make sure that it will be worthy for the price that I&rsquo;d be paying for. However as I dig more info about it - blogs, reviews and forums - the following tipped off the scale for NUC:</p>
+
+<ul>
+<li>Price</li>
+<li>Hardware Upgrades</li>
+</ul>
+
+<h2 id="hardware">Hardware</h2>
+
+<p>The Toshiba and Western Digital SATA disks are old stuff I pulled out from an old laptop.</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Spec</th>
+<th>Additional Info</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ASRock Deskmini</td>
+<td>Barebone PC</td>
+<td>H110M-STX, 110W (Wireless version)</td>
+<td><a href="http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp">ASRock Website info</a></td>
+</tr>
+
+<tr>
+<td>Intel G4560 Pentium</td>
+<td>CPU</td>
+<td>3.50GHz, 2 Cores</td>
+<td><a href="http://cpu.userbenchmark.com/Compare/Intel-Pentium-G4560-vs-Intel-Core-i3-6100/3892vs3511">Intel-Pentium-G4560-vs-Intel-Core-i3-6100</a></td>
+</tr>
+
+<tr>
+<td>Samsung 960 EVO</td>
+<td>SSD</td>
+<td>250GB, M.2, PCIe</td>
+<td><a href="http://www.tomshardware.com/reviews/samsung-960-evo-nvme-ssd-review,4802.html">Tom&rsquo;s Hardware review on 960 EVO NVMe SSD</a></td>
+</tr>
+
+<tr>
+<td>Crucial SODIMM</td>
+<td>RAM</td>
+<td>2x8GB, DDR4-2133</td>
+<td><a href="http://www.crucial.com/usa/en/ct8g4sfd8213">crucial info</a></td>
+</tr>
+
+<tr>
+<td>TOSHIBA MQ01ABF050</td>
+<td>SATA</td>
+<td>500GB 5400 RPM 8MB Cache SATA 6.0Gb/s 2.5&rdquo;</td>
+<td><a href="https://www.newegg.com/Product/Product.aspx?Item=1Z4-000B-00003">newegg.com TOSHIBA MQ01ABF050</a></td>
+</tr>
+
+<tr>
+<td>Western Digital WD2500BEVT</td>
+<td>SATA</td>
+<td>250GB 5400 RPM 8MB Cache SATA 3.0Gb/s 2.5&rdquo;</td>
+<td><a href="https://www.newegg.com/Product/Product.aspx?Item=N82E16822136387">newegg.com Western Digital WD2500BEVT</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="gallery">Gallery</h2>
+
+<p>Here are a couple of shots of my Deskmini and its components.</p>
+
+<section id="two">
+	<div class="row">
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/cpu-box.jpg" class="image fit thumb">
+        <img src="/images/deskmini/cpu-box.jpg" alt="" />
+      </a>
+			<h3>Pentium LGA1151</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/cpu.jpg" class="image fit thumb">
+        <img src="/images/deskmini/cpu.jpg" alt="" />
+      </a>
+			<h3>Pentium G4560</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/evo-cover.jpg" class="image fit thumb">
+        <img src="/images/deskmini/evo-cover.jpg" alt="" />
+      </a>
+			<h3>960 EVO M.2 Box</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/evo-disk.jpg" class="image fit thumb">
+        <img src="/images/deskmini/evo-disk.jpg" alt="" />
+      </a>
+			<h3>960 EVO 250GB SSD</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/ram.jpg" class="image fit thumb">
+        <img src="/images/deskmini/ram.jpg" alt="" />
+      </a>
+			<h3>Crucial 2x8GB DDR4 RAM</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/deskmini-assembled.jpg" class="image fit thumb">
+        <img src="/images/deskmini/deskmini-assembled.jpg" alt="" />
+      </a>
+			<h3>Side View: Assembled Deskmini</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/cpu-and-disk.jpg" class="image fit thumb">
+        <img src="/images/deskmini/cpu-and-disk.jpg" alt="" />
+      </a>
+			<h3>Top View: Assembled Deskmini</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/deskmini.jpg" class="image fit thumb">
+        <img src="/images/deskmini/deskmini.jpg" alt="" />
+      </a>
+			<h3>Deskmini Contents</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/sata-disk.jpg" class="image fit thumb">
+        <img src="/images/deskmini/sata-disk.jpg" alt="" />
+      </a>
+			<h3>Bottom View: Toshiba SATA Disk</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/deskmini/package.jpg" class="image fit thumb">
+        <img src="/images/deskmini/package.jpg" alt="" />
+      </a>
+			<h3>Deskmini, RAM, SSD, CPU</h3>
+		</article>
+		
+	</div>
+</section>
+
+
+<h2 id="issues">Issues</h2>
+
+<p>It wouldn&rsquo;t be an exciting stuff if there are no issues, don&rsquo;t you think ?</p>
+
+<h4 id="bios-kaby-lake">BIOS &amp; Kaby Lake</h4>
+
+<p>Once you get the build done and pushed the start button - <em>IT WON&rsquo;T BOOT THE F**K BOOT UP!</em> why?! - Kaby Lake processor needs UEFI/BIOS version 7.0 or greater. To fix this issue you either need to do the following:</p>
+
+<ul>
+<li>Ask the retailers/tech guys to flash the BIOS for you - before handling over your money, this is what I did.</li>
+<li>Get a spare Skylake processor, boot it up on Windows and flash the BIOS with your barehand.</li>
+</ul>
+
+<h2 id="future-plan">Future Plan</h2>
+
+<p>Obviously we want the best, fastest and the latest - so my wishlist for this box are:</p>
+
+<ul>
+<li><a href="http://noctua.at/en/nh-l9i">Noctua NH-L9i</a></li>
+<li><a href="https://ark.intel.com/products/88195/Intel-Core-i7-6700K-Processor-8M-Cache-up-to-4_20-GHz">Intel Skylake Core i7 6700K 4.0Ghz 8MB LGA 1151</a></li>
+<li><a href="http://www.corsair.com/en-gb/vengeance-series-32gb-2x16gb-ddr4-sodimm-3000mhz-cl16-memory-kit-cmsx32gx4m2a3000c16">Vengeance® Series 32GB (2 x 16GB) DDR4 SODIMM </a></li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Overall I&rsquo;m happy with this box, gets the job done. It&rsquo;s been just few weeks since I built this and its current uptime is 11 days.
+The OS is Ubuntu Server 16.04.2 LTS + Docker version 17.03.1-ce with 3 running Docker containers for my fullstack development.
+Head over at the references below should you need more details.</p>
+
+<p>I will have another blog for the OS and development experience so stay tuned.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=8j-u7B5nzAk">https://www.youtube.com/watch?v=8j-u7B5nzAk</a></li>
+<li><a href="http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp#Gallery">http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp#Gallery</a></li>
+<li><a href="https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows">https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows</a></li>
+<li><a href="https://www-ssl.intel.com/content/www/us/en/products/boards-kits/nuc.html">https://www-ssl.intel.com/content/www/us/en/products/boards-kits/nuc.html</a></li>
+<li><a href="http://forum.asrock.com/forum_posts.asp?TID=4552&amp;title=deskmini-110-kaby-lake-bios">http://forum.asrock.com/forum_posts.asp?TID=4552&amp;title=deskmini-110-kaby-lake-bios</a></li>
+<li><a href="https://hardforum.com/threads/help-intel-skull-canyon-nuc-or-asrock-mini-stx-deskmini-110-with-i7-6700.1908805/">https://hardforum.com/threads/help-intel-skull-canyon-nuc-or-asrock-mini-stx-deskmini-110-with-i7-6700.1908805/</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/asrock-deskmini-110w-with-ubuntu-server\/';
+    var disqus_title = 'ASRock H110M-STX Deskmini 110w With Headless Ubuntu Server';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/asrock-deskmini-110w-with-ubuntu-server\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

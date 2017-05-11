@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</loc>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
   </url>
@@ -180,6 +185,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/categories/development/</loc>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/dns/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
@@ -187,7 +198,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/docker/</loc>
-    <lastmod>2017-02-15T16:39:23+13:00</lastmod>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,7 +216,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/linux/</loc>
-    <lastmod>2017-02-15T16:39:23+13:00</lastmod>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -246,8 +257,14 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/pc/</loc>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -277,7 +294,7 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-04-28T21:11:01+12:00</lastmod>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -296,6 +313,12 @@
   <url>
     <loc>http://www.mindginative.com/tags/security/</loc>
     <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/server/</loc>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -330,7 +353,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/ubuntu/</loc>
-    <lastmod>2016-11-28T01:17:35+13:00</lastmod>
+    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   

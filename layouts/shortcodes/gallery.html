@@ -1,0 +1,13 @@
+<section id="two">
+	<div class="row">
+		{{ range $param := .Params }}
+    {{ $imgSrc := split $param "|" }}
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/{{ index $imgSrc 0 }}" class="image fit thumb">
+        <img src="/images/{{ index $imgSrc 0 }}" alt="" />
+      </a>
+			<h3>{{ index $imgSrc 1 }}</h3>
+		</article>
+		{{ end }}
+	</div>
+</section>

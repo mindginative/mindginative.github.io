@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>S3 on Richard Sentino via mindginative</title>
-    <link>http://www.mindginative.com/tags/s3/index.xml</link>
+    <link>http://www.mindginative.com/tags/s3/</link>
     <description>Recent content in S3 on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.mindginative.com/tags/s3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Apr 2017 21:27:59 +1200</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/tags/s3/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Setting up Bitbucket&#39;s Pipelines for frontend deployment on AWS S3</title>
@@ -14,115 +17,8 @@
       <pubDate>Sun, 09 Apr 2017 21:27:59 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/setting-up-bitbucket-pipelines-and-aws-s3/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt; is my main git repo for all my personal (PoC) projects, portfolio and all of my contracting projects - hands down on private repo.&lt;/p&gt;
-
-&lt;p&gt;While I&amp;rsquo;ve tried &lt;a href=&#34;https://codeship.com/&#34;&gt;Codeship&lt;/a&gt;, &lt;a href=&#34;https://circleci.com/&#34;&gt;CircleCI&lt;/a&gt;, &lt;a href=&#34;https://jenkins.io/&#34;&gt;Jenkins&lt;/a&gt; for production use, however, all of these CI server needs some little education about private and public certificates for setting up roles/permission/access before any of them can pull out your source code and push it to eg: &lt;em&gt;Amazon S3&lt;/em&gt; &amp;mdash; Pipelines + AWS S3 was far bit easier.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;d say &lt;em&gt;easy&lt;/em&gt; because it only took me a couple of minutes to configure S3 and Pipeline from nothing to automated deployment. We&amp;rsquo;ll see that in a bit.&lt;/p&gt;
-
-&lt;h2 id=&#34;nuff-said-show-me&#34;&gt;`nuff said, show me!&lt;/h2&gt;
-
-&lt;h3 id=&#34;pipelines&#34;&gt;Pipelines&lt;/h3&gt;
-
-&lt;p&gt;There are only 4 steps to enable Pipelines for your project:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1. Go to settings&lt;/li&gt;
-&lt;li&gt;2. Enable Pipelines&lt;/li&gt;
-&lt;li&gt;3. Select &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt; deployment template&lt;/li&gt;
-&lt;li&gt;4. Commit &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Figure below is my default YAML config file for a NodeJS application:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/pipelines-enable.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you get past #4, you&amp;rsquo;re all pretty much all set.&lt;/p&gt;
-
-&lt;h4 id=&#34;custom-template&#34;&gt;Custom Template&lt;/h4&gt;
-
-&lt;p&gt;My project is still in super alpha stage, I don&amp;rsquo;t want to trap myself into this complicated build systems like: Webpack, Rollup - not even Angular2 nor React. I just want keep to keep it lean, deliver fast and improve later.&lt;/p&gt;
-
-&lt;p&gt;Deployment is done via &lt;a href=&#34;https://aws.amazon.com/cli/&#34;&gt;AWS Command Line Interface&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;bitbucket-pipelines.yml:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# This is a sample build configuration for Haskell.
-# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
-# Only use spaces to indent your .yml configuration.
-# -----
-# You can specify a custom docker image from Docker Hub as your build environment.
-image: node:6.9.2
-
-pipelines:
-  branches:
-    master:
-      - step:
-          script:
-           - apt-get update
-           - python --version
-           - apt-get -y install python-dev
-           - apt-get -y install python-pip
-           - pip install awscli
-           - pip --help
-           - aws --version
-           - aws --region ap-southeast-2 s3 sync . s3://path-to-your-s3-bucket/ --acl public-read --exclude &amp;quot;.vscode/*&amp;quot; --exclude &amp;quot;.git/*&amp;quot; --exclude &amp;quot;.gitattributes&amp;quot; --exclude &amp;quot;.gitignore&amp;quot; --exclude &amp;quot;.editorconfig&amp;quot; --exclude &amp;quot;node_modules&amp;quot; --exclude &amp;quot;yarn.lock&amp;quot; --exclude &amp;quot;package.json&amp;quot; --exclude &amp;quot;bitbucket-pipelines.yml&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;environment-variables&#34;&gt;Environment Variables&lt;/h4&gt;
-
-&lt;p&gt;The last line from our &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt; requires &lt;em&gt;AWS_ACCESS_KEY_ID&lt;/em&gt; and &lt;em&gt;AWS_SECRET_ACCESS_KEY&lt;/em&gt;. We&amp;rsquo;ll stick each value in Pipelines environment variable section. During the build process, Bitbucket populates these values in shell environment eg: export AWS_ACCESS_KEY_ID=&lt;whatever key id&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;aws&lt;/code&gt; command line interface on the other hand, will react accordingly that we&amp;rsquo;re trying to override one of the default options once it sees &lt;code&gt;AWS_ACCESS_KEY_ID&lt;/code&gt; and &lt;code&gt;AWS_SECRET_ACCESS_KEY&lt;/code&gt; in environment variables. see &lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#config-settings-and-precedence&#34;&gt;config-settings-and-precedence&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/pipelines-env.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Provide a dummy value for now, we&amp;rsquo;ll get one in a bit.&lt;/p&gt;
-
-&lt;h3 id=&#34;amazon-s3&#34;&gt;Amazon S3&lt;/h3&gt;
-
-&lt;p&gt;We&amp;rsquo;ll configure the S3 deployment using &lt;a href=&#34;https://aws.amazon.com/iam/&#34;&gt;AWS Identity and Access Management&lt;/a&gt; tool.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Create Group called &lt;code&gt;Deploy&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Attach &lt;code&gt;AmazonS3FullAccess&lt;/code&gt; permission to your Group&lt;/li&gt;
-&lt;li&gt;Create user named &lt;code&gt;deploy_s3&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Select &lt;code&gt;Programmatic access&lt;/code&gt; for &lt;code&gt;deploy_s3&lt;/code&gt; access type&lt;/li&gt;
-&lt;li&gt;Attach &lt;code&gt;deploy_s3&lt;/code&gt; user to your &lt;code&gt;Deploy&lt;/code&gt; group&lt;/li&gt;
-&lt;li&gt;Copy AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;deploy-group&#34;&gt;Deploy Group&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/iam-group.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;user-deploy-s3-access-type&#34;&gt;User deploy_s3 Access Type&lt;/h4&gt;
-
-&lt;p&gt;Tick the box &lt;em&gt;Programmatic Access&lt;/em&gt;, we need the Key and Secret values later
-&lt;img src=&#34;http://www.mindginative.com/images/iam-user-access-type.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;user-deploy-s3-attached-to-deploy-group&#34;&gt;User deploy_s3 attached to Deploy group&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/iam-user.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;user-deploy-s3-credentials&#34;&gt;User deploy_s3 Credentials&lt;/h4&gt;
-
-&lt;p&gt;Copy the &lt;em&gt;Access key ID&lt;/em&gt; and &lt;em&gt;Secret access key&lt;/em&gt; values and paste it into your Pipelines environment variables&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/iam-user-credentials.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you&amp;rsquo;ve got everything in placed. Try and push some changes to your master remote branch - check Pipelines status, and check your S3 bucket&lt;/p&gt;
-
-&lt;h2 id=&#34;build-it&#34;&gt;Build it!&lt;/h2&gt;
-
-&lt;p&gt;Here&amp;rsquo;s a successful build status&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/pipelines-deployment.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;got comments, reactions or found typos ? let me know. thanks&lt;/p&gt;
-</description>
+      <description>Bitbucket is my main git repo for all my personal (PoC) projects, portfolio and all of my contracting projects - hands down on private repo.
+While I&amp;rsquo;ve tried Codeship, CircleCI, Jenkins for production use, however, all of these CI server needs some little education about private and public certificates for setting up roles/permission/access before any of them can pull out your source code and push it to eg: Amazon S3 &amp;mdash; Pipelines + AWS S3 was far bit easier.</description>
     </item>
     
   </channel>

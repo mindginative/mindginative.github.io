@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/first-taste-of-win10-bitlocker/</loc>
+    <lastmod>2017-05-12T16:06:19+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</loc>
     <lastmod>2017-05-11T22:42:44+12:00</lastmod>
   </url>
@@ -157,6 +162,7 @@
   
   <url>
     <loc>http://www.mindginative.com/categories/</loc>
+    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,6 +211,12 @@
   <url>
     <loc>http://www.mindginative.com/tags/domain/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/encryption/</loc>
+    <lastmod>2017-05-12T16:06:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -264,7 +276,7 @@
   
   <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
+    <lastmod>2017-05-12T16:06:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -294,7 +306,7 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
+    <lastmod>2017-05-12T16:06:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -330,6 +342,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/</loc>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -365,7 +378,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/windows10/</loc>
-    <lastmod>2017-02-15T16:39:23+13:00</lastmod>
+    <lastmod>2017-05-12T16:06:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   

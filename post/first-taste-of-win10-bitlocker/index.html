@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>First Taste of Win10 BitLocker &middot; Richard Sentino via mindginative</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard&#39;s page for more information.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.20.7" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>First Taste of Win10 BitLocker</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-05-12 16:06:19 &#43;1200 NZST">2017-05-12</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/windows10">Windows10</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/encryption">encryption</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>I bought the idea of encrypting my OS drive, since I&rsquo;m on Windows 10 I opted the closed source utility called BitLocker.
+Prior to trusting my gut - I had initially configured my Ubuntu-based headless server with <a href="http://ecryptfs.org">eCryptfs</a>.</p>
+
+<p>If you peek at <a href="http://ecryptfs.org/about.html">eCryptfs about page</a>, one of the authors became a member of BitLocker team at Microsoft - so I guess that&rsquo;s why I pushed the &ldquo;OK&rdquo; button.</p>
+
+<h2 id="the-famous-bcmwl63a-sys">The Famous bcmwl63a.sys</h2>
+
+<p>The trouble started 2 days after Windows 10 Insider Preview Build <a href="https://blogs.windows.com/windowsexperience/2017/05/04/announcing-windows-10-insider-preview-build-16188-pc-build-15210-mobile">16188</a> was installed, the drive was already blanketed with BitLocker&rsquo;s thick layer of goodness (I do really hope!).</p>
+
+<p>If you google: bcmwl63a.sys - you will get a good list</p>
+
+<blockquote>
+<p>8,870 results (0.48 seconds)</p>
+</blockquote>
+
+<p>Got the brand new Green Screen of Death w/ Emoji (GSoD+E), rebooted my machine at least 10 times before I decided to fallback in recovery mode because I need to reinstall the WiFi driver.</p>
+
+<section id="two">
+	<div class="row">
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/bitlocker/gsod-bcmwl63a.jpg" class="image fit thumb">
+        <img src="/images/bitlocker/gsod-bcmwl63a.jpg" alt="" />
+      </a>
+			<h3>bcmwl63a.sys in Action</h3>
+		</article>
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/bitlocker/gsod.jpg" class="image fit thumb">
+        <img src="/images/bitlocker/gsod.jpg" alt="" />
+      </a>
+			<h3>Green Screen of Death with Emoji</h3>
+		</article>
+		
+	</div>
+</section>
+<br>
+
+
+<h2 id="recovery-mode-bitlocker-keys">Recovery Mode == BitLocker Keys</h2>
+
+<p>Yep in recovery mode your BitLocker is required - no escaping, so make sure to get it where you keep it.</p>
+
+<section id="two">
+	<div class="row">
+		
+    
+		<article class="6u 12u$(xsmall) work-item">
+      <a href="/images/bitlocker/bitlocker-key.jpg" class="image fit thumb">
+        <img src="/images/bitlocker/bitlocker-key.jpg" alt="" />
+      </a>
+			<h3>BitLocker asking for recovery key</h3>
+		</article>
+		
+	</div>
+</section>
+<br>
+
+
+<h2 id="observation">Observation</h2>
+
+<p>With just days of using BitLocker, I can&rsquo;t say much other than this epic driver issue.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://ecryptfs.org">http://ecryptfs.org</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BitLocker">https://en.wikipedia.org/wiki/BitLocker</a></li>
+<li><a href="https://blogs.windows.com/windowsexperience/2017/05/04/announcing-windows-10-insider-preview-build-16188-pc-build-15210-mobile">https://blogs.windows.com/windowsexperience/2017/05/04/announcing-windows-10-insider-preview-build-16188-pc-build-15210-mobile</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/first-taste-of-win10-bitlocker\/';
+    var disqus_title = 'First Taste of Win10 BitLocker';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/first-taste-of-win10-bitlocker\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="https://www.linkedin.com/in/sentino" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

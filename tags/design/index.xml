@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on Richard Sentino via mindginative</title>
-    <link>http://www.mindginative.com/tags/design/index.xml</link>
+    <link>http://www.mindginative.com/tags/design/</link>
     <description>Recent content in Design on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.mindginative.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Apr 2017 13:03:54 +1200</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Internet Archive&#39;s WaybackMachine 2003</title>
@@ -14,21 +17,9 @@
       <pubDate>Sat, 08 Apr 2017 13:03:54 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</guid>
-      <description>&lt;p&gt;Weekend Saturday morning, my JavaScript Weekly subscription &lt;a href=&#34;http://javascriptweekly.com/issues/329&#34; target=&#34;_blank&#34;&gt;#329&lt;/a&gt; had a catchy email subject title &lt;strong&gt;&lt;em&gt;Opinionated Comparison of React, Angular2, and Aurelia&lt;/em&gt;&lt;/strong&gt;, read full article &lt;a href=&#34;https://github.com/stickfigure/blog/wiki/Opinionated-Comparison-of-React%2C-Angular2%2C-and-Aurelia?utm_source=javascriptweekly&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I have been doing some form of frontend development since the early 90s.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;from the blog&amp;rsquo;s first sentence I quickly recalled the first website I designed 14yrs ago, worked started in late 2002 but it was launched in 2003. I remember dabbling with Macromedia&amp;rsquo;s Fireworks and Dreamweaver.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/2003.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s the link to that &lt;strong&gt;Wayback Machine&lt;/strong&gt;: &lt;a href=&#34;https://web.archive.org/web/20030124013620/http://outsourcing-services.net/&#34;&gt;https://web.archive.org/web/20030124013620/http://outsourcing-services.net/&lt;/a&gt;
-Fortunately, the author&amp;rsquo;s meta name still sticks my name on it, hurray!&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;If I may recall correctly, I tested this on the following browsers: Internet Explorer, Firefox 0.x - preview release, Netscape Navigator &amp;ndash; to all Chrome bashers/fanatics!, that epic browser wasn&amp;rsquo;t born at that time.&lt;/p&gt;
-</description>
+      <description>Weekend Saturday morning, my JavaScript Weekly subscription #329 had a catchy email subject title Opinionated Comparison of React, Angular2, and Aurelia, read full article here
+ I have been doing some form of frontend development since the early 90s.
+ from the blog&amp;rsquo;s first sentence I quickly recalled the first website I designed 14yrs ago, worked started in late 2002 but it was launched in 2003. I remember dabbling with Macromedia&amp;rsquo;s Fireworks and Dreamweaver.</description>
     </item>
     
   </channel>

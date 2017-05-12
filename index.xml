@@ -2,12 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Richard Sentino via mindginative</title>
-    <link>http://www.mindginative.com/index.xml</link>
+    <link>http://www.mindginative.com/</link>
     <description>Recent content on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 May 2017 22:42:44 +1200</lastBuildDate>
-    <atom:link href="http://www.mindginative.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 May 2017 16:06:19 +1200</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Taste of Win10 BitLocker</title>
+      <link>http://www.mindginative.com/post/first-taste-of-win10-bitlocker/</link>
+      <pubDate>Fri, 12 May 2017 16:06:19 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/first-taste-of-win10-bitlocker/</guid>
+      <description>I bought the idea of encrypting my OS drive, since I&amp;rsquo;m on Windows 10 I opted the closed source utility called BitLocker. Prior to trusting my gut - I had initially configured my Ubuntu-based headless server with eCryptfs.
+If you peek at eCryptfs about page, one of the authors became a member of BitLocker team at Microsoft - so I guess that&amp;rsquo;s why I pushed the &amp;ldquo;OK&amp;rdquo; button.
+The Famous bcmwl63a.</description>
+    </item>
     
     <item>
       <title>ASRock H110M-STX Deskmini 110w With Headless Ubuntu Server</title>
@@ -15,214 +28,8 @@
       <pubDate>Thu, 11 May 2017 22:42:44 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</guid>
-      <description>
-
-&lt;p&gt;About 8 months ago when I saw the Intel NUC at local computer store, I thought maybe I could get one for my expirements/projects. One that I could just leave running (headless) on one corner and either do of the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Remote SSH from a local coffee shop: download stuff, etc&lt;/li&gt;
-&lt;li&gt;Remote development while travelling overseas where internet speed isn&amp;rsquo;t great&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I did a bit of research about Intel NUC, just wanted to make sure that it will be worthy for the price that I&amp;rsquo;d be paying for. However as I dig more info about it - blogs, reviews and forums - the following tipped off the scale for NUC:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Price&lt;/li&gt;
-&lt;li&gt;Hardware Upgrades&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
-
-&lt;p&gt;The Toshiba and Western Digital SATA disks are old stuff I pulled out from an old laptop.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Spec&lt;/th&gt;
-&lt;th&gt;Additional Info&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ASRock Deskmini&lt;/td&gt;
-&lt;td&gt;Barebone PC&lt;/td&gt;
-&lt;td&gt;H110M-STX, 110W (Wireless version)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp&#34;&gt;ASRock Website info&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Intel G4560 Pentium&lt;/td&gt;
-&lt;td&gt;CPU&lt;/td&gt;
-&lt;td&gt;3.50GHz, 2 Cores&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://cpu.userbenchmark.com/Compare/Intel-Pentium-G4560-vs-Intel-Core-i3-6100/3892vs3511&#34;&gt;Intel-Pentium-G4560-vs-Intel-Core-i3-6100&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Samsung 960 EVO&lt;/td&gt;
-&lt;td&gt;SSD&lt;/td&gt;
-&lt;td&gt;250GB, M.2, PCIe&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.tomshardware.com/reviews/samsung-960-evo-nvme-ssd-review,4802.html&#34;&gt;Tom&amp;rsquo;s Hardware review on 960 EVO NVMe SSD&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Crucial SODIMM&lt;/td&gt;
-&lt;td&gt;RAM&lt;/td&gt;
-&lt;td&gt;2x8GB, DDR4-2133&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.crucial.com/usa/en/ct8g4sfd8213&#34;&gt;crucial info&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;TOSHIBA MQ01ABF050&lt;/td&gt;
-&lt;td&gt;SATA&lt;/td&gt;
-&lt;td&gt;500GB 5400 RPM 8MB Cache SATA 6.0Gb/s 2.5&amp;rdquo;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.newegg.com/Product/Product.aspx?Item=1Z4-000B-00003&#34;&gt;newegg.com TOSHIBA MQ01ABF050&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Western Digital WD2500BEVT&lt;/td&gt;
-&lt;td&gt;SATA&lt;/td&gt;
-&lt;td&gt;250GB 5400 RPM 8MB Cache SATA 3.0Gb/s 2.5&amp;rdquo;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.newegg.com/Product/Product.aspx?Item=N82E16822136387&#34;&gt;newegg.com Western Digital WD2500BEVT&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;gallery&#34;&gt;Gallery&lt;/h2&gt;
-
-&lt;p&gt;Here are a couple of shots of my Deskmini and its components.&lt;/p&gt;
-
-&lt;section id=&#34;two&#34;&gt;
-	&lt;div class=&#34;row&#34;&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu-box.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu-box.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;Pentium LGA1151&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;Pentium G4560&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/evo-cover.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/evo-cover.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;960 EVO M.2 Box&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/evo-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/evo-disk.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;960 EVO 250GB SSD&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/ram.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/ram.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;Crucial 2x8GB DDR4 RAM&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/deskmini-assembled.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/deskmini-assembled.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;Side View: Assembled Deskmini&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/cpu-and-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/cpu-and-disk.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;Top View: Assembled Deskmini&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/deskmini.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/deskmini.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;Deskmini Contents&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/sata-disk.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/sata-disk.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;Bottom View: Toshiba SATA Disk&lt;/h3&gt;
-		&lt;/article&gt;
-		
-    
-		&lt;article class=&#34;6u 12u$(xsmall) work-item&#34;&gt;
-      &lt;a href=&#34;http://www.mindginative.com/images/deskmini/package.jpg&#34; class=&#34;image fit thumb&#34;&gt;
-        &lt;img src=&#34;http://www.mindginative.com/images/deskmini/package.jpg&#34; alt=&#34;&#34; /&gt;
-      &lt;/a&gt;
-			&lt;h3&gt;Deskmini, RAM, SSD, CPU&lt;/h3&gt;
-		&lt;/article&gt;
-		
-	&lt;/div&gt;
-&lt;/section&gt;
-
-
-&lt;h2 id=&#34;issues&#34;&gt;Issues&lt;/h2&gt;
-
-&lt;p&gt;It wouldn&amp;rsquo;t be an exciting stuff if there are no issues, don&amp;rsquo;t you think ?&lt;/p&gt;
-
-&lt;h4 id=&#34;bios-kaby-lake&#34;&gt;BIOS &amp;amp; Kaby Lake&lt;/h4&gt;
-
-&lt;p&gt;Once you get the build done and pushed the start button - &lt;em&gt;IT WON&amp;rsquo;T BOOT THE F**K BOOT UP!&lt;/em&gt; why?! - Kaby Lake processor needs UEFI/BIOS version 7.0 or greater. To fix this issue you either need to do the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Ask the retailers/tech guys to flash the BIOS for you - before handling over your money, this is what I did.&lt;/li&gt;
-&lt;li&gt;Get a spare Skylake processor, boot it up on Windows and flash the BIOS with your barehand.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;future-plan&#34;&gt;Future Plan&lt;/h2&gt;
-
-&lt;p&gt;Obviously we want the best, fastest and the latest - so my wishlist for this box are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://noctua.at/en/nh-l9i&#34;&gt;Noctua NH-L9i&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ark.intel.com/products/88195/Intel-Core-i7-6700K-Processor-8M-Cache-up-to-4_20-GHz&#34;&gt;Intel Skylake Core i7 6700K 4.0Ghz 8MB LGA 1151&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.corsair.com/en-gb/vengeance-series-32gb-2x16gb-ddr4-sodimm-3000mhz-cl16-memory-kit-cmsx32gx4m2a3000c16&#34;&gt;Vengeance® Series 32GB (2 x 16GB) DDR4 SODIMM &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Overall I&amp;rsquo;m happy with this box, gets the job done. It&amp;rsquo;s been just few weeks since I built this and its current uptime is 11 days.
-The OS is Ubuntu Server 16.04.2 LTS + Docker version 17.03.1-ce with 3 running Docker containers for my fullstack development.
-Head over at the references below should you need more details.&lt;/p&gt;
-
-&lt;p&gt;I will have another blog for the OS and development experience so stay tuned.&lt;/p&gt;
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8j-u7B5nzAk&#34;&gt;https://www.youtube.com/watch?v=8j-u7B5nzAk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp#Gallery&#34;&gt;http://www.asrock.com/nettop/intel/Deskmini%20110%20Series/index.asp#Gallery&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows&#34;&gt;https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www-ssl.intel.com/content/www/us/en/products/boards-kits/nuc.html&#34;&gt;https://www-ssl.intel.com/content/www/us/en/products/boards-kits/nuc.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://forum.asrock.com/forum_posts.asp?TID=4552&amp;amp;title=deskmini-110-kaby-lake-bios&#34;&gt;http://forum.asrock.com/forum_posts.asp?TID=4552&amp;amp;title=deskmini-110-kaby-lake-bios&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hardforum.com/threads/help-intel-skull-canyon-nuc-or-asrock-mini-stx-deskmini-110-with-i7-6700.1908805/&#34;&gt;https://hardforum.com/threads/help-intel-skull-canyon-nuc-or-asrock-mini-stx-deskmini-110-with-i7-6700.1908805/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>About 8 months ago when I saw the Intel NUC at local computer store, I thought maybe I could get one for my expirements/projects. One that I could just leave running (headless) on one corner and either do of the following:
+ Remote SSH from a local coffee shop: download stuff, etc Remote development while travelling overseas where internet speed isn&amp;rsquo;t great  I did a bit of research about Intel NUC, just wanted to make sure that it will be worthy for the price that I&amp;rsquo;d be paying for.</description>
     </item>
     
     <item>
@@ -231,103 +38,10 @@ Head over at the references below should you need more details.&lt;/p&gt;
       <pubDate>Fri, 28 Apr 2017 21:11:01 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</guid>
-      <description>
-
-&lt;p&gt;After a fantastic &lt;em&gt;&lt;strong&gt;9+&lt;/strong&gt;&lt;/em&gt; years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened  nor bad customer experience.&lt;/p&gt;
-
-&lt;p&gt;A million reasons:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;They&amp;rsquo;re just my domain provider, I only remember them when it&amp;rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;target-audience&#34;&gt;Target Audience&lt;/h2&gt;
-
-&lt;p&gt;It aims at people who are already using AWS Route53 as their DNS provider, for newcomers - I guess you&amp;rsquo;ll have to touch base with DNS first, see &lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&#34;&gt;Migrating DNS Service for an existing Domain to Amazon Route53&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;the-process&#34;&gt;The Process&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;ve only spent at most 1 hour from start until I got the final confirmation email from Amazon that they&amp;rsquo;re now the domain registrar of mindginative.&lt;/p&gt;
-
-&lt;p&gt;Between the migration process - expect a bunch of emails, notifications, instructions, confirmations from GoDaddy and Amazon.&lt;/p&gt;
-
-&lt;p&gt;A word of warning though, before you turn all these knobs you MUST read the &lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&#34;&gt;transfer requirements for Top-Level domains&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&#34;unlock-your-domain&#34;&gt;Unlock your domain&lt;/h4&gt;
-
-&lt;p&gt;It&amp;rsquo;s a standard protocol (I guess) for every Domain Registrars to lock your domain - kind of first step security measure for unauthorized domain takeover. So first, unlock it:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-unlock.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;start-domain-transfer&#34;&gt;Start Domain Transfer&lt;/h4&gt;
-
-&lt;p&gt;Once unlocked, head over to your AWS dashboard:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1. Route53 dashboard&lt;/li&gt;
-&lt;li&gt;2. Registered domains&lt;/li&gt;
-&lt;li&gt;3. Transfer Domain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;AWS Route53 will always check for unlocked domain status before the actual domain transfer thus a big warning sign should you haven&amp;rsquo;t done it yet.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-domain-transfer.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Follow through the Transfer Domain wizard, fill out the fields - if needed. Confirm the domain transfer, request authorization code.&lt;/p&gt;
-
-&lt;p&gt;AWS Route53 initiates a transfer domain request authorization code from GoDaddy.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-registrar-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Before the &lt;a href=&#34;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&#34;&gt;EPP code&lt;/a&gt;, a transer notice email:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-domain-transfer-notice.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;and then &amp;ldquo;Accept&amp;rdquo; the domain transfer:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-domain-transfer-accept-or-decline.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;errr! and then GoDaddy would then provide you the authorization code:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-authorization-code.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;all-done&#34;&gt;All done&lt;/h4&gt;
-
-&lt;p&gt;You will get a fair amount of emails, a few minutes delay, before getting the final confirmation emails from GoDaddy and Amazon Route53 that your domain has been transfered.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s from Amazon:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/aws-final-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;and GoDaddy:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/godaddy-to-aws/godaddy-final-confirmation.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;The process went well. no hiccups, other than a few slight delays of notifications and or confirmation emails.&lt;/p&gt;
-
-&lt;p&gt;I only paid for the domain re-registration this time with AWS being the Domain Registrar. A good time to change Domain Registrar is when your domain is about to expire, say: 1 month from now - mine had only 3 days left with GoDaddy.&lt;/p&gt;
-
-&lt;p&gt;The steps and screenshots were lacking some of the steps but you get the gist, yes?&lt;/p&gt;
-
-&lt;p&gt;Who knows, 9 years from now I&amp;rsquo;ll move to another Domain Registrar, Google? I don&amp;rsquo;t know but I&amp;rsquo;d hope by then it&amp;rsquo;ll be easy as QR Code scanning.&lt;/p&gt;
-
-&lt;p&gt;Got questions, suggestions, found typos ? let me know.&lt;/p&gt;
-
-&lt;p&gt;Enjoy!&lt;/p&gt;
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://godaddy.com&#34;&gt;http://godaddy.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/route53/&#34;&gt;https://aws.amazon.com/route53/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/getting-started/tutorials/get-a-domain/&#34;&gt;https://aws.amazon.com/getting-started/tutorials/get-a-domain/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&#34;&gt;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html#domain-transfer-to-route-53-requirements&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&#34;&gt;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&#34;&gt;http://www.tucowsdomains.com/transfer-of-domain-registration/authorizationcode/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>After a fantastic 9+ years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened nor bad customer experience.
+A million reasons:
+ They&amp;rsquo;re just my domain provider, I only remember them when it&amp;rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.
+ Target Audience It aims at people who are already using AWS Route53 as their DNS provider, for newcomers - I guess you&amp;rsquo;ll have to touch base with DNS first, see Migrating DNS Service for an existing Domain to Amazon Route53</description>
     </item>
     
     <item>
@@ -336,73 +50,11 @@ Head over at the references below should you need more details.&lt;/p&gt;
       <pubDate>Mon, 10 Apr 2017 21:03:29 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</guid>
-      <description>
-
-&lt;p&gt;I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;ssh: connect to host 192.168.178.79 port 22: Connection refused&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;tell-tale-sign&#34;&gt;Tell-tale Sign&lt;/h2&gt;
-
-&lt;p&gt;after few attempts the ssh status showed up an interesting set of logs:&lt;/p&gt;
-
-&lt;p&gt;$&amp;gt; sudo service ssh status&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;● ssh.service - OpenBSD Secure Shell server
-   Loaded: loaded (/lib/systemd/system/ssh.service; enabled)
-   Active: active (running) since Mon 2017-04-10 08:51:38 UTC; 6min ago
- Main PID: 1332 (sshd)
-   CGroup: /system.slice/ssh.service
-           └─1332 /usr/sbin/sshd -D
-
-Apr 10 08:51:38 raspberrypi sshd[1332]: key_load_public: invalid format
-Apr 10 08:51:38 raspberrypi sshd[1332]: Could not load host key: /etc/ssh/ss...y
-Apr 10 08:51:38 raspberrypi sshd[1332]: key_load_public: invalid format
-Apr 10 08:51:38 raspberrypi sshd[1332]: Could not load host key: /etc/ssh/ss...y
-Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
-Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
-Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
-Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
-Apr 10 08:51:42 raspberrypi sshd[1338]: error: key_load_public: invalid format
-Apr 10 08:51:42 raspberrypi sshd[1338]: error: Could not load host key: /etc...y
-Hint: Some lines were ellipsized, use -l to show in full.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;fix&#34;&gt;Fix&lt;/h2&gt;
-
-&lt;p&gt;googling brought me to this article [1], there are 2 suggested CLI commands but the command below fixed my issue:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;$&amp;gt; sudo rm /etc/ssh/ssh_host_* &amp;amp;&amp;amp; sudo dpkg-reconfigure openssh-server&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;It will generate a new set of ssh certs, like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Creating SSH2 RSA key; this may take some time ...
-2048 73:a5:a5:1b:88:c6:19:40:0e:4c:51:18:ad:94:81:7f /etc/ssh/ssh_host_rsa_key.pub (RSA)
-Creating SSH2 DSA key; this may take some time ...
-1024 5a:37:ab:bf:11:c3:f5:ea:5f:e4:b3:ea:16:6a:11:f6 /etc/ssh/ssh_host_dsa_key.pub (DSA)
-Creating SSH2 ECDSA key; this may take some time ...
-256 d6:74:28:5e:ca:cd:ac:a8:69:32:03:f3:56:b5:48:7d /etc/ssh/ssh_host_ecdsa_key.pub (ECDSA)
-Creating SSH2 ED25519 key; this may take some time ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;my-raspberry-pi&#34;&gt;My Raspberry Pi&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OS: Raspbian GNU/Linux 8.0 (jessie)&lt;/li&gt;
-&lt;li&gt;Image burner &lt;a href=&#34;+https://etcher.io/&#34;&gt;Etcher&lt;/a&gt; tool&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/products/model-b-plus/&#34;&gt;Raspberry Pi 1 Model B+ v1.2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[1] &lt;a href=&#34;https://drjohnstechtalk.com/blog/2015/04/cant-ssh-to-raspberry-pi/&#34;&gt;https://drjohnstechtalk.com/blog/2015/04/cant-ssh-to-raspberry-pi/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[2] &lt;a href=&#34;https://etcher.io/&#34;&gt;https://etcher.io/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[3] &lt;a href=&#34;https://www.raspberrypi.org/products/model-b-plus/&#34;&gt;https://www.raspberrypi.org/products/model-b-plus/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:
+ ssh: connect to host 192.168.178.79 port 22: Connection refused
+ Tell-tale Sign after few attempts the ssh status showed up an interesting set of logs:
+$&amp;gt; sudo service ssh status
+● ssh.service - OpenBSD Secure Shell server Loaded: loaded (/lib/systemd/system/ssh.service; enabled) Active: active (running) since Mon 2017-04-10 08:51:38 UTC; 6min ago Main PID: 1332 (sshd) CGroup: /system.</description>
     </item>
     
     <item>
@@ -411,115 +63,8 @@ Creating SSH2 ED25519 key; this may take some time ...
       <pubDate>Sun, 09 Apr 2017 21:27:59 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/setting-up-bitbucket-pipelines-and-aws-s3/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt; is my main git repo for all my personal (PoC) projects, portfolio and all of my contracting projects - hands down on private repo.&lt;/p&gt;
-
-&lt;p&gt;While I&amp;rsquo;ve tried &lt;a href=&#34;https://codeship.com/&#34;&gt;Codeship&lt;/a&gt;, &lt;a href=&#34;https://circleci.com/&#34;&gt;CircleCI&lt;/a&gt;, &lt;a href=&#34;https://jenkins.io/&#34;&gt;Jenkins&lt;/a&gt; for production use, however, all of these CI server needs some little education about private and public certificates for setting up roles/permission/access before any of them can pull out your source code and push it to eg: &lt;em&gt;Amazon S3&lt;/em&gt; &amp;mdash; Pipelines + AWS S3 was far bit easier.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;d say &lt;em&gt;easy&lt;/em&gt; because it only took me a couple of minutes to configure S3 and Pipeline from nothing to automated deployment. We&amp;rsquo;ll see that in a bit.&lt;/p&gt;
-
-&lt;h2 id=&#34;nuff-said-show-me&#34;&gt;`nuff said, show me!&lt;/h2&gt;
-
-&lt;h3 id=&#34;pipelines&#34;&gt;Pipelines&lt;/h3&gt;
-
-&lt;p&gt;There are only 4 steps to enable Pipelines for your project:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1. Go to settings&lt;/li&gt;
-&lt;li&gt;2. Enable Pipelines&lt;/li&gt;
-&lt;li&gt;3. Select &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt; deployment template&lt;/li&gt;
-&lt;li&gt;4. Commit &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Figure below is my default YAML config file for a NodeJS application:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/pipelines-enable.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you get past #4, you&amp;rsquo;re all pretty much all set.&lt;/p&gt;
-
-&lt;h4 id=&#34;custom-template&#34;&gt;Custom Template&lt;/h4&gt;
-
-&lt;p&gt;My project is still in super alpha stage, I don&amp;rsquo;t want to trap myself into this complicated build systems like: Webpack, Rollup - not even Angular2 nor React. I just want keep to keep it lean, deliver fast and improve later.&lt;/p&gt;
-
-&lt;p&gt;Deployment is done via &lt;a href=&#34;https://aws.amazon.com/cli/&#34;&gt;AWS Command Line Interface&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;bitbucket-pipelines.yml:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# This is a sample build configuration for Haskell.
-# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
-# Only use spaces to indent your .yml configuration.
-# -----
-# You can specify a custom docker image from Docker Hub as your build environment.
-image: node:6.9.2
-
-pipelines:
-  branches:
-    master:
-      - step:
-          script:
-           - apt-get update
-           - python --version
-           - apt-get -y install python-dev
-           - apt-get -y install python-pip
-           - pip install awscli
-           - pip --help
-           - aws --version
-           - aws --region ap-southeast-2 s3 sync . s3://path-to-your-s3-bucket/ --acl public-read --exclude &amp;quot;.vscode/*&amp;quot; --exclude &amp;quot;.git/*&amp;quot; --exclude &amp;quot;.gitattributes&amp;quot; --exclude &amp;quot;.gitignore&amp;quot; --exclude &amp;quot;.editorconfig&amp;quot; --exclude &amp;quot;node_modules&amp;quot; --exclude &amp;quot;yarn.lock&amp;quot; --exclude &amp;quot;package.json&amp;quot; --exclude &amp;quot;bitbucket-pipelines.yml&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;environment-variables&#34;&gt;Environment Variables&lt;/h4&gt;
-
-&lt;p&gt;The last line from our &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt; requires &lt;em&gt;AWS_ACCESS_KEY_ID&lt;/em&gt; and &lt;em&gt;AWS_SECRET_ACCESS_KEY&lt;/em&gt;. We&amp;rsquo;ll stick each value in Pipelines environment variable section. During the build process, Bitbucket populates these values in shell environment eg: export AWS_ACCESS_KEY_ID=&lt;whatever key id&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;aws&lt;/code&gt; command line interface on the other hand, will react accordingly that we&amp;rsquo;re trying to override one of the default options once it sees &lt;code&gt;AWS_ACCESS_KEY_ID&lt;/code&gt; and &lt;code&gt;AWS_SECRET_ACCESS_KEY&lt;/code&gt; in environment variables. see &lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#config-settings-and-precedence&#34;&gt;config-settings-and-precedence&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/pipelines-env.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Provide a dummy value for now, we&amp;rsquo;ll get one in a bit.&lt;/p&gt;
-
-&lt;h3 id=&#34;amazon-s3&#34;&gt;Amazon S3&lt;/h3&gt;
-
-&lt;p&gt;We&amp;rsquo;ll configure the S3 deployment using &lt;a href=&#34;https://aws.amazon.com/iam/&#34;&gt;AWS Identity and Access Management&lt;/a&gt; tool.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Create Group called &lt;code&gt;Deploy&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Attach &lt;code&gt;AmazonS3FullAccess&lt;/code&gt; permission to your Group&lt;/li&gt;
-&lt;li&gt;Create user named &lt;code&gt;deploy_s3&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Select &lt;code&gt;Programmatic access&lt;/code&gt; for &lt;code&gt;deploy_s3&lt;/code&gt; access type&lt;/li&gt;
-&lt;li&gt;Attach &lt;code&gt;deploy_s3&lt;/code&gt; user to your &lt;code&gt;Deploy&lt;/code&gt; group&lt;/li&gt;
-&lt;li&gt;Copy AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;deploy-group&#34;&gt;Deploy Group&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/iam-group.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;user-deploy-s3-access-type&#34;&gt;User deploy_s3 Access Type&lt;/h4&gt;
-
-&lt;p&gt;Tick the box &lt;em&gt;Programmatic Access&lt;/em&gt;, we need the Key and Secret values later
-&lt;img src=&#34;http://www.mindginative.com/images/iam-user-access-type.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;user-deploy-s3-attached-to-deploy-group&#34;&gt;User deploy_s3 attached to Deploy group&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/iam-user.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;user-deploy-s3-credentials&#34;&gt;User deploy_s3 Credentials&lt;/h4&gt;
-
-&lt;p&gt;Copy the &lt;em&gt;Access key ID&lt;/em&gt; and &lt;em&gt;Secret access key&lt;/em&gt; values and paste it into your Pipelines environment variables&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/iam-user-credentials.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you&amp;rsquo;ve got everything in placed. Try and push some changes to your master remote branch - check Pipelines status, and check your S3 bucket&lt;/p&gt;
-
-&lt;h2 id=&#34;build-it&#34;&gt;Build it!&lt;/h2&gt;
-
-&lt;p&gt;Here&amp;rsquo;s a successful build status&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/pipelines-deployment.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;got comments, reactions or found typos ? let me know. thanks&lt;/p&gt;
-</description>
+      <description>Bitbucket is my main git repo for all my personal (PoC) projects, portfolio and all of my contracting projects - hands down on private repo.
+While I&amp;rsquo;ve tried Codeship, CircleCI, Jenkins for production use, however, all of these CI server needs some little education about private and public certificates for setting up roles/permission/access before any of them can pull out your source code and push it to eg: Amazon S3 &amp;mdash; Pipelines + AWS S3 was far bit easier.</description>
     </item>
     
     <item>
@@ -528,21 +73,9 @@ pipelines:
       <pubDate>Sat, 08 Apr 2017 13:03:54 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</guid>
-      <description>&lt;p&gt;Weekend Saturday morning, my JavaScript Weekly subscription &lt;a href=&#34;http://javascriptweekly.com/issues/329&#34; target=&#34;_blank&#34;&gt;#329&lt;/a&gt; had a catchy email subject title &lt;strong&gt;&lt;em&gt;Opinionated Comparison of React, Angular2, and Aurelia&lt;/em&gt;&lt;/strong&gt;, read full article &lt;a href=&#34;https://github.com/stickfigure/blog/wiki/Opinionated-Comparison-of-React%2C-Angular2%2C-and-Aurelia?utm_source=javascriptweekly&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I have been doing some form of frontend development since the early 90s.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;from the blog&amp;rsquo;s first sentence I quickly recalled the first website I designed 14yrs ago, worked started in late 2002 but it was launched in 2003. I remember dabbling with Macromedia&amp;rsquo;s Fireworks and Dreamweaver.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/2003.png&#34; width=&#34;600&#34; style=&#34;-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s the link to that &lt;strong&gt;Wayback Machine&lt;/strong&gt;: &lt;a href=&#34;https://web.archive.org/web/20030124013620/http://outsourcing-services.net/&#34;&gt;https://web.archive.org/web/20030124013620/http://outsourcing-services.net/&lt;/a&gt;
-Fortunately, the author&amp;rsquo;s meta name still sticks my name on it, hurray!&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;If I may recall correctly, I tested this on the following browsers: Internet Explorer, Firefox 0.x - preview release, Netscape Navigator &amp;ndash; to all Chrome bashers/fanatics!, that epic browser wasn&amp;rsquo;t born at that time.&lt;/p&gt;
-</description>
+      <description>Weekend Saturday morning, my JavaScript Weekly subscription #329 had a catchy email subject title Opinionated Comparison of React, Angular2, and Aurelia, read full article here
+ I have been doing some form of frontend development since the early 90s.
+ from the blog&amp;rsquo;s first sentence I quickly recalled the first website I designed 14yrs ago, worked started in late 2002 but it was launched in 2003. I remember dabbling with Macromedia&amp;rsquo;s Fireworks and Dreamweaver.</description>
     </item>
     
     <item>
@@ -551,34 +84,8 @@ Fortunately, the author&amp;rsquo;s meta name still sticks my name on it, hurray
       <pubDate>Sat, 18 Mar 2017 21:56:03 +1300</pubDate>
       
       <guid>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</guid>
-      <description>
-
-&lt;h2 id=&#34;copy-paste-trust-me&#34;&gt;Copy &amp;amp; Paste, trust me!&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$&amp;gt; sudo apt-get update
-$&amp;gt; sudo apt-get upgrade
-$&amp;gt; sudo apt-get -y install git
-$&amp;gt; curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
-$&amp;gt; source ~/.bashrc
-$&amp;gt; nvm install --lts
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;as of this writing my NodeJS LTS version: &lt;code&gt;v6.10.0&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;what-s-the-fuss&#34;&gt;What&amp;rsquo;s  The Fuss?&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;Node Version Manager (nvm)&lt;/a&gt; gets installed, we&amp;rsquo;ll then use it to install whatever is the current &lt;a href=&#34;https://github.com/nodejs/LTS&#34;&gt;NodeJS LTS&lt;/a&gt; - primarily behind the scenes, it will spear you from crap of load of these commands:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;tax -xvf **armv1**.xz, cd, sudo cp -R /blah/blah/path, rm /some/dir,...&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;got-proof&#34;&gt;Got Proof ?&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/rpi-nodejs-raspbian-lite-jessie.jpg&#34; width=&#34;600&#34;&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;got-issues-or-better-tips&#34;&gt;Got Issues, or better tips ?&lt;/h2&gt;
-
-&lt;p&gt;yell out, I&amp;rsquo;d highly appreciate and always happy hear! Thanks&lt;/p&gt;
-</description>
+      <description>Copy &amp;amp; Paste, trust me! $&amp;gt; sudo apt-get update $&amp;gt; sudo apt-get upgrade $&amp;gt; sudo apt-get -y install git $&amp;gt; curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash $&amp;gt; source ~/.bashrc $&amp;gt; nvm install --lts  as of this writing my NodeJS LTS version: v6.10.0
+What&amp;rsquo;s The Fuss? Node Version Manager (nvm) gets installed, we&amp;rsquo;ll then use it to install whatever is the current NodeJS LTS - primarily behind the scenes, it will spear you from crap of load of these commands:</description>
     </item>
     
     <item>
@@ -587,134 +94,9 @@ $&amp;gt; nvm install --lts
       <pubDate>Mon, 20 Feb 2017 20:47:01 +1300</pubDate>
       
       <guid>http://www.mindginative.com/post/nodejs-cron-getting-rid-of-dangling-processes/</guid>
-      <description>
-
-&lt;p&gt;Short-lived scripts that sucked your resources for 1mins or at most 5mins - is probably fine.
-However, if it is recurring jobs in Cron and involves several tasks and at least an hour of processing - that&amp;rsquo;d be a different story.&lt;/p&gt;
-
-&lt;p&gt;I was working on a simple NodeJS-based cron script with only 3 requirements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;extract&lt;/li&gt;
-&lt;li&gt;transform&lt;/li&gt;
-&lt;li&gt;load&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Each one of these however would involve crunching through a million rows of data.&lt;/p&gt;
-
-&lt;p&gt;If you take a closer look at the result of &lt;code&gt;ps aux&lt;/code&gt; command, you&amp;rsquo;ll notice that there are couple of dangling processes waiting for some event to complete - of which technically the parent process doesn&amp;rsquo;t exists anymore! - the dates would tell you that some of those process had been there for about 9 days.&lt;/p&gt;
-
-&lt;p&gt;the script runs on top of AWS EC2 instance so literally we&amp;rsquo;re talking about:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;CPU ticks, RAM usage, disk spins, etc == &lt;strong&gt;$$$&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;If left unattended this would turn into a zombie manufacturing plant. Anyhow, see the command output below.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;$&amp;gt; ps aux&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root      6934  0.0  0.0  59636   448 ?        S    Feb10   0:00 CRON
-ubuntu    7005  0.0  0.0   4440   104 ?        Ss   Feb10   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-ubuntu    7008  0.0  0.0  11112   180 ?        S    Feb10   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
-ubuntu    7094  0.0  0.0   4444   108 ?        S    Feb10   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
-ubuntu    7095  0.0  0.1 574624  5924 ?        Sl   Feb10   0:00 npm run export-task
-ubuntu   15536  0.0  0.0   4440   104 ?        Ss   Feb18   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-ubuntu   15557  0.0  0.0  11112   176 ?        S    Feb18   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
-ubuntu   19398  0.0  0.0   4440   100 ?        Ss   Feb11   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-ubuntu   19399  0.0  0.0  11112   192 ?        S    Feb11   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
-ubuntu   19410  0.0  0.0   4444   108 ?        S    Feb11   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
-ubuntu   19421  0.0  0.0   4444   108 ?        S    Feb11   0:00 sh -c node ./js/cron-script.js export-task
-ubuntu   19422  0.0  1.1 839088 44164 ?        Sl   Feb11   0:01 node ./js/cron-script.js export-task
-ubuntu   25683  0.0  0.0   4440   100 ?        Ss   Feb14   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-ubuntu   25684  0.0  0.0  11112   188 ?        S    Feb14   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
-ubuntu   25712  0.0  0.0   4444   104 ?        S    Feb14   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
-ubuntu   25723  0.0  0.0   4444   104 ?        S    Feb14   0:00 sh -c node ./js/cron-script.js export-task
-ubuntu   25724  0.0  2.6 964268 102912 ?       Sl   Feb14   0:02 node ./js/cron-script.js export-task
-ubuntu   26093  0.0  0.0   4440   100 ?        Ss   Feb14   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-ubuntu   26094  0.0  0.0  11112   188 ?        S    Feb14   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
-ubuntu   26107  0.0  0.0   4444   108 ?        S    Feb14   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
-ubuntu   26118  0.0  0.0   4444   108 ?        S    Feb14   0:00 sh -c node ./js/cron-script.js export-task
-ubuntu   26119  0.0  1.5 929424 60320 ?        Sl   Feb14   0:01 node ./js/cron-script.js export-task
-ubuntu   26511  0.0  0.0   4440   104 ?        Ss   Feb09   0:00 /bin/sh -c /home/ubuntu/crontools/cron-script-wrapper.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
-ubuntu   26512  0.0  0.0  11112   188 ?        S    Feb09   0:00 /bin/bash /home/ubuntu/crontools/cron-script-wrapper.sh
-ubuntu   26523  0.0  0.0   4444   108 ?        S    Feb09   0:00 sh -c npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task
-ubuntu   26534  0.0  0.0   4444   104 ?        S    Feb09   0:00 sh -c node ./js/cron-script.js export-task
-ubuntu   26535  0.0  0.7 601220 28212 ?        Sl   Feb09   0:01 node ./js/cron-script.js export-task
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On the day when the script was loaded onto crontab and didn&amp;rsquo;t get was I was hoping for, my gut tells me that I f***ed up Cron: bad syntax or wasn&amp;rsquo;t throwing the logs properly, why? you asked! - having passed the &amp;ldquo;&lt;a href=&#34;https://blog.codinghorror.com/the-works-on-my-machine-certification-program/&#34;&gt;Works on My Machine&lt;/a&gt;&amp;rdquo; certification program I could run the script manually at sucess rate of 100%.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;¯\_(ツ)_/¯&lt;/p&gt;
-
-&lt;p&gt;E-V-E-R-Y-T-H-I-N-G WORKS!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;unsuccessful-attempts&#34;&gt;Unsuccessful Attempts&lt;/h3&gt;
-
-&lt;h4 id=&#34;1st-attempt&#34;&gt;1st attempt:&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;* * * * * * cd /to/script/folder &amp;amp;&amp;amp; npm run export-task &amp;amp;&amp;amp; npm run transform-task &amp;amp;&amp;amp; npm run load-task 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;2nd-attempt&#34;&gt;2nd attempt:&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;* * * * * * cd /to/script/folder &amp;amp;&amp;amp; npm run-task-in-sequence 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;3rd-attempt&#34;&gt;3rd attempt:&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;* * * * * * cd /to/script/folder &amp;amp;&amp;amp; ./script-wrapper.sh 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;script-wrapper.sh&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-npm run export-task
-npm run transform-task
-npm run load-task
-
-exit 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;successful-attempts&#34;&gt;Successful Attempts&lt;/h3&gt;
-
-&lt;h4 id=&#34;4th-attempt&#34;&gt;4th attempt:&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;* * * * * * cd /to/script/folder &amp;amp;&amp;amp; ./script-wrapper.sh 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;script-wrapper.sh&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-node ./cron-script.js export-task
-node ./cron-script.js transform-task
-node ./cron-script.js load-task
-
-exit 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Not relying on running &lt;a href=&#34;https://docs.npmjs.com/cli/run-script&#34;&gt;arbitrary commands&lt;/a&gt; in npm did fixed the issue.&lt;/p&gt;
-
-&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The issue did went away on the 4th attempt but it still needs a lot of explaining because the main issue occurs only inside AWS/EC2 machine. I couldn&amp;rsquo;t replicate the issue on a Docker machine&lt;/li&gt;
-&lt;li&gt;I forgot to get the snapshot of the real zombie process, see [1]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[1] &lt;a href=&#34;https://www.howtogeek.com/119815/htg-explains-what-is-a-zombie-process-on-linux/&#34;&gt;https://www.howtogeek.com/119815/htg-explains-what-is-a-zombie-process-on-linux/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[2] &lt;a href=&#34;https://docs.npmjs.com/cli/run-script&#34;&gt;https://docs.npmjs.com/cli/run-script&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[3] &lt;a href=&#34;https://blog.codinghorror.com/the-works-on-my-machine-certification-program/&#34;&gt;https://blog.codinghorror.com/the-works-on-my-machine-certification-program/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Short-lived scripts that sucked your resources for 1mins or at most 5mins - is probably fine. However, if it is recurring jobs in Cron and involves several tasks and at least an hour of processing - that&amp;rsquo;d be a different story.
+I was working on a simple NodeJS-based cron script with only 3 requirements:
+ extract transform load  Each one of these however would involve crunching through a million rows of data.</description>
     </item>
     
     <item>
@@ -723,137 +105,8 @@ exit 0
       <pubDate>Wed, 15 Feb 2017 16:39:23 +1300</pubDate>
       
       <guid>http://www.mindginative.com/post/nodejs-development-inside-docker-with-windows10/</guid>
-      <description>
-
-&lt;h2 id=&#34;wait-what&#34;&gt;Wait, what ?&lt;/h2&gt;
-
-&lt;p&gt;Moving to Windows10 (6 months ago as of this writing) as my main OS is a bit hard, just a little bit.
-I use commandline &lt;strong&gt;ALL THE TIME&lt;/strong&gt; and I can&amp;rsquo;t live without the developer&amp;rsquo;s Swiss army knife on my side - tiny tools that make our life easier: &lt;em&gt;grep&lt;/em&gt;, &lt;em&gt;sed&lt;/em&gt;, &lt;em&gt;ps&lt;/em&gt;, &lt;em&gt;tree&lt;/em&gt;, &lt;em&gt;ssh&lt;/em&gt;, &lt;em&gt;find&lt;/em&gt; &amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;&lt;em&gt;&lt;a href=&#34;https://msdn.microsoft.com/en-us/commandline/wsl/about&#34;&gt;Bash On Windows&lt;/a&gt;&lt;/em&gt;&amp;rdquo; was a good strategy from Microsoft - I didn&amp;rsquo;t bother about switching to Windows and I didn&amp;rsquo;t think twice, I was more worried about which machine to buy.&lt;/p&gt;
-
-&lt;p&gt;I miss some of the good stuff from MacOS: &lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;, &lt;a href=&#34;https://caskroom.github.io/&#34;&gt;Homebrew Cask&lt;/a&gt;, to name a few.
-I&amp;rsquo;ll just get a Mac mini for OSX development.&lt;/p&gt;
-
-&lt;h2 id=&#34;frustration-solution&#34;&gt;Frustration &amp;amp; Solution&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;m a member of the &lt;a href=&#34;https://blogs.windows.com/blog/tag/windows-insider-program/&#34;&gt;Windows Insider Program&lt;/a&gt; and their build releases includes fixes to some annoying issues, often with accompanying features.
-However, the build release &lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/&#34;&gt;15031&lt;/a&gt; affected my productivity.
-Bash On Windows would hang up and opening up a separate Bash window gives the same result - you can&amp;rsquo;t even close the window nor the running process - this would have been an easy &lt;code&gt;kill -9 &amp;lt;PID&amp;gt;&lt;/code&gt; command in Mac/Linux, the famous ALT + CTRL + DELETE combination is nowhere effective.
-NodeJS via NVM wouldn&amp;rsquo;t work at all, see issue &lt;a href=&#34;https://github.com/Microsoft/BashOnWindows/issues/1683&#34;&gt;#1683&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Reboot! yep sometimes 6 reboots in a day&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;A rollback to the previous build release was the easiest solution. I hit the button and it works, as &lt;a href=&#34;https://github.com/Microsoft/BashOnWindows/issues/1683#issuecomment-279109940&#34;&gt;Ben Hillis&lt;/a&gt; said of Bash On Windows team:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The rollback feature really is great and doesn&amp;rsquo;t get enough credit. It&amp;rsquo;s saved me a couple times as well.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The hang up went out however there are still minor issues like slowness, etc. It&amp;rsquo;s bearable but I&amp;rsquo;ve already thought of finding an alternative,
-one where I could easily jump from different machine and OS eg. MacOS, Linux.&lt;/p&gt;
-
-&lt;h2 id=&#34;docker-docker&#34;&gt;Docker, Docker&lt;/h2&gt;
-
-&lt;p&gt;Enter Docker, I haven&amp;rsquo;t fully utilised this tool since its beta phase. 5 or 6 montsh ago there were issues with mounting folders from host machine inside a container, it was a show stopper for me at that time.
-I was following some steps from John Lees-Miller&amp;rsquo;s &amp;ldquo;&lt;a href=&#34;http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html&#34;&gt;Building a Node App in Docker&lt;/a&gt;&amp;rdquo; and everthing works except for mounting a shared folder.&lt;/p&gt;
-
-&lt;p&gt;February 2017, I revisited steps and it works!&lt;/p&gt;
-
-&lt;h3 id=&#34;docker-with-node-version-manager&#34;&gt;Docker with Node Version Manager&lt;/h3&gt;
-
-&lt;p&gt;Here&amp;rsquo;s the slightly modified Docker configuration.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OS: Ubuntu 16.04&lt;/li&gt;
-&lt;li&gt;NodeJS: v6.9.2 via NVM&lt;/li&gt;
-&lt;li&gt;NVM: v0.33.0&lt;/li&gt;
-&lt;li&gt;Docker: 1.13.1 (10072)&lt;/li&gt;
-&lt;li&gt;Docker Channel: Stable 94675c5&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Dockerfile&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FROM ubuntu:16.04
-
-# Constants
-ENV NVM_VERSION v0.33.0
-ENV NODE_VERSION v6.9.2
-ENV HOME=/home/app
-
-# Replace shell with bash so we can source files
-RUN rm /bin/sh &amp;amp;&amp;amp; ln -s /bin/bash /bin/sh
-
-# add special user called `app`
-RUN useradd --user-group --create-home --shell /bin/false app
-
-# Install pre-reqs
-RUN apt-get update &amp;amp;&amp;amp; apt-get install -y \
-    build-essential \
-    checkinstall    \
-    libssl-dev      \
-    curl
-
-USER app
-
-# Install NVM
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
-
-# Install NODE
-RUN source ~/.nvm/nvm.sh; \
-    nvm install $NODE_VERSION; \
-    nvm use --delete-prefix $NODE_VERSION;
-
-USER root
-COPY package.json start.sh $HOME/web/
-RUN chown -R app:app $HOME/*
-
-USER app
-WORKDIR $HOME/web
-RUN source ~/.nvm/nvm.sh; \
-    nvm use --delete-prefix $NODE_VERSION; \
-    npm install;
-
-USER root
-COPY . $HOME/web
-RUN chown -R app:app $HOME/*
-
-USER app
-RUN source ~/.nvm/nvm.sh; \
-    nvm use --delete-prefix $NODE_VERSION;
-
-CMD [&amp;quot;./start.sh&amp;quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;docker-compose.yml&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;web:
-  build: .
-  ports:
-    - &#39;8080:8080&#39;
-  environment:
-    NODE_ENV: dev
-  volumes:
-    - .:/home/app/web
-    - /home/app/web/node_modules
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;start.sh&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-# load NVM environment
-source ~/.nvm/nvm.sh
-nvm use --delete-prefix v6.9.2
-
-# start server
-npm start
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Enjoy&lt;/p&gt;
-</description>
+      <description>Wait, what ? Moving to Windows10 (6 months ago as of this writing) as my main OS is a bit hard, just a little bit. I use commandline ALL THE TIME and I can&amp;rsquo;t live without the developer&amp;rsquo;s Swiss army knife on my side - tiny tools that make our life easier: grep, sed, ps, tree, ssh, find &amp;hellip;
+&amp;ldquo;Bash On Windows&amp;rdquo; was a good strategy from Microsoft - I didn&amp;rsquo;t bother about switching to Windows and I didn&amp;rsquo;t think twice, I was more worried about which machine to buy.</description>
     </item>
     
     <item>
@@ -862,55 +115,8 @@ npm start
       <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
       
       <guid>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</guid>
-      <description>
-
-&lt;p&gt;Yesterday 10th of Feb 2017, I managed to update my PC with the latest &lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97&#34;&gt;Windows 10 Insider Preview Build 15031&lt;/a&gt;.
-The list contains a massive set of features as well as fixes, so I didn&amp;rsquo;t mind the upgrade. It took at least 20mins to get it done. Once done, my NodeJS environment started complaining, btw I am using &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;Node Version Manager&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s what I got when switching NodeJS versions:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;nvm use v4.3.2
-net.js:129
-    this._handle.open(options.fd);
-                 ^
-
-Error: Unknown system error -25: Unknown system error -25, uv_pipe_open
-    at Error (native)
-    at new Socket (net.js:129:18)
-    at createWritableStdioStream (node.js:601:18)
-    at process.stdout (node.js:627:16)
-    at module.exports (/home/urix/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npmlog/node_modules/set-blocking/index.js:2:11)
-    at Object.&amp;lt;anonymous&amp;gt; (/home/urix/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npmlog/log.js:11:1)
-    at Module._compile (module.js:409:26)
-    at Object.Module._extensions..js (module.js:416:10)
-    at Module.load (module.js:343:32)
-    at Function.Module._load (module.js:300:12)
-nvm is not compatible with the npm config &amp;quot;prefix&amp;quot; option: currently set to &amp;quot;&amp;quot;
-Run `nvm use --delete-prefix v4.3.2` to unset it.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;luckily, folks at &lt;a href=&#34;https://github.com/Microsoft/BashOnWindows/issues/1683#issuecomment-279101631&#34;&gt;Bash on Windows were friendly and responsive&lt;/a&gt;.
-The timeline for the fix is weeks due to that it&amp;rsquo;s a driver issue but unforunately I can&amp;rsquo;t wait as I need to do some NodeJS work related stuff on various releases.
-I develop and maintain some antiquated NodeJS releases going back as far as v0.12.x hence NVM is my main tool.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve switched to the previous inside build prior to 15301 - it took probably less than 5mins to do. I&amp;rsquo;m now on &lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97&#34;&gt;Windows Insider Preview Build 15025.100&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;update&#34;&gt;Update&lt;/h3&gt;
-
-&lt;p&gt;Make sure to set &lt;code&gt;Pause Updates&lt;/code&gt; to &lt;code&gt;on&lt;/code&gt; to avoid re-installing the latest build 15031 when you restart your PC.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/windows-insider-build-15031.png&#34; width=&#34;800&#34; alt=&#34;Advanced Options&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Enjoy!&lt;/p&gt;
-
-&lt;h3 id=&#34;referrences&#34;&gt;Referrences&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Microsoft/BashOnWindows/issues/1683&#34;&gt;https://github.com/Microsoft/BashOnWindows/issues/1683&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97&#34;&gt;https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/#zQAbyxpwEGLAdWvl.97&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97&#34;&gt;https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/#kwrCg1TLbgrRzLe0.97&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Yesterday 10th of Feb 2017, I managed to update my PC with the latest Windows 10 Insider Preview Build 15031. The list contains a massive set of features as well as fixes, so I didn&amp;rsquo;t mind the upgrade. It took at least 20mins to get it done. Once done, my NodeJS environment started complaining, btw I am using Node Version Manager.
+Here&amp;rsquo;s what I got when switching NodeJS versions:</description>
     </item>
     
     <item>
@@ -919,44 +125,8 @@ I develop and maintain some antiquated NodeJS releases going back as far as v0.1
       <pubDate>Tue, 31 Jan 2017 21:54:59 +1300</pubDate>
       
       <guid>http://www.mindginative.com/projects/list/</guid>
-      <description>&lt;p&gt;This list represents some of the projects that are either hobby/personal, opensource and or
-opensource contributions.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/angular/angular/search?q=rixrix&amp;amp;type=Issues&amp;amp;utf8=%E2%9C%93&#34;&gt;Angular2 Contribution&lt;/a&gt; - for almost 3 years at Booktrack on front-end team solely using AngularJS, I managed to contribute to Angular2 since its alpha releases at the same time while working on Angular2-based product. Proud to be recognised as &lt;a href=&#34;https://angularjs.blogspot.co.nz/2016/09/angular2-final.html&#34;&gt;contributor&lt;/a&gt; on the v2.0.0 production release even though my contribution was just a tad tiny.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/TSJS-lib-generator&#34;&gt;TypeScript Contribution&lt;/a&gt; - I love the &lt;a href=&#34;https://www.typescriptlang.org/&#34;&gt;TypeScript&lt;/a&gt; language and I&amp;rsquo;d like the project to continue henced I made a tiny &lt;a href=&#34;https://github.com/Microsoft/TypeScript/blob/master/AUTHORS.md&#34;&gt;contribution&lt;/a&gt; &lt;a href=&#34;https://github.com/Microsoft/TSJS-lib-generator/pull/30&#34;&gt;PR30&lt;/a&gt; aside from submitting issues or testing the latest releases.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/mosaic-photo&#34;&gt;Photo Mosaic in JS&lt;/a&gt; - A little test project I did when I applied for a JS development role.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/vscode-terraform-snippets&#34;&gt;Terraform Snippets&lt;/a&gt; for &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VSCode&lt;/a&gt; -This library contains at least 550 &lt;a href=&#34;https://www.terraform.io/&#34;&gt;Terraform&lt;/a&gt; code snippets, which would roughly saves you at least 5,000 lines of code snippets.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/stencil&#34;&gt;Stencil Angular2&lt;/a&gt; - This is my minimal version of Angular2 starter kit. It was primarily inspired by @angularclass but thought I could reduce the infrastructure complexity.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/stencil-ng1&#34;&gt;Stencil Angular1&lt;/a&gt; - A bare minimum Angular1 starter kit with only Webpack and NPM script as the build infrastructure.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/stencil-lambda&#34;&gt;Stencil Lambda&lt;/a&gt; - Starter template for all your serverless development on AWS lambda w/ Apex, TypeScript &amp;amp; Webpack. I&amp;rsquo;ve used it for my personal serverless project/.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/npm-git-lock&#34;&gt;NPM Git Lock&lt;/a&gt; - Added various patches for in-house use at Booktrack deployment infrastructure. A CLI tool to lock all node_modules dependencies to a separate git repository.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/node-podcast&#34;&gt;Node Podcast&lt;/a&gt; - Added patch for in-house use at MediaWorks NZ.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/stencil-project/stencil-d3&#34;&gt;D3 on Stencil&lt;/a&gt; - D3.js component for Angular2 via Stencil starter kit.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/gulp-stylint&#34;&gt;Stylus Linter for GulpJS&lt;/a&gt; - Experiment with building &lt;a href=&#34;http://gulpjs.com/&#34;&gt;GulpJS&lt;/a&gt; plugin for linting &lt;a href=&#34;http://stylus-lang.com/&#34;&gt;Stylus&lt;/a&gt; style sheets.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/stencil-project/express-dustjs-kit&#34;&gt;Express + Dust.js Starter Kit&lt;/a&gt; - A bare minimum starter kit for ExpressJS and DustJS&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/SodiumFRP/sodium-typescript&#34;&gt;Sodium JS/TypeScript&lt;/a&gt; - Typescript/Javascript implementation of Sodium FRP (Functional Reactive Programming) library.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/typescript-collections&#34;&gt;TypeScript Collections&lt;/a&gt; - minor patch for use with Sodium TypeScript library.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/ffmpeg_ubuntu_installer.sh&#34;&gt;FFMpeg Ubuntu Installer&lt;/a&gt; - A collection of Bash scripts for installation of FFMpeg plugins&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/singletasking&#34;&gt;SingleTasking&lt;/a&gt; -Easy web todo app&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/webpinger-nodejs&#34;&gt;Webpinger NodeJS&lt;/a&gt; - AngularJS + NodeJS domain latency checker&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/webpinger-zf1&#34;&gt;Webpinger ZendFramework&lt;/a&gt; - AngularJS + ZendFramework v1 domain latency checker&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/madeinnz-mobile&#34;&gt;Made in NZ Mobile&lt;/a&gt; - Hybrid Cordova-based mobile application&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/madeinnz&#34;&gt;Made in NZ Frontend&lt;/a&gt; - Frontend for Made in NZ project&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/arrow-randomizer&#34;&gt;Arrow Randomizer&lt;/a&gt; - It&amp;rsquo;s the equivalent to TSA&amp;rsquo;s $1.4M app randomizer &lt;a href=&#34;https://news.slashdot.org/story/16/04/04/2227200/tsa-paid-14-million-for-randomizer-app-that-chooses-left-or-right&#34;&gt;https://news.slashdot.org/story/16/04/04/2227200/tsa-paid-14-million-for-randomizer-app-that-chooses-left-or-right&lt;/a&gt;. I built the app before going off for work, probably in 30mins.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/rust-nodejs-ffi&#34;&gt;Rust + NodeJS FFI&lt;/a&gt; - Experiment with calling Rust library in NodeJS via Foreign Function Interface (FFI)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/silverstripe-clickbank&#34;&gt;SilverStrip CMS + Clickbank Module&lt;/a&gt; - &lt;a href=&#34;https://www.clickbank.com/&#34;&gt;ClickBank&lt;/a&gt; module for &lt;a href=&#34;https://www.silverstripe.org/&#34;&gt;Silverstripe CMS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/silverstripe-lucene&#34;&gt;Silverstripe Lucene&lt;/a&gt; - Added patch for my personal project&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/rpi-access-point&#34;&gt;Raspberry Pi acccess point&lt;/a&gt; - A set of configuration / hacks / scripts that I&amp;rsquo;ve compiled from across different sources. I was playing with RPi as an WiFi access point for throttling connected device in various connection such as 3G, Dial-up and or DSL.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://m0n0.ch/wall/index.php&#34;&gt;M0n0Dev for M0n0wall&lt;/a&gt; - Submitted patches to upstream. A PHP script and additional files which automate nearly all of the steps required to build a working &lt;a href=&#34;http://m0n0.ch/wall/index.php&#34;&gt;m0n0wall&lt;/a&gt; firewall image from SVN.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/zafu&#34;&gt;Zafu&lt;/a&gt; - Cisco-Like CLI on a Nix system for the CouchDB database administration.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/agnos&#34;&gt;Agnos Test Runner&lt;/a&gt; - My attempt to build a language-agnostic test runner and managed to get PHP running.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/jobberrails&#34;&gt;JobberRails&lt;/a&gt; - A forked version which I managed to add few features for my Job Site. This was when Rails was so hot, circa 2008-ish.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/tklpatch-silverstripe&#34;&gt;TurnKey Linux patch for SilverStripe&lt;/a&gt; - A TurnKey Linux patch for Silverstripe CMS&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/cordova-plugin-battery-status&#34;&gt;FirefoxOS Battery Status Plugin&lt;/a&gt; - Submitted a pull request &lt;a href=&#34;https://github.com/apache/cordova-plugin-battery-status/pull/11&#34;&gt;#11&lt;/a&gt; to &lt;a href=&#34;https://cordova.apache.org/&#34;&gt;Apache Cordova&lt;/a&gt; project to add support for FirefoxOS battery status&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rixrix/ui-playground&#34;&gt;UI Playground&lt;/a&gt; - A UI/UX playground with HarpJS and browser sync.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>This list represents some of the projects that are either hobby/personal, opensource and or opensource contributions.
+ Angular2 Contribution - for almost 3 years at Booktrack on front-end team solely using AngularJS, I managed to contribute to Angular2 since its alpha releases at the same time while working on Angular2-based product. Proud to be recognised as contributor on the v2.0.0 production release even though my contribution was just a tad tiny.</description>
     </item>
     
     <item>
@@ -965,24 +135,8 @@ opensource contributions.&lt;/p&gt;
       <pubDate>Mon, 28 Nov 2016 01:17:35 +1300</pubDate>
       
       <guid>http://www.mindginative.com/post/install-ffmpeg-from-source-ubuntu-win10/</guid>
-      <description>&lt;p&gt;I was working on transcoding videos into different formats, resolutions so it could be played on various desktops, tablets and mobile devices.
-My main working machine is Dell XPS13 on Windows 10 with Ubuntu Bash enabled, some of my needed libraries is missing and needs recompilation of FFmpeg the one
-that came from Ubuntu 14.04 repo.&lt;/p&gt;
-
-&lt;p&gt;I think I&amp;rsquo;ve literraly spent hours or probably days buildin/re-building libraries just to get the videos transcoded into my desired format.&lt;/p&gt;
-
-&lt;p&gt;I got tired of copy/pasting the script from the &lt;a href=&#34;https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu&#34;&gt;wiki&lt;/a&gt;. I also needed a script where I could drop into my build server.
-There are couple of examples online, I&amp;rsquo;ve tried some of those, and some are a bit outdated now.&lt;/p&gt;
-
-&lt;p&gt;I ripped off the FFmpeg compilation steps and dropped into a simple bash script. All I needed to do now is just:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sudo installer.sh&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo uninstaler.sh&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;grab the script here: &lt;a href=&#34;https://github.com/rixrix/ffmpeg_ubuntu_installer.sh&#34;&gt;https://github.com/rixrix/ffmpeg_ubuntu_installer.sh&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>I was working on transcoding videos into different formats, resolutions so it could be played on various desktops, tablets and mobile devices. My main working machine is Dell XPS13 on Windows 10 with Ubuntu Bash enabled, some of my needed libraries is missing and needs recompilation of FFmpeg the one that came from Ubuntu 14.04 repo.
+I think I&amp;rsquo;ve literraly spent hours or probably days buildin/re-building libraries just to get the videos transcoded into my desired format.</description>
     </item>
     
     <item>
@@ -991,108 +145,7 @@ There are couple of examples online, I&amp;rsquo;ve tried some of those, and som
       <pubDate>Sat, 26 Nov 2016 22:27:10 +1300</pubDate>
       
       <guid>http://www.mindginative.com/post/go1-7-bash-on-win10/</guid>
-      <description>
-
-&lt;p&gt;Since moving to &lt;a href=&#34;https://www.gohugo.io/&#34;&gt;Hugo&lt;/a&gt; few months ago my installation
-history with &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; was quick and dirty, I just want to get something
-up running to get started with Hugo. 48 hours ago I was playing with Go,
-I thought of building a simple cli utility where CI server can hook in and start building something
-- of course it has be built on top of Go, enough to get my around its dev-ecosystem.&lt;/p&gt;
-
-&lt;p&gt;Bash on Windows 10 shipped with Ubuntu 14.04.5 but unfortunately the repo contains Go1.6.
-I could use the Personal Package Archive (ppa) repo however coming from Node Version Manager (nvm),
-I find it a lot easier to switchover from one version to another -
-I have NodeJS projects which requires specific version to run eg: 0.x, 4.x and 6.x and so a version manager is a big help.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&#34;installation&#34;&gt;Installation&lt;/h4&gt;
-
-&lt;p&gt;it&amp;rsquo;s pretty straight forward, see gvm steps at &lt;a href=&#34;https://github.com/moovweb/gvm#installing&#34;&gt;https://github.com/moovweb/gvm#installing&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;notes&#34;&gt;Notes&lt;/h4&gt;
-
-&lt;p&gt;These are just a few details that I&amp;rsquo;ve encountered during gvm installation, it might be of your help.&lt;/p&gt;
-
-&lt;h4 id=&#34;failed-to-install-go1-7&#34;&gt;Failed to install Go1.7&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; gvm install go1.7
-
-Downloading Go source...
-Installing go1.7...
- * Compiling...
-ERROR: Failed to compile. Check the logs at /home/urix/.gvm/logs/go-go1.7-compile.log
-ERROR: Failed to use installed version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Make sure to set to issue this command before you install v1.7&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gvm install go1.4 -B
-gvm use go1.4
-export GOROOT_BOOTSTRAP=$GOROOT
-gvm install go1.7
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Set the default Go1.7 version to get the same version when you close and open the Bash shell&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gvm use go1.7 --default
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;goroot-and-gopath&#34;&gt;GOROOT and GOPATH&lt;/h4&gt;
-
-&lt;p&gt;These environment variables will be set automatically by gvm for you when you switch versions,
-which is handy when testing packages with different versions of Go.&lt;/p&gt;
-
-&lt;p&gt;My environment for Go1.7&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; go version
-go version go1.7 linux/amd64
-
-$&amp;gt; go env
-
-GOARCH=&amp;quot;amd64&amp;quot;
-GOBIN=&amp;quot;&amp;quot;
-GOEXE=&amp;quot;&amp;quot;
-GOHOSTARCH=&amp;quot;amd64&amp;quot;
-GOHOSTOS=&amp;quot;linux&amp;quot;
-GOOS=&amp;quot;linux&amp;quot;
-GOPATH=&amp;quot;/home/urix/.gvm/pkgsets/go1.7/global&amp;quot;
-GORACE=&amp;quot;&amp;quot;
-GOROOT=&amp;quot;/home/urix/.gvm/gos/go1.7&amp;quot;
-GOTOOLDIR=&amp;quot;/home/urix/.gvm/gos/go1.7/pkg/tool/linux_amd64&amp;quot;
-CC=&amp;quot;gcc&amp;quot;
-GOGCCFLAGS=&amp;quot;-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build356629057=/tmp/go-build -gno-record-gcc-switches&amp;quot;
-CXX=&amp;quot;g++&amp;quot;
-CGO_ENABLED=&amp;quot;1&amp;quot;
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and Go1.4&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; gvm use go1.4
-Now using version go1.4
-
-$&amp;gt; go version
-go version go1.4 linux/amd64
-
-$&amp;gt; go env
-GOARCH=&amp;quot;amd64&amp;quot;
-GOBIN=&amp;quot;&amp;quot;
-GOCHAR=&amp;quot;6&amp;quot;
-GOEXE=&amp;quot;&amp;quot;
-GOHOSTARCH=&amp;quot;amd64&amp;quot;
-GOHOSTOS=&amp;quot;linux&amp;quot;
-GOOS=&amp;quot;linux&amp;quot;
-GOPATH=&amp;quot;/home/urix/.gvm/pkgsets/go1.4/global&amp;quot;
-GORACE=&amp;quot;&amp;quot;
-GOROOT=&amp;quot;/home/urix/.gvm/gos/go1.4&amp;quot;
-GOTOOLDIR=&amp;quot;/home/urix/.gvm/gos/go1.4/pkg/tool/linux_amd64&amp;quot;
-CC=&amp;quot;gcc&amp;quot;
-GOGCCFLAGS=&amp;quot;-fPIC -m64 -pthread -fmessage-length=0&amp;quot;
-CXX=&amp;quot;g++&amp;quot;
-CGO_ENABLED=&amp;quot;1&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Since moving to Hugo few months ago my installation history with Go was quick and dirty, I just want to get something up running to get started with Hugo. 48 hours ago I was playing with Go, I thought of building a simple cli utility where CI server can hook in and start building something - of course it has be built on top of Go, enough to get my around its dev-ecosystem.</description>
     </item>
     
     <item>
@@ -1101,12 +154,8 @@ CGO_ENABLED=&amp;quot;1&amp;quot;
       <pubDate>Mon, 29 Aug 2016 02:51:23 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/moving-to-hugo/</guid>
-      <description>&lt;p&gt;I was initially planning to use plain Github Pages for my blogging but I&amp;rsquo;ve read some good reviews with Hugo.
-I&amp;rsquo;ll give it a try and see how it goes.&lt;/p&gt;
-
-&lt;p&gt;I have written a few blog posts over at Medium but I don&amp;rsquo;t want to spam my Twitter followers with random information that don&amp;rsquo;t matter to them.
-I might sync a few bits from time to time.&lt;/p&gt;
-</description>
+      <description>I was initially planning to use plain Github Pages for my blogging but I&amp;rsquo;ve read some good reviews with Hugo. I&amp;rsquo;ll give it a try and see how it goes.
+I have written a few blog posts over at Medium but I don&amp;rsquo;t want to spam my Twitter followers with random information that don&amp;rsquo;t matter to them. I might sync a few bits from time to time.</description>
     </item>
     
     <item>
@@ -1115,74 +164,7 @@ I might sync a few bits from time to time.&lt;/p&gt;
       <pubDate>Wed, 04 May 2016 11:10:22 +1200</pubDate>
       
       <guid>http://www.mindginative.com/post/browsersync--the-ghost-and-the-pretender/</guid>
-      <description>
-
-&lt;p&gt;Looking at few stats: &lt;a href=&#34;https://github.com/BrowserSync/browser-sync/stargazers&#34;&gt;6.9k&lt;/a&gt; Github stars and &lt;a href=&#34;https://www.npmjs.com/package/browser-sync&#34;&gt;700k&lt;/a&gt; npm downloads in the last month
-(at the time of this writing) it’s no wonder that you can always find plugins,
-tools or utilities that will link up Browsersync with your favourite frontend
-or server side framework to ease up your browser testing. It is packed with good
-features as mentioned in Addy Osmani’s 2013 blog but its ghostMode and Proxy options
-are spot on in my opinion.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ghostMode — Clicks, Scrolls &amp;amp; Form inputs on any device will be mirrored to all others.&lt;/li&gt;
-&lt;li&gt;Proxy — Acts as an intermediary or a mini server between the browser and your backend/api/webapp (sounds about right eh, I guess)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Let’s try the “fast food” way so we can use the two options without writing a single line of code and become productive , right now— c’mon! are you sure ? you asked.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;the-ghost-and-the-pretender&#34;&gt;The Ghost and the Pretender&lt;/h3&gt;
-
-&lt;p&gt;Here’s the basic steps to utilise ghostMode and Proxy options with your web app:&lt;/p&gt;
-
-&lt;p&gt;1.) Install browsersync&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; npm install -g browser-sync
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;2.) Start browsersync as proxy against your webapp, we’ll use &lt;a href=&#34;http://stackoverflow.com/&#34;&gt;http://stackoverflow.com/&lt;/a&gt; as an example&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; browser-sync start --proxy http://stackoverflow.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You will see the following message in terminal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[BS] Proxying: http://stackoverflow.com
-[BS] Access URLs:
- — — — — — — — — — — — — — — — — — — — -
- Local: http://localhost:3000
- External: http://192.168.178.24:3000
- — — — — — — — — — — — — — — — — — — — -
- UI: http://localhost:3001
- UI External: http://192.168.178.24:3001
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;3.) Navigate to the proxy URL&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;4.) There’s no #4&lt;/p&gt;
-
-&lt;p&gt;5.) Done&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/browsersync.png&#34; width=&#34;800&#34; alt=&#34;Browsersync Dashboard&#34; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-
-&lt;p&gt;Here’s how the proxyfied stackoverflow looks like. On the left is iPhone6 simulator, Firefox in the middle and then Opera.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.mindginative.com/images/browsersync-example.gif&#34; width=&#34;800&#34; alt=&#34;Browsersync Dashboard&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;enjoy&#34;&gt;Enjoy!&lt;/h3&gt;
-</description>
+      <description>Looking at few stats: 6.9k Github stars and 700k npm downloads in the last month (at the time of this writing) it’s no wonder that you can always find plugins, tools or utilities that will link up Browsersync with your favourite frontend or server side framework to ease up your browser testing. It is packed with good features as mentioned in Addy Osmani’s 2013 blog but its ghostMode and Proxy options are spot on in my opinion.</description>
     </item>
     
     <item>
@@ -1191,41 +173,62 @@ are spot on in my opinion.&lt;/p&gt;
       <pubDate>Fri, 15 Apr 2016 16:18:14 +1300</pubDate>
       
       <guid>http://www.mindginative.com/post/owasp-new-zealand-day-2016/</guid>
-      <description>&lt;p&gt;This is kind of an old story now, 1+ month ago as of this writing.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The conference had a good &lt;a href=&#34;https://www.owasp.org/index.php/OWASP_New_Zealand_Day_2016#tab=Presentation_Schedule&#34;&gt;list of speakers&lt;/a&gt; and most of them are working for a NZ-based security companies.
-There were shown pre-recorded demos and live ones as well.&lt;/p&gt;
-
-&lt;p&gt;One of the highlights would be the lessons learned from this conference:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Credit Card Fraud (&lt;a href=&#34;https://web.fredden.org/assets/OWASP%20Feb%202016.pdf&#34;&gt;pdf&lt;/a&gt;)&lt;/strong&gt; — by Dan Wallis of Christchurch ISIG&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Content Security Policy (&lt;a href=&#34;https://www.owasp.org/images/9/9e/Keep_Calm_And_CSP.pdf&#34;&gt;pdf&lt;/a&gt;)&lt;/strong&gt; — by Valentinas Bakaitis of Aura Security&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Oauth 2.0: The Promise and Pitfalls (&lt;a href=&#34;https://www.lateralsecurity.com/downloads/Lateral_Security-OAuth2_The_Promise_and_Pitfalls_NZOWASP2016.pdf&#34;&gt;pdf&lt;/a&gt;)&lt;/strong&gt; — by Sergey Ozernikov of Lateral Security&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Don’t be a Hero&lt;/strong&gt; — There was one talk where the speaker did not recommend on rolling your own crypto, or re-inventing the wheel — it’s hard — there are a dime dozen open source and battle tested crypto tools floating around. &lt;em&gt;I totally forgot the speaker and topic title, my apology&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Same Origin Policy&lt;/strong&gt; — When you set the following configuration &lt;code&gt;Access-Control-Allow-Origin: *&lt;/code&gt;, you need to seriously consider the implications of such one-line hallelujah. There was a short demo of hijacking yahoo mail cookies and taking over user’s account with a simple Java applet.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Continuous Security&lt;/strong&gt; — by Laura Bell of SafeStack. The topic was about making security be part of the development process and not an afterthought — it’s where you only thought of security after the project is done and deployed to production. Another recommendation was to automate everything as possible to reduce the possibility human mistake… heard of DevOps ?&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Deserialization, what could go wrong&lt;/strong&gt; — by Brendan Jamieson of Insomnia Security. It mainly talks about the potential danger of deserialising user controlled data. The presenter showed a few hands on demo in PHP, Python and Java — awesome!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Using 3rd Party Framework&lt;/strong&gt; — Pick out the one with good and active community and are always up to date. New found/reported vulnerabilities would be patched in days and not weeks or months&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Security Knowledge Framework (SKF) (&lt;a href=&#34;https://www.securityknowledgeframework.org/&#34;&gt;link&lt;/a&gt;)&lt;/strong&gt; — from their website “SKF is an open source security knowledgebase including manageable projects with checklists and best practice code examples in multiple programming languages showing you how to prevent hackers gaining access and running exploits on your application.”. I highly recommend that you check out their website at &lt;a href=&#34;https://www.securityknowledgeframework.org/&#34;&gt;https://www.securityknowledgeframework.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Things that didn’t go well for me, pretty minor&lt;/p&gt;
-
-&lt;p&gt;Room capacity issue — There was 1 talk where a bunch of people waiting outside but were not allowed to get inside due to capacity issue.
-I thought, well, we’re techy people and we don’t mind standing and sitting on the floor.
-Most of the people outside — including me — just wanted the technical knowledge, the tips.
-A bit disappointing but nonetheless it was good.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;A huge thanks to the OWASP NZ organizers, sponsors and the speakers.
-It was worth it, good location, good crowd!&lt;/p&gt;
-</description>
+      <description>This is kind of an old story now, 1+ month ago as of this writing.
+The conference had a good list of speakers and most of them are working for a NZ-based security companies. There were shown pre-recorded demos and live ones as well.
+One of the highlights would be the lessons learned from this conference:
+ Credit Card Fraud (pdf) — by Dan Wallis of Christchurch ISIG Content Security Policy (pdf) — by Valentinas Bakaitis of Aura Security Oauth 2.</description>
+    </item>
+    
+    <item>
+      <title>Docker 3rd Bday &#43; Training</title>
+      <link>http://www.mindginative.com/post/docker-3rd-bday-training/</link>
+      <pubDate>Wed, 23 Mar 2016 16:46:45 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/docker-3rd-bday-training/</guid>
+      <description>source : https://twitter.com/dockerakl/status/711820276942528512
+ Thanks for the event! I really enjoyed the Docker crash course, it was certainly an eye-opener for me :)
+HUGE thanks. Get me started with docker:P
+ Attendees feedback, how cool is that ?! it was held on 21 of March 2016
+I thought it was a good meetup, the room wasn’t really that packed but it was a good crowd. Although, was a bit lost and had to find my way through the conference room but location-wise ?</description>
+    </item>
+    
+    <item>
+      <title>Xhyve &#43; Alpine Linux</title>
+      <link>http://www.mindginative.com/post/xhyve-alpine-linux/</link>
+      <pubDate>Mon, 18 Jan 2016 11:07:49 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/xhyve-alpine-linux/</guid>
+      <description>During the 2015 Xmas holiday break I’ve been meaning to play around with Docker or in particular CoreOS on my Mac machine. I know it’s pretty easy to whip with a few CLI commands — Vagrant + VirtualBox, done! — but I wanted something different and wanted to avoid too many abstraction eg. running a virtual environment on top of a virtual environment. A few google searches got me into xhyve, can’t remember the exact keywords I used — sorry.</description>
+    </item>
+    
+    <item>
+      <title>TypeScript and its magic number TS2403</title>
+      <link>http://www.mindginative.com/post/typescript--its-magic-number-ts2403/</link>
+      <pubDate>Sat, 09 Jan 2016 10:59:13 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/typescript--its-magic-number-ts2403/</guid>
+      <description>At work, we’ve been using Webpack for our frontend stack (TypeScript, AngularJS v1.x, NodeJS, GulpJS + other JS libraries without much drama. Over the last couple of months our Angular2-based project is starting to get a life, from a simple PoC to a usable web app. Though we were working against the early alpha releases of Angular2 but we thought it’s gonna be fine — we just want a minimum viable product.</description>
+    </item>
+    
+    <item>
+      <title>2016 resolution</title>
+      <link>http://www.mindginative.com/post/2016-resolution/</link>
+      <pubDate>Fri, 01 Jan 2016 10:41:04 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/2016-resolution/</guid>
+      <description> Untitled… updated 2016 resolution(s) it&amp;rsquo;s not a long list but I&amp;rsquo;ll give it a shot
+ Start a writing a blog (first yay!) Track my goals (web apps, any suggestion ?) Be healthy Watch Jono &amp;amp; Ben (c’mon ? what ?) Edutech my kids with Khan Academy (had 1 today for my 3 yr old) Deep dive into Rustlang Be patient Read 1 book per month Experiment and turn small ideas into life  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://www.mindginative.com/about/me/</link>
+      <pubDate>Tue, 01 Jan 2002 00:02:48 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/about/me/</guid>
+      <description>Hi there, My name is Richard I&amp;rsquo;m a web developer from New Zealand. A few little bits about me:
+ I write code for the web I am cool, not friendly because I am VERY friendly! I put code on Github I like to automate things with CI  Community I help co-organise from 2013-2016 a local tech meetup called Auckland Continuous Delivery Meetup
+Speaking  Continuous deployment of a Single Page Application on Azure CI and Deployment w/ Codeship  Conferences I love to go seminars and conferences whenever I can.</description>
     </item>
     
   </channel>

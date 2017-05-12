@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on Richard Sentino via mindginative</title>
-    <link>http://www.mindginative.com/categories/tools/index.xml</link>
+    <link>http://www.mindginative.com/categories/tools/</link>
     <description>Recent content in Tools on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.mindginative.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Nov 2016 22:27:10 +1300</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Go1.7 installation via GVM on Ubuntu Bash on Windows 10</title>
@@ -14,108 +17,7 @@
       <pubDate>Sat, 26 Nov 2016 22:27:10 +1300</pubDate>
       
       <guid>http://www.mindginative.com/post/go1-7-bash-on-win10/</guid>
-      <description>
-
-&lt;p&gt;Since moving to &lt;a href=&#34;https://www.gohugo.io/&#34;&gt;Hugo&lt;/a&gt; few months ago my installation
-history with &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; was quick and dirty, I just want to get something
-up running to get started with Hugo. 48 hours ago I was playing with Go,
-I thought of building a simple cli utility where CI server can hook in and start building something
-- of course it has be built on top of Go, enough to get my around its dev-ecosystem.&lt;/p&gt;
-
-&lt;p&gt;Bash on Windows 10 shipped with Ubuntu 14.04.5 but unfortunately the repo contains Go1.6.
-I could use the Personal Package Archive (ppa) repo however coming from Node Version Manager (nvm),
-I find it a lot easier to switchover from one version to another -
-I have NodeJS projects which requires specific version to run eg: 0.x, 4.x and 6.x and so a version manager is a big help.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&#34;installation&#34;&gt;Installation&lt;/h4&gt;
-
-&lt;p&gt;it&amp;rsquo;s pretty straight forward, see gvm steps at &lt;a href=&#34;https://github.com/moovweb/gvm#installing&#34;&gt;https://github.com/moovweb/gvm#installing&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;notes&#34;&gt;Notes&lt;/h4&gt;
-
-&lt;p&gt;These are just a few details that I&amp;rsquo;ve encountered during gvm installation, it might be of your help.&lt;/p&gt;
-
-&lt;h4 id=&#34;failed-to-install-go1-7&#34;&gt;Failed to install Go1.7&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; gvm install go1.7
-
-Downloading Go source...
-Installing go1.7...
- * Compiling...
-ERROR: Failed to compile. Check the logs at /home/urix/.gvm/logs/go-go1.7-compile.log
-ERROR: Failed to use installed version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Make sure to set to issue this command before you install v1.7&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gvm install go1.4 -B
-gvm use go1.4
-export GOROOT_BOOTSTRAP=$GOROOT
-gvm install go1.7
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Set the default Go1.7 version to get the same version when you close and open the Bash shell&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gvm use go1.7 --default
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;goroot-and-gopath&#34;&gt;GOROOT and GOPATH&lt;/h4&gt;
-
-&lt;p&gt;These environment variables will be set automatically by gvm for you when you switch versions,
-which is handy when testing packages with different versions of Go.&lt;/p&gt;
-
-&lt;p&gt;My environment for Go1.7&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; go version
-go version go1.7 linux/amd64
-
-$&amp;gt; go env
-
-GOARCH=&amp;quot;amd64&amp;quot;
-GOBIN=&amp;quot;&amp;quot;
-GOEXE=&amp;quot;&amp;quot;
-GOHOSTARCH=&amp;quot;amd64&amp;quot;
-GOHOSTOS=&amp;quot;linux&amp;quot;
-GOOS=&amp;quot;linux&amp;quot;
-GOPATH=&amp;quot;/home/urix/.gvm/pkgsets/go1.7/global&amp;quot;
-GORACE=&amp;quot;&amp;quot;
-GOROOT=&amp;quot;/home/urix/.gvm/gos/go1.7&amp;quot;
-GOTOOLDIR=&amp;quot;/home/urix/.gvm/gos/go1.7/pkg/tool/linux_amd64&amp;quot;
-CC=&amp;quot;gcc&amp;quot;
-GOGCCFLAGS=&amp;quot;-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build356629057=/tmp/go-build -gno-record-gcc-switches&amp;quot;
-CXX=&amp;quot;g++&amp;quot;
-CGO_ENABLED=&amp;quot;1&amp;quot;
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and Go1.4&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$&amp;gt; gvm use go1.4
-Now using version go1.4
-
-$&amp;gt; go version
-go version go1.4 linux/amd64
-
-$&amp;gt; go env
-GOARCH=&amp;quot;amd64&amp;quot;
-GOBIN=&amp;quot;&amp;quot;
-GOCHAR=&amp;quot;6&amp;quot;
-GOEXE=&amp;quot;&amp;quot;
-GOHOSTARCH=&amp;quot;amd64&amp;quot;
-GOHOSTOS=&amp;quot;linux&amp;quot;
-GOOS=&amp;quot;linux&amp;quot;
-GOPATH=&amp;quot;/home/urix/.gvm/pkgsets/go1.4/global&amp;quot;
-GORACE=&amp;quot;&amp;quot;
-GOROOT=&amp;quot;/home/urix/.gvm/gos/go1.4&amp;quot;
-GOTOOLDIR=&amp;quot;/home/urix/.gvm/gos/go1.4/pkg/tool/linux_amd64&amp;quot;
-CC=&amp;quot;gcc&amp;quot;
-GOGCCFLAGS=&amp;quot;-fPIC -m64 -pthread -fmessage-length=0&amp;quot;
-CXX=&amp;quot;g++&amp;quot;
-CGO_ENABLED=&amp;quot;1&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Since moving to Hugo few months ago my installation history with Go was quick and dirty, I just want to get something up running to get started with Hugo. 48 hours ago I was playing with Go, I thought of building a simple cli utility where CI server can hook in and start building something - of course it has be built on top of Go, enough to get my around its dev-ecosystem.</description>
     </item>
     
   </channel>

@@ -28,7 +28,7 @@ Got the brand new Green Screen of Death w/ Emoji (GSoD+E), rebooted my machine a
 
 ## Recovery Mode == BitLocker Keys
 
-Yep in recovery mode your BitLocker is required - no escaping, so make sure to get it where you keep it.
+Yep in recovery mode your BitLocker is required - no escaping, so make sure to get it where you kept it.
 
 {{< gallery
   "bitlocker/bitlocker-key.jpg|BitLocker asking for recovery key"

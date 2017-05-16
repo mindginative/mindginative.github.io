@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/owasp-new-zealand-day-2017/</loc>
+    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/first-taste-of-win10-bitlocker/</loc>
     <lastmod>2017-05-12T16:06:19+12:00</lastmod>
   </url>
@@ -174,7 +179,7 @@
   
   <url>
     <loc>http://www.mindginative.com/categories/conference/</loc>
-    <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -264,7 +269,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/owasp/</loc>
-    <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -276,7 +281,7 @@
   
   <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-05-12T16:06:19+12:00</lastmod>
+    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -306,7 +311,7 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-05-12T16:06:19+12:00</lastmod>
+    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -324,7 +329,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/security/</loc>
-    <lastmod>2016-04-15T16:18:14+13:00</lastmod>
+    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   

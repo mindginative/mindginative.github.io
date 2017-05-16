@@ -6,10 +6,20 @@
     <description>Recent content in Security on Richard Sentino via mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Apr 2016 16:18:14 +1300</lastBuildDate>
+    <lastBuildDate>Tue, 16 May 2017 13:33:31 +1200</lastBuildDate>
     
 	<atom:link href="http://www.mindginative.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OWASP New Zealand Day 2017</title>
+      <link>http://www.mindginative.com/post/owasp-new-zealand-day-2017/</link>
+      <pubDate>Tue, 16 May 2017 13:33:31 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/owasp-new-zealand-day-2017/</guid>
+      <description>Alright! this was my 2nd year in a row for this web security conference here in Auckland, New Zealand. This is the type conference that would never fails to impress myself: the work and research they&amp;rsquo;ve (personal or business related) is great.
+They had a good list of local and international speakers, which I think - particularly for inviting international speakers - is good the fact that the audience (like me) will get a different insights outside of the local security threats/tools or knowledge in general.</description>
+    </item>
     
     <item>
       <title>OWASP New Zealand Day 2016</title>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/visiting-boston/</loc>
+    <lastmod>2017-05-30T18:50:19+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/owasp-new-zealand-day-2017/</loc>
     <lastmod>2017-05-16T13:33:31+12:00</lastmod>
   </url>
@@ -178,6 +183,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/conference/</loc>
+    <lastmod>2017-05-30T18:50:19+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/categories/conference/</loc>
     <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
@@ -281,7 +292,7 @@
   
   <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
+    <lastmod>2017-05-30T18:50:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -311,7 +322,7 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
+    <lastmod>2017-05-30T18:50:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -366,6 +377,12 @@
   <url>
     <loc>http://www.mindginative.com/tags/training/</loc>
     <lastmod>2016-03-23T16:46:45+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/travel/</loc>
+    <lastmod>2017-05-30T18:50:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   

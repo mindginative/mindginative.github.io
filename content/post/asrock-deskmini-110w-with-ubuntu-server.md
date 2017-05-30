@@ -52,7 +52,7 @@ It wouldn't be an exciting stuff if there are no issues, don't you think ?
 
 #### BIOS & Kaby Lake
 
-Once you get the build done and pushed the start button - *IT WON'T BOOT THE F\*\*K BOOT UP!* why?! - Kaby Lake processor needs UEFI/BIOS version 7.0 or greater. To fix this issue you either need to do the following:
+Once you get the build done and pushed the start button - *IT WON'T BOOT THE F\*\*K UP!* why?! - Kaby Lake processor needs UEFI/BIOS version 7.0 or greater. To fix this issue you either need to do the following:
 
   - Ask the retailers/tech guys to flash the BIOS for you - before handling over your money, this is what I did.
   - Get a spare Skylake processor, boot it up on Windows and flash the BIOS with your barehand.

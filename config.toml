@@ -1,6 +1,6 @@
 baseurl = "http://www.mindginative.com/"
 languageCode = "en-us"
-title = "Richard Sentino via mindginative"
+title = "Richard Sentino"
 theme = "strata"
 disqusShortname = "mindginative"
 
@@ -17,7 +17,7 @@ paginate = 10
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
 	name = "Richard Sentino"
-	description = "Richard Sentino is a Web Developer in Auckland, New Zealand. Visit Richard's page for more information."
+	description = "Richard Sentino is a Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot."
 
 	# Format dates with Go's time formatting
 	date_format = "2006-01-02"
@@ -31,11 +31,10 @@ paginate = 10
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "me.png"
 		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot"
+		bio = "♥ Opensource | Building web stuff | JavaScript/NodeJS | WebOps "
 		# The icons will be shown if you enter your username
 		twitter = "mindginative"
 		github = "rixrix"
-		linkedin = "https://www.linkedin.com/in/sentino"
 
 		copyright = [
 			"&copy; Richard Sentino",

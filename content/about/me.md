@@ -26,7 +26,7 @@ I ~~help~~ co-organise from *2013-2016* a local tech meetup called [Auckland Con
 
 I love to go seminars and conferences whenever I can. Below are the list of conferences/seminars that I have attended - as far as I can remember:
 
-* 2017 - Brightcove Play (Boston, MA USA) - upcoming
+* 2017 - Brightcove Play (Boston, MA USA)
 * 2017 - codemania.io (NZ)
 * 2017 - OWASP New Zealand Day (NZ)
 * 2016 - OWASP New Zealand Day (NZ)

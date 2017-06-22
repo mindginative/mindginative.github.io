@@ -55,6 +55,20 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     
         <span>
     <h1>
+        <a href="http://www.mindginative.com/post/that-ssh-denied-on-encrypted-fs/">That! SSH permission denied on eCryptfs-enabled file system</a>
+    </h1>
+
+    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+    <time datetime="2017-06-22 23:00:25 &#43;1200 NZST" itemprop="datePublished">2017-06-22</time>
+</span>
+
+<p>On the day my DeskMini Headless server was born - it was christened with ecryptfs and I did that on purpose - paranoid!
+Gearing up for a password-less configuration was supposedly and easy task later then I realised that my first SSH session won&rsquo;t work. This is for obvious reason: the home folder ~/ isn&rsquo;t readable - yet - not until you manually mount the folder. By default SSH will look for authorized_keys file at the user&rsquo;s home folder henced SSH can&rsquo;t read it - you&rsquo;ll get Permission denied (publickey).</p>
+<hr>
+
+    
+        <span>
+    <h1>
         <a href="http://www.mindginative.com/post/visiting-boston/">My Boston (USA) Trip</a>
     </h1>
 
@@ -184,21 +198,6 @@ While I&rsquo;ve tried Codeship, CircleCI, Jenkins for production use, however, 
 
 <p>Copy &amp; Paste, trust me! $&gt; sudo apt-get update $&gt; sudo apt-get upgrade $&gt; sudo apt-get -y install git $&gt; curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash $&gt; source ~/.bashrc $&gt; nvm install --lts  as of this writing my NodeJS LTS version: v6.10.0
 What&rsquo;s The Fuss? Node Version Manager (nvm) gets installed, we&rsquo;ll then use it to install whatever is the current NodeJS LTS - primarily behind the scenes, it will spear you from crap of load of these commands:</p>
-<hr>
-
-    
-        <span>
-    <h1>
-        <a href="http://www.mindginative.com/post/nodejs-cron-getting-rid-of-dangling-processes/">NodeJS &#43; Cron: A series of attempts in getting rid of dangling processes</a>
-    </h1>
-
-    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
-    <time datetime="2017-02-20 20:47:01 &#43;1300 NZDT" itemprop="datePublished">2017-02-20</time>
-</span>
-
-<p>Short-lived scripts that sucked your resources for 1mins or at most 5mins - is probably fine. However, if it is recurring jobs in Cron and involves several tasks and at least an hour of processing - that&rsquo;d be a different story.
-I was working on a simple NodeJS-based cron script with only 3 requirements:
- extract transform load  Each one of these however would involve crunching through a million rows of data.</p>
 <hr>
 
     

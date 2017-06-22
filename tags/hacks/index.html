@@ -7,7 +7,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 	<head>
-		<title>Ssh &middot; Richard Sentino</title>
+		<title>Hacks &middot; Richard Sentino</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Richard Sentino">
@@ -64,23 +64,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <p>On the day my DeskMini Headless server was born - it was christened with ecryptfs and I did that on purpose - paranoid!
 Gearing up for a password-less configuration was supposedly and easy task later then I realised that my first SSH session won&rsquo;t work. This is for obvious reason: the home folder ~/ isn&rsquo;t readable - yet - not until you manually mount the folder. By default SSH will look for authorized_keys file at the user&rsquo;s home folder henced SSH can&rsquo;t read it - you&rsquo;ll get Permission denied (publickey).</p>
-<hr>
-
-    
-        <span>
-    <h1>
-        <a href="http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/">How to fix Raspberry Pi SSH connection reset</a>
-    </h1>
-
-    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
-    <time datetime="2017-04-10 21:03:29 &#43;1200 NZST" itemprop="datePublished">2017-04-10</time>
-</span>
-
-<p>I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:
- ssh: connect to host 192.168.178.79 port 22: Connection refused
- Tell-tale Sign after few attempts the ssh status showed up an interesting set of logs:
-$&gt; sudo service ssh status
-● ssh.service - OpenBSD Secure Shell server Loaded: loaded (/lib/systemd/system/ssh.service; enabled) Active: active (running) since Mon 2017-04-10 08:51:38 UTC; 6min ago Main PID: 1332 (sshd) CGroup: /system.</p>
 <hr>
 
     

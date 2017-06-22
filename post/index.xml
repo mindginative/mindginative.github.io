@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Richard Sentino</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 May 2017 18:50:19 +1200</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jun 2017 23:00:25 +1200</lastBuildDate>
     
 	<atom:link href="http://www.mindginative.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>That! SSH permission denied on eCryptfs-enabled file system</title>
+      <link>http://www.mindginative.com/post/that-ssh-denied-on-encrypted-fs/</link>
+      <pubDate>Thu, 22 Jun 2017 23:00:25 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/that-ssh-denied-on-encrypted-fs/</guid>
+      <description>On the day my DeskMini Headless server was born - it was christened with ecryptfs and I did that on purpose - paranoid!
+Gearing up for a password-less configuration was supposedly and easy task later then I realised that my first SSH session won&amp;rsquo;t work. This is for obvious reason: the home folder ~/ isn&amp;rsquo;t readable - yet - not until you manually mount the folder. By default SSH will look for authorized_keys file at the user&amp;rsquo;s home folder henced SSH can&amp;rsquo;t read it - you&amp;rsquo;ll get Permission denied (publickey).</description>
+    </item>
     
     <item>
       <title>My Boston (USA) Trip</title>

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>That! SSH permission denied on eCryptfs-enabled file system &middot; Richard Sentino</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.20.7" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript/NodeJS | WebOps</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>That! SSH permission denied on eCryptfs-enabled file system</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-06-22 23:00:25 &#43;1200 NZST">2017-06-22</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/ssh">ssh</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/hacks">hacks</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p>On the day my <a href="http://mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/">DeskMini</a> Headless server was born -
+it was christened with <a href="http://ecryptfs.org/">ecryptfs</a> and I did that on purpose - paranoid!</p>
+
+<p>Gearing up for a password-less configuration was supposedly and easy task later then I realised that my first SSH session won&rsquo;t work.
+This is for obvious reason: the home folder <code>~/</code> isn&rsquo;t readable - yet - not until you manually mount the folder.
+By default SSH will look for <code>authorized_keys</code> file at the user&rsquo;s home folder henced SSH can&rsquo;t read it - you&rsquo;ll get <code>Permission denied (publickey).</code></p>
+
+<p>One way to fix it, as suggested by others is to configure ssh and set the <code>AuthorizedKeysFile</code> to a different readable path</p>
+
+<p>sshd_config:</p>
+
+<pre><code>AuthorizedKeysFile /etc/ssh/keys/authorized_keys
+</code></pre>
+
+<p>If you allow multiple SSH users on your machine, at some stage they&rsquo;ll get denied - unmounted user&rsquo;s home folder etc.
+Use the same fix above but use <code>%u</code> user TOKEN. This will let the SSH server to open up authorized_keys file based on the current user&rsquo;s <em>username</em> trying to connect via SSH.</p>
+
+<p>sshd_config:</p>
+
+<pre><code>AuthorizedKeysFile /etc/ssh/keys/%u/authorized_keys
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>$&gt; ssh mrtrump@192.168.1.99
+</code></pre>
+
+<p>SSH server will look for authorized_keys file at <code>/etc/ssh/keys/mrtrump/authorized_keys</code></p>
+
+<p>Enjoy!</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://man.openbsd.org/sshd_config#TOKENS">https://man.openbsd.org/sshd_config#TOKENS</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/that-ssh-denied-on-encrypted-fs\/';
+    var disqus_title = 'That! SSH permission denied on eCryptfs-enabled file system';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/that-ssh-denied-on-encrypted-fs\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/12-hours-hackathon-with-react/</loc>
+    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/that-ssh-denied-on-encrypted-fs/</loc>
     <lastmod>2017-06-22T23:00:25+12:00</lastmod>
   </url>
@@ -242,6 +247,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/frontend/</loc>
+    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/categories/frontend/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
@@ -250,6 +261,12 @@
   <url>
     <loc>http://www.mindginative.com/tags/hacks/</loc>
     <lastmod>2017-06-22T23:00:25+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/javascript/</loc>
+    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -303,7 +320,7 @@
   
   <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-06-22T23:00:25+12:00</lastmod>
+    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -332,8 +349,14 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/react/</loc>
+    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-06-22T23:00:25+12:00</lastmod>
+    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
     <priority>0</priority>
   </url>
   

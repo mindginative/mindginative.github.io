@@ -151,14 +151,14 @@
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/tags/bash/</loc>
-    <lastmod>2016-11-28T01:17:35+13:00</lastmod>
+    <loc>http://www.mindginative.com/categories/bash/</loc>
+    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/categories/bash/</loc>
-    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
+    <loc>http://www.mindginative.com/tags/bash/</loc>
+    <lastmod>2016-11-28T01:17:35+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -193,14 +193,14 @@
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/tags/conference/</loc>
-    <lastmod>2017-05-30T18:50:19+12:00</lastmod>
+    <loc>http://www.mindginative.com/categories/conference/</loc>
+    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/categories/conference/</loc>
-    <lastmod>2017-05-16T13:33:31+12:00</lastmod>
+    <loc>http://www.mindginative.com/tags/conference/</loc>
+    <lastmod>2017-05-30T18:50:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/tags/frontend/</loc>
-    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
+    <loc>http://www.mindginative.com/categories/frontend/</loc>
+    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/categories/frontend/</loc>
-    <lastmod>2017-04-09T21:27:59+12:00</lastmod>
+    <loc>http://www.mindginative.com/tags/frontend/</loc>
+    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -289,14 +289,14 @@
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/tags/nodejs/</loc>
-    <lastmod>2017-03-18T21:56:03+13:00</lastmod>
+    <loc>http://www.mindginative.com/categories/nodejs/</loc>
+    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/categories/nodejs/</loc>
-    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
+    <loc>http://www.mindginative.com/tags/nodejs/</loc>
+    <lastmod>2017-03-18T21:56:03+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -421,13 +421,19 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/categories/ubuntu/</loc>
+    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/ubuntu/</loc>
     <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/categories/ubuntu/</loc>
+    <loc>http://www.mindginative.com/categories/windows10/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
@@ -435,12 +441,6 @@
   <url>
     <loc>http://www.mindginative.com/tags/windows10/</loc>
     <lastmod>2017-05-12T16:06:19+12:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.mindginative.com/categories/windows10/</loc>
-    <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   

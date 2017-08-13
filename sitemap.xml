@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/post/microservices-with-docker-alpine-nodejs-nginx-win10/</loc>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/post/12-hours-hackathon-with-react/</loc>
     <lastmod>2017-07-02T22:45:35+12:00</lastmod>
   </url>
@@ -139,6 +144,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/api/</loc>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/archive/</loc>
     <lastmod>2017-04-08T13:03:54+12:00</lastmod>
     <priority>0</priority>
@@ -223,6 +234,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/devops/</loc>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/dns/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
@@ -230,7 +247,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/docker/</loc>
-    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -272,13 +289,19 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/linux/</loc>
-    <lastmod>2017-05-11T22:42:44+12:00</lastmod>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.mindginative.com/categories/meetup/</loc>
     <lastmod>2016-03-23T16:46:45+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/microservices/</loc>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -290,7 +313,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/nodejs/</loc>
-    <lastmod>2017-03-18T21:56:03+13:00</lastmod>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -320,7 +343,7 @@
   
   <url>
     <loc>http://www.mindginative.com/post/</loc>
-    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -356,7 +379,7 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-07-02T22:45:35+12:00</lastmod>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -429,6 +452,12 @@
   <url>
     <loc>http://www.mindginative.com/categories/ubuntu/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/tags/win10/</loc>
+    <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   

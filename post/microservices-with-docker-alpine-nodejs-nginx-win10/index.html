@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host &middot; Richard Sentino</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Richard Sentino">
+    	<meta name="description" content="Richard Sentino is a Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.20.7" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="http://www.mindginative.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3194304275912505",
+        enable_page_level_ads: true
+      });
+    </script>
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="http://www.mindginative.com/" class="image avatar"><img src="http://www.mindginative.com/images/me.png" alt="" /></a>
+	
+		<h1>♥ Opensource | Building web stuff | JavaScript/NodeJS | WebOps</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="http://www.mindginative.com/">Home</a></li>
+			
+				<li><a href="http://www.mindginative.com/projects/list">Projects</a></li>
+			
+				<li><a href="http://www.mindginative.com/about/me">About</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<h1>Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host</h1>
+	<span>
+	    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+	    <time datetime="2017-08-13 21:42:20 &#43;1200 NZST">2017-08-13</time>&nbsp;&nbsp;
+
+	    
+	        
+	        
+	    
+
+	    
+	       
+	       
+	           &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/devops">devops</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/docker">docker</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/nodejs">nodejs</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/linux">linux</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/win10">win10</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/microservices">microservices</a>
+	           &middot;
+	           
+	           <a class="article-category-link" href="http://www.mindginative.com/tags/api">api</a>
+	           
+	           
+	       
+	    
+	</span>
+
+	<p>
+	    
+
+<p><img src="/images/microservices/diagram.png" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>Apology for the last word &ldquo;Win10&rdquo;, it&rsquo;s bit misleading but my main development machine is Dell XPS 13 on Windows 10 Pro Insider Preview. There&rsquo;s should be a follow up to this blog hopefully on my <a href="http://yup-the-website-domain-is.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/">headless Ubuntu Server</a>.</p>
+
+<p>Btw, it&rsquo;s just a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&rsquo;t on plain CLI commands then discovered that wrapping it inside docker-compose.yml does trick. C-R-A-Z-Y-!</p>
+
+<p><img src="/images/microservices/win10-docker-dnsmasq-configuration.jpg" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>I had this vision from last year (2016) while I was working on couple projects: NodeJS APIs, setting up infras (CI), deployments, standing up AWS services -  to do some automated orchestration of infrastructures and its services, it just got materialised recently, and with some help from [1] [2].</p>
+
+<h2 id="dangx-project">Dangx Project</h2>
+
+<p>Dangx Project is an attempt to build a microservice architecture with Docker, Alpine Linux, NodeJS, Nginx. Each service should run on its own isolated container.</p>
+
+<p>see <a href="https://github.com/rixrix/dangx-project">https://github.com/rixrix/dangx-project</a></p>
+
+<h3 id="configuration">Configuration</h3>
+
+<ul>
+<li>Except for Dnsmasq, all containers are linked via the &ldquo;nginx-proxy&rdquo; network</li>
+<li>Dnsmasq[4] will only respond to &ldquo;dev&rdquo; domain queries on localhost/127.0.0.1
+
+<ul>
+<li><code>--address=/dev/127.0.0.1</code></li>
+</ul></li>
+<li>Configure your Windows Docker vEthernet (DockerNAT) network adapter to use the 127.0.0.1 as one of your DNS server and use DNS suffix &ldquo;dev&rdquo;, see screenshot above</li>
+</ul>
+
+<h3 id="how-it-works">How it works</h3>
+
+<ul>
+<li>Dnsmasq responds to &ldquo;dev&rdquo; domain queries and use 127.0.0.1 as its IP</li>
+<li>Nginx Proxy listens for any request on port 80, proxys the request to its target container, it does a lot of cool magic behind the scene, see [3]</li>
+<li>Domain and its containers
+
+<ul>
+<li><a href="http://dangxproject.dev">http://dangxproject.dev</a>
+
+<ul>
+<li>dangx-www-dangxproject</li>
+<li>nginx static server</li>
+</ul></li>
+<li><a href="http://api.dangxproject.dev">http://api.dangxproject.dev</a>
+
+<ul>
+<li>dangx-www-api</li>
+<li>NodeJS/Express server</li>
+</ul></li>
+<li><a href="http://whoami.dangxproject.dev">http://whoami.dangxproject.dev</a>
+
+<ul>
+<li>dangx-www-whoami</li>
+<li>nginx test server</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="commands">Commands</h3>
+
+<ul>
+<li>For fresh project, create the special network
+
+<ul>
+<li><code>./scripts/docker-new-network.sh</code></li>
+</ul></li>
+<li>Build the containers
+
+<ul>
+<li><code>./scripts/docker-compose-up.sh</code></li>
+</ul></li>
+<li>Destroy the containers, excluding network and images
+
+<ul>
+<li><code>./scripts/docker-compose-down.sh</code></li>
+</ul></li>
+<li>Restart the containers
+
+<ul>
+<li><code>./scripts/docker-compose-restart.sh</code></li>
+</ul></li>
+</ul>
+
+<h2 id="note">Note</h2>
+
+<p>This is a short write up about its purpose, functionality and configuration, feel free to ask or file an <a href="https://github.com/rixrix/dangx-project">issue over at Github</a>. The references below should give you enough information about what it does.</p>
+
+<h2 id="future-plan">Future Plan</h2>
+
+<p>I&rsquo;m excited about the current state of this project, and I&rsquo;d like to move forward and do some cool stuff. Here&rsquo;s the grand plan:</p>
+
+<ul>
+<li>Deploy to AWS</li>
+<li>Infrastructure management with Terraform.io</li>
+<li>Multi-cloud deployment eg: Google Cloud, AWS, Azure</li>
+<li>CI</li>
+<li>Security</li>
+<li>Automated Testing</li>
+<li>Blue/Green deployment</li>
+<li>Spin-off sample/cool projects from this project</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>[1] <a href="http://blog.ibmjstart.net/2015/07/23/learning-microservices-architecture-bluemix-docker-part-1/">http://blog.ibmjstart.net/2015/07/23/learning-microservices-architecture-bluemix-docker-part-1/</a></li>
+<li>[2] <a href="https://adrianperez.org/improving-dev-environments-all-the-http-things/">https://adrianperez.org/improving-dev-environments-all-the-http-things/</a></li>
+<li>[3] <a href="https://hub.docker.com/r/jwilder/nginx-proxy/">https://hub.docker.com/r/jwilder/nginx-proxy/</a></li>
+<li>[4] <a href="https://hub.docker.com/r/andyshinn/dnsmasq/">https://hub.docker.com/r/andyshinn/dnsmasq/</a></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mindginative';
+    var disqus_identifier = 'http:\/\/www.mindginative.com\/post\/microservices-with-docker-alpine-nodejs-nginx-win10\/';
+    var disqus_title = 'Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host';
+    var disqus_url = 'http:\/\/www.mindginative.com\/post\/microservices-with-docker-alpine-nodejs-nginx-win10\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+		
+		<li><a href="//twitter.com/mindginative" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/rixrix" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		
+		
+		
+		<li><a href="#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Richard Sentino</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Background Image: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script async src="http://www.mindginative.com/js/jquery.min.js"></script>
+<script async src="http://www.mindginative.com/js/jquery.poptrox.min.js"></script>
+<script async src="http://www.mindginative.com/js/skel.min.js"></script>
+<script async src="http://www.mindginative.com/js/util.js"></script>
+
+<script async src="http://www.mindginative.com/js/main.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-55684248-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

@@ -10,13 +10,13 @@ title = "Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host"
 
 Apology for the last word "Win10", it's bit misleading but my main development machine is Dell XPS 13 on Windows 10 Pro Insider Preview. There's should be a follow up to this blog hopefully on my [headless Ubuntu Server](http://yup-the-website-domain-is.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/).
 
-Btw, it's just a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won't on plain CLI commands then discovered that wrapping it inside docker-compose.yml does trick. C-R-A-Z-Y-!
+BTW, it's a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won't work on plain CLI commands later then I discovered that wrapping it inside docker-compose.yml does the trick. C-R-A-Z-Y-!
 
 <img src="/images/microservices/win10-docker-dnsmasq-configuration.jpg" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);">
 
 ## Rationale
 
-I had this vision from last year (2016) while I was working on couple projects: NodeJS APIs, setting up infras (CI), deployments, standing up AWS services -  to do some automated orchestration of infrastructures and its services, it just got materialised recently, and with some help from [1] [2].
+I had this vision from last year (2016) while I was working on couple projects: NodeJS APIs, setting up infras (CI), deployments, standing up AWS services -  to do some automated orchestration of infrastructures and its services, stick inside a container. It just got materialised recently, and with some help from [1] [2].
 
 ## Dangx Project
 
@@ -38,13 +38,13 @@ see https://github.com/rixrix/dangx-project
 * Domain and its containers
   * http://dangxproject.dev
       * dangx-www-dangxproject
-      * nginx static server
+      * Nginx static server
   * http://api.dangxproject.dev
       * dangx-www-api
       * NodeJS/Express server
   * http://whoami.dangxproject.dev
       * dangx-www-whoami
-      * nginx test server
+      * Nginx test server
 
 ### Commands
 
@@ -59,7 +59,7 @@ see https://github.com/rixrix/dangx-project
 
 ## Note
 
-This is a short write up about its purpose, functionality and configuration, feel free to ask or file an [issue over at Github](https://github.com/rixrix/dangx-project). The references below should give you enough information about what it does.
+This is a short write up about its purpose, functionality and configuration, feel free to ask or file an [issue over at Github](https://github.com/rixrix/dangx-project). The references below should give you the nitty-gritty.
 
 ## Future Plan
 
@@ -68,9 +68,8 @@ I'm excited about the current state of this project, and I'd like to move forwar
 * Deploy to AWS
 * Infrastructure management with Terraform.io
 * Multi-cloud deployment eg: Google Cloud, AWS, Azure
-* CI
-* Security
-* Automated Testing
+* CI (automated: testing, deployment)
+* Security (SSL, etc)
 * Blue/Green deployment
 * Spin-off sample/cool projects from this project
 

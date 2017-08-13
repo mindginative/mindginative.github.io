@@ -8,11 +8,9 @@ title = "12 Hours Hackathon with React JavaScript Library"
 
 <img src="/images/12-hours/v1.png" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);">
 
-In the last few months I received cold calls and emails from various recruiters - locals and outside NZ.
+One thing I kept hearing as part of the requirements: `React`
 
-One thing I kept hearing as one of the requirements: `React`
-
-I don't have a production experience with React however IMHO if a developer has done a bit of JS development I don't think onboarding is rocket science plus if you think that your/their team is bad-ass then I'd pressume onboarding gets even a lot easier - fancy build, pair programming ? no?!
+I don't have a production experience with React, however, IMHO if a developer has done a bit of JS development in the past I don't think onboarding is rocket science.
 
 > At the end of the day, it's just JavaScript!
 
@@ -28,7 +26,7 @@ I'm currently working on a couple of personal projects and thought of using Reac
 * Use Material design
 * Development and production test environment
 
-The list above looks daunting BUT this is 2017! this isn't 1999 where you have to pull out information from the 6 CDs of VB6 MSDN. Google FTW!
+The list above looks daunting BUT this is 2017! this isn't 1999 - 6 CDs of VB6 MSDN.
 
 ## On building "NZ,ey!" RSS news reader
 
@@ -37,7 +35,7 @@ on the first iteration of the web app.
 
 ## Conclusion
 
-I think I managed to get up and running on the web app from nothing to a working version within 12 hours, including sleeping and writing this blog.
+I think I managed to get up and running the web app from nothing to a working version within 12 hours.
 
 My take on React? onboarding is damn easy
 

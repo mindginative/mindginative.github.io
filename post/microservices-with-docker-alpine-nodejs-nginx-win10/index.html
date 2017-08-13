@@ -106,13 +106,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <p>Apology for the last word &ldquo;Win10&rdquo;, it&rsquo;s bit misleading but my main development machine is Dell XPS 13 on Windows 10 Pro Insider Preview. There&rsquo;s should be a follow up to this blog hopefully on my <a href="http://yup-the-website-domain-is.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/">headless Ubuntu Server</a>.</p>
 
-<p>Btw, it&rsquo;s just a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&rsquo;t on plain CLI commands then discovered that wrapping it inside docker-compose.yml does trick. C-R-A-Z-Y-!</p>
+<p>BTW, it&rsquo;s a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&rsquo;t work on plain CLI commands later then I discovered that wrapping it inside docker-compose.yml does the trick. C-R-A-Z-Y-!</p>
 
 <p><img src="/images/microservices/win10-docker-dnsmasq-configuration.jpg" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
 
 <h2 id="rationale">Rationale</h2>
 
-<p>I had this vision from last year (2016) while I was working on couple projects: NodeJS APIs, setting up infras (CI), deployments, standing up AWS services -  to do some automated orchestration of infrastructures and its services, it just got materialised recently, and with some help from [1] [2].</p>
+<p>I had this vision from last year (2016) while I was working on couple projects: NodeJS APIs, setting up infras (CI), deployments, standing up AWS services -  to do some automated orchestration of infrastructures and its services, stick inside a container. It just got materialised recently, and with some help from [1] [2].</p>
 
 <h2 id="dangx-project">Dangx Project</h2>
 
@@ -144,7 +144,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <ul>
 <li>dangx-www-dangxproject</li>
-<li>nginx static server</li>
+<li>Nginx static server</li>
 </ul></li>
 <li><a href="http://api.dangxproject.dev">http://api.dangxproject.dev</a>
 
@@ -156,7 +156,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <ul>
 <li>dangx-www-whoami</li>
-<li>nginx test server</li>
+<li>Nginx test server</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -188,7 +188,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <h2 id="note">Note</h2>
 
-<p>This is a short write up about its purpose, functionality and configuration, feel free to ask or file an <a href="https://github.com/rixrix/dangx-project">issue over at Github</a>. The references below should give you enough information about what it does.</p>
+<p>This is a short write up about its purpose, functionality and configuration, feel free to ask or file an <a href="https://github.com/rixrix/dangx-project">issue over at Github</a>. The references below should give you the nitty-gritty.</p>
 
 <h2 id="future-plan">Future Plan</h2>
 
@@ -198,9 +198,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <li>Deploy to AWS</li>
 <li>Infrastructure management with Terraform.io</li>
 <li>Multi-cloud deployment eg: Google Cloud, AWS, Azure</li>
-<li>CI</li>
-<li>Security</li>
-<li>Automated Testing</li>
+<li>CI (automated: testing, deployment)</li>
+<li>Security (SSL, etc)</li>
 <li>Blue/Green deployment</li>
 <li>Spin-off sample/cool projects from this project</li>
 </ul>

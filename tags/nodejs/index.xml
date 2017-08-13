@@ -18,7 +18,7 @@
       
       <guid>http://www.mindginative.com/post/microservices-with-docker-alpine-nodejs-nginx-win10/</guid>
       <description>Apology for the last word &amp;ldquo;Win10&amp;rdquo;, it&amp;rsquo;s bit misleading but my main development machine is Dell XPS 13 on Windows 10 Pro Insider Preview. There&amp;rsquo;s should be a follow up to this blog hopefully on my headless Ubuntu Server.
-Btw, it&amp;rsquo;s just a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&amp;rsquo;t on plain CLI commands then discovered that wrapping it inside docker-compose.</description>
+BTW, it&amp;rsquo;s a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&amp;rsquo;t work on plain CLI commands later then I discovered that wrapping it inside docker-compose.</description>
     </item>
     
     <item>

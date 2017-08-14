@@ -22,7 +22,7 @@ I had this vision from last year (2016) while I was working on couple projects: 
 
 Dangx Project is an attempt to build a microservice architecture with Docker, Alpine Linux, NodeJS, Nginx. Each service should run on its own isolated container.
 
-see https://github.com/rixrix/dangx-project
+see https://github.com/rixrix/dangx-project/tree/v1.0.0
 
 ### Configuration
 

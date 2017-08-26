@@ -1,13 +1,8 @@
 {{ define "main" }}
-	{{ if not .Site.Params.about.hide }}
-		{{ partial "about" . }}
-	{{ end }}
+{{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+{{ range $paginator.Pages }}
+    {{ .Render "summary" }}
+{{ end }}
 
-	{{ if not .Site.Params.portfolio.hide }}
-		{{ partial "portfolio" . }}
-	{{ end }}
-
-	{{ if not .Site.Params.contact.hide }}
-		{{ partial "contact" . }}
-	{{ end }}
+{{ partial "pagination" . }}
 {{ end }}

@@ -1,8 +1,9 @@
 baseurl = "http://www.mindginative.com/"
 languageCode = "en-us"
-title = "Richard Sentino"
-theme = "strata"
+title = "mindginative"
+theme = "pickles"
 disqusShortname = "mindginative"
+copyright = "&copy; Copyright notice"
 
 # build directory
 publishDir = "build"
@@ -15,7 +16,7 @@ paginate = 10
 
 [params]
 	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
+  # information about you and your website.
 	name = "Richard Sentino"
 	description = "Richard Sentino is a Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot."
 
@@ -26,7 +27,17 @@ paginate = 10
 	custom_js   = []
 	custom_css  = []
 
+  # social
+  npm = "mindginative"
+  twitter = "mindginative"
+  github = "rixrix"
+  linkedin = "sentino"
+  contact = false
+  author = "Richard Sentino"
+  bio = "A full-stack web developer from Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot. My blogs are my own."
+  subtitle = "---"
 
+  # custom params for strata theme
 	[params.sidebar]
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "me.png"
@@ -91,38 +102,7 @@ paginate = 10
 			title = "Lorem ipsum dolor."
 			description = "Lorem ipsum dolor sit amet."
 
-    [params.contact]
-		hide  = true
-		title = "Get In Touch"
-		content = "Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor."
 
-		address = [
-			"1234 Somewhere Rd.",
-			"Nashville, TN 00000",
-			"United States"
-		]
-		phone = "000-000-0000"
-
-		# Since this template is static, the contact form uses www.formspree.io as a
-		# proxy. The form makes a POST request to their servers to send the actual
-		# email. Visitors can send up to a 1000 emails each month for free.
-	    #
-	    # What you need to do for the setup?
-	    #
-	    # - set your email address under 'email' below
-	    # - upload the generated site to your server
-	    # - send a dummy email yourself to confirm your account
-	    # - click the confirm link in the email from www.formspree.io
-	    # - you're done. Happy mailing!
-		email = "hello@example.com"
-
-		[params.contact.form]
-			# Set custom strings for the form if your native
-			# language isn't English
-			name = "Name"
-			email = "Email"
-			message = "Message"
-			submit = "Send message"
 
 # Menu links that appear on the left sidebar
 [[menu.main]]
@@ -132,10 +112,10 @@ paginate = 10
 
 [[menu.main]]
 	name = "Projects"
-	url  = "projects/list"
+	url  = "/projects/list"
 	weight = 9
 
 [[menu.main]]
 	name = "About"
-	url  = "about/me"
+	url  = "/about/me"
 	weight = 10

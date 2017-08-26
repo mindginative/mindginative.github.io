@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on mindginative</title>
-    <link>http://localhost:8080/categories/tools/</link>
+    <link>http://www.mindginative.com/categories/tools/</link>
     <description>Recent content in Tools on mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Sat, 26 Nov 2016 22:27:10 +1300</lastBuildDate>
     
-	<atom:link href="http://localhost:8080/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.mindginative.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Go1.7 installation via GVM on Ubuntu Bash on Windows 10</title>
-      <link>http://localhost:8080/posts/go1-7-bash-on-win10/</link>
+      <link>http://www.mindginative.com/posts/go1-7-bash-on-win10/</link>
       <pubDate>Sat, 26 Nov 2016 22:27:10 +1300</pubDate>
       
-      <guid>http://localhost:8080/posts/go1-7-bash-on-win10/</guid>
+      <guid>http://www.mindginative.com/posts/go1-7-bash-on-win10/</guid>
       <description>Since moving to Hugo few months ago my installation history with Go was quick and dirty, I just want to get something up running to get started with Hugo. 48 hours ago I was playing with Go, I thought of building a simple cli utility where CI server can hook in and start building something - of course it has be built on top of Go, enough to get my around its dev-ecosystem.</description>
     </item>
     

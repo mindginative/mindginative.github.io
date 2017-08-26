@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Migration on mindginative</title>
-    <link>http://localhost:8080/tags/migration/</link>
+    <link>http://www.mindginative.com/tags/migration/</link>
     <description>Recent content in Migration on mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Fri, 28 Apr 2017 21:11:01 +1200</lastBuildDate>
     
-	<atom:link href="http://localhost:8080/tags/migration/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.mindginative.com/tags/migration/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Domain Registrar migration from GoDaddy to AWS Route53: Short Story</title>
-      <link>http://localhost:8080/posts/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</link>
+      <link>http://www.mindginative.com/posts/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</link>
       <pubDate>Fri, 28 Apr 2017 21:11:01 +1200</pubDate>
       
-      <guid>http://localhost:8080/posts/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</guid>
+      <guid>http://www.mindginative.com/posts/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</guid>
       <description>After a fantastic 9+ years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened nor bad customer experience.
 A million reasons:
  They&amp;rsquo;re just my domain provider, I only remember them when it&amp;rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.

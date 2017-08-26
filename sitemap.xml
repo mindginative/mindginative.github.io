@@ -2,473 +2,473 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:8080/posts/microservices-with-docker-alpine-nodejs-nginx-win10/</loc>
+    <loc>http://www.mindginative.com/posts/microservices-with-docker-alpine-nodejs-nginx-win10/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/12-hours-hackathon-with-react/</loc>
+    <loc>http://www.mindginative.com/posts/12-hours-hackathon-with-react/</loc>
     <lastmod>2017-07-02T22:45:35+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/that-ssh-denied-on-encrypted-fs/</loc>
+    <loc>http://www.mindginative.com/posts/that-ssh-denied-on-encrypted-fs/</loc>
     <lastmod>2017-06-22T23:00:25+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/visiting-boston/</loc>
+    <loc>http://www.mindginative.com/posts/visiting-boston/</loc>
     <lastmod>2017-05-30T18:50:19+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/owasp-new-zealand-day-2017/</loc>
+    <loc>http://www.mindginative.com/posts/owasp-new-zealand-day-2017/</loc>
     <lastmod>2017-05-16T13:33:31+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/first-taste-of-win10-bitlocker/</loc>
+    <loc>http://www.mindginative.com/posts/first-taste-of-win10-bitlocker/</loc>
     <lastmod>2017-05-12T16:06:19+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/asrock-deskmini-110w-with-ubuntu-server/</loc>
+    <loc>http://www.mindginative.com/posts/asrock-deskmini-110w-with-ubuntu-server/</loc>
     <lastmod>2017-05-11T22:42:44+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</loc>
+    <loc>http://www.mindginative.com/posts/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/raspberrypi-ssh-connection-reset/</loc>
+    <loc>http://www.mindginative.com/posts/raspberrypi-ssh-connection-reset/</loc>
     <lastmod>2017-04-10T21:03:29+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/setting-up-bitbucket-pipelines-and-aws-s3/</loc>
+    <loc>http://www.mindginative.com/posts/setting-up-bitbucket-pipelines-and-aws-s3/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/internet-archive-waybackmachine-2003/</loc>
+    <loc>http://www.mindginative.com/posts/internet-archive-waybackmachine-2003/</loc>
     <lastmod>2017-04-08T13:03:54+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</loc>
+    <loc>http://www.mindginative.com/posts/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</loc>
     <lastmod>2017-03-18T21:56:03+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/nodejs-cron-getting-rid-of-dangling-processes/</loc>
+    <loc>http://www.mindginative.com/posts/nodejs-cron-getting-rid-of-dangling-processes/</loc>
     <lastmod>2017-02-20T20:47:01+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/nodejs-development-inside-docker-with-windows10/</loc>
+    <loc>http://www.mindginative.com/posts/nodejs-development-inside-docker-with-windows10/</loc>
     <lastmod>2017-02-15T16:39:23+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/windows-insider-15031-vs-nodejs/</loc>
+    <loc>http://www.mindginative.com/posts/windows-insider-15031-vs-nodejs/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/projects/list/</loc>
+    <loc>http://www.mindginative.com/projects/list/</loc>
     <lastmod>2017-01-31T21:54:59+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/install-ffmpeg-from-source-ubuntu-win10/</loc>
+    <loc>http://www.mindginative.com/posts/install-ffmpeg-from-source-ubuntu-win10/</loc>
     <lastmod>2016-11-28T01:17:35+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/go1-7-bash-on-win10/</loc>
+    <loc>http://www.mindginative.com/posts/go1-7-bash-on-win10/</loc>
     <lastmod>2016-11-26T22:27:10+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/moving-to-hugo/</loc>
+    <loc>http://www.mindginative.com/posts/moving-to-hugo/</loc>
     <lastmod>2016-08-29T02:51:23+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/browsersync--the-ghost-and-the-pretender/</loc>
+    <loc>http://www.mindginative.com/posts/browsersync--the-ghost-and-the-pretender/</loc>
     <lastmod>2016-05-04T11:10:22+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/owasp-new-zealand-day-2016/</loc>
+    <loc>http://www.mindginative.com/posts/owasp-new-zealand-day-2016/</loc>
     <lastmod>2016-04-15T16:18:14+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/docker-3rd-bday-training/</loc>
+    <loc>http://www.mindginative.com/posts/docker-3rd-bday-training/</loc>
     <lastmod>2016-03-23T16:46:45+13:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/xhyve-alpine-linux/</loc>
+    <loc>http://www.mindginative.com/posts/xhyve-alpine-linux/</loc>
     <lastmod>2016-01-18T11:07:49+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/typescript--its-magic-number-ts2403/</loc>
+    <loc>http://www.mindginative.com/posts/typescript--its-magic-number-ts2403/</loc>
     <lastmod>2016-01-09T10:59:13+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/2016-resolution/</loc>
+    <loc>http://www.mindginative.com/posts/2016-resolution/</loc>
     <lastmod>2016-01-01T10:41:04+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/about/me/</loc>
+    <loc>http://www.mindginative.com/about/me/</loc>
     <lastmod>1901-01-01T00:02:48+12:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8080/about/</loc>
+    <loc>http://www.mindginative.com/about/</loc>
     <lastmod>1901-01-01T00:02:48+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/amazon/</loc>
+    <loc>http://www.mindginative.com/tags/amazon/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/api/</loc>
+    <loc>http://www.mindginative.com/tags/api/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/archive/</loc>
+    <loc>http://www.mindginative.com/tags/archive/</loc>
     <lastmod>2017-04-08T13:03:54+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/aws/</loc>
+    <loc>http://www.mindginative.com/tags/aws/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/bash/</loc>
+    <loc>http://www.mindginative.com/tags/bash/</loc>
     <lastmod>2016-11-28T01:17:35+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/bash/</loc>
+    <loc>http://www.mindginative.com/categories/bash/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/bitbucket/</loc>
+    <loc>http://www.mindginative.com/tags/bitbucket/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/blog/</loc>
+    <loc>http://www.mindginative.com/categories/blog/</loc>
     <lastmod>2016-05-04T11:10:22+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/browsersync/</loc>
+    <loc>http://www.mindginative.com/tags/browsersync/</loc>
     <lastmod>2016-05-04T11:10:22+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/</loc>
+    <loc>http://www.mindginative.com/categories/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/ci/</loc>
+    <loc>http://www.mindginative.com/categories/ci/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/conference/</loc>
+    <loc>http://www.mindginative.com/tags/conference/</loc>
     <lastmod>2017-05-30T18:50:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/conference/</loc>
+    <loc>http://www.mindginative.com/categories/conference/</loc>
     <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/cron/</loc>
+    <loc>http://www.mindginative.com/tags/cron/</loc>
     <lastmod>2017-02-20T20:47:01+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/design/</loc>
+    <loc>http://www.mindginative.com/tags/design/</loc>
     <lastmod>2017-04-08T13:03:54+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/development/</loc>
+    <loc>http://www.mindginative.com/categories/development/</loc>
     <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/devops/</loc>
+    <loc>http://www.mindginative.com/tags/devops/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/dns/</loc>
+    <loc>http://www.mindginative.com/tags/dns/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/docker/</loc>
+    <loc>http://www.mindginative.com/tags/docker/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/domain/</loc>
+    <loc>http://www.mindginative.com/tags/domain/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/encryption/</loc>
+    <loc>http://www.mindginative.com/tags/encryption/</loc>
     <lastmod>2017-05-12T16:06:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/frontend/</loc>
+    <loc>http://www.mindginative.com/tags/frontend/</loc>
     <lastmod>2017-07-02T22:45:35+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/frontend/</loc>
+    <loc>http://www.mindginative.com/categories/frontend/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/hacks/</loc>
+    <loc>http://www.mindginative.com/tags/hacks/</loc>
     <lastmod>2017-06-22T23:00:25+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/javascript/</loc>
+    <loc>http://www.mindginative.com/tags/javascript/</loc>
     <lastmod>2017-07-02T22:45:35+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/linux/</loc>
+    <loc>http://www.mindginative.com/tags/linux/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/meetup/</loc>
+    <loc>http://www.mindginative.com/categories/meetup/</loc>
     <lastmod>2016-03-23T16:46:45+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/microservices/</loc>
+    <loc>http://www.mindginative.com/tags/microservices/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/migration/</loc>
+    <loc>http://www.mindginative.com/tags/migration/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/nodejs/</loc>
+    <loc>http://www.mindginative.com/tags/nodejs/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/nodejs/</loc>
+    <loc>http://www.mindginative.com/categories/nodejs/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/nvm/</loc>
+    <loc>http://www.mindginative.com/tags/nvm/</loc>
     <lastmod>2017-03-18T21:56:03+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/owasp/</loc>
+    <loc>http://www.mindginative.com/tags/owasp/</loc>
     <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/pc/</loc>
+    <loc>http://www.mindginative.com/tags/pc/</loc>
     <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/posts/</loc>
+    <loc>http://www.mindginative.com/posts/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/projects/</loc>
+    <loc>http://www.mindginative.com/projects/</loc>
     <lastmod>2017-01-31T21:54:59+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/raspberry/</loc>
+    <loc>http://www.mindginative.com/categories/raspberry/</loc>
     <lastmod>2017-04-10T21:03:29+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/raspberrypi/</loc>
+    <loc>http://www.mindginative.com/tags/raspberrypi/</loc>
     <lastmod>2017-03-18T21:56:03+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/raspbian/</loc>
+    <loc>http://www.mindginative.com/tags/raspbian/</loc>
     <lastmod>2017-04-10T21:03:29+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/react/</loc>
+    <loc>http://www.mindginative.com/tags/react/</loc>
     <lastmod>2017-07-02T22:45:35+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/route53/</loc>
+    <loc>http://www.mindginative.com/tags/route53/</loc>
     <lastmod>2017-04-28T21:11:01+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/s3/</loc>
+    <loc>http://www.mindginative.com/tags/s3/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/security/</loc>
+    <loc>http://www.mindginative.com/tags/security/</loc>
     <lastmod>2017-05-16T13:33:31+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/server/</loc>
+    <loc>http://www.mindginative.com/tags/server/</loc>
     <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/ssh/</loc>
+    <loc>http://www.mindginative.com/tags/ssh/</loc>
     <lastmod>2017-06-22T23:00:25+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/</loc>
+    <loc>http://www.mindginative.com/tags/</loc>
     <lastmod>2017-04-09T21:27:59+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/testing/</loc>
+    <loc>http://www.mindginative.com/tags/testing/</loc>
     <lastmod>2016-05-04T11:10:22+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/tools/</loc>
+    <loc>http://www.mindginative.com/categories/tools/</loc>
     <lastmod>2016-11-26T22:27:10+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/training/</loc>
+    <loc>http://www.mindginative.com/tags/training/</loc>
     <lastmod>2016-03-23T16:46:45+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/travel/</loc>
+    <loc>http://www.mindginative.com/tags/travel/</loc>
     <lastmod>2017-05-30T18:50:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/ubuntu/</loc>
+    <loc>http://www.mindginative.com/tags/ubuntu/</loc>
     <lastmod>2017-05-11T22:42:44+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/ubuntu/</loc>
+    <loc>http://www.mindginative.com/categories/ubuntu/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/win10/</loc>
+    <loc>http://www.mindginative.com/tags/win10/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/tags/windows10/</loc>
+    <loc>http://www.mindginative.com/tags/windows10/</loc>
     <lastmod>2017-05-12T16:06:19+12:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/categories/windows10/</loc>
+    <loc>http://www.mindginative.com/categories/windows10/</loc>
     <lastmod>2017-02-11T13:14:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:8080/</loc>
+    <loc>http://www.mindginative.com/</loc>
     <lastmod>2017-08-13T21:42:20+12:00</lastmod>
     <priority>0</priority>
   </url>

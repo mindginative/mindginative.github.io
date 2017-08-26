@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conference on mindginative</title>
-    <link>http://localhost:8080/tags/conference/</link>
+    <link>http://www.mindginative.com/tags/conference/</link>
     <description>Recent content in Conference on mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Tue, 30 May 2017 18:50:19 +1200</lastBuildDate>
     
-	<atom:link href="http://localhost:8080/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.mindginative.com/tags/conference/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My Boston (USA) Trip</title>
-      <link>http://localhost:8080/posts/visiting-boston/</link>
+      <link>http://www.mindginative.com/posts/visiting-boston/</link>
       <pubDate>Tue, 30 May 2017 18:50:19 +1200</pubDate>
       
-      <guid>http://localhost:8080/posts/visiting-boston/</guid>
+      <guid>http://www.mindginative.com/posts/visiting-boston/</guid>
       <description>Last week I had the privileged to travel and visit Boston, USA. It&amp;rsquo;s old but a great &amp;amp; lovely city. Food are bit cheaper than NZ, oops!
 I was looking for great coffee but sad to say I didn&amp;rsquo;t find a good one, sorry, NZ&amp;rsquo;s coffee still the best - even the petrol station near at my place was way better.
 On the bright side, in Boston, food was epic! here are a few food places I went to:</description>

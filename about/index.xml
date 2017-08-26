@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on mindginative</title>
-    <link>http://localhost:8080/about/</link>
+    <link>http://www.mindginative.com/about/</link>
     <description>Recent content in Abouts on mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Tue, 01 Jan 1901 00:02:48 +1200</lastBuildDate>
     
-	<atom:link href="http://localhost:8080/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.mindginative.com/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>http://localhost:8080/about/me/</link>
+      <link>http://www.mindginative.com/about/me/</link>
       <pubDate>Tue, 01 Jan 1901 00:02:48 +1200</pubDate>
       
-      <guid>http://localhost:8080/about/me/</guid>
+      <guid>http://www.mindginative.com/about/me/</guid>
       <description>Hi it&amp;rsquo;s Richard here, a full-stack web developer from New Zealand. My main tools of the trade is JavaScript.
 I&amp;rsquo;m also dabbler so sometimes I mess around with technologies like: Docker, Terraform, AWS Web Services, Linux configuration, CI, Bash scripting, Go, Rust, mobile development, networking, contracting - I&amp;rsquo;ve dabbled enough to understand a full stack system.
 My curiosity in various areas of tech stack on/off my day job means I can to talk to and communicate effectively with people in other areas.</description>

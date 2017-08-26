@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nodejs on Richard Sentino</title>
-    <link>http://www.mindginative.com/tags/nodejs/</link>
-    <description>Recent content in Nodejs on Richard Sentino</description>
+    <title>Nodejs on mindginative</title>
+    <link>http://localhost:8080/tags/nodejs/</link>
+    <description>Recent content in Nodejs on mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Sun, 13 Aug 2017 21:42:20 +1200</lastBuildDate>
     
-	<atom:link href="http://www.mindginative.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:8080/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host</title>
-      <link>http://www.mindginative.com/post/microservices-with-docker-alpine-nodejs-nginx-win10/</link>
+      <link>http://localhost:8080/posts/microservices-with-docker-alpine-nodejs-nginx-win10/</link>
       <pubDate>Sun, 13 Aug 2017 21:42:20 +1200</pubDate>
       
-      <guid>http://www.mindginative.com/post/microservices-with-docker-alpine-nodejs-nginx-win10/</guid>
+      <guid>http://localhost:8080/posts/microservices-with-docker-alpine-nodejs-nginx-win10/</guid>
       <description>Apology for the last word &amp;ldquo;Win10&amp;rdquo;, it&amp;rsquo;s bit misleading but my main development machine is Dell XPS 13 on Windows 10 Pro Insider Preview. There&amp;rsquo;s should be a follow up to this blog hopefully on my headless Ubuntu Server.
 BTW, it&amp;rsquo;s a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&amp;rsquo;t work on plain CLI commands later then I discovered that wrapping it inside docker-compose.</description>
     </item>
     
     <item>
       <title>No Fuss, NodeJS LTS installation on Raspbian Lite Jessie</title>
-      <link>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</link>
+      <link>http://localhost:8080/posts/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</link>
       <pubDate>Sat, 18 Mar 2017 21:56:03 +1300</pubDate>
       
-      <guid>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</guid>
+      <guid>http://localhost:8080/posts/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</guid>
       <description>Copy &amp;amp; Paste, trust me! $&amp;gt; sudo apt-get update $&amp;gt; sudo apt-get upgrade $&amp;gt; sudo apt-get -y install git $&amp;gt; curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash $&amp;gt; source ~/.bashrc $&amp;gt; nvm install --lts  as of this writing my NodeJS LTS version: v6.10.0
 What&amp;rsquo;s The Fuss? Node Version Manager (nvm) gets installed, we&amp;rsquo;ll then use it to install whatever is the current NodeJS LTS - primarily behind the scenes, it will spear you from crap of load of these commands:</description>
     </item>
     
     <item>
       <title>NodeJS &#43; Cron: A series of attempts in getting rid of dangling processes</title>
-      <link>http://www.mindginative.com/post/nodejs-cron-getting-rid-of-dangling-processes/</link>
+      <link>http://localhost:8080/posts/nodejs-cron-getting-rid-of-dangling-processes/</link>
       <pubDate>Mon, 20 Feb 2017 20:47:01 +1300</pubDate>
       
-      <guid>http://www.mindginative.com/post/nodejs-cron-getting-rid-of-dangling-processes/</guid>
+      <guid>http://localhost:8080/posts/nodejs-cron-getting-rid-of-dangling-processes/</guid>
       <description>Short-lived scripts that sucked your resources for 1mins or at most 5mins - is probably fine. However, if it is recurring jobs in Cron and involves several tasks and at least an hour of processing - that&amp;rsquo;d be a different story.
 I was working on a simple NodeJS-based cron script with only 3 requirements:
  extract transform load  Each one of these however would involve crunching through a million rows of data.</description>
@@ -44,20 +45,20 @@ I was working on a simple NodeJS-based cron script with only 3 requirements:
     
     <item>
       <title>NodeJS Development Inside Docker on Windows 10</title>
-      <link>http://www.mindginative.com/post/nodejs-development-inside-docker-with-windows10/</link>
+      <link>http://localhost:8080/posts/nodejs-development-inside-docker-with-windows10/</link>
       <pubDate>Wed, 15 Feb 2017 16:39:23 +1300</pubDate>
       
-      <guid>http://www.mindginative.com/post/nodejs-development-inside-docker-with-windows10/</guid>
+      <guid>http://localhost:8080/posts/nodejs-development-inside-docker-with-windows10/</guid>
       <description>Wait, what ? Moving to Windows10 (6 months ago as of this writing) as my main OS is a bit hard, just a little bit. I use commandline ALL THE TIME and I can&amp;rsquo;t live without the developer&amp;rsquo;s Swiss army knife on my side - tiny tools that make our life easier: grep, sed, ps, tree, ssh, find &amp;hellip;
 &amp;ldquo;Bash On Windows&amp;rdquo; was a good strategy from Microsoft - I didn&amp;rsquo;t bother about switching to Windows and I didn&amp;rsquo;t think twice, I was more worried about which machine to buy.</description>
     </item>
     
     <item>
       <title>Windows Insider Build 15031 Broke my NVM NodeJS environment</title>
-      <link>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</link>
+      <link>http://localhost:8080/posts/windows-insider-15031-vs-nodejs/</link>
       <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
       
-      <guid>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</guid>
+      <guid>http://localhost:8080/posts/windows-insider-15031-vs-nodejs/</guid>
       <description>Yesterday 10th of Feb 2017, I managed to update my PC with the latest Windows 10 Insider Preview Build 15031. The list contains a massive set of features as well as fixes, so I didn&amp;rsquo;t mind the upgrade. It took at least 20mins to get it done. Once done, my NodeJS environment started complaining, btw I am using Node Version Manager.
 Here&amp;rsquo;s what I got when switching NodeJS versions:</description>
     </item>

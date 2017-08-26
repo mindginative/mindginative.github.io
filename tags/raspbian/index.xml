@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Raspbian on Richard Sentino</title>
-    <link>http://www.mindginative.com/tags/raspbian/</link>
-    <description>Recent content in Raspbian on Richard Sentino</description>
+    <title>Raspbian on mindginative</title>
+    <link>http://localhost:8080/tags/raspbian/</link>
+    <description>Recent content in Raspbian on mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Mon, 10 Apr 2017 21:03:29 +1200</lastBuildDate>
     
-	<atom:link href="http://www.mindginative.com/tags/raspbian/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:8080/tags/raspbian/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to fix Raspberry Pi SSH connection reset</title>
-      <link>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</link>
+      <link>http://localhost:8080/posts/raspberrypi-ssh-connection-reset/</link>
       <pubDate>Mon, 10 Apr 2017 21:03:29 +1200</pubDate>
       
-      <guid>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</guid>
+      <guid>http://localhost:8080/posts/raspberrypi-ssh-connection-reset/</guid>
       <description>I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:
  ssh: connect to host 192.168.178.79 port 22: Connection refused
  Tell-tale Sign after few attempts the ssh status showed up an interesting set of logs:
@@ -26,10 +27,10 @@ $&amp;gt; sudo service ssh status
     
     <item>
       <title>No Fuss, NodeJS LTS installation on Raspbian Lite Jessie</title>
-      <link>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</link>
+      <link>http://localhost:8080/posts/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</link>
       <pubDate>Sat, 18 Mar 2017 21:56:03 +1300</pubDate>
       
-      <guid>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</guid>
+      <guid>http://localhost:8080/posts/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</guid>
       <description>Copy &amp;amp; Paste, trust me! $&amp;gt; sudo apt-get update $&amp;gt; sudo apt-get upgrade $&amp;gt; sudo apt-get -y install git $&amp;gt; curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash $&amp;gt; source ~/.bashrc $&amp;gt; nvm install --lts  as of this writing my NodeJS LTS version: v6.10.0
 What&amp;rsquo;s The Fuss? Node Version Manager (nvm) gets installed, we&amp;rsquo;ll then use it to install whatever is the current NodeJS LTS - primarily behind the scenes, it will spear you from crap of load of these commands:</description>
     </item>

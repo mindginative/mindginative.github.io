@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Richard Sentino</title>
-    <link>http://www.mindginative.com/categories/blog/</link>
-    <description>Recent content in Blog on Richard Sentino</description>
+    <title>Blog on mindginative</title>
+    <link>http://localhost:8080/categories/blog/</link>
+    <description>Recent content in Blog on mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Wed, 04 May 2016 11:10:22 +1200</lastBuildDate>
     
-	<atom:link href="http://www.mindginative.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:8080/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Browsersync -- The Ghost and the Pretender</title>
-      <link>http://www.mindginative.com/post/browsersync--the-ghost-and-the-pretender/</link>
+      <link>http://localhost:8080/posts/browsersync--the-ghost-and-the-pretender/</link>
       <pubDate>Wed, 04 May 2016 11:10:22 +1200</pubDate>
       
-      <guid>http://www.mindginative.com/post/browsersync--the-ghost-and-the-pretender/</guid>
+      <guid>http://localhost:8080/posts/browsersync--the-ghost-and-the-pretender/</guid>
       <description>Looking at few stats: 6.9k Github stars and 700k npm downloads in the last month (at the time of this writing) it’s no wonder that you can always find plugins, tools or utilities that will link up Browsersync with your favourite frontend or server side framework to ease up your browser testing. It is packed with good features as mentioned in Addy Osmani’s 2013 blog but its ghostMode and Proxy options are spot on in my opinion.</description>
     </item>
     
     <item>
       <title>2016 resolution</title>
-      <link>http://www.mindginative.com/post/2016-resolution/</link>
+      <link>http://localhost:8080/posts/2016-resolution/</link>
       <pubDate>Fri, 01 Jan 2016 10:41:04 +1200</pubDate>
       
-      <guid>http://www.mindginative.com/post/2016-resolution/</guid>
+      <guid>http://localhost:8080/posts/2016-resolution/</guid>
       <description> Untitled… updated 2016 resolution(s) it&amp;rsquo;s not a long list but I&amp;rsquo;ll give it a shot
  Start a writing a blog (first yay!) Track my goals (web apps, any suggestion ?) Be healthy Watch Jono &amp;amp; Ben (c’mon ? what ?) Edutech my kids with Khan Academy (had 1 today for my 3 yr old) Deep dive into Rustlang Be patient Read 1 book per month Experiment and turn small ideas into life  </description>
     </item>

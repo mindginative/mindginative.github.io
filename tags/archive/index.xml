@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Archive on Richard Sentino</title>
-    <link>http://www.mindginative.com/tags/archive/</link>
-    <description>Recent content in Archive on Richard Sentino</description>
+    <title>Archive on mindginative</title>
+    <link>http://localhost:8080/tags/archive/</link>
+    <description>Recent content in Archive on mindginative</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Sat, 08 Apr 2017 13:03:54 +1200</lastBuildDate>
     
-	<atom:link href="http://www.mindginative.com/tags/archive/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:8080/tags/archive/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Internet Archive&#39;s WaybackMachine 2003</title>
-      <link>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</link>
+      <link>http://localhost:8080/posts/internet-archive-waybackmachine-2003/</link>
       <pubDate>Sat, 08 Apr 2017 13:03:54 +1200</pubDate>
       
-      <guid>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</guid>
+      <guid>http://localhost:8080/posts/internet-archive-waybackmachine-2003/</guid>
       <description>Weekend Saturday morning, my JavaScript Weekly subscription #329 had a catchy email subject title Opinionated Comparison of React, Angular2, and Aurelia, read full article here
  I have been doing some form of frontend development since the early 90s.
  from the blog&amp;rsquo;s first sentence I quickly recalled the first website I designed 14yrs ago, worked started in late 2002 but it was launched in 2003. I remember dabbling with Macromedia&amp;rsquo;s Fireworks and Dreamweaver.</description>

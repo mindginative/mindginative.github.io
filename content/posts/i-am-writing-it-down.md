@@ -30,7 +30,7 @@ I decided to give it a try, and set some goal after-work hours. The "Lessons Lea
 - I am not really accomplishing anything on my personal projects, goals
 - there were too many interruptions but this is due to my disorganised routine
 
-it's my second day, and I'd like to continue doing this - the systems needs some tweaking for my lifestyle however the daily restrospective and writing it down made a lot of sense to me.
+it's my second day, and I'd like to continue doing this - the system needs some tweaking for my lifestyle however the daily restrospective and writing it down made a lot of sense for me.
 
 I'm looking to buy the notebook that Victor used in his journal but don't know if it is available in New Zealand. For the meantime I'm sketching it manually on a A5 Art Notebook - works well though!
 

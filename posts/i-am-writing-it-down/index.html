@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host</title>
-  <meta property="og:title" content="Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host" />
-  <meta name="twitter:title" content="Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host" />
+  <title>I Am Writing It Down!</title>
+  <meta property="og:title" content="I Am Writing It Down!" />
+  <meta name="twitter:title" content="I Am Writing It Down!" />
   
 
   
@@ -17,7 +17,7 @@
 
   <meta name="author" content="Richard Sentino"/>
   <meta property="og:site_name" content="mindginative" />
-  <meta property="og:url" content="http://www.mindginative.com/posts/microservices-with-docker-alpine-nodejs-nginx-win10/" />
+  <meta property="og:url" content="http://www.mindginative.com/posts/i-am-writing-it-down/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -58,144 +58,70 @@
 
 <article class="p-article">
   <header>
-    <h1>Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host</h1>
+    <h1>I Am Writing It Down!</h1>
     <div>
       <div class="c-time">
         Posted on
-        <time datetime="2017-08-13T21:42:20&#43;12:00">
-          Aug 13, 2017
+        <time datetime="2017-08-27T14:17:31&#43;12:00">
+          Aug 27, 2017
         </time>
       </div>
       
-      <a href="http://www.mindginative.com//tags/devops" class="c-tag">devops</a>
+      <a href="http://www.mindginative.com//tags/journal" class="c-tag">journal</a>
       
-      <a href="http://www.mindginative.com//tags/docker" class="c-tag">docker</a>
+      <a href="http://www.mindginative.com//tags/life" class="c-tag">life</a>
       
-      <a href="http://www.mindginative.com//tags/nodejs" class="c-tag">nodejs</a>
-      
-      <a href="http://www.mindginative.com//tags/linux" class="c-tag">linux</a>
-      
-      <a href="http://www.mindginative.com//tags/win10" class="c-tag">win10</a>
-      
-      <a href="http://www.mindginative.com//tags/microservices" class="c-tag">microservices</a>
-      
-      <a href="http://www.mindginative.com//tags/api" class="c-tag">api</a>
+      <a href="http://www.mindginative.com//tags/notes" class="c-tag">notes</a>
       
     </div>
   </header>
   <section id="js-article" class="p-article__body">
     
 
-<p><img src="/images/microservices/diagram.png" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+<p>In response to <a href="https://blog.nrwl.io/@vsavkin">Victor Savkin&rsquo;s</a> blog about &ldquo;<a href="https://blog.nrwl.io/write-it-down-55086ca4f2ee">Write it Down</a>&rdquo; 2 days ago.</p>
 
-<p>Apology for the last word &ldquo;Win10&rdquo;, it&rsquo;s bit misleading but my main development machine is Dell XPS 13 on Windows 10 Pro Insider Preview. There&rsquo;s should be a follow up to this blog hopefully on my <a href="http://yup-the-website-domain-is.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/">headless Ubuntu Server</a>.</p>
+<blockquote>
+<p>Retrospectives are important. That’s why software development teams get together once a week to see what works and what can be improved. We know small adjustments add up. So why don’t we apply the same approach in our day-to-day lives?</p>
+</blockquote>
 
-<p>BTW, it&rsquo;s a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&rsquo;t work on plain CLI commands later then I discovered that wrapping it inside docker-compose.yml does the trick. C-R-A-Z-Y-!</p>
+<p>I decided to give it a try, and set some goal after-work hours. The &ldquo;Lessons Learned&rdquo; had a surprising result.</p>
 
-<p><img src="/images/microservices/win10-docker-dnsmasq-configuration.jpg" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
-
-<h2 id="rationale">Rationale</h2>
-
-<p>I had this vision from last year (2016) while I was working on couple projects: NodeJS APIs, setting up infras (CI), deployments, standing up AWS services -  to do some automated orchestration of infrastructures and its services, stick inside a container. It just got materialised recently, and with some help from [1] [2].</p>
-
-<h2 id="dangx-project">Dangx Project</h2>
-
-<p>Dangx Project is an attempt to build a microservice architecture with Docker, Alpine Linux, NodeJS, Nginx. Each service should run on its own isolated container.</p>
-
-<p>see <a href="https://github.com/rixrix/dangx-project/tree/v1.0.0">https://github.com/rixrix/dangx-project/tree/v1.0.0</a></p>
-
-<h3 id="configuration">Configuration</h3>
+<h2 id="my-goal">My Goal</h2>
 
 <ul>
-<li>Except for Dnsmasq, all containers are linked via the &ldquo;nginx-proxy&rdquo; network</li>
-<li>Dnsmasq[4] will only respond to &ldquo;dev&rdquo; domain queries on localhost/127.0.0.1
-
-<ul>
-<li><code>--address=/dev/127.0.0.1</code></li>
-</ul></li>
-<li>Configure your Windows Docker vEthernet (DockerNAT) network adapter to use the 127.0.0.1 as one of your DNS server and use DNS suffix &ldquo;dev&rdquo;, see screenshot above</li>
+<li>Organize Trello for work</li>
+<li>Get a life (kids, wife, family)</li>
 </ul>
 
-<h3 id="how-it-works">How it works</h3>
+<h2 id="today-s-target">Today&rsquo;s Target</h2>
 
 <ul>
-<li>Dnsmasq responds to &ldquo;dev&rdquo; domain queries and use 127.0.0.1 as its IP</li>
-<li>Nginx Proxy listens for any request on port 80, proxys the request to its target container, it does a lot of cool magic behind the scene, see [3]</li>
-<li>Domain and its containers
-
-<ul>
-<li><a href="http://dangxproject.dev">http://dangxproject.dev</a>
-
-<ul>
-<li>dangx-www-dangxproject</li>
-<li>Nginx static server</li>
-</ul></li>
-<li><a href="http://api.dangxproject.dev">http://api.dangxproject.dev</a>
-
-<ul>
-<li>dangx-www-api</li>
-<li>NodeJS/Express server</li>
-</ul></li>
-<li><a href="http://whoami.dangxproject.dev">http://whoami.dangxproject.dev</a>
-
-<ul>
-<li>dangx-www-whoami</li>
-<li>Nginx test server</li>
-</ul></li>
-</ul></li>
+<li>Declutter Trello</li>
+<li>Read AWS whitepaper, conference videos</li>
+<li>Setup Docker container for webapp I&rsquo;m working on</li>
 </ul>
 
-<h3 id="commands">Commands</h3>
+<h2 id="wins">Wins</h2>
 
 <ul>
-<li>For fresh project, create the special network
-
-<ul>
-<li><code>./scripts/docker-new-network.sh</code></li>
-</ul></li>
-<li>Build the containers
-
-<ul>
-<li><code>./scripts/docker-compose-up.sh</code></li>
-</ul></li>
-<li>Destroy the containers, excluding network and images
-
-<ul>
-<li><code>./scripts/docker-compose-down.sh</code></li>
-</ul></li>
-<li>Restart the containers
-
-<ul>
-<li><code>./scripts/docker-compose-restart.sh</code></li>
-</ul></li>
+<li>Managed to re-organized all my Trello boards, though still in-progress but it&rsquo;s a lot better than before</li>
+<li>I spent time with my kids + wife: with Gadgets, TV turned off</li>
 </ul>
 
-<h2 id="note">Note</h2>
-
-<p>This is a short write up about its purpose, functionality and configuration, feel free to ask or file an <a href="https://github.com/rixrix/dangx-project">issue over at Github</a>. The references below should give you the nitty-gritty.</p>
-
-<h2 id="future-plan">Future Plan</h2>
-
-<p>I&rsquo;m excited about the current state of this project, and I&rsquo;d like to move forward and do some cool stuff. Here&rsquo;s the grand plan:</p>
+<h2 id="lessons-learned">Lessons Learned</h2>
 
 <ul>
-<li>Deploy to AWS</li>
-<li>Infrastructure management with Terraform.io</li>
-<li>Multi-cloud deployment eg: Google Cloud, AWS, Azure</li>
-<li>CI (automated: testing, deployment)</li>
-<li>Security (SSL, etc)</li>
-<li>Blue/Green deployment</li>
-<li>Spin-off sample/cool projects from this project</li>
+<li>I was so disorganized</li>
+<li>I was careless about the time I spent on useless stuff eg. reading news, watching useless youtube recommendation videos</li>
+<li>I am not really accomplishing anything on my personal projects, goals</li>
+<li>there were too many interruptions but this is due to my disorganised routine</li>
 </ul>
 
-<h2 id="references">References</h2>
+<p>it&rsquo;s my second day, and I&rsquo;d like to continue doing this - the systems needs some tweaking for my lifestyle however the daily restrospective and writing it down made a lot of sense to me.</p>
 
-<ul>
-<li>[1] <a href="http://blog.ibmjstart.net/2015/07/23/learning-microservices-architecture-bluemix-docker-part-1/">http://blog.ibmjstart.net/2015/07/23/learning-microservices-architecture-bluemix-docker-part-1/</a></li>
-<li>[2] <a href="https://adrianperez.org/improving-dev-environments-all-the-http-things/">https://adrianperez.org/improving-dev-environments-all-the-http-things/</a></li>
-<li>[3] <a href="https://hub.docker.com/r/jwilder/nginx-proxy/">https://hub.docker.com/r/jwilder/nginx-proxy/</a></li>
-<li>[4] <a href="https://hub.docker.com/r/andyshinn/dnsmasq/">https://hub.docker.com/r/andyshinn/dnsmasq/</a></li>
-</ul>
+<p>I&rsquo;m looking to buy the notebook that Victor used in his journal but don&rsquo;t know if it is available in New Zealand. For the meantime I&rsquo;m sketching it manually on a A5 Art Notebook - works well though!</p>
+
+<p>Have a great weekend!</p>
 
   </section>
   <footer>
@@ -204,12 +130,11 @@
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
           
-          <a href="http://www.mindginative.com/posts/i-am-writing-it-down/">Newer</a>
           
         </div>
         <div class="c-pagination__older">
           
-          <a href="http://www.mindginative.com/posts/12-hours-hackathon-with-react/">Older</a>
+          <a href="http://www.mindginative.com/posts/microservices-with-docker-alpine-nodejs-nginx-win10/">Older</a>
           
         </div>
       </div>

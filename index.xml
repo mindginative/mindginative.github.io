@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
-    <lastBuildDate>Sun, 13 Aug 2017 21:42:20 +1200</lastBuildDate>
+    <lastBuildDate>Sun, 27 Aug 2017 14:17:31 +1200</lastBuildDate>
     
 	<atom:link href="http://www.mindginative.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I Am Writing It Down!</title>
+      <link>http://www.mindginative.com/posts/i-am-writing-it-down/</link>
+      <pubDate>Sun, 27 Aug 2017 14:17:31 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/posts/i-am-writing-it-down/</guid>
+      <description>In response to Victor Savkin&amp;rsquo;s blog about &amp;ldquo;Write it Down&amp;rdquo; 2 days ago.
+ Retrospectives are important. That’s why software development teams get together once a week to see what works and what can be improved. We know small adjustments add up. So why don’t we apply the same approach in our day-to-day lives?
+ I decided to give it a try, and set some goal after-work hours. The &amp;ldquo;Lessons Learned&amp;rdquo; had a surprising result.</description>
+    </item>
     
     <item>
       <title>Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host</title>

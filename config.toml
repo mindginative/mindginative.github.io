@@ -1,6 +1,6 @@
 baseurl = "http://www.mindginative.com/"
 languageCode = "en-us"
-title = "mindginative"
+title = "Richard Sentino"
 theme = "pickles"
 disqusShortname = "mindginative"
 copyright = "&copy; Copyright notice"
@@ -14,11 +14,12 @@ googleAnalytics = "UA-55684248-1"
 # Define how many posts should appear on a site
 paginate = 10
 
+	description = "xxx"
 [params]
 	# To provide some metadata for search engines feel free to add a few
   # information about you and your website.
 	name = "Richard Sentino"
-	description = "Richard Sentino is a Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot."
+	description = "A Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot. My blogs are my own."
 
 	# Format dates with Go's time formatting
 	date_format = "2006-01-02"
@@ -33,9 +34,9 @@ paginate = 10
   github = "rixrix"
   linkedin = "sentino"
   contact = false
-  author = "Richard Sentino"
-  bio = "A full-stack web developer from Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot. My blogs are my own."
-  subtitle = "---"
+  author = ""
+  bio = ""
+  subtitle = "A Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot. My blogs are my own."
 
   # custom params for strata theme
 	[params.sidebar]

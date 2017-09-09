@@ -37,6 +37,7 @@ paginate = 10
   author = ""
   bio = ""
   subtitle = "A Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot. My blogs are my own."
+  disqus = "mindginative"
 
   # custom params for strata theme
 	[params.sidebar]

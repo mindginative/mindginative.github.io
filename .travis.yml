@@ -1,7 +1,7 @@
 language: go
 env:
   global:
-  - GIT_DEPLOY_DIR=public
+  - GIT_DEPLOY_DIR=build
   - GIT_DEPLOY_BRANCH=master
   - GIT_DEPLOY_USERNAME="Travis CI"
   - GIT_DEPLOY_EMAIL=richard@mindginative.com
@@ -13,5 +13,5 @@ install: go get -v github.com/spf13/hugo
 script:
   - hugo
 after_success:
-  - cp .travis.yml build
+  - cp .travis.yml BingSiteAuth.xml CNAME google469b1176000782af.html build
   - bash deploy.sh

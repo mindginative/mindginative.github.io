@@ -1,0 +1,17 @@
+language: go
+env:
+  global:
+  - GIT_DEPLOY_DIR=public
+  - GIT_DEPLOY_BRANCH=master
+  - GIT_DEPLOY_USERNAME="Travis CI"
+  - GIT_DEPLOY_EMAIL=richard@mindginative.com
+  - secure: But1p4qFp9BG9PPI4lQvB9s+eGZkda4qhvXatbuBwbJRKU3bGOi0fSOgbMNBNs8rT9uPfDz1X2V6H28S8GgrZ9xj0xJXENJQTwNpbHsNpCPsH9eKK2oPAXg7SqKrmt6g/k00ttIbj7ifqrR/sDgZXtQ6wK3/riYbvxogA6OxpWKn4HcCQaqbZRz/gVuYqu+slxb8DFZEIsyLp7E5qyfIaKYhj8XGkGKf0ZWS6fJr5p5GG9PlxAnnhfrurF48PNX6Iyjt2LNECyPXKExeIwobaap547x+EINi69BkhEZsJfnOeLjJJHe/meceKwQPu1KhVNtHSEKm7Sto1Pq4xJzXoTSUwfhHBtgKJrkvpo4W/3t/vGjarT1EH0E9HILAxlyuesFtCugu8YVF1oBszCbYxFz0kncMlLAFxlWpdt2Inc6G6IvBd/vVtSOrwEV19fFM/aXVz5OkEJdQLcgvV6voKM3c/aI0jWWy0VSLbNpKwq6oRbuJhMGayJh8E61TbE9kgadS8pXOUaS/w1kcCNnAhPZlieqOyjW8NcX9ipICr4ywBDZAmkpvzyzomesEcpZc6TbsG7qP8D+OOrvmANVhIbxhpPYAxovVt0giyFoDQpEVk0xNexn+GOSq3PlZMUW/LcH7TnxKsiAxJSH4zRAnEUxhmzuFzK5h4OTOJPyA/FQ=
+branches:
+  only:
+  - cms
+install: go get -v github.com/spf13/hugo
+script:
+  - hugo
+after_success:
+  - cp .travis.yml build
+  - bash deploy.sh

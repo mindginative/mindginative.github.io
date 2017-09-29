@@ -1,5 +1,5 @@
-<a name=""></a>
-#  (2017-09-29)
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/mindginative/mindginative.github.io/compare/ccfefef...v2.0.0) (2017-09-29)
 
 
 ### Bug Fixes
@@ -24,6 +24,7 @@
 * **blog:** ssh denied ([4cc9272](https://github.com/mindginative/mindginative.github.io/commit/4cc9272))
 * **hugo:** add gallery shortcodes ([d5e34fa](https://github.com/mindginative/mindginative.github.io/commit/d5e34fa))
 * **menu:** add project list ([ccfefef](https://github.com/mindginative/mindginative.github.io/commit/ccfefef))
+* added CI ([7cff6be](https://github.com/mindginative/mindginative.github.io/commit/7cff6be))
 * microservices blog ([53c57f7](https://github.com/mindginative/mindginative.github.io/commit/53c57f7))
 * new blog "I am writing it down" ([fd518b2](https://github.com/mindginative/mindginative.github.io/commit/fd518b2))
 

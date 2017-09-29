@@ -11,9 +11,10 @@ branches:
   - cms
 install: go get -v github.com/spf13/hugo
 script:
-- rm -frv build
-- git clone $GIT_DEPLOY_REPO --branch master --single-branch build --depth 1
-- hugo
+  - rm -frv build
+  - git clone $GIT_DEPLOY_REPO --branch master --single-branch build --depth 1
+  - hugo
 after_success:
-- cp .travis.yml build
-- bash deploy.sh
+  - cp .travis.yml build
+  - cd build && git add . && git commit -am 'update' && cd -
+  - bash deploy.sh

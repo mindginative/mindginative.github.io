@@ -17,4 +17,4 @@ script:
 after_success:
   - cp .travis.yml build
   - cd build && git add . && git commit -am '...' && cd -
-  - bash deploy.sh --message "Travis CI: release"
+  - bash deploy.sh

@@ -12,9 +12,11 @@ branches:
 install: go get -v github.com/spf13/hugo
 script:
   - rm -frv build
-  - git clone $GIT_DEPLOY_REPO --branch master --single-branch build --depth 1
+  - git clone $GIT_DEPLOY_REPO --branch master --depth 1 build
   - hugo
+  - cd build && git status
+  - git add . && git commit -am '...' && cd ../
+  - ls -alth && pwd
 after_success:
   - cp .travis.yml build
-  - cd build && git add . && git commit -am '...' && cd -
   - bash deploy.sh

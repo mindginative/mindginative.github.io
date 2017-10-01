@@ -11,12 +11,10 @@ branches:
   - cms
 install: go get -v github.com/spf13/hugo
 script:
+  - git log
   - rm -frv build
-  - git clone $GIT_DEPLOY_REPO --branch master --depth 1 build
-  - hugo
-  - cd build && git status
-  - git add . && git commit -am '...' && cd ../
-  - ls -alth && pwd
+  - git clone $GIT_DEPLOY_REPO --branch master --depth 1 build && hugo
 after_success:
   - cp .travis.yml build
+  - cd build && git status && git add . && git commit -am '...' && cd ../
   - bash deploy.sh

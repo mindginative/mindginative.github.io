@@ -13,6 +13,7 @@ install: go get -v github.com/spf13/hugo
 script:
   - git log
   - rm -frv build
+  - hugo version
   - git clone $GIT_DEPLOY_REPO --branch master --depth 1 build && hugo
 after_success:
   - cp .travis.yml build

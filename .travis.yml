@@ -18,4 +18,4 @@ script:
 after_success:
   - cp .travis.yml build
   - cd build && git status && git add . && git commit -am '...' && cd ../
-  - bash deploy.sh
+#  - bash deploy.sh

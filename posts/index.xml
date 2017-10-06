@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
-    <lastBuildDate>Sat, 30 Sep 2017 00:06:59 +1200</lastBuildDate>
+    <lastBuildDate>Fri, 06 Oct 2017 00:10:26 +1200</lastBuildDate>
     
 	<atom:link href="http://www.mindginative.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ubuntu WSL</title>
+      <link>http://www.mindginative.com/posts/ubuntu-wsl/</link>
+      <pubDate>Fri, 06 Oct 2017 00:10:26 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/posts/ubuntu-wsl/</guid>
+      <description>Today I learned that I can install Ubuntu or Suse Linux, straight from Windows App Store. I might have missed the opportunity which was announced 4 months ago
+Notes This is my first post of &amp;ldquo;Today I Learned&amp;rdquo; series of mini-blog: a mixed of tips, resources or anything. I spent at least 8 hours in front of the screen - coding and always learning.</description>
+    </item>
     
     <item>
       <title>2018</title>

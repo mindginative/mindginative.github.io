@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Richard Sentino</title>
-  <meta property="og:title" content="Richard Sentino" />
-  <meta name="twitter:title" content="Richard Sentino" />
+  <title>Today I Learned</title>
+  <meta property="og:title" content="Today I Learned" />
+  <meta name="twitter:title" content="Today I Learned" />
   
 
   
@@ -17,7 +17,7 @@
 
   <meta name="author" content=""/>
   <meta property="og:site_name" content="Richard Sentino" />
-  <meta property="og:url" content="http://www.mindginative.com/" />
+  <meta property="og:url" content="http://www.mindginative.com/tags/today-i-learned/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -34,8 +34,6 @@
   <meta name="generator" content="Hugo 0.20.7" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="http://www.mindginative.com/css/style.css" />
   <link rel="shortcut icon" href="http://www.mindginative.com/images/favicon.ico" />
-  
-  <link href="http://www.mindginative.com/index.xml" rel="alternate" type="application/rss+xml" title="Richard Sentino" />
   
   <script type="text/javascript" src="http://www.mindginative.com/js/bundle.js"></script>
   
@@ -56,228 +54,22 @@
   </header>
   <main class="l-main">
 
-
+<h2 class="c-title tag-title">Today I Learned</h2>
 
 <article class="c-article p-list-article">
   <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/">Domain Registrar migration from GoDaddy to AWS Route53: Short Story</a></h2>
+    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/ubuntu-wsl/">Ubuntu WSL</a></h2>
     <p class="c-article__meta">
       Posted on
-      <time datetime="2017-04-28T21:11:01&#43;12:00">
-        Apr 28, 2017
+      <time datetime="2017-10-06T00:10:26&#43;12:00">
+        Oct 6, 2017
       </time>
     </p>
   </header>
   <div class="c-article__summary">
-    After a fantastic 9+ years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened nor bad customer experience.
-A million reasons:
- They&rsquo;re just my domain provider, I only remember them when it&rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.
- Target Audience It aims at people who are already using AWS Route53 as their DNS provider, for newcomers - I guess you&rsquo;ll have to touch base with DNS first, see Migrating DNS Service for an existing Domain to Amazon Route53
+    Today I learned that I can install Ubuntu or Suse Linux, straight from Windows App Store. I might have missed the opportunity which was announced 4 months ago
+Notes This is my first post of &ldquo;Today I Learned&rdquo; series of mini-blog: a mixed of tips, resources or anything. I spent at least 8 hours in front of the screen - coding and always learning.
   </div>
-  
-  <a href="http://www.mindginative.com/posts/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/raspberrypi-ssh-connection-reset/">How to fix Raspberry Pi SSH connection reset</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2017-04-10T21:03:29&#43;12:00">
-        Apr 10, 2017
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:
- ssh: connect to host 192.168.178.79 port 22: Connection refused
- Tell-tale Sign after few attempts the ssh status showed up an interesting set of logs:
-$&gt; sudo service ssh status
-● ssh.service - OpenBSD Secure Shell server Loaded: loaded (/lib/systemd/system/ssh.service; enabled) Active: active (running) since Mon 2017-04-10 08:51:38 UTC; 6min ago Main PID: 1332 (sshd) CGroup: /system.
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/raspberrypi-ssh-connection-reset/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/setting-up-bitbucket-pipelines-and-aws-s3/">Setting up Bitbucket&#39;s Pipelines for frontend deployment on AWS S3</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2017-04-09T21:27:59&#43;12:00">
-        Apr 9, 2017
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Bitbucket is my main git repo for all my personal (PoC) projects, portfolio and all of my contracting projects - hands down on private repo.
-While I&rsquo;ve tried Codeship, CircleCI, Jenkins for production use, however, all of these CI server needs some little education about private and public certificates for setting up roles/permission/access before any of them can pull out your source code and push it to eg: Amazon S3 &mdash; Pipelines + AWS S3 was far bit easier.
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/setting-up-bitbucket-pipelines-and-aws-s3/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/internet-archive-waybackmachine-2003/">Internet Archive&#39;s WaybackMachine 2003</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2017-04-08T13:03:54&#43;12:00">
-        Apr 8, 2017
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Weekend Saturday morning, my JavaScript Weekly subscription #329 had a catchy email subject title Opinionated Comparison of React, Angular2, and Aurelia, read full article here
- I have been doing some form of frontend development since the early 90s.
- from the blog&rsquo;s first sentence I quickly recalled the first website I designed 14yrs ago, worked started in late 2002 but it was launched in 2003. I remember dabbling with Macromedia&rsquo;s Fireworks and Dreamweaver.
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/internet-archive-waybackmachine-2003/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/no-fuss-nodejs-lts-on-raspbian-lite-jessie/">No Fuss, NodeJS LTS installation on Raspbian Lite Jessie</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2017-03-18T21:56:03&#43;13:00">
-        Mar 18, 2017
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Copy &amp; Paste, trust me! $&gt; sudo apt-get update $&gt; sudo apt-get upgrade $&gt; sudo apt-get -y install git $&gt; curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash $&gt; source ~/.bashrc $&gt; nvm install --lts  as of this writing my NodeJS LTS version: v6.10.0
-What&rsquo;s The Fuss? Node Version Manager (nvm) gets installed, we&rsquo;ll then use it to install whatever is the current NodeJS LTS - primarily behind the scenes, it will spear you from crap of load of these commands:
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/no-fuss-nodejs-lts-on-raspbian-lite-jessie/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/nodejs-cron-getting-rid-of-dangling-processes/">NodeJS &#43; Cron: A series of attempts in getting rid of dangling processes</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2017-02-20T20:47:01&#43;13:00">
-        Feb 20, 2017
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Short-lived scripts that sucked your resources for 1mins or at most 5mins - is probably fine. However, if it is recurring jobs in Cron and involves several tasks and at least an hour of processing - that&rsquo;d be a different story.
-I was working on a simple NodeJS-based cron script with only 3 requirements:
- extract transform load  Each one of these however would involve crunching through a million rows of data.
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/nodejs-cron-getting-rid-of-dangling-processes/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/nodejs-development-inside-docker-with-windows10/">NodeJS Development Inside Docker on Windows 10</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2017-02-15T16:39:23&#43;13:00">
-        Feb 15, 2017
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Wait, what ? Moving to Windows10 (6 months ago as of this writing) as my main OS is a bit hard, just a little bit. I use commandline ALL THE TIME and I can&rsquo;t live without the developer&rsquo;s Swiss army knife on my side - tiny tools that make our life easier: grep, sed, ps, tree, ssh, find &hellip;
-&ldquo;Bash On Windows&rdquo; was a good strategy from Microsoft - I didn&rsquo;t bother about switching to Windows and I didn&rsquo;t think twice, I was more worried about which machine to buy.
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/nodejs-development-inside-docker-with-windows10/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/windows-insider-15031-vs-nodejs/">Windows Insider Build 15031 Broke my NVM NodeJS environment</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2017-02-11T13:14:55&#43;13:00">
-        Feb 11, 2017
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Yesterday 10th of Feb 2017, I managed to update my PC with the latest Windows 10 Insider Preview Build 15031. The list contains a massive set of features as well as fixes, so I didn&rsquo;t mind the upgrade. It took at least 20mins to get it done. Once done, my NodeJS environment started complaining, btw I am using Node Version Manager.
-Here&rsquo;s what I got when switching NodeJS versions:
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/windows-insider-15031-vs-nodejs/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/install-ffmpeg-from-source-ubuntu-win10/">Install FFmpeg from source on Ubuntu Bash on Win10</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2016-11-28T01:17:35&#43;13:00">
-        Nov 28, 2016
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    I was working on transcoding videos into different formats, resolutions so it could be played on various desktops, tablets and mobile devices. My main working machine is Dell XPS13 on Windows 10 with Ubuntu Bash enabled, some of my needed libraries is missing and needs recompilation of FFmpeg the one that came from Ubuntu 14.04 repo.
-I think I&rsquo;ve literraly spent hours or probably days buildin/re-building libraries just to get the videos transcoded into my desired format.
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/install-ffmpeg-from-source-ubuntu-win10/" class="c-article__btn p-list-article__btn">Read more</a></li>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="http://www.mindginative.com/posts/go1-7-bash-on-win10/">Go1.7 installation via GVM on Ubuntu Bash on Windows 10</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2016-11-26T22:27:10&#43;13:00">
-        Nov 26, 2016
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Since moving to Hugo few months ago my installation history with Go was quick and dirty, I just want to get something up running to get started with Hugo. 48 hours ago I was playing with Go, I thought of building a simple cli utility where CI server can hook in and start building something - of course it has be built on top of Go, enough to get my around its dev-ecosystem.
-  </div>
-  
-  <a href="http://www.mindginative.com/posts/go1-7-bash-on-win10/" class="c-article__btn p-list-article__btn">Read more</a></li>
   
 </article>
 
@@ -286,19 +78,13 @@ I think I&rsquo;ve literraly spent hours or probably days buildin/re-building li
   <div class="c-pagination__ctrl">
     <div class="c-pagination__newer">
       
-      <a href="/">Newer</a>
-      
     </div>
     <div class="c-pagination__older">
       
-      <a href="/page/3/">Older</a>
-      
     </div>
   </div>
-  <span class="c-pagination__count p-pagination__count">Page 2 of 3</span>
+  <span class="c-pagination__count p-pagination__count">Page 1 of 1</span>
 </nav>
-
-
 
   </main>
   
@@ -308,8 +94,6 @@ I think I&rsquo;ve literraly spent hours or probably days buildin/re-building li
     
     <li class="p-menu__listitem">
       <a href='/'
-        
-           class='current' aria-current='page'
         
       >Home</a>
     </li>

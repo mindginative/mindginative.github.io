@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Today I Learned on Richard Sentino</title>
-    <link>http://www.mindginative.com/tags/today-i-learned/</link>
-    <description>Recent content in Today I Learned on Richard Sentino</description>
+    <title>Npm on Richard Sentino</title>
+    <link>http://www.mindginative.com/tags/npm/</link>
+    <description>Recent content in Npm on Richard Sentino</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Sun, 08 Oct 2017 00:28:54 +1300</lastBuildDate>
     
-	<atom:link href="http://www.mindginative.com/tags/today-i-learned/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.mindginative.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,16 +21,6 @@
       <description>4 days ago, npm published a blog about protecting your account with 2FA. I&amp;rsquo;m a user of Google Authenticator [1], [2] and YubiKey - so it was just perfect timing.
 To enable 2FA on your profile, you need to install the beta release of npm client:
 $&amp;gt; npm install npm@next -g  and follow the rest of the instruction here: https://docs.npmjs.com/getting-started/using-two-factor-authentication</description>
-    </item>
-    
-    <item>
-      <title>Ubuntu WSL</title>
-      <link>http://www.mindginative.com/posts/ubuntu-wsl/</link>
-      <pubDate>Fri, 06 Oct 2017 00:10:26 +1200</pubDate>
-      
-      <guid>http://www.mindginative.com/posts/ubuntu-wsl/</guid>
-      <description>Today I learned that I can install Ubuntu or Suse Linux, straight from Windows App Store. I might have missed the opportunity which was announced 4 months ago
-Notes This is my first post of &amp;ldquo;Today I Learned&amp;rdquo; series of mini-blog: a mixed of tips, resources or anything. I spent at least 8 hours in front of the screen - coding and always learning.</description>
     </item>
     
   </channel>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.mindginative.com/posts/enabling-2fa-with-npm/</loc>
+    <lastmod>2017-10-08T00:28:54+13:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/posts/ubuntu-wsl/</loc>
     <lastmod>2017-10-06T00:10:26+12:00</lastmod>
   </url>
@@ -357,6 +362,12 @@
   </url>
   
   <url>
+    <loc>http://www.mindginative.com/tags/npm/</loc>
+    <lastmod>2017-10-08T00:28:54+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.mindginative.com/tags/nvm/</loc>
     <lastmod>2017-03-18T21:56:03+13:00</lastmod>
     <priority>0</priority>
@@ -376,7 +387,7 @@
   
   <url>
     <loc>http://www.mindginative.com/posts/</loc>
-    <lastmod>2017-10-06T00:10:26+12:00</lastmod>
+    <lastmod>2017-10-08T00:28:54+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -412,7 +423,7 @@
   
   <url>
     <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-10-06T00:10:26+12:00</lastmod>
+    <lastmod>2017-10-08T00:28:54+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -460,7 +471,7 @@
   
   <url>
     <loc>http://www.mindginative.com/tags/today-i-learned/</loc>
-    <lastmod>2017-10-06T00:10:26+12:00</lastmod>
+    <lastmod>2017-10-08T00:28:54+13:00</lastmod>
     <priority>0</priority>
   </url>
   

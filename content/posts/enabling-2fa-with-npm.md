@@ -2,7 +2,7 @@
 categories = []
 date = "2017-10-08T00:28:54+13:00"
 tags = ["today-i-learned", "npm"]
-title = "Enabling Two-Factor Authentication (2FA) with npmjs.com"
+title = "Enabling Two-Factor Authentication (2FA) on your npm account"
 
 +++
 

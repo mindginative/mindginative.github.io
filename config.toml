@@ -1,6 +1,6 @@
 baseurl = "http://www.mindginative.com/"
 languageCode = "en-us"
-title = "Richard Sentino"
+title = " [_]3"
 theme = "pickles"
 disqusShortname = "mindginative"
 copyright = "&copy; Copyright notice"
@@ -19,7 +19,7 @@ paginate = 10
 	# To provide some metadata for search engines feel free to add a few
   # information about you and your website.
 	name = "Richard Sentino"
-	description = "A Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot. My blogs are my own."
+	description = "coffee | web | dev | opensource | rants | and then some"
 
 	# Format dates with Go's time formatting
 	date_format = "2006-01-02"
@@ -36,7 +36,7 @@ paginate = 10
   contact = false
   author = ""
   bio = ""
-  subtitle = "A Web Developer in Auckland, New Zealand who ♥ Opensource | Building web stuff | JavaScript wrangler | WebOps | Polyglot. My blogs are my own."
+  subtitle = "coffee | web | dev | opensource | rants | and then some"
   disqus = "mindginative"
 
   # custom params for strata theme

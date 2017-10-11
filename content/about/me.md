@@ -6,7 +6,7 @@ title = "About"
 
 +++
 
-Hi it's **Richard** here, a full-stack web developer from New Zealand. My main tools of the trade is JavaScript.
+Hi it's **Richard** here, a full-stack web developer from New Zealand. I build stuff mainly on JavaScript and Node.js
 
 I'm also dabbler so sometimes I mess around with technologies like: Docker, Terraform, AWS Web Services, Linux configuration, CI, Bash scripting, Go, Rust, mobile development, networking, contracting - I've dabbled enough to understand a full stack system.
 
@@ -33,7 +33,7 @@ A few little bits about me:
 
 ### Conferences
 
-A few list of conferences/meetup I have attended over the years:
+Notable conferences and meetups I've atteded:
 
 * 2017 - Brightcove Play (Boston, MA USA), codemania.io (NZ), OWASP New Zealand Day (NZ)
 * 2016 - OWASP New Zealand Day (NZ), AWS Summit (NZ)

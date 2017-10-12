@@ -157,12 +157,6 @@
   </url>
   
   <url>
-    <loc>http://www.mindginative.com/</loc>
-    <lastmod>2017-10-11T23:36:26+13:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.mindginative.com/about/</loc>
     <lastmod>1901-01-01T00:02:48+12:00</lastmod>
     <priority>0</priority>
@@ -435,6 +429,12 @@
   <url>
     <loc>http://www.mindginative.com/tags/react/</loc>
     <lastmod>2017-07-02T22:45:35+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.mindginative.com/</loc>
+    <lastmod>2017-10-11T23:36:26+13:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Owasp on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
-    <link>http://www.mindginative.com/tags/owasp/</link>
+    <link>http://read.mindginative.com/tags/owasp/</link>
     <description>Recent content in Owasp on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Tue, 16 May 2017 13:33:31 +1200</lastBuildDate>
     
-	<atom:link href="http://www.mindginative.com/tags/owasp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://read.mindginative.com/tags/owasp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OWASP New Zealand Day 2017</title>
-      <link>http://www.mindginative.com/post/owasp-new-zealand-day-2017/</link>
+      <link>http://read.mindginative.com/post/owasp-new-zealand-day-2017/</link>
       <pubDate>Tue, 16 May 2017 13:33:31 +1200</pubDate>
       
-      <guid>http://www.mindginative.com/post/owasp-new-zealand-day-2017/</guid>
+      <guid>http://read.mindginative.com/post/owasp-new-zealand-day-2017/</guid>
       <description>Alright! this was my 2nd year in a row for this web security conference here in Auckland, New Zealand. This is the type conference that would never fails to impress myself: the work and research they&amp;rsquo;ve (personal or business related) is great.
 They had a good list of local and international speakers, which I think - particularly for inviting international speakers - is good the fact that the audience (like me) will get a different insights outside of the local security threats/tools or knowledge in general.</description>
     </item>
     
     <item>
       <title>OWASP New Zealand Day 2016</title>
-      <link>http://www.mindginative.com/post/owasp-new-zealand-day-2016/</link>
+      <link>http://read.mindginative.com/post/owasp-new-zealand-day-2016/</link>
       <pubDate>Fri, 15 Apr 2016 16:18:14 +1300</pubDate>
       
-      <guid>http://www.mindginative.com/post/owasp-new-zealand-day-2016/</guid>
+      <guid>http://read.mindginative.com/post/owasp-new-zealand-day-2016/</guid>
       <description>This is kind of an old story now, 1+ month ago as of this writing.
 The conference had a good list of speakers and most of them are working for a NZ-based security companies. There were shown pre-recorded demos and live ones as well.
 One of the highlights would be the lessons learned from this conference:

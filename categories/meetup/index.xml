@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meetup on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
-    <link>http://www.mindginative.com/categories/meetup/</link>
+    <link>http://read.mindginative.com/categories/meetup/</link>
     <description>Recent content in Meetup on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Wed, 23 Mar 2016 16:46:45 +1300</lastBuildDate>
     
-	<atom:link href="http://www.mindginative.com/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://read.mindginative.com/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Docker 3rd Bday &#43; Training</title>
-      <link>http://www.mindginative.com/post/docker-3rd-bday-training/</link>
+      <link>http://read.mindginative.com/post/docker-3rd-bday-training/</link>
       <pubDate>Wed, 23 Mar 2016 16:46:45 +1300</pubDate>
       
-      <guid>http://www.mindginative.com/post/docker-3rd-bday-training/</guid>
+      <guid>http://read.mindginative.com/post/docker-3rd-bday-training/</guid>
       <description>source : https://twitter.com/dockerakl/status/711820276942528512
  Thanks for the event! I really enjoyed the Docker crash course, it was certainly an eye-opener for me :)
 HUGE thanks. Get me started with docker:P

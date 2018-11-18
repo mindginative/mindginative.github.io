@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Browsersync on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
-    <link>http://www.mindginative.com/tags/browsersync/</link>
+    <link>http://read.mindginative.com/tags/browsersync/</link>
     <description>Recent content in Browsersync on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
     <lastBuildDate>Wed, 04 May 2016 11:10:22 +1200</lastBuildDate>
     
-	<atom:link href="http://www.mindginative.com/tags/browsersync/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://read.mindginative.com/tags/browsersync/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Browsersync -- The Ghost and the Pretender</title>
-      <link>http://www.mindginative.com/post/browsersync-the-ghost-and-the-pretender/</link>
+      <link>http://read.mindginative.com/post/browsersync-the-ghost-and-the-pretender/</link>
       <pubDate>Wed, 04 May 2016 11:10:22 +1200</pubDate>
       
-      <guid>http://www.mindginative.com/post/browsersync-the-ghost-and-the-pretender/</guid>
+      <guid>http://read.mindginative.com/post/browsersync-the-ghost-and-the-pretender/</guid>
       <description>Looking at few stats: 6.9k Github stars and 700k npm downloads in the last month (at the time of this writing) it’s no wonder that you can always find plugins, tools or utilities that will link up Browsersync with your favourite frontend or server side framework to ease up your browser testing. It is packed with good features as mentioned in Addy Osmani’s 2013 blog but its ghostMode and Proxy options are spot on in my opinion.</description>
     </item>
     

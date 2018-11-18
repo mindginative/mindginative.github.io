@@ -6,7 +6,7 @@ disqusShortname = "mindginative"
 copyright = "&copy; Copyright notice"
 
 # buid dir and github pages
-publishDir = "docs"
+publishDir = "public"
 
 # Enable Google Analytics by inserting your tracking code
 googleAnalytics = "UA-55684248-1"

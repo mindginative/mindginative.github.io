@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Playground on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/tags/playground/</link>
+    <description>Recent content in Playground on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Fri, 13 Oct 2017 00:34:38 +1300</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/tags/playground/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Try Full Docker Environment in Browser for a Limited Time (4hr)</title>
+      <link>http://www.mindginative.com/post/try-full-docker-environment-in-browser-for-4-hours/</link>
+      <pubDate>Fri, 13 Oct 2017 00:34:38 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/try-full-docker-environment-in-browser-for-4-hours/</guid>
+      <description>Docker Playground Came across this little web service Docker Playground, spinning up a full Docker environment took only seconds.
+Hardware and System Info $ uname -a Linux node1 4.4.0-1035-aws #44-Ubuntu SMP Tue Sep 12 17:27:47 UTC 2017 x86_64 Linux  $ lshw -short H/W path Device Class Description =============================================== system HVM domU /0 bus Motherboard /0/0 memory 96KiB BIOS /0/1 processor Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz /0/2 processor CPU /0/3 processor CPU /0/4 processor CPU /0/5 processor CPU /0/6 processor CPU /0/7 processor CPU /0/8 processor CPU /0/9 memory System Memory /0/9/0 memory 16GiB DIMM RAM /0/9/1 memory 16GiB DIMM RAM /0/9/2 memory 16GiB DIMM RAM /0/9/3 memory 13GiB DIMM RAM /0/9/4 memory 16GiB DIMM RAM /0/9/5 memory 16GiB DIMM RAM /0/9/6 memory 16GiB DIMM RAM /0/9/7 memory 13GiB DIMM RAM /0/a memory 96KiB BIOS /0/b processor CPU /0/c processor CPU /0/d processor CPU /0/e processor CPU /0/f processor CPU /0/10 processor CPU /0/11 processor CPU /0/12 processor CPU /0/13 memory System Memory /0/14 memory /0/15 memory /0/100 bridge 440FX - 82441FX PMC [Natoma] /0/100/1 bridge 82371SB PIIX3 ISA [Natoma/Triton II] /0/100/1.</description>
+    </item>
+    
+  </channel>
+</rss>

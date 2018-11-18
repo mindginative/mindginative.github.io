@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/tags/aws/</link>
+    <description>Recent content in Aws on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Fri, 28 Apr 2017 21:11:01 +1200</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Domain Registrar migration from GoDaddy to AWS Route53: Short Story</title>
+      <link>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</link>
+      <pubDate>Fri, 28 Apr 2017 21:11:01 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</guid>
+      <description>After a fantastic 9+ years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened nor bad customer experience.
+A million reasons:
+ They&amp;rsquo;re just my domain provider, I only remember them when it&amp;rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.
+ Target Audience It aims at people who are already using AWS Route53 as their DNS provider, for newcomers - I guess you&amp;rsquo;ll have to touch base with DNS first, see Migrating DNS Service for an existing Domain to Amazon Route53</description>
+    </item>
+    
+  </channel>
+</rss>

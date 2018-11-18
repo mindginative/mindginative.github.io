@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/tags/ssh/</link>
+    <description>Recent content in Ssh on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Thu, 22 Jun 2017 23:00:25 +1200</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>That! SSH permission denied on eCryptfs-enabled file system</title>
+      <link>http://www.mindginative.com/post/that-ssh-denied-on-encrypted-fs/</link>
+      <pubDate>Thu, 22 Jun 2017 23:00:25 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/that-ssh-denied-on-encrypted-fs/</guid>
+      <description>On the day my DeskMini Headless server was born - it was christened with ecryptfs and I did that on purpose - paranoid!
+Gearing up for a password-less configuration was supposedly and easy task later then I realised that my first SSH session won&amp;rsquo;t work. This is for obvious reason: the home folder ~/ isn&amp;rsquo;t readable - yet - not until you manually mount the folder. By default SSH will look for authorized_keys file at the user&amp;rsquo;s home folder henced SSH can&amp;rsquo;t read it - you&amp;rsquo;ll get Permission denied (publickey).</description>
+    </item>
+    
+    <item>
+      <title>How to fix Raspberry Pi SSH connection reset</title>
+      <link>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</link>
+      <pubDate>Mon, 10 Apr 2017 21:03:29 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</guid>
+      <description>I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:
+ ssh: connect to host 192.168.178.79 port 22: Connection refused
+ Tell-tale Sign after few attempts the ssh status showed up an interesting set of logs:
+$&amp;gt; sudo service ssh status
+● ssh.service - OpenBSD Secure Shell server Loaded: loaded (/lib/systemd/system/ssh.service; enabled) Active: active (running) since Mon 2017-04-10 08:51:38 UTC; 6min ago Main PID: 1332 (sshd) CGroup: /system.</description>
+    </item>
+    
+  </channel>
+</rss>

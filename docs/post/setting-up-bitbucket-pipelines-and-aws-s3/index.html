@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="coffee | web | dev | opensource | rants | and then some">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="http://www.mindginative.com/">
+
+<meta name="twitter:image" content="http://www.mindginative.com/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Richard Sentino | coffee | web | dev | opensource | rants | and then some">
+<meta name="twitter:description" property="og:description" itemprop="description" content="coffee | web | dev | opensource | rants | and then some">
+<meta name="og:type" content="website">
+<meta name="og:url" content="http://www.mindginative.com/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="http://www.mindginative.com/tn.png">
+
+<link rel="shortcut icon" href="http://www.mindginative.com/sam.ico" id="favicon">
+<link rel="stylesheet" href="http://www.mindginative.com/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55684248-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55684248-1');
+</script>
+
+    
+
+    
+    
+    
+    <title>
+        
+        Setting up Bitbucket&#39;s Pipelines for frontend deployment on AWS S3
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Setting up Bitbucket&#39;s Pipelines for frontend deployment on AWS S3</div>
+
+        <div class="section" id="content">
+
+<p><a href="https://bitbucket.org/">Bitbucket</a> is my main git repo for all my personal (PoC) projects, portfolio and all of my contracting projects - hands down on private repo.</p>
+
+<p>While I&rsquo;ve tried <a href="https://codeship.com/">Codeship</a>, <a href="https://circleci.com/">CircleCI</a>, <a href="https://jenkins.io/">Jenkins</a> for production use, however, all of these CI server needs some little education about private and public certificates for setting up roles/permission/access before any of them can pull out your source code and push it to eg: <em>Amazon S3</em> &mdash; Pipelines + AWS S3 was far bit easier.</p>
+
+<p>I&rsquo;d say <em>easy</em> because it only took me a couple of minutes to configure S3 and Pipeline from nothing to automated deployment. We&rsquo;ll see that in a bit.</p>
+
+<h2 id="nuff-said-show-me">`nuff said, show me!</h2>
+
+<h3 id="pipelines">Pipelines</h3>
+
+<p>There are only 4 steps to enable Pipelines for your project:</p>
+
+<ul>
+<li>1. Go to settings</li>
+<li>2. Enable Pipelines</li>
+<li>3. Select <code>bitbucket-pipelines.yml</code> deployment template</li>
+<li>4. Commit <code>bitbucket-pipelines.yml</code></li>
+</ul>
+
+<p>Figure below is my default YAML config file for a NodeJS application:</p>
+
+<p><img src="/images/pipelines-enable.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>Once you get past #4, you&rsquo;re all pretty much all set.</p>
+
+<h4 id="custom-template">Custom Template</h4>
+
+<p>My project is still in super alpha stage, I don&rsquo;t want to trap myself into this complicated build systems like: Webpack, Rollup - not even Angular2 nor React. I just want keep to keep it lean, deliver fast and improve later.</p>
+
+<p>Deployment is done via <a href="https://aws.amazon.com/cli/">AWS Command Line Interface</a></p>
+
+<p>bitbucket-pipelines.yml:</p>
+
+<pre><code># This is a sample build configuration for Haskell.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:6.9.2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+           - apt-get update
+           - python --version
+           - apt-get -y install python-dev
+           - apt-get -y install python-pip
+           - pip install awscli
+           - pip --help
+           - aws --version
+           - aws --region ap-southeast-2 s3 sync . s3://path-to-your-s3-bucket/ --acl public-read --exclude &quot;.vscode/*&quot; --exclude &quot;.git/*&quot; --exclude &quot;.gitattributes&quot; --exclude &quot;.gitignore&quot; --exclude &quot;.editorconfig&quot; --exclude &quot;node_modules&quot; --exclude &quot;yarn.lock&quot; --exclude &quot;package.json&quot; --exclude &quot;bitbucket-pipelines.yml&quot;
+</code></pre>
+
+<h4 id="environment-variables">Environment Variables</h4>
+
+<p>The last line from our <code>bitbucket-pipelines.yml</code> requires <em>AWS_ACCESS_KEY_ID</em> and <em>AWS_SECRET_ACCESS_KEY</em>. We&rsquo;ll stick each value in Pipelines environment variable section. During the build process, Bitbucket populates these values in shell environment eg: export AWS_ACCESS_KEY_ID=<whatever key id>.</p>
+
+<p><code>aws</code> command line interface on the other hand, will react accordingly that we&rsquo;re trying to override one of the default options once it sees <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> in environment variables. see <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#config-settings-and-precedence">config-settings-and-precedence</a></p>
+
+<p><img src="/images/pipelines-env.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>Provide a dummy value for now, we&rsquo;ll get one in a bit.</p>
+
+<h3 id="amazon-s3">Amazon S3</h3>
+
+<p>We&rsquo;ll configure the S3 deployment using <a href="https://aws.amazon.com/iam/">AWS Identity and Access Management</a> tool.</p>
+
+<ul>
+<li>Create Group called <code>Deploy</code></li>
+<li>Attach <code>AmazonS3FullAccess</code> permission to your Group</li>
+<li>Create user named <code>deploy_s3</code></li>
+<li>Select <code>Programmatic access</code> for <code>deploy_s3</code> access type</li>
+<li>Attach <code>deploy_s3</code> user to your <code>Deploy</code> group</li>
+<li>Copy AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY</li>
+</ul>
+
+<h4 id="deploy-group">Deploy Group</h4>
+
+<p><img src="/images/iam-group.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<h4 id="user-deploy-s3-access-type">User deploy_s3 Access Type</h4>
+
+<p>Tick the box <em>Programmatic Access</em>, we need the Key and Secret values later
+<img src="/images/iam-user-access-type.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<h4 id="user-deploy-s3-attached-to-deploy-group">User deploy_s3 attached to Deploy group</h4>
+
+<p><img src="/images/iam-user.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<h4 id="user-deploy-s3-credentials">User deploy_s3 Credentials</h4>
+
+<p>Copy the <em>Access key ID</em> and <em>Secret access key</em> values and paste it into your Pipelines environment variables</p>
+
+<p><img src="/images/iam-user-credentials.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>Once you&rsquo;ve got everything in placed. Try and push some changes to your master remote branch - check Pipelines status, and check your S3 bucket</p>
+
+<h2 id="build-it">Build it!</h2>
+
+<p>Here&rsquo;s a successful build status</p>
+
+<p><img src="/images/pipelines-deployment.png" width="600" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>got comments, reactions or found typos ? let me know. thanks</p>
+</div>
+
+        
+        <div class="section bottom-menu">
+<hr />
+<p>
+
+
+    
+
+    
+        
+            <a href="/post">
+                writing
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/projects/list">
+                projects
+            </a>
+        
+            &#183; 
+            <a href="/about/me">
+                who dis?
+            </a>
+        
+    
+    &#183; 
+    <a href="http://www.mindginative.com/">
+        home
+    </a>
+
+</p></div>
+        
+
+        <div class="section footer">coffee | web | dev | opensource | rants | and then some</div>
+    </div>
+</body>
+
+</html>

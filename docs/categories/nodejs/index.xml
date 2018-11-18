@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nodejs on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/categories/nodejs/</link>
+    <description>Recent content in Nodejs on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Sat, 11 Feb 2017 13:14:55 +1300</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows Insider Build 15031 Broke my NVM NodeJS environment</title>
+      <link>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</link>
+      <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</guid>
+      <description>Yesterday 10th of Feb 2017, I managed to update my PC with the latest Windows 10 Insider Preview Build 15031. The list contains a massive set of features as well as fixes, so I didn&amp;rsquo;t mind the upgrade. It took at least 20mins to get it done. Once done, my NodeJS environment started complaining, btw I am using Node Version Manager.
+Here&amp;rsquo;s what I got when switching NodeJS versions:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/projects/</link>
+    <description>Recent content in Projects on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Tue, 31 Jan 2017 21:54:59 +1300</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Projects</title>
+      <link>http://www.mindginative.com/projects/list/</link>
+      <pubDate>Tue, 31 Jan 2017 21:54:59 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/projects/list/</guid>
+      <description>This list represents some of the projects that are either hobby/personal, opensource and or opensource contributions.
+ Angular2 Contribution - for almost 3 years at Booktrack on front-end team solely using AngularJS, I managed to contribute to Angular2 since its alpha releases at the same time while working on Angular2-based product. Proud to be recognised as contributor on the v2.0.0 production release even though my contribution was just a tad tiny.</description>
+    </item>
+    
+  </channel>
+</rss>

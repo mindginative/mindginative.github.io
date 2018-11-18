@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="coffee | web | dev | opensource | rants | and then some">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="http://www.mindginative.com/">
+
+<meta name="twitter:image" content="http://www.mindginative.com/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Richard Sentino | coffee | web | dev | opensource | rants | and then some">
+<meta name="twitter:description" property="og:description" itemprop="description" content="coffee | web | dev | opensource | rants | and then some">
+<meta name="og:type" content="website">
+<meta name="og:url" content="http://www.mindginative.com/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="http://www.mindginative.com/tn.png">
+
+<link rel="shortcut icon" href="http://www.mindginative.com/sam.ico" id="favicon">
+<link rel="stylesheet" href="http://www.mindginative.com/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55684248-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55684248-1');
+</script>
+
+    
+
+    
+    
+    
+    <title>
+        
+        That! SSH permission denied on eCryptfs-enabled file system
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">That! SSH permission denied on eCryptfs-enabled file system</div>
+
+        <div class="section" id="content">
+
+<p>On the day my <a href="http://mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/">DeskMini</a> Headless server was born -
+it was christened with <a href="http://ecryptfs.org/">ecryptfs</a> and I did that on purpose - paranoid!</p>
+
+<p>Gearing up for a password-less configuration was supposedly and easy task later then I realised that my first SSH session won&rsquo;t work.
+This is for obvious reason: the home folder <code>~/</code> isn&rsquo;t readable - yet - not until you manually mount the folder.
+By default SSH will look for <code>authorized_keys</code> file at the user&rsquo;s home folder henced SSH can&rsquo;t read it - you&rsquo;ll get <code>Permission denied (publickey).</code></p>
+
+<p>One way to fix it, as suggested by others is to configure ssh and set the <code>AuthorizedKeysFile</code> to a different readable path</p>
+
+<p>sshd_config:</p>
+
+<pre><code>AuthorizedKeysFile /etc/ssh/keys/authorized_keys
+</code></pre>
+
+<p>If you allow multiple SSH users on your machine, at some stage they&rsquo;ll get denied - unmounted user&rsquo;s home folder etc.
+Use the same fix above but use <code>%u</code> user TOKEN. This will let the SSH server to open up authorized_keys file based on the current user&rsquo;s <em>username</em> trying to connect via SSH.</p>
+
+<p>sshd_config:</p>
+
+<pre><code>AuthorizedKeysFile /etc/ssh/keys/%u/authorized_keys
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>$&gt; ssh mrtrump@192.168.1.99
+</code></pre>
+
+<p>SSH server will look for authorized_keys file at <code>/etc/ssh/keys/mrtrump/authorized_keys</code></p>
+
+<p>Enjoy!</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://man.openbsd.org/sshd_config#TOKENS">https://man.openbsd.org/sshd_config#TOKENS</a></li>
+</ul>
+</div>
+
+        
+        <div class="section bottom-menu">
+<hr />
+<p>
+
+
+    
+
+    
+        
+            <a href="/post">
+                writing
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/projects/list">
+                projects
+            </a>
+        
+            &#183; 
+            <a href="/about/me">
+                who dis?
+            </a>
+        
+    
+    &#183; 
+    <a href="http://www.mindginative.com/">
+        home
+    </a>
+
+</p></div>
+        
+
+        <div class="section footer">coffee | web | dev | opensource | rants | and then some</div>
+    </div>
+</body>
+
+</html>

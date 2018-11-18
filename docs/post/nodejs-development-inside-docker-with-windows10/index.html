@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="coffee | web | dev | opensource | rants | and then some">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="http://www.mindginative.com/">
+
+<meta name="twitter:image" content="http://www.mindginative.com/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Richard Sentino | coffee | web | dev | opensource | rants | and then some">
+<meta name="twitter:description" property="og:description" itemprop="description" content="coffee | web | dev | opensource | rants | and then some">
+<meta name="og:type" content="website">
+<meta name="og:url" content="http://www.mindginative.com/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="http://www.mindginative.com/tn.png">
+
+<link rel="shortcut icon" href="http://www.mindginative.com/sam.ico" id="favicon">
+<link rel="stylesheet" href="http://www.mindginative.com/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55684248-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55684248-1');
+</script>
+
+    
+
+    
+    
+    
+    <title>
+        
+        NodeJS Development Inside Docker on Windows 10
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">NodeJS Development Inside Docker on Windows 10</div>
+
+        <div class="section" id="content">
+
+<h2 id="wait-what">Wait, what ?</h2>
+
+<p>Moving to Windows10 (6 months ago as of this writing) as my main OS is a bit hard, just a little bit.
+I use commandline <strong>ALL THE TIME</strong> and I can&rsquo;t live without the developer&rsquo;s Swiss army knife on my side - tiny tools that make our life easier: <em>grep</em>, <em>sed</em>, <em>ps</em>, <em>tree</em>, <em>ssh</em>, <em>find</em> &hellip;</p>
+
+<p>&ldquo;<em><a href="https://msdn.microsoft.com/en-us/commandline/wsl/about">Bash On Windows</a></em>&rdquo; was a good strategy from Microsoft - I didn&rsquo;t bother about switching to Windows and I didn&rsquo;t think twice, I was more worried about which machine to buy.</p>
+
+<p>I miss some of the good stuff from MacOS: <a href="https://brew.sh/">Homebrew</a>, <a href="https://caskroom.github.io/">Homebrew Cask</a>, to name a few.
+I&rsquo;ll just get a Mac mini for OSX development.</p>
+
+<h2 id="frustration-solution">Frustration &amp; Solution</h2>
+
+<p>I&rsquo;m a member of the <a href="https://blogs.windows.com/blog/tag/windows-insider-program/">Windows Insider Program</a> and their build releases includes fixes to some annoying issues, often with accompanying features.
+However, the build release <a href="https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/">15031</a> affected my productivity.
+Bash On Windows would hang up and opening up a separate Bash window gives the same result - you can&rsquo;t even close the window nor the running process - this would have been an easy <code>kill -9 &lt;PID&gt;</code> command in Mac/Linux, the famous ALT + CTRL + DELETE combination is nowhere effective.
+NodeJS via NVM wouldn&rsquo;t work at all, see issue <a href="https://github.com/Microsoft/BashOnWindows/issues/1683">#1683</a>.</p>
+
+<blockquote>
+<p>Reboot! yep sometimes 6 reboots in a day</p>
+</blockquote>
+
+<p>A rollback to the previous build release was the easiest solution. I hit the button and it works, as <a href="https://github.com/Microsoft/BashOnWindows/issues/1683#issuecomment-279109940">Ben Hillis</a> said of Bash On Windows team:</p>
+
+<blockquote>
+<p>The rollback feature really is great and doesn&rsquo;t get enough credit. It&rsquo;s saved me a couple times as well.</p>
+</blockquote>
+
+<p>The hang up went out however there are still minor issues like slowness, etc. It&rsquo;s bearable but I&rsquo;ve already thought of finding an alternative,
+one where I could easily jump from different machine and OS eg. MacOS, Linux.</p>
+
+<h2 id="docker-docker">Docker, Docker</h2>
+
+<p>Enter Docker, I haven&rsquo;t fully utilised this tool since its beta phase. 5 or 6 montsh ago there were issues with mounting folders from host machine inside a container, it was a show stopper for me at that time.
+I was following some steps from John Lees-Miller&rsquo;s &ldquo;<a href="http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html">Building a Node App in Docker</a>&rdquo; and everthing works except for mounting a shared folder.</p>
+
+<p>February 2017, I revisited steps and it works!</p>
+
+<h3 id="docker-with-node-version-manager">Docker with Node Version Manager</h3>
+
+<p>Here&rsquo;s the slightly modified Docker configuration.</p>
+
+<ul>
+<li>OS: Ubuntu 16.04</li>
+<li>NodeJS: v6.9.2 via NVM</li>
+<li>NVM: v0.33.0</li>
+<li>Docker: 1.13.1 (10072)</li>
+<li>Docker Channel: Stable 94675c5</li>
+</ul>
+
+<p>Dockerfile</p>
+
+<pre><code>FROM ubuntu:16.04
+
+# Constants
+ENV NVM_VERSION v0.33.0
+ENV NODE_VERSION v6.9.2
+ENV HOME=/home/app
+
+# Replace shell with bash so we can source files
+RUN rm /bin/sh &amp;&amp; ln -s /bin/bash /bin/sh
+
+# add special user called `app`
+RUN useradd --user-group --create-home --shell /bin/false app
+
+# Install pre-reqs
+RUN apt-get update &amp;&amp; apt-get install -y \
+    build-essential \
+    checkinstall    \
+    libssl-dev      \
+    curl
+
+USER app
+
+# Install NVM
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
+
+# Install NODE
+RUN source ~/.nvm/nvm.sh; \
+    nvm install $NODE_VERSION; \
+    nvm use --delete-prefix $NODE_VERSION;
+
+USER root
+COPY package.json start.sh $HOME/web/
+RUN chown -R app:app $HOME/*
+
+USER app
+WORKDIR $HOME/web
+RUN source ~/.nvm/nvm.sh; \
+    nvm use --delete-prefix $NODE_VERSION; \
+    npm install;
+
+USER root
+COPY . $HOME/web
+RUN chown -R app:app $HOME/*
+
+USER app
+RUN source ~/.nvm/nvm.sh; \
+    nvm use --delete-prefix $NODE_VERSION;
+
+CMD [&quot;./start.sh&quot;]
+</code></pre>
+
+<p>docker-compose.yml</p>
+
+<pre><code>web:
+  build: .
+  ports:
+    - '8080:8080'
+  environment:
+    NODE_ENV: dev
+  volumes:
+    - .:/home/app/web
+    - /home/app/web/node_modules
+</code></pre>
+
+<p>start.sh</p>
+
+<pre><code>#!/bin/bash
+
+# load NVM environment
+source ~/.nvm/nvm.sh
+nvm use --delete-prefix v6.9.2
+
+# start server
+npm start
+</code></pre>
+
+<p>Enjoy</p>
+</div>
+
+        
+        <div class="section bottom-menu">
+<hr />
+<p>
+
+
+    
+
+    
+        
+            <a href="/post">
+                writing
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/projects/list">
+                projects
+            </a>
+        
+            &#183; 
+            <a href="/about/me">
+                who dis?
+            </a>
+        
+    
+    &#183; 
+    <a href="http://www.mindginative.com/">
+        home
+    </a>
+
+</p></div>
+        
+
+        <div class="section footer">coffee | web | dev | opensource | rants | and then some</div>
+    </div>
+</body>
+
+</html>

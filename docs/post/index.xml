@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/post/</link>
+    <description>Recent content in Posts on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Fri, 13 Oct 2017 00:34:38 +1300</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Try Full Docker Environment in Browser for a Limited Time (4hr)</title>
+      <link>http://www.mindginative.com/post/try-full-docker-environment-in-browser-for-4-hours/</link>
+      <pubDate>Fri, 13 Oct 2017 00:34:38 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/try-full-docker-environment-in-browser-for-4-hours/</guid>
+      <description>Docker Playground Came across this little web service Docker Playground, spinning up a full Docker environment took only seconds.
+Hardware and System Info $ uname -a Linux node1 4.4.0-1035-aws #44-Ubuntu SMP Tue Sep 12 17:27:47 UTC 2017 x86_64 Linux  $ lshw -short H/W path Device Class Description =============================================== system HVM domU /0 bus Motherboard /0/0 memory 96KiB BIOS /0/1 processor Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz /0/2 processor CPU /0/3 processor CPU /0/4 processor CPU /0/5 processor CPU /0/6 processor CPU /0/7 processor CPU /0/8 processor CPU /0/9 memory System Memory /0/9/0 memory 16GiB DIMM RAM /0/9/1 memory 16GiB DIMM RAM /0/9/2 memory 16GiB DIMM RAM /0/9/3 memory 13GiB DIMM RAM /0/9/4 memory 16GiB DIMM RAM /0/9/5 memory 16GiB DIMM RAM /0/9/6 memory 16GiB DIMM RAM /0/9/7 memory 13GiB DIMM RAM /0/a memory 96KiB BIOS /0/b processor CPU /0/c processor CPU /0/d processor CPU /0/e processor CPU /0/f processor CPU /0/10 processor CPU /0/11 processor CPU /0/12 processor CPU /0/13 memory System Memory /0/14 memory /0/15 memory /0/100 bridge 440FX - 82441FX PMC [Natoma] /0/100/1 bridge 82371SB PIIX3 ISA [Natoma/Triton II] /0/100/1.</description>
+    </item>
+    
+    <item>
+      <title>Markdown-like UML Scripting with VSCode within Markdown document</title>
+      <link>http://www.mindginative.com/post/markdown-like-uml-scripting-with-vscode/</link>
+      <pubDate>Wed, 11 Oct 2017 23:36:26 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/markdown-like-uml-scripting-with-vscode/</guid>
+      <description>Documenting API flow is best when coupled with UML. There exists more than a dozen tools, special IDE, web apps: turn your UML script into beautiful visual presentation.
+Most of the time you will end with the classic scenario:
+ Write UML script Save Export as png, or PDF  With VScode Mermaid Preview it&amp;rsquo;s never been easier writing your UML script embedded within your Markdown document. It&amp;rsquo;s built on top of Mermaid.</description>
+    </item>
+    
+    <item>
+      <title>Enabling Two-Factor Authentication (2FA) on your npm account</title>
+      <link>http://www.mindginative.com/post/enabling-2fa-with-npm/</link>
+      <pubDate>Sun, 08 Oct 2017 00:28:54 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/enabling-2fa-with-npm/</guid>
+      <description>4 days ago, npm published a blog about protecting your account with 2FA. I&amp;rsquo;m a user of Google Authenticator [1], [2] and YubiKey - so it was just perfect timing.
+To enable 2FA on your profile, you need to install the beta release of npm client:
+$&amp;gt; npm install npm@next -g  and follow the rest of the instruction here: https://docs.npmjs.com/getting-started/using-two-factor-authentication</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu WSL</title>
+      <link>http://www.mindginative.com/post/ubuntu-wsl/</link>
+      <pubDate>Fri, 06 Oct 2017 00:10:26 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/ubuntu-wsl/</guid>
+      <description>Today I learned that I can install Ubuntu or Suse Linux, straight from Windows App Store. I might have missed the opportunity which was announced 4 months ago
+Notes This is my first post of &amp;ldquo;Today I Learned&amp;rdquo; series of mini-blog: a mixed of tips, resources or anything. I spent at least 8 hours in front of the screen - coding and always learning.</description>
+    </item>
+    
+    <item>
+      <title>2018</title>
+      <link>http://www.mindginative.com/post/2018/</link>
+      <pubDate>Sat, 30 Sep 2017 00:06:59 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/2018/</guid>
+      <description>Looking forward 2018! gearing up for some cloud certification - 5 months from now.
+Still have to book for the exact date but all the needed materials are on the table.
+I was thinking of building a small project while on the course towards the certification - definitely involves standing up infra, deployment, database, APIs</description>
+    </item>
+    
+    <item>
+      <title>I Am Writing It Down!</title>
+      <link>http://www.mindginative.com/post/i-am-writing-it-down/</link>
+      <pubDate>Sun, 27 Aug 2017 14:17:31 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/i-am-writing-it-down/</guid>
+      <description>In response to Victor Savkin&amp;rsquo;s blog about &amp;ldquo;Write it Down&amp;rdquo; 2 days ago.
+ Retrospectives are important. That’s why software development teams get together once a week to see what works and what can be improved. We know small adjustments add up. So why don’t we apply the same approach in our day-to-day lives?
+ I decided to give it a try, and set some goal after-work hours. The &amp;ldquo;Lessons Learned&amp;rdquo; had a surprising result.</description>
+    </item>
+    
+    <item>
+      <title>Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host</title>
+      <link>http://www.mindginative.com/post/microservices-with-docker-alpine-nodejs-nginx-win10/</link>
+      <pubDate>Sun, 13 Aug 2017 21:42:20 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/microservices-with-docker-alpine-nodejs-nginx-win10/</guid>
+      <description>Apology for the last word &amp;ldquo;Win10&amp;rdquo;, it&amp;rsquo;s bit misleading but my main development machine is Dell XPS 13 on Windows 10 Pro Insider Preview. There&amp;rsquo;s should be a follow up to this blog hopefully on my headless Ubuntu Server.
+BTW, it&amp;rsquo;s a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&amp;rsquo;t work on plain CLI commands later then I discovered that wrapping it inside docker-compose.</description>
+    </item>
+    
+    <item>
+      <title>12 Hours Hackathon with React JavaScript Library</title>
+      <link>http://www.mindginative.com/post/12-hours-hackathon-with-react/</link>
+      <pubDate>Sun, 02 Jul 2017 22:45:35 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/12-hours-hackathon-with-react/</guid>
+      <description>One thing I kept hearing as part of the requirements: React
+I don&amp;rsquo;t have a production experience with React, however, IMHO if a developer has done a bit of JS development in the past I don&amp;rsquo;t think onboarding is rocket science.
+ At the end of the day, it&amp;rsquo;s just JavaScript!
+ I&amp;rsquo;m currently working on a couple of personal projects and thought of using React at some stage but instead I&amp;rsquo;ve decided to do hackathon on a simple React project and see where it would take me, I didn&amp;rsquo;t set a deadline.</description>
+    </item>
+    
+    <item>
+      <title>That! SSH permission denied on eCryptfs-enabled file system</title>
+      <link>http://www.mindginative.com/post/that-ssh-denied-on-encrypted-fs/</link>
+      <pubDate>Thu, 22 Jun 2017 23:00:25 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/that-ssh-denied-on-encrypted-fs/</guid>
+      <description>On the day my DeskMini Headless server was born - it was christened with ecryptfs and I did that on purpose - paranoid!
+Gearing up for a password-less configuration was supposedly and easy task later then I realised that my first SSH session won&amp;rsquo;t work. This is for obvious reason: the home folder ~/ isn&amp;rsquo;t readable - yet - not until you manually mount the folder. By default SSH will look for authorized_keys file at the user&amp;rsquo;s home folder henced SSH can&amp;rsquo;t read it - you&amp;rsquo;ll get Permission denied (publickey).</description>
+    </item>
+    
+    <item>
+      <title>My Boston (USA) Trip</title>
+      <link>http://www.mindginative.com/post/visiting-boston/</link>
+      <pubDate>Tue, 30 May 2017 18:50:19 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/visiting-boston/</guid>
+      <description>Last week I had the privileged to travel and visit Boston, USA. It&amp;rsquo;s old but a great &amp;amp; lovely city. Food are bit cheaper than NZ, oops!
+I was looking for great coffee but sad to say I didn&amp;rsquo;t find a good one, sorry, NZ&amp;rsquo;s coffee still the best - even the petrol station near at my place was way better.
+On the bright side, in Boston, food was epic! here are a few food places I went to:</description>
+    </item>
+    
+    <item>
+      <title>OWASP New Zealand Day 2017</title>
+      <link>http://www.mindginative.com/post/owasp-new-zealand-day-2017/</link>
+      <pubDate>Tue, 16 May 2017 13:33:31 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/owasp-new-zealand-day-2017/</guid>
+      <description>Alright! this was my 2nd year in a row for this web security conference here in Auckland, New Zealand. This is the type conference that would never fails to impress myself: the work and research they&amp;rsquo;ve (personal or business related) is great.
+They had a good list of local and international speakers, which I think - particularly for inviting international speakers - is good the fact that the audience (like me) will get a different insights outside of the local security threats/tools or knowledge in general.</description>
+    </item>
+    
+    <item>
+      <title>First Taste of Win10 BitLocker</title>
+      <link>http://www.mindginative.com/post/first-taste-of-win10-bitlocker/</link>
+      <pubDate>Fri, 12 May 2017 16:06:19 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/first-taste-of-win10-bitlocker/</guid>
+      <description>I bought the idea of encrypting my OS drive, since I&amp;rsquo;m on Windows 10 I opted the closed source utility called BitLocker. Prior to trusting my gut - I had initially configured my Ubuntu-based headless server with eCryptfs.
+If you peek at eCryptfs about page, one of the authors became a member of BitLocker team at Microsoft - so I guess that&amp;rsquo;s why I pushed the &amp;ldquo;OK&amp;rdquo; button.
+The Famous bcmwl63a.</description>
+    </item>
+    
+    <item>
+      <title>ASRock H110M-STX Deskmini 110w With Headless Ubuntu Server</title>
+      <link>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</link>
+      <pubDate>Thu, 11 May 2017 22:42:44 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/</guid>
+      <description>About 8 months ago when I saw the Intel NUC at local computer store, I thought maybe I could get one for my expirements/projects. One that I could just leave running (headless) on one corner and either do of the following:
+ Remote SSH from a local coffee shop: download stuff, etc Remote development while travelling overseas where internet speed isn&amp;rsquo;t great  I did a bit of research about Intel NUC, just wanted to make sure that it will be worthy for the price that I&amp;rsquo;d be paying for.</description>
+    </item>
+    
+    <item>
+      <title>Domain Registrar migration from GoDaddy to AWS Route53: Short Story</title>
+      <link>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</link>
+      <pubDate>Fri, 28 Apr 2017 21:11:01 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/domain-registrar-migration-from-godaddy-to-aws-route53-short-story/</guid>
+      <description>After a fantastic 9+ years with GoDaddy, I moved on - yep, AWS Route53 is the domain registrar for mindginative.com. Nope not because of a horrible things that just happened nor bad customer experience.
+A million reasons:
+ They&amp;rsquo;re just my domain provider, I only remember them when it&amp;rsquo;s time to renew my domain - the rest were fully managed by AWS Route53 eg. DNS, Subdomains, Servers, etc.
+ Target Audience It aims at people who are already using AWS Route53 as their DNS provider, for newcomers - I guess you&amp;rsquo;ll have to touch base with DNS first, see Migrating DNS Service for an existing Domain to Amazon Route53</description>
+    </item>
+    
+    <item>
+      <title>How to fix Raspberry Pi SSH connection reset</title>
+      <link>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</link>
+      <pubDate>Mon, 10 Apr 2017 21:03:29 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/raspberrypi-ssh-connection-reset/</guid>
+      <description>I was trying to copy files to my Raspbian-based Raspberry Pi but I kept getting this error:
+ ssh: connect to host 192.168.178.79 port 22: Connection refused
+ Tell-tale Sign after few attempts the ssh status showed up an interesting set of logs:
+$&amp;gt; sudo service ssh status
+● ssh.service - OpenBSD Secure Shell server Loaded: loaded (/lib/systemd/system/ssh.service; enabled) Active: active (running) since Mon 2017-04-10 08:51:38 UTC; 6min ago Main PID: 1332 (sshd) CGroup: /system.</description>
+    </item>
+    
+    <item>
+      <title>Setting up Bitbucket&#39;s Pipelines for frontend deployment on AWS S3</title>
+      <link>http://www.mindginative.com/post/setting-up-bitbucket-pipelines-and-aws-s3/</link>
+      <pubDate>Sun, 09 Apr 2017 21:27:59 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/setting-up-bitbucket-pipelines-and-aws-s3/</guid>
+      <description>Bitbucket is my main git repo for all my personal (PoC) projects, portfolio and all of my contracting projects - hands down on private repo.
+While I&amp;rsquo;ve tried Codeship, CircleCI, Jenkins for production use, however, all of these CI server needs some little education about private and public certificates for setting up roles/permission/access before any of them can pull out your source code and push it to eg: Amazon S3 &amp;mdash; Pipelines + AWS S3 was far bit easier.</description>
+    </item>
+    
+    <item>
+      <title>Internet Archive&#39;s WaybackMachine 2003</title>
+      <link>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</link>
+      <pubDate>Sat, 08 Apr 2017 13:03:54 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/internet-archive-waybackmachine-2003/</guid>
+      <description>Weekend Saturday morning, my JavaScript Weekly subscription #329 had a catchy email subject title Opinionated Comparison of React, Angular2, and Aurelia, read full article here
+ I have been doing some form of frontend development since the early 90s.
+ from the blog&amp;rsquo;s first sentence I quickly recalled the first website I designed 14yrs ago, worked started in late 2002 but it was launched in 2003. I remember dabbling with Macromedia&amp;rsquo;s Fireworks and Dreamweaver.</description>
+    </item>
+    
+    <item>
+      <title>No Fuss, NodeJS LTS installation on Raspbian Lite Jessie</title>
+      <link>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</link>
+      <pubDate>Sat, 18 Mar 2017 21:56:03 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/no-fuss-nodejs-lts-on-raspbian-lite-jessie/</guid>
+      <description>Copy &amp;amp; Paste, trust me! $&amp;gt; sudo apt-get update $&amp;gt; sudo apt-get upgrade $&amp;gt; sudo apt-get -y install git $&amp;gt; curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash $&amp;gt; source ~/.bashrc $&amp;gt; nvm install --lts  as of this writing my NodeJS LTS version: v6.10.0
+What&amp;rsquo;s The Fuss? Node Version Manager (nvm) gets installed, we&amp;rsquo;ll then use it to install whatever is the current NodeJS LTS - primarily behind the scenes, it will spear you from crap of load of these commands:</description>
+    </item>
+    
+    <item>
+      <title>NodeJS &#43; Cron: A series of attempts in getting rid of dangling processes</title>
+      <link>http://www.mindginative.com/post/nodejs-cron-getting-rid-of-dangling-processes/</link>
+      <pubDate>Mon, 20 Feb 2017 20:47:01 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/nodejs-cron-getting-rid-of-dangling-processes/</guid>
+      <description>Short-lived scripts that sucked your resources for 1mins or at most 5mins - is probably fine. However, if it is recurring jobs in Cron and involves several tasks and at least an hour of processing - that&amp;rsquo;d be a different story.
+I was working on a simple NodeJS-based cron script with only 3 requirements:
+ extract transform load  Each one of these however would involve crunching through a million rows of data.</description>
+    </item>
+    
+    <item>
+      <title>NodeJS Development Inside Docker on Windows 10</title>
+      <link>http://www.mindginative.com/post/nodejs-development-inside-docker-with-windows10/</link>
+      <pubDate>Wed, 15 Feb 2017 16:39:23 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/nodejs-development-inside-docker-with-windows10/</guid>
+      <description>Wait, what ? Moving to Windows10 (6 months ago as of this writing) as my main OS is a bit hard, just a little bit. I use commandline ALL THE TIME and I can&amp;rsquo;t live without the developer&amp;rsquo;s Swiss army knife on my side - tiny tools that make our life easier: grep, sed, ps, tree, ssh, find &amp;hellip;
+&amp;ldquo;Bash On Windows&amp;rdquo; was a good strategy from Microsoft - I didn&amp;rsquo;t bother about switching to Windows and I didn&amp;rsquo;t think twice, I was more worried about which machine to buy.</description>
+    </item>
+    
+    <item>
+      <title>Windows Insider Build 15031 Broke my NVM NodeJS environment</title>
+      <link>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</link>
+      <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/windows-insider-15031-vs-nodejs/</guid>
+      <description>Yesterday 10th of Feb 2017, I managed to update my PC with the latest Windows 10 Insider Preview Build 15031. The list contains a massive set of features as well as fixes, so I didn&amp;rsquo;t mind the upgrade. It took at least 20mins to get it done. Once done, my NodeJS environment started complaining, btw I am using Node Version Manager.
+Here&amp;rsquo;s what I got when switching NodeJS versions:</description>
+    </item>
+    
+    <item>
+      <title>Install FFmpeg from source on Ubuntu Bash on Win10</title>
+      <link>http://www.mindginative.com/post/install-ffmpeg-from-source-ubuntu-win10/</link>
+      <pubDate>Mon, 28 Nov 2016 01:17:35 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/install-ffmpeg-from-source-ubuntu-win10/</guid>
+      <description>I was working on transcoding videos into different formats, resolutions so it could be played on various desktops, tablets and mobile devices. My main working machine is Dell XPS13 on Windows 10 with Ubuntu Bash enabled, some of my needed libraries is missing and needs recompilation of FFmpeg the one that came from Ubuntu 14.04 repo.
+I think I&amp;rsquo;ve literraly spent hours or probably days buildin/re-building libraries just to get the videos transcoded into my desired format.</description>
+    </item>
+    
+    <item>
+      <title>Go1.7 installation via GVM on Ubuntu Bash on Windows 10</title>
+      <link>http://www.mindginative.com/post/go1-7-bash-on-win10/</link>
+      <pubDate>Sat, 26 Nov 2016 22:27:10 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/go1-7-bash-on-win10/</guid>
+      <description>Since moving to Hugo few months ago my installation history with Go was quick and dirty, I just want to get something up running to get started with Hugo. 48 hours ago I was playing with Go, I thought of building a simple cli utility where CI server can hook in and start building something - of course it has be built on top of Go, enough to get my around its dev-ecosystem.</description>
+    </item>
+    
+    <item>
+      <title>moving to hugo</title>
+      <link>http://www.mindginative.com/post/moving-to-hugo/</link>
+      <pubDate>Mon, 29 Aug 2016 02:51:23 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/moving-to-hugo/</guid>
+      <description>I was initially planning to use plain Github Pages for my blogging but I&amp;rsquo;ve read some good reviews with Hugo. I&amp;rsquo;ll give it a try and see how it goes.
+I have written a few blog posts over at Medium but I don&amp;rsquo;t want to spam my Twitter followers with random information that don&amp;rsquo;t matter to them. I might sync a few bits from time to time.</description>
+    </item>
+    
+    <item>
+      <title>Browsersync -- The Ghost and the Pretender</title>
+      <link>http://www.mindginative.com/post/browsersync-the-ghost-and-the-pretender/</link>
+      <pubDate>Wed, 04 May 2016 11:10:22 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/browsersync-the-ghost-and-the-pretender/</guid>
+      <description>Looking at few stats: 6.9k Github stars and 700k npm downloads in the last month (at the time of this writing) it’s no wonder that you can always find plugins, tools or utilities that will link up Browsersync with your favourite frontend or server side framework to ease up your browser testing. It is packed with good features as mentioned in Addy Osmani’s 2013 blog but its ghostMode and Proxy options are spot on in my opinion.</description>
+    </item>
+    
+    <item>
+      <title>OWASP New Zealand Day 2016</title>
+      <link>http://www.mindginative.com/post/owasp-new-zealand-day-2016/</link>
+      <pubDate>Fri, 15 Apr 2016 16:18:14 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/owasp-new-zealand-day-2016/</guid>
+      <description>This is kind of an old story now, 1+ month ago as of this writing.
+The conference had a good list of speakers and most of them are working for a NZ-based security companies. There were shown pre-recorded demos and live ones as well.
+One of the highlights would be the lessons learned from this conference:
+ Credit Card Fraud (pdf) — by Dan Wallis of Christchurch ISIG Content Security Policy (pdf) — by Valentinas Bakaitis of Aura Security Oauth 2.</description>
+    </item>
+    
+    <item>
+      <title>Docker 3rd Bday &#43; Training</title>
+      <link>http://www.mindginative.com/post/docker-3rd-bday-training/</link>
+      <pubDate>Wed, 23 Mar 2016 16:46:45 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/docker-3rd-bday-training/</guid>
+      <description>source : https://twitter.com/dockerakl/status/711820276942528512
+ Thanks for the event! I really enjoyed the Docker crash course, it was certainly an eye-opener for me :)
+HUGE thanks. Get me started with docker:P
+ Attendees feedback, how cool is that ?! it was held on 21 of March 2016
+I thought it was a good meetup, the room wasn’t really that packed but it was a good crowd. Although, was a bit lost and had to find my way through the conference room but location-wise ?</description>
+    </item>
+    
+    <item>
+      <title>Xhyve &#43; Alpine Linux</title>
+      <link>http://www.mindginative.com/post/xhyve-alpine-linux/</link>
+      <pubDate>Mon, 18 Jan 2016 11:07:49 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/xhyve-alpine-linux/</guid>
+      <description>During the 2015 Xmas holiday break I’ve been meaning to play around with Docker or in particular CoreOS on my Mac machine. I know it’s pretty easy to whip with a few CLI commands — Vagrant + VirtualBox, done! — but I wanted something different and wanted to avoid too many abstraction eg. running a virtual environment on top of a virtual environment. A few google searches got me into xhyve, can’t remember the exact keywords I used — sorry.</description>
+    </item>
+    
+    <item>
+      <title>TypeScript and its magic number TS2403</title>
+      <link>http://www.mindginative.com/post/typescript-its-magic-number-ts2403/</link>
+      <pubDate>Sat, 09 Jan 2016 10:59:13 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/typescript-its-magic-number-ts2403/</guid>
+      <description>At work, we’ve been using Webpack for our frontend stack (TypeScript, AngularJS v1.x, NodeJS, GulpJS + other JS libraries without much drama. Over the last couple of months our Angular2-based project is starting to get a life, from a simple PoC to a usable web app. Though we were working against the early alpha releases of Angular2 but we thought it’s gonna be fine — we just want a minimum viable product.</description>
+    </item>
+    
+    <item>
+      <title>2016 resolution</title>
+      <link>http://www.mindginative.com/post/2016-resolution/</link>
+      <pubDate>Fri, 01 Jan 2016 10:41:04 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/2016-resolution/</guid>
+      <description> Untitled… updated 2016 resolution(s) it&amp;rsquo;s not a long list but I&amp;rsquo;ll give it a shot
+ Start a writing a blog (first yay!) Track my goals (web apps, any suggestion ?) Be healthy Watch Jono &amp;amp; Ben (c’mon ? what ?) Edutech my kids with Khan Academy (had 1 today for my 3 yr old) Deep dive into Rustlang Be patient Read 1 book per month Experiment and turn small ideas into life  </description>
+    </item>
+    
+  </channel>
+</rss>

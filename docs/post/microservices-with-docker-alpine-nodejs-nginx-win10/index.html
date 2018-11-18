@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="coffee | web | dev | opensource | rants | and then some">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="http://www.mindginative.com/">
+
+<meta name="twitter:image" content="http://www.mindginative.com/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Richard Sentino | coffee | web | dev | opensource | rants | and then some">
+<meta name="twitter:description" property="og:description" itemprop="description" content="coffee | web | dev | opensource | rants | and then some">
+<meta name="og:type" content="website">
+<meta name="og:url" content="http://www.mindginative.com/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="http://www.mindginative.com/tn.png">
+
+<link rel="shortcut icon" href="http://www.mindginative.com/sam.ico" id="favicon">
+<link rel="stylesheet" href="http://www.mindginative.com/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55684248-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55684248-1');
+</script>
+
+    
+
+    
+    
+    
+    <title>
+        
+        Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Microservices with Docker, Alpine Linux, Nodejs, Nginx on Win10 Host</div>
+
+        <div class="section" id="content">
+
+<p><img src="/images/microservices/diagram.png" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<p>Apology for the last word &ldquo;Win10&rdquo;, it&rsquo;s bit misleading but my main development machine is Dell XPS 13 on Windows 10 Pro Insider Preview. There&rsquo;s should be a follow up to this blog hopefully on my <a href="http://yup-the-website-domain-is.mindginative.com/post/asrock-deskmini-110w-with-ubuntu-server/">headless Ubuntu Server</a>.</p>
+
+<p>BTW, it&rsquo;s a PITA to get this thing working on my Win10 machine - too many wrangling with Windows GUI DNS settings, Docker vEthernet adapter then a mixed of CLI scripts, some won&rsquo;t work on plain CLI commands later then I discovered that wrapping it inside docker-compose.yml does the trick. C-R-A-Z-Y-!</p>
+
+<p><img src="/images/microservices/win10-docker-dnsmasq-configuration.jpg" width="800" style="-webkit-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);-moz-box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);box-shadow: 10px 10px 8px 0px rgba(156,156,156,0.27);"></p>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>I had this vision from last year (2016) while I was working on couple projects: NodeJS APIs, setting up infras (CI), deployments, standing up AWS services -  to do some automated orchestration of infrastructures and its services, stick inside a container. It just got materialised recently, and with some help from [1] [2].</p>
+
+<h2 id="dangx-project">Dangx Project</h2>
+
+<p>Dangx Project is an attempt to build a microservice architecture with Docker, Alpine Linux, NodeJS, Nginx. Each service should run on its own isolated container.</p>
+
+<p>see <a href="https://github.com/rixrix/dangx-project/tree/v1.0.0">https://github.com/rixrix/dangx-project/tree/v1.0.0</a></p>
+
+<h3 id="configuration">Configuration</h3>
+
+<ul>
+<li>Except for Dnsmasq, all containers are linked via the &ldquo;nginx-proxy&rdquo; network</li>
+<li>Dnsmasq[4] will only respond to &ldquo;dev&rdquo; domain queries on localhost/127.0.0.1
+
+<ul>
+<li><code>--address=/dev/127.0.0.1</code></li>
+</ul></li>
+<li>Configure your Windows Docker vEthernet (DockerNAT) network adapter to use the 127.0.0.1 as one of your DNS server and use DNS suffix &ldquo;dev&rdquo;, see screenshot above</li>
+</ul>
+
+<h3 id="how-it-works">How it works</h3>
+
+<ul>
+<li>Dnsmasq responds to &ldquo;dev&rdquo; domain queries and use 127.0.0.1 as its IP</li>
+<li>Nginx Proxy listens for any request on port 80, proxys the request to its target container, it does a lot of cool magic behind the scene, see [3]</li>
+<li>Domain and its containers
+
+<ul>
+<li><a href="http://dangxproject.dev">http://dangxproject.dev</a>
+
+<ul>
+<li>dangx-www-dangxproject</li>
+<li>Nginx static server</li>
+</ul></li>
+<li><a href="http://api.dangxproject.dev">http://api.dangxproject.dev</a>
+
+<ul>
+<li>dangx-www-api</li>
+<li>NodeJS/Express server</li>
+</ul></li>
+<li><a href="http://whoami.dangxproject.dev">http://whoami.dangxproject.dev</a>
+
+<ul>
+<li>dangx-www-whoami</li>
+<li>Nginx test server</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="commands">Commands</h3>
+
+<ul>
+<li>For fresh project, create the special network
+
+<ul>
+<li><code>./scripts/docker-new-network.sh</code></li>
+</ul></li>
+<li>Build the containers
+
+<ul>
+<li><code>./scripts/docker-compose-up.sh</code></li>
+</ul></li>
+<li>Destroy the containers, excluding network and images
+
+<ul>
+<li><code>./scripts/docker-compose-down.sh</code></li>
+</ul></li>
+<li>Restart the containers
+
+<ul>
+<li><code>./scripts/docker-compose-restart.sh</code></li>
+</ul></li>
+</ul>
+
+<h2 id="note">Note</h2>
+
+<p>This is a short write up about its purpose, functionality and configuration, feel free to ask or file an <a href="https://github.com/rixrix/dangx-project">issue over at Github</a>. The references below should give you the nitty-gritty.</p>
+
+<h2 id="future-plan">Future Plan</h2>
+
+<p>I&rsquo;m excited about the current state of this project, and I&rsquo;d like to move forward and do some cool stuff. Here&rsquo;s the grand plan:</p>
+
+<ul>
+<li>Deploy to AWS</li>
+<li>Infrastructure management with Terraform.io</li>
+<li>Multi-cloud deployment eg: Google Cloud, AWS, Azure</li>
+<li>CI (automated: testing, deployment)</li>
+<li>Security (SSL, etc)</li>
+<li>Blue/Green deployment</li>
+<li>Spin-off sample/cool projects from this project</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>[1] <a href="http://blog.ibmjstart.net/2015/07/23/learning-microservices-architecture-bluemix-docker-part-1/">http://blog.ibmjstart.net/2015/07/23/learning-microservices-architecture-bluemix-docker-part-1/</a></li>
+<li>[2] <a href="https://adrianperez.org/improving-dev-environments-all-the-http-things/">https://adrianperez.org/improving-dev-environments-all-the-http-things/</a></li>
+<li>[3] <a href="https://hub.docker.com/r/jwilder/nginx-proxy/">https://hub.docker.com/r/jwilder/nginx-proxy/</a></li>
+<li>[4] <a href="https://hub.docker.com/r/andyshinn/dnsmasq/">https://hub.docker.com/r/andyshinn/dnsmasq/</a></li>
+</ul>
+</div>
+
+        
+        <div class="section bottom-menu">
+<hr />
+<p>
+
+
+    
+
+    
+        
+            <a href="/post">
+                writing
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/projects/list">
+                projects
+            </a>
+        
+            &#183; 
+            <a href="/about/me">
+                who dis?
+            </a>
+        
+    
+    &#183; 
+    <a href="http://www.mindginative.com/">
+        home
+    </a>
+
+</p></div>
+        
+
+        <div class="section footer">coffee | web | dev | opensource | rants | and then some</div>
+    </div>
+</body>
+
+</html>

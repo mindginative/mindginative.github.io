@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uml on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/tags/uml/</link>
+    <description>Recent content in Uml on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Wed, 11 Oct 2017 23:36:26 +1300</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/tags/uml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown-like UML Scripting with VSCode within Markdown document</title>
+      <link>http://www.mindginative.com/post/markdown-like-uml-scripting-with-vscode/</link>
+      <pubDate>Wed, 11 Oct 2017 23:36:26 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/post/markdown-like-uml-scripting-with-vscode/</guid>
+      <description>Documenting API flow is best when coupled with UML. There exists more than a dozen tools, special IDE, web apps: turn your UML script into beautiful visual presentation.
+Most of the time you will end with the classic scenario:
+ Write UML script Save Export as png, or PDF  With VScode Mermaid Preview it&amp;rsquo;s never been easier writing your UML script embedded within your Markdown document. It&amp;rsquo;s built on top of Mermaid.</description>
+    </item>
+    
+  </channel>
+</rss>

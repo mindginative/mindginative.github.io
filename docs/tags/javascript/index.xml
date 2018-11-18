@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/tags/javascript/</link>
+    <description>Recent content in Javascript on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Sun, 02 Jul 2017 22:45:35 +1200</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>12 Hours Hackathon with React JavaScript Library</title>
+      <link>http://www.mindginative.com/post/12-hours-hackathon-with-react/</link>
+      <pubDate>Sun, 02 Jul 2017 22:45:35 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/12-hours-hackathon-with-react/</guid>
+      <description>One thing I kept hearing as part of the requirements: React
+I don&amp;rsquo;t have a production experience with React, however, IMHO if a developer has done a bit of JS development in the past I don&amp;rsquo;t think onboarding is rocket science.
+ At the end of the day, it&amp;rsquo;s just JavaScript!
+ I&amp;rsquo;m currently working on a couple of personal projects and thought of using React at some stage but instead I&amp;rsquo;ve decided to do hackathon on a simple React project and see where it would take me, I didn&amp;rsquo;t set a deadline.</description>
+    </item>
+    
+  </channel>
+</rss>

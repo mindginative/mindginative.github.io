@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/categories/</link>
+    <description>Recent content in Categories on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Sat, 11 Feb 2017 13:14:55 +1300</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash</title>
+      <link>http://www.mindginative.com/categories/bash/</link>
+      <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>http://www.mindginative.com/categories/blog/</link>
+      <pubDate>Wed, 04 May 2016 11:10:22 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ci</title>
+      <link>http://www.mindginative.com/categories/ci/</link>
+      <pubDate>Sun, 09 Apr 2017 21:27:59 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conference</title>
+      <link>http://www.mindginative.com/categories/conference/</link>
+      <pubDate>Tue, 16 May 2017 13:33:31 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Development</title>
+      <link>http://www.mindginative.com/categories/development/</link>
+      <pubDate>Thu, 11 May 2017 22:42:44 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Frontend</title>
+      <link>http://www.mindginative.com/categories/frontend/</link>
+      <pubDate>Sun, 09 Apr 2017 21:27:59 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meetup</title>
+      <link>http://www.mindginative.com/categories/meetup/</link>
+      <pubDate>Wed, 23 Mar 2016 16:46:45 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/meetup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>http://www.mindginative.com/categories/nodejs/</link>
+      <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry</title>
+      <link>http://www.mindginative.com/categories/raspberry/</link>
+      <pubDate>Mon, 10 Apr 2017 21:03:29 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/raspberry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>http://www.mindginative.com/categories/tools/</link>
+      <pubDate>Sat, 26 Nov 2016 22:27:10 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>http://www.mindginative.com/categories/ubuntu/</link>
+      <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows10</title>
+      <link>http://www.mindginative.com/categories/windows10/</link>
+      <pubDate>Sat, 11 Feb 2017 13:14:55 +1300</pubDate>
+      
+      <guid>http://www.mindginative.com/categories/windows10/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

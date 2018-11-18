@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on Richard Sentino | coffee | web | dev | opensource | rants | and then some</title>
+    <link>http://www.mindginative.com/tags/life/</link>
+    <description>Recent content in Life on Richard Sentino | coffee | web | dev | opensource | rants | and then some</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright notice</copyright>
+    <lastBuildDate>Sat, 30 Sep 2017 00:06:59 +1200</lastBuildDate>
+    
+	<atom:link href="http://www.mindginative.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2018</title>
+      <link>http://www.mindginative.com/post/2018/</link>
+      <pubDate>Sat, 30 Sep 2017 00:06:59 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/2018/</guid>
+      <description>Looking forward 2018! gearing up for some cloud certification - 5 months from now.
+Still have to book for the exact date but all the needed materials are on the table.
+I was thinking of building a small project while on the course towards the certification - definitely involves standing up infra, deployment, database, APIs</description>
+    </item>
+    
+    <item>
+      <title>I Am Writing It Down!</title>
+      <link>http://www.mindginative.com/post/i-am-writing-it-down/</link>
+      <pubDate>Sun, 27 Aug 2017 14:17:31 +1200</pubDate>
+      
+      <guid>http://www.mindginative.com/post/i-am-writing-it-down/</guid>
+      <description>In response to Victor Savkin&amp;rsquo;s blog about &amp;ldquo;Write it Down&amp;rdquo; 2 days ago.
+ Retrospectives are important. That’s why software development teams get together once a week to see what works and what can be improved. We know small adjustments add up. So why don’t we apply the same approach in our day-to-day lives?
+ I decided to give it a try, and set some goal after-work hours. The &amp;ldquo;Lessons Learned&amp;rdquo; had a surprising result.</description>
+    </item>
+    
+  </channel>
+</rss>

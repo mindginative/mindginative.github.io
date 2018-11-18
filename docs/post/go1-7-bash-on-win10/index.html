@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="coffee | web | dev | opensource | rants | and then some">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="http://www.mindginative.com/">
+
+<meta name="twitter:image" content="http://www.mindginative.com/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Richard Sentino | coffee | web | dev | opensource | rants | and then some">
+<meta name="twitter:description" property="og:description" itemprop="description" content="coffee | web | dev | opensource | rants | and then some">
+<meta name="og:type" content="website">
+<meta name="og:url" content="http://www.mindginative.com/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="http://www.mindginative.com/tn.png">
+
+<link rel="shortcut icon" href="http://www.mindginative.com/sam.ico" id="favicon">
+<link rel="stylesheet" href="http://www.mindginative.com/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55684248-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55684248-1');
+</script>
+
+    
+
+    
+    
+    
+    <title>
+        
+        Go1.7 installation via GVM on Ubuntu Bash on Windows 10
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Go1.7 installation via GVM on Ubuntu Bash on Windows 10</div>
+
+        <div class="section" id="content">
+
+<p>Since moving to <a href="https://www.gohugo.io/">Hugo</a> few months ago my installation
+history with <a href="https://golang.org/">Go</a> was quick and dirty, I just want to get something
+up running to get started with Hugo. 48 hours ago I was playing with Go,
+I thought of building a simple cli utility where CI server can hook in and start building something
+- of course it has be built on top of Go, enough to get my around its dev-ecosystem.</p>
+
+<p>Bash on Windows 10 shipped with Ubuntu 14.04.5 but unfortunately the repo contains Go1.6.
+I could use the Personal Package Archive (ppa) repo however coming from Node Version Manager (nvm),
+I find it a lot easier to switchover from one version to another -
+I have NodeJS projects which requires specific version to run eg: 0.x, 4.x and 6.x and so a version manager is a big help.</p>
+
+<hr />
+
+<h4 id="installation">Installation</h4>
+
+<p>it&rsquo;s pretty straight forward, see gvm steps at <a href="https://github.com/moovweb/gvm#installing">https://github.com/moovweb/gvm#installing</a></p>
+
+<h4 id="notes">Notes</h4>
+
+<p>These are just a few details that I&rsquo;ve encountered during gvm installation, it might be of your help.</p>
+
+<h4 id="failed-to-install-go1-7">Failed to install Go1.7</h4>
+
+<pre><code class="language-bash">$&gt; gvm install go1.7
+
+Downloading Go source...
+Installing go1.7...
+ * Compiling...
+ERROR: Failed to compile. Check the logs at /home/urix/.gvm/logs/go-go1.7-compile.log
+ERROR: Failed to use installed version
+</code></pre>
+
+<p>Make sure to set to issue this command before you install v1.7</p>
+
+<pre><code class="language-bash">gvm install go1.4 -B
+gvm use go1.4
+export GOROOT_BOOTSTRAP=$GOROOT
+gvm install go1.7
+</code></pre>
+
+<p>Set the default Go1.7 version to get the same version when you close and open the Bash shell</p>
+
+<pre><code class="language-bash">gvm use go1.7 --default
+</code></pre>
+
+<h4 id="goroot-and-gopath">GOROOT and GOPATH</h4>
+
+<p>These environment variables will be set automatically by gvm for you when you switch versions,
+which is handy when testing packages with different versions of Go.</p>
+
+<p>My environment for Go1.7</p>
+
+<pre><code class="language-bash">$&gt; go version
+go version go1.7 linux/amd64
+
+$&gt; go env
+
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;&quot;
+GOEXE=&quot;&quot;
+GOHOSTARCH=&quot;amd64&quot;
+GOHOSTOS=&quot;linux&quot;
+GOOS=&quot;linux&quot;
+GOPATH=&quot;/home/urix/.gvm/pkgsets/go1.7/global&quot;
+GORACE=&quot;&quot;
+GOROOT=&quot;/home/urix/.gvm/gos/go1.7&quot;
+GOTOOLDIR=&quot;/home/urix/.gvm/gos/go1.7/pkg/tool/linux_amd64&quot;
+CC=&quot;gcc&quot;
+GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build356629057=/tmp/go-build -gno-record-gcc-switches&quot;
+CXX=&quot;g++&quot;
+CGO_ENABLED=&quot;1&quot;
+
+</code></pre>
+
+<p>and Go1.4</p>
+
+<pre><code class="language-bash">$&gt; gvm use go1.4
+Now using version go1.4
+
+$&gt; go version
+go version go1.4 linux/amd64
+
+$&gt; go env
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;&quot;
+GOCHAR=&quot;6&quot;
+GOEXE=&quot;&quot;
+GOHOSTARCH=&quot;amd64&quot;
+GOHOSTOS=&quot;linux&quot;
+GOOS=&quot;linux&quot;
+GOPATH=&quot;/home/urix/.gvm/pkgsets/go1.4/global&quot;
+GORACE=&quot;&quot;
+GOROOT=&quot;/home/urix/.gvm/gos/go1.4&quot;
+GOTOOLDIR=&quot;/home/urix/.gvm/gos/go1.4/pkg/tool/linux_amd64&quot;
+CC=&quot;gcc&quot;
+GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fmessage-length=0&quot;
+CXX=&quot;g++&quot;
+CGO_ENABLED=&quot;1&quot;
+</code></pre>
+</div>
+
+        
+        <div class="section bottom-menu">
+<hr />
+<p>
+
+
+    
+
+    
+        
+            <a href="/post">
+                writing
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/projects/list">
+                projects
+            </a>
+        
+            &#183; 
+            <a href="/about/me">
+                who dis?
+            </a>
+        
+    
+    &#183; 
+    <a href="http://www.mindginative.com/">
+        home
+    </a>
+
+</p></div>
+        
+
+        <div class="section footer">coffee | web | dev | opensource | rants | and then some</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="coffee | web | dev | opensource | rants | and then some">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="http://read.mindginative.com/">
+
+<meta name="twitter:image" content="http://read.mindginative.com/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Richard Sentino | coffee | web | dev | opensource | rants | and then some">
+<meta name="twitter:description" property="og:description" itemprop="description" content="coffee | web | dev | opensource | rants | and then some">
+<meta name="og:type" content="website">
+<meta name="og:url" content="http://read.mindginative.com/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="http://read.mindginative.com/tn.png">
+
+<link rel="shortcut icon" href="http://read.mindginative.com/sam.ico" id="favicon">
+<link rel="stylesheet" href="http://read.mindginative.com/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55684248-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55684248-1');
+</script>
+
+    
+
+    
+    
+    
+    <title>
+        
+        Parcejs in Production! (almost)
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Parcejs in Production! (almost)</div>
+
+        <div class="section" id="content"><p>See this <a href="https://parceljs.org/">Parcel</a> slogan:</p>
+
+<blockquote>
+<p>Blazing fast, zero configuration web application bundler</p>
+</blockquote>
+
+<p>Prior to using it, I saw a number of articles about it and
+I was like &ldquo;nice!, finally a tool that allows me to focus on building stuff instead of fine tunning the build infrastructure&rdquo;</p>
+
+<p>Few months after I got the task to do an integration work.
+This involves building a custom plugin from a 3rd party system.
+We get a mixed of raw .js and a transpiled .js</p>
+
+<pre><code>|_ dist/
+|_ public/
+  |_ index.html
+|_ vendor/
+  |_ vendor.min.js
+|_ src/
+  |_ custom.js
+  |_ custom.sass
+  |_ some.css
+</code></pre>
+
+<p><strong>The First 30mins</strong></p>
+
+<p>Our project was initially built on top of <a href="https://babeljs.io/">Babel</a> however we needed
+to do more than Babel does eg. SASS, CSS, auto-reload.
+I decided to give a go with Parcel, hooking it up was less of a work - Zero Configuration, fast build time, auto-reload.</p>
+
+<p><strong>The Problem</strong></p>
+
+<p>Everything works! the fact that I could skip out Webpack completely was a huge win.
+However I noticed my <code>vendor.min.js</code> gets double-transpiled and this has caused my whole
+dev day finding a better solution or a temporary work-around. There were suggestions and recommendations but I was not totally convinced.</p>
+
+<p>There&rsquo;s no (better) way for me to mark or skip <code>vendor.min.js</code> from Parcel&rsquo;s build workflow.</p>
+
+<p><strong>Production (almost)</strong></p>
+
+<p>I pushed back and decided to go with the simplified version:</p>
+
+<ul>
+<li>Babel</li>
+<li>Nodemon</li>
+<li>Node-SASS</li>
+</ul>
+
+<p><strong>Optional Configuration</strong></p>
+
+<p>Zero Configuration is an ambitious attempt, definitely I was 95-98% complete - so they&rsquo;re getting there, it will work with other scenario.
+An optional configuration might work in this case.</p>
+
+<p>Turns out quite a few people are having this issue. There&rsquo;s an on-going ticket about this:</p>
+
+<blockquote>
+<p><strong>How do i mark some modules to external?</strong> <a href="https://github.com/parcel-bundler/parcel/issues/144">https://github.com/parcel-bundler/parcel/issues/144</a></p>
+</blockquote>
+
+<p>Please support Parcel project. It&rsquo;s an awesome tool and I&rsquo;m looking forward to using it in some other project.</p>
+
+<p><strong>Further reading</strong></p>
+
+<ul>
+<li>The Problem with Webpack and Why It Is (Kind of) Our Fault <a href="https://medium.com/@allanbaptista/the-problem-with-webpack-8a025268a761">https://medium.com/@allanbaptista/the-problem-with-webpack-8a025268a761</a></li>
+<li>If you’ve ever configured Webpack, Parcel will blow your mind! <a href="https://medium.com/@ibrahimbutt/if-youve-ever-configured-webpack-parcel-will-blow-your-mind-b615468cee78">https://medium.com/@ibrahimbutt/if-youve-ever-configured-webpack-parcel-will-blow-your-mind-b615468cee78</a></li>
+<li>Comparing bundlers: Webpack, Rollup &amp; Parcel <a href="https://medium.com/js-imaginea/comparing-bundlers-webpack-rollup-parcel-f8f5dc609cfd">https://medium.com/js-imaginea/comparing-bundlers-webpack-rollup-parcel-f8f5dc609cfd</a></li>
+</ul>
+</div>
+
+        
+        <div class="section bottom-menu">
+<hr />
+<p>
+
+
+    
+
+    
+        
+            <a href="/post">
+                writings
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/projects/list">
+                projects
+            </a>
+        
+            &#183; 
+            <a href="/about/me">
+                about
+            </a>
+        
+    
+    &#183; 
+    <a href="http://read.mindginative.com/">
+        home
+    </a>
+
+</p></div>
+        
+
+        <div class="section footer">coffee | web | dev | opensource | rants | and then some</div>
+    </div>
+</body>
+
+</html>

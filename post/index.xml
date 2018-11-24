@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright notice</copyright>
-    <lastBuildDate>Fri, 13 Oct 2017 00:34:38 +1300</lastBuildDate>
+    <lastBuildDate>Sat, 24 Nov 2018 19:08:14 +1300</lastBuildDate>
     
 	<atom:link href="http://read.mindginative.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Parcejs in Production! (almost)</title>
+      <link>http://read.mindginative.com/post/parcejs-in-production-almost/</link>
+      <pubDate>Sat, 24 Nov 2018 19:08:14 +1300</pubDate>
+      
+      <guid>http://read.mindginative.com/post/parcejs-in-production-almost/</guid>
+      <description>See this Parcel slogan:
+ Blazing fast, zero configuration web application bundler
+ Prior to using it, I saw a number of articles about it and I was like &amp;ldquo;nice!, finally a tool that allows me to focus on building stuff instead of fine tunning the build infrastructure&amp;rdquo;
+Few months after I got the task to do an integration work. This involves building a custom plugin from a 3rd party system.</description>
+    </item>
     
     <item>
       <title>Try Full Docker Environment in Browser for a Limited Time (4hr)</title>

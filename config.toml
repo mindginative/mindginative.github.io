@@ -61,4 +61,4 @@ description = "xxx"
 
 [[params.mainMenu]]
     link = "/about/me"
-    text = "who dis?"
+    text = "about"

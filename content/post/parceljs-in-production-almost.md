@@ -1,5 +1,5 @@
 ---
-title: "Parcejs in Production! (almost)"
+title: "Parceljs in Production! (almost)"
 date: 2018-11-24T19:08:14+13:00
 showDate: false
 ---
